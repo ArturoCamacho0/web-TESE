@@ -5,6 +5,15 @@
     align-items: center;
 }
 
+a{
+    color:#fff;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #fff;
+}
+
 .logo > img{
     height: 60px;
 }
@@ -31,7 +40,7 @@
     height: 100vh;
     background-color: #212121;
     color: #fff;
-    z-index: 1;
+    z-index: 300;
     place-items: center;
     transition: 0.5s;
     font-size: 1.3rem;

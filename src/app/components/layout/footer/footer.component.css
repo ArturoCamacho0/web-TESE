@@ -1,7 +1,36 @@
 footer{
-    bottom: 0;
-    position: absolute;
     width: 98.5%;
     background-color: #212121;
     padding: 10px;
+    display: flex;
+    flex-flow: row;
+    gap: 10px;
+    justify-content: space-around;
+}
+
+.contact{
+    width: 40%;
+    color: white;
+    background-color: none;
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.card h3{
+    font-size: 1.3rem;
+}
+
+.direction{
+    color:white;
+    width: 40%;
+    text-align: center;
+}
+
+.social{
+    display: flex;
+    flex-flow: row;
+    gap: 10px;
 }

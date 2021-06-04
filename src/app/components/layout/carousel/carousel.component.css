@@ -1,0 +1,9 @@
+.carousel-item{
+    height: 300px;
+    background-size: cover;
+    background-color: black;
+}
+
+.image{
+    opacity: 0.5;
+}

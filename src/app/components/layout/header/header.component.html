@@ -5,7 +5,7 @@
     </div>
 
     <nav class="menu-items">
-        <a mat-button>Inicio</a>
+        <a mat-button [routerLink]="['/']">Inicio</a>
         <a mat-button>Oferta educativa</a>
         <a mat-button>Con&oacute;cenos</a>
         <a mat-button>Contacto</a>
@@ -21,7 +21,7 @@
     <button mat-icon-button class="burguer-menu">
         <mat-icon (click)="menu()">close</mat-icon>
     </button>
-    <a>Inicio</a>
+    <a [routerLink]="['/']">Inicio</a>
     <a>Oferta educativa</a>
     <a>Con&oacute;cenos</a>
     <a>Contacto</a>

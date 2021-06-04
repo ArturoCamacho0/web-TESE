@@ -1,23 +1,29 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { MaterialModule } from '../material/material.module';
+import { routing, appRoutingProviders } from '../../app.routing';
 
+import { MaterialModule } from '../material/material.module';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { CarouselComponent } from './carousel/carousel.component';
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    CarouselComponent
   ],
   imports: [
     CommonModule,
-    MaterialModule
+    MaterialModule,
+    routing,
+    appRoutingProviders
   ],
   exports: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    CarouselComponent
   ]
 })
 export class LayoutModule { }
