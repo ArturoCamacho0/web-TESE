@@ -1,15 +1,19 @@
 footer{
-    width: 98.5%;
+    width: 100%;
     background-color: #212121;
     padding: 10px;
     display: flex;
-    flex-flow: row;
     gap: 10px;
     justify-content: space-around;
 }
 
+.links{
+    width: 30%;
+    color: white;
+}
+
 .contact{
-    width: 40%;
+    width: 30%;
     color: white;
     background-color: none;
     display: flex;
@@ -33,4 +37,30 @@ footer{
     display: flex;
     flex-flow: row;
     gap: 10px;
+}
+
+
+@media screen and (max-width: 810px){
+    footer{
+        display: flex;
+        flex-flow: column !important;
+    }
+
+    footer div{
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .social{
+        display: flex;
+        flex-flow: row !important;
+        margin-bottom: 10px;
+    }
+
+    .direction > iframe{
+        margin-bottom: 10px;
+    }
 }

@@ -1,9 +1,15 @@
 .carousel-item{
-    height: 300px;
+    height: 30vh;
     background-size: cover;
     background-color: black;
 }
 
 .image{
     opacity: 0.5;
+}
+
+@media screen and (min-width: 860px){
+    .carousel-item{
+        height: 40vh;
+    }
 }

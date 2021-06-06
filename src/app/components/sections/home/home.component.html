@@ -1,3 +1,105 @@
-<div>
-    Holaaaa
+<mat-drawer-container class="side-container">
+    <mat-drawer mode="side" class="sidebar" id="side" #drawer opened>
+        <mat-selection-list role="list container" [multiple]="false">
+            <a href="#"><mat-list-option>Item 1</mat-list-option></a>
+            <mat-list-option role="listitem">Item 2</mat-list-option>
+            <mat-list-option role="listitem">Item 3</mat-list-option>
+        </mat-selection-list>
+    </mat-drawer>
+
+    <mat-drawer-content class="side-content">
+        <button id="arrow" type="button" mat-button (click)="drawer.toggle()">
+            <mat-icon>arrow_forward</mat-icon>
+        </button>
+
+        <mat-divider class="divider"></mat-divider>
+
+        <div class="text-side">
+            Esto es una prueba
+        </div>
+    </mat-drawer-content>
+    
+</mat-drawer-container>
+
+<div class="cards">
+    <mat-card class="careers">
+        <mat-divider></mat-divider>
+
+        <p class="text-center display-4 mt-2">Conóce nuestras carreras!</p>
+        
+        <mat-divider></mat-divider>
+
+        <div class="row">
+            <a href="#" class="card-career informatica col">
+                <mat-card>
+                    <span class="h1">Ingeniería informática</span>
+                </mat-card>
+            </a>
+
+            <a href="#" class="card-career quimica col">
+                <mat-card>
+                    <span class="h1">Ingeniería química</span>
+                </mat-card>
+            </a>
+
+            <a href="#" class="card-career contador col">
+                <mat-card>
+                    <span class="h1">Licenciatura contaduría</span>
+                </mat-card>
+            </a>
+
+            <a href="#" class="card-career informatica col">
+                <mat-card>
+                    <span class="h1">Ingeniería informática</span>
+                </mat-card>
+            </a>
+        </div>
+    </mat-card>
+
+
+    <mat-card class="careers">
+        <mat-divider></mat-divider>
+
+        <p class="text-center display-4 mt-2">Actividades</p>
+        
+        <mat-divider></mat-divider>
+
+        <div class="row">
+            <a href="#" class="col">
+                <mat-card class="act">
+                    <span>Actividad 1</span>
+                </mat-card>
+            </a>
+
+            <a href="#" class="col">
+                <mat-card class="act">
+                    <span>Actividad 2</span>
+                </mat-card>
+            </a>
+
+            <a href="#" class="col">
+                <mat-card class="act">
+                    <span>Actividad 3</span>
+                </mat-card>
+            </a>
+
+            <a href="#" class="col">
+                <mat-card class="act">
+                    <span>Actividad 4</span>
+                </mat-card>
+            </a>
+
+            <a href="#" class="col">
+                <mat-card class="act">
+                    <span>Actividad 5</span>
+                </mat-card>
+            </a>
+
+            <a href="#" class="col">
+                <mat-card class="act">
+                    <span>Actividad 6</span>
+                </mat-card>
+            </a>
+        </div>
+    </mat-card>
 </div>

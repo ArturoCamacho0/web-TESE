@@ -7,6 +7,7 @@ import { MaterialModule } from '../material/material.module';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { SectionsModule } from '../sections/sections.module';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { CarouselComponent } from './carousel/carousel.component';
   imports: [
     CommonModule,
     MaterialModule,
+    SectionsModule,
     routing,
     appRoutingProviders
   ],

@@ -12,4 +12,9 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onClick(){
+    let full = document.getElementById('side');
+    full.classList.toggle('active');
+  }
+
 }

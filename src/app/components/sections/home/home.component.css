@@ -1,3 +1,117 @@
-div{
+a{
+    text-decoration: none;
+}
+
+.side-container{
     height: 100vh;
+}
+
+.sidebar {
+    padding: 10px;
+    width: 20%;
+}
+
+.side-content{
+    padding: 15px;
+}
+
+.cards{
+    display: flex;
+    flex-flow: column;
+    justify-content:center;
+    background-color: #303030;
+}
+
+.careers{
+    width: 98%;
+    margin-right: 0;
+    margin-left: 0;
+    padding-top: 30px;
+    margin: 10px;
+}
+
+.row{
+    gap: 10px;
+    margin-top: 40px;
+}
+
+.card-career{
+    height: 100px;
+}
+
+.card-career > mat-card{
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: black;
+}
+
+.card-career > mat-card > span{
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.card-career:hover > mat-card > span{
+    display: none;
+}
+
+.card-career:hover > mat-card{
+    filter: blur(1px);
+}
+
+.informatica:hover > mat-card{
+    background-image: url('../../../../assets/images/informatica.jpg');
+}
+
+.quimica:hover > mat-card{
+    background-image: url('../../../../assets/images/quimica.jpg');
+}
+
+.contador:hover > mat-card{
+    background-image: url('../../../../assets/images/contador.jpg');
+}
+
+.act{
+    background-color: white;
+    color: black;
+    text-align: center;
+}
+
+@media screen and (max-width: 860px){
+    .card-career > mat-card > span{
+        font-size: 1rem;
+    }
+
+    #side{
+        width: 70vw;
+    }
+
+    #arrow{
+        margin-bottom: 20px;
+        font-weight: bold;
+        font-size: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .text-side{
+        margin-top: 20px;
+    }
+}
+
+@media screen and (min-width: 860px){
+    #arrow{
+        display: none;
+    }
+
+    .divider{
+        display: none;
+    }
 }
