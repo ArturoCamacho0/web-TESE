@@ -83,7 +83,11 @@ a:hover{
     }
 
     #menu-full{
-        display: grid;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        gap: 50px;
+        padding-top: 50px;
     }
 
     .logo > img{

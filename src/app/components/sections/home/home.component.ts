@@ -17,4 +17,12 @@ export class HomeComponent implements OnInit {
     full.classList.toggle('active');
   }
 
+  open(){
+    let r = document.getElementById('right');
+    r.classList.toggle('open');
+
+    let l = document.getElementById('left');
+    l.classList.toggle('open');
+  }
+
 }

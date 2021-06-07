@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "public": "dist/TESE-web",
+    "site": "sitetese",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
