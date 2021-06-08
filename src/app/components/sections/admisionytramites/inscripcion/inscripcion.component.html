@@ -1,0 +1,85 @@
+<mat-drawer-container class="side-container">
+  <mat-drawer mode="side" class="sidebar" id="side" #drawer opened>
+      <mat-selection-list role="list container" [multiple]="false">
+          <a href="#"><mat-list-option>Item 1</mat-list-option></a>
+          <mat-list-option role="listitem">Item 2</mat-list-option>
+          <mat-list-option role="listitem">Item 3</mat-list-option>
+      </mat-selection-list>
+  </mat-drawer>
+
+  <mat-drawer-content class="side-content">
+      <button id="arrow" type="button" mat-button (click)="drawer.toggle()" (click)="open()">
+          <mat-icon id="right" class="open">arrow_forward</mat-icon>
+          <mat-icon id="left">arrow_back</mat-icon>
+      </button>
+
+      <mat-divider class="divider"></mat-divider>
+
+
+     <div class="CuerpoTexto">
+ El Tecnológico de Estudios Superiores de Ecatepec cuenta con:
+
+      Preparatoria Abierta.- Por medio de convenio con el SEIEM, se funge como
+
+      Centro de asesoría y gestoría, en el que se atiende a la comunidad
+
+      interna y externa.
+
+      La atención es en el Departamento de Servicio Social y Seguimiento de Egresados.
+      Ubicado en el Edificio “D” planta Baja los días sábado y domingo, en un horario de 8:00 am a 2:00 pm
+      <br>
+
+      xd
+     </div>
+
+
+
+
+
+
+
+
+
+      <div class="row">
+        <div class="column">
+          <div class="card">
+            <img src="img1.jpg" alt="Jane" style="width:100%">
+            <div class="container">
+              <h2>Jane Doe</h2>
+              <p class="title">CEO &amp; Founder</p>
+              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+              <p>example@example.com</p>
+              <p><button class="button">Contact</button></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="card">
+            <img src="img2.jpg" alt="Mike" style="width:100%">
+            <div class="container">
+              <h2>Mike Ross</h2>
+              <p class="title">Art Director</p>
+              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+              <p>example@example.com</p>
+              <p><button class="button">Contact</button></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="card">
+            <img src="img3.jpg" alt="John" style="width:100%">
+            <div class="container">
+              <h2>John Doe</h2>
+              <p class="title">Designer</p>
+              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+              <p>example@example.com</p>
+              <p><button class="button">Contact</button></p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </mat-drawer-content>
+
+</mat-drawer-container>
