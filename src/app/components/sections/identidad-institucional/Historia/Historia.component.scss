@@ -1,0 +1,40 @@
+.center{
+  text-align: center;
+  font-weight: bold;
+
+}
+
+.contact{
+  width: 30%;
+  color: white;
+  background-color: none;
+  display: flex;
+  flex-flow: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.justificar{
+  text-align: justify;
+  margin: 5ch;
+  padding: 10px;
+  display: flex;
+  font-size: 3ch;
+  line-height: 3ch;
+}
+.img-icon{
+  width: 8ch;
+  height: 10ch;
+
+}
+.enlace-pdf{
+  color:white;
+  display: flex;
+  font-size: 3ch;
+  padding: 10px;
+  text-align: left;
+
+}
