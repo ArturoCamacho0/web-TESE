@@ -15,21 +15,54 @@ a:hover{
 }
 
 .logo > img{
-    height: 60px;
+    height: 70px;
+    margin: 5px;
+}
+
+.logo > h1{
+    color: #eb2a30;
 }
 
 .title{
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 .header{
     display: flex;
     justify-content: space-between;
+    height: auto;
+    z-index: 23;
+    background-color: rgba(255, 255, 255, 0.822);
+    width: 100%;
+    margin: 0 auto;
+    position: fixed;
 }
 
 .menu-items{
     flex-flow: row;
-    gap: 10px;
+    gap: 30px;
+    cursor: pointer;
+}
+
+.menu-items a:hover{
+    color: #eb2a30;
+    text-decoration: underline;
+}
+
+.sesion:hover{
+    color: #4aa96c !important;
+}
+
+.sesion{
+    color: #eb2a30 !important;
+}
+
+.menu-items a{
+    color: #000;
+}
+
+.separator{
+    height: 13vh;
 }
 
 #menu-full{
@@ -50,10 +83,6 @@ a:hover{
     right: 0;
 }
 
-.sesion{
-    color: #4aa96c;
-}
-
 #sesion-full{
     text-decoration:underline;
     color: #4aa96c;
@@ -66,6 +95,10 @@ a:hover{
 
     .menu-items{
         display: flex;
+    }
+
+    .menu-items a{
+        font-size: 1.1rem;
     }
 
     #menu-full{

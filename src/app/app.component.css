@@ -1,3 +1,9 @@
 a{
     cursor: pointer;
 }
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
