@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CAROUSEL_DATA_ITEMS_BANNERP } from './carousel';
+import { ICarouselItem } from '../carousel/icarousel-item.metadata';
 
 @Component({
   selector: 'app-home',
@@ -6,11 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  public carouselData: ICarouselItem[]=CAROUSEL_DATA_ITEMS_BANNERP;
 
-  constructor() { }
+  constructor(){}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   onClick(){
     let full = document.getElementById('side');

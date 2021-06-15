@@ -17,7 +17,8 @@ import { CarouselComponent } from './carousel/carousel.component';
     MaterialModule
   ],
   exports: [
-    HomeComponent
+    HomeComponent,
+    CarouselComponent
   ]
 })
 export class SectionsModule { }

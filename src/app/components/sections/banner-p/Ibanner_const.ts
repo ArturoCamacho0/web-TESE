@@ -3,11 +3,11 @@ export const CAROUSEL_DATA_ITEMS_BANNERP: ICarouselItem[]=[
   {
     id:1,
     title:{
-      first:'',
-      second:''
+      first:'Imágen',
+      second:'1'
     },
-    subtitle: '',
-    link: '',
+    subtitle: 'Prueba de imágen',
+    link: 'localhost:4200',
     image: "assets/images/tese1.jpg"
   },{
     id:2,
