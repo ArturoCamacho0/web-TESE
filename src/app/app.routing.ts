@@ -6,7 +6,7 @@ import { PlantillaContenidoComponent } from './components/sections/plantilla-con
 // Rutas
 const appRoutes: Routes = [
     { path: '', component: HomeComponent },
-    {path: 'plantillacontenido',component:PlantillaContenidoComponent}
+    { path: 'plantillacontenido', component:PlantillaContenidoComponent }
 ];
 
 // Exportar el modulo
