@@ -5,12 +5,14 @@ import { HomeComponent } from './home/home.component';
 import { MaterialModule } from '../material/material.module';
 import { BannerPComponent } from './banner-p/banner-p.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { PlantillaContenidoComponent } from './plantilla-contenido/plantilla-contenido.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
     BannerPComponent,
-    CarouselComponent
+    CarouselComponent,
+    PlantillaContenidoComponent
   ],
   imports: [
     CommonModule,
