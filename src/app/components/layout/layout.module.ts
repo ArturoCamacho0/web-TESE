@@ -7,11 +7,13 @@ import { MaterialModule } from '../material/material.module';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SectionsModule } from '../sections/sections.module';
+import { ContactoComponent } from './contacto/contacto.component';
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ContactoComponent
   ],
   imports: [
     CommonModule,
