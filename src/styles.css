@@ -5,6 +5,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;background-c
 }
 
 body::-webkit-scrollbar {
+
     width: 12px;
   }
   
@@ -17,3 +18,4 @@ body::-webkit-scrollbar {
     background-color: #eb2a30;
     border-radius: 10px;
   }
+
