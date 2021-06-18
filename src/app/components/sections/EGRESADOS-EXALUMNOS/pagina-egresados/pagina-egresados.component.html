@@ -1,0 +1,426 @@
+<div class="container-fluid px-0">
+  <div class="row bg-dark h-100">
+    <div class="col-12 px-0">
+      <app-carousel [items]="carouselData"></app-carousel>
+    </div>
+  </div>
+</div>
+
+ <mat-drawer-container class="side-container">
+
+   <!-- Inicio de la SIDE NAV BAR; Si se desea eliminar se borrara este bloque de codigo y el final mat drawer  -->
+     <mat-drawer mode="side" class="sidebar" id="side" #drawer opened>
+         <mat-selection-list role="list container" [multiple]="false">
+             <mat-list-option role="listitem" (click)="getId(1)">
+              VINCULACIÓN EMPRESARIAL E INCUBADORA DE EMPRESAS
+             </mat-list-option>
+             <br>
+             <mat-list-option role="listitem" (click)="getId(2)">
+              ACTIVIDADES Y CREDENCIALES EGRESADOS
+             </mat-list-option>
+             <br>
+             <mat-list-option role="listitem" (click)="getId(3)">
+              CURSOS Y DIPLOMADOS
+             </mat-list-option>
+             <br>
+             <a href="http://tecnm.occ.com.mx/Bolsa_Trabajo"><mat-list-option>
+              BOLSA DE TRABAJO
+             </mat-list-option></a>
+             <br>
+             <mat-list-option role="listitem" (click)="getId(4)">
+              HISTORIAL ACADÉMICO
+             </mat-list-option>
+             <br>
+             <mat-list-option role="listitem" (click)="getId(5)">
+              SERVICIO A LA COMUNIDAD
+             </mat-list-option>
+         </mat-selection-list>
+     </mat-drawer>
+
+     <mat-drawer-content class="side-content">
+         <button id="arrow" type="button" mat-button (click)="drawer.toggle()" (click)="open()">
+             <mat-icon id="right" class="open">arrow_forward</mat-icon>
+             <mat-icon id="left">arrow_back</mat-icon>
+         </button>
+
+         <mat-divider class="divider"></mat-divider>
+
+         <!-- Empieza el area para ingresar contenido en el panel lateral -->
+         <div class="text-side" >
+        <div class="box-shadow= 50px 50px;">
+
+
+    <h1 class="titulo">EGRESADOS Y EXALUMNOS</h1>
+
+    <div *ngIf = "op">
+      <!-- Breadcrumb, ayuda a que el sitio sea mas agil y el usuario sepa en donde esta localizado, hacia donde puede ir y que paginas le anteceden -->
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Egresados y Exalumnos</li>
+          <li class="breadcrumb-item active" aria-current="page">Posgrados</li>
+        </ol>
+      </nav>
+
+    <h1 class="Titulo2">POSGRADOS</h1>
+
+    <div class="row row-cols-1 row-cols-md-2 g-3">
+
+      <div class="col">
+
+        <a routerLink="/Mquimica">
+        <div class="card">
+          <img src="../../../../../assets/IMAGENES_EGRESADOS/ING_QUIMICA1.jpg" class="card-img-top">
+          <div class="card-img-overlay">
+            <h1 class="tcard" style="margin-top:5vh;">MAESTRÍA EN CIENCIAS INGENIERÍA QUÍMICA</h1>
+          </div>
+
+        </div>
+      </a>
+
+      </div>
+
+      <div class="col">
+        <a routerLink="/Mbioquimica">
+        <div class="card">
+
+          <img src="../../../../../assets/IMAGENES_EGRESADOS/ING_BIOQUIMICA1.jpg" class="card-img-top">
+          <div class="card-img-overlay">
+            <h1 class="tcard" style="margin-top:5vh;">MAESTRÍA EN CIENCIAS INGENIERÍA BIOQUÍMICA</h1>
+          </div>
+        </div>
+      </a>
+      </div>
+
+      <div class="col">
+        <a routerLink="/Msistemas">
+        <div class="card">
+          <img src="../../../../../assets/IMAGENES_EGRESADOS/ING_SISTEMAS1.jpg" class="card-img-top">
+          <div class="card-img-overlay">
+            <h1 class="tcard" style="margin-top:5vh;">MAESTRÍA EN SISTEMAS COMPUTACIONALES</h1>
+          </div>
+        </div>
+        </a>
+      </div>
+
+      <div class="col">
+        <a routerLink="/Meficienciaenergetica">
+        <div class="card">
+          <img src="../../../../../assets/IMAGENES_EGRESADOS/ING_ER1.jpg" class="card-img-top">
+          <div class="card-img-overlay">
+            <h1 class="tcard" style="margin-top:5vh;">MAESTRÍA EN EFICIENCIA ENERGÉTICA Y ENERGÍAS RENOVABLES</h1>
+          </div>
+        </div>
+        </a>
+      </div>
+
+      <div class="col">
+        <a routerLink="/Mmecatronica">
+        <div class="card">
+          <img src="../../../../../assets/IMAGENES_EGRESADOS/ING_MECATRONICA1.jpg" class="card-img-top">
+          <div class="card-img-overlay">
+            <h1 class="tcard" style="margin-top:5vh;">MAESTRÍA EN CIENCIAS EN INGENIERÍA MECATRÓNICA</h1>
+          </div>
+        </div>
+        </a>
+      </div>
+
+      <div class="col">
+        <a routerLink="/Mgestion">
+        <div class="card">
+          <img src="../../../../../assets/IMAGENES_EGRESADOS/ING_GESTION1.jpg" class="card-img-top">
+          <div class="card-img-overlay">
+            <h1 class="tcard" style="margin-top:5vh;">MAESTRIA EN GESTIÓN ADMINISTRATIVA</h1>
+          </div>
+        </div>
+        </a>
+      </div>
+    </div>
+    </div>
+
+    <div *ngIf = "op2">
+      <!-- Breadcrumb, ayuda a que el sitio sea mas agil y el usuario sepa en donde esta localizado, hacia donde puede ir y que paginas le anteceden -->
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+         <li class="breadcrumb-item active" aria-current="page">Egresados y Exalumnos</li>
+         <li class="breadcrumb-item"><a href="/egresadosyexalumnos">Posgrados</a></li>
+        </ol>
+      </nav>
+
+      <div class="cards">
+        <div class="card-body">
+          <h4 class="card-title"><div class="Titulo2">VINCULACIÓN EMPRESARIAL E INCUBADORA DE EMPRESAS</div></h4>
+          <p class="card-text"> El Centro de Gestión Tecnológica es el área responsable de coordinar diversos programas
+            y actividades que aportan elementos empresariales a la formación integral de los estudiantes del Tecnológico
+            de Estudios Superiores de Ecatepec (TESE).
+          </p>
+          <BR>
+          <BR>
+          <h4 class="card-title"><div class="Titulo2">OBJETIVO</div></h4>
+
+            <UL>
+              <LI>Apoyar a egresados y estudiantes para la obtención de empleo, mediante la creación de un acervo dinámico de vacantes y su difusión.</LI>
+              <LI>Este servicio es interno y externo: primeramente se beneficia a los alumnos y egresados que son colocados en empleos acordes con sus
+                estudios. También se brinda un servicio al sector productivo, al enviar candidatos a cubrir vacantes con las especificaciones requeridas.</LI>
+              <LI>El interesado deberá acudir a una entrevista directa con el encargado de la Bolsa de Trabajo. Si cumple con los requisitos, se le entregará
+                  una carta de presentación específica para la empresa que oferta la vacante.</LI>
+            </UL>
+          <BR>
+          <BR>
+
+          <h1 class="Titulo2">PARA EGRESADOS Y ALUMNOS</h1>
+          <p class="card-text">En el apartado de Archivos disponibles puedes bajar el formato de inscripción; llénalo y entrégalo en la oficina del Centro de
+            Gestión Tecnológica, donde te atenderemos con gusto.</p>
+          <BR>
+          <BR>
+
+          <h4 class="card-title"><div class="Titulo2">PARA EMPRESAS</div></h4>
+          <p class="card-text">Enviar correo electrónico a la dirección agarcia@tese.edu.mx con los datos de la vacante, el perfil del puesto y los datos de la empresa.</p>
+          <BR>
+          <BR>
+
+          <h4 class="card-title"><div class="Titulo2">INCUBADORA DE EMPRESAS</div></h4>
+          <p class="card-text">Es un área que brinda apoyo a emprendedores en la creación de empresas,  mediante servicios de articulación y acompañamiento empresarial para
+            la elaboración y puesta en marcha de su plan de negocios. También acerca a  las empresas incubadas a posible financiamiento. Especialmente apoya la  puesta en
+            marcha de proyectos que comercializan un producto o un  servicio con alguna innovación tecnológica y que requiera de  infraestructura física y tecnología especializa.
+          </p>
+
+            <UL>
+              <LI>Formato de ingreso (proyecto).</LI>
+              <LI>Consultor externo.</LI>
+            </UL>
+          <BR>
+          <BR>
+
+
+        </div>
+      </div>
+      </div>
+
+
+    <div *ngIf = "op3">
+       <!-- Breadcrumb, ayuda a que el sitio sea mas agil y el usuario sepa en donde esta localizado, hacia donde puede ir y que paginas le anteceden -->
+       <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+         <li class="breadcrumb-item active" aria-current="page">Egresados y Exalumnos</li>
+         <li class="breadcrumb-item"><a href="/egresadosyexalumnos">Posgrados</a></li>
+        </ol>
+      </nav>
+
+      <div class="cards">
+        <div class="card-body">
+          <h4 class="card-title"><div class="Titulo2">ACTIVIDADES DE EGRESADO</div></h4>
+            <UL>
+              <LI>Difusión de cursos de Educación Continua.</LI>
+              <LI>Reclutamientos masivos de personal gestionados por la Bolsa de trabajo del TESE.</LI>
+              <LI>Encuestas para estudios de egresados.</LI>
+            </UL>
+          <BR>
+          <BR>
+
+          <h4 class="card-title"><div class="Titulo2">BENEFICIOS DE LA INSTITUCIÓN</div></h4>
+          <UL>
+            <LI>Descuento del 50% en cursos de Educación Continua e Idiomas.</LI>
+            <LI>Acceso a la Biblioteca y préstamo de libros a domicilio.</LI>
+          </UL>
+          <BR>
+          <BR>
+
+            <h4 class="card-title"><div class="Titulo2">CREDENCIAL DE EGRESADOS</div></h4>
+              <p class="card-text">Para acceder a los beneficios es necesario contar con su credencial de egresado. <BR>Procedimiento para adquirir la credencial de egresado.</p>
+            <OL>
+              <LI>Ingresar a la página <a href="http://sici.tese.edu.mx/sici_online/sici_online.aspx">"http://sici.tese.edu.mx" </a>para generar ficha de pago.</LI>
+              <LI>Realizar el pago en cualquier sucursal bancaria.</LI>
+              <LI>Presentar pago en el área de sistemas de la Unidad de Registro y Certificación, la cual esta ubicada a un costado de recepción en el Edificio D.</LI>
+              <LI>La entrega de la credencial se realizará inmediatamente en los horarios mencionados.</LI>
+            </OL>
+          <BR>
+          <BR>
+        </div>
+        </div>
+    </div>
+
+
+    <div *ngIf = "op4">
+      <!-- Breadcrumb, ayuda a que el sitio sea mas agil y el usuario sepa en donde esta localizado, hacia donde puede ir y que paginas le anteceden -->
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+         <li class="breadcrumb-item active" aria-current="page">Egresados y Exalumnos</li>
+         <li class="breadcrumb-item"><a href="/egresadosyexalumnos">Posgrados</a></li>
+        </ol>
+      </nav>
+
+      <div class="cards">
+        <div class="card-body">
+          <h4 class="card-title"><div class="Titulo2">CURSOS Y DIPLOMADOS</div></h4>
+          <p class="card-text">La educación es un ingrediente fundamental a lo largo de la vida, para el desarrollo de la comunidad,
+            municipio, estado y del país, que brinda al hombre la oportunidad de integrarse y pertenecer a la sociedad del conocimiento,
+            para que cuente con las herramientas necesarias que respondan a las demandas del mundo laboral actual, competitivo y
+            globalizado.</p>
+          <BR>
+          <BR>
+
+          <h4 class="card-title"><div class="Titulo2">PERFIL DEL EGRESADO</div></h4>
+          <p class="card-text">Estos Diplomados se ofrecen a estudiantes, egresados, personal de los sectores público y privado, así como al
+            público en general, interesados en su capacitación y actualización.</p>
+          <BR>
+          <BR>
+
+            <h1 class="Titulo2">CAMPO LABORAL</h1>
+              <p class="card-text">Brinda la oportunidad de integrarse y pertenecer a la sociedad del conocimiento, para que cuente con
+                las herramientas necesarias que respondan a las demandas del mundo laboral actual, competitivo y globalizado.</p>
+          <BR>
+          <BR>
+            <h1 class="Titulo2">CURSOS DEL CENTRO DE IDIOMAS</h1>
+              <p class="card-text">El Centro de Idiomas del Tecnológico de Estudios Superiores de Ecatepec, basa su enseñanza en el Marco
+                Común Europeo de Referencia para la enseñanza de las lenguas extranjeras (MCER) y calibra su oferta de cursos con la escala
+                de los niveles de competencia. El cuadro siguiente presenta la descripción general de los niveles del MCER:</p>
+
+                <UL>
+                  <LI>BÁSICO: A1, A2 (KET)</LI>
+                  <LI>iNDEPENDIENTE: B1 (PET), B2 (FCE)</LI>
+                  <LI>COMPETENTE: C1 (CAE), C2 (CPE)</LI>
+                </UL>
+        </div>
+        </div>
+    </div>
+
+
+    <div *ngIf = "op5">
+      <!-- Breadcrumb, ayuda a que el sitio sea mas agil y el usuario sepa en donde esta localizado, hacia donde puede ir y que paginas le anteceden -->
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+         <li class="breadcrumb-item active" aria-current="page">Egresados y Exalumnos</li>
+         <li class="breadcrumb-item"><a href="/egresadosyexalumnos">Posgrados</a></li>
+        </ol>
+      </nav>
+
+      <div class="cards">
+        <div class="card-body">
+          <h4 class="card-title"><div class="Titulo2">HISTORIAL ACADÉMICO</div></h4>
+          <p class="card-text">Es una consulta que los alumnos inscritos o egresados pueden hacer de su trayectoria académica
+            en el sitio <a href="http://escolarweb.tese.edu.mx">http://escolarweb.tese.edu.mx</a> previa identificación de usuario y contraseña. Si el documento se obtiene
+            por esta vía solo tendrá un carácter informativo y si se requiere que el documento tenga mas formalidad deberá
+            acudir a la ventanilla de su carrera previo pago en la caja de Tesorería.</p>
+          <br>
+          <br>
+
+            <div class="row row-cols-1 row-cols-md-2 g-2">
+              <div class="col">
+          <h4 class="card-title"><div class="Titulo2">DOCUMENTO ELECTRÓNICO</div></h4>
+          <p class="card-text">El alumno ingresa al sitiohttp://escolarweb.tese.edu.mxdonde captura su número de usuario y contraseña lo que permitirá entrar a su sesión,
+            ahí seleccionará la ventana académicos y posteriormente historial académico para imprimirlo.</p>
+            <br>
+            <br>
+
+            </div>
+            <div class="col">
+              <h4 class="card-title"><div class="Titulo2">DOCUMENTO OFICIAL</div></h4>
+              <p class="card-text">Deberá pasar a la caja de Tesorería del TESE para pagar y posteriormente a la ventanilla de su carrera quien se lo entregara al momento.</p>
+          <BR>
+          <BR>
+          </div>
+          </div>
+
+            <h1 class="Titulo2">HORARIO Y LUGAR</h1>
+              <p class="card-text">Av. Tecnológico S/N C.P. 55210 Col. Valle de Anáhuac, Ecatepec de Morelos, Estado de México</p>
+              <UL>
+                <LI>Edificio D en Ventanillas</LI>
+                <LI>Teléfono: 01 (55) 50 00 23 42</LI>
+                <LI>De Lunes a Viernes de 8:00 A 18:00 Horas.</LI>
+              </UL>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf = "op6">
+      <!-- Breadcrumb, ayuda a que el sitio sea mas agil y el usuario sepa en donde esta localizado, hacia donde puede ir y que paginas le anteceden -->
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+         <li class="breadcrumb-item active" aria-current="page">Egresados y Exalumnos</li>
+         <li class="breadcrumb-item"><a href="/egresadosyexalumnos">Posgrados</a></li>
+        </ol>
+      </nav>
+
+      <div class="cards">
+        <p class="card-body">
+          <h4 class="card-title"><div class="Titulo2">SERVICIO A LA COMUNIDAD</div></h4>
+          <p class="card-text">El Tecnológico de Estudios Superiores de Ecatepec cuenta con 6 programas de servicio social comunitario:</p>
+.
+          <UL>
+            <LI>Proyecto Integral de Desarrollo Social: Se apoya a las  comunidades de alto índice de marginación, en específico en el Municipio
+               de Villa Victoria, así como a comunidades en zona de pobreza urbana en  el Municipio de Ecatepec.</LI>
+            <li>Apoyo a Microempresas: Se apoya a microempresas en áreas  específicas con problemáticas en las que puedan contribuir los
+              prestadores de servicio social de acuerdo a su perfil profesional, como  requisito se solicita que se encuentren en zona de
+              pobreza urbana en el  Municipio de Ecatepec.</li>
+              <li>Preparatoria Abierta: Por medio de convenio con el SEIEM, fungimos como centro de asesoría y gestoría, en el que se
+                atiende a la comunidad interna y externa.</li>
+          </UL>
+          <BR>
+          <BR>
+
+          <h4 class="card-title"><div class="Titulo2">INEA</div></h4>
+          <ul>
+            <li>En este programa se atiende a la comunidad interna y externa con asesorías, inscripción y trámites diversos.</li>
+            <li>Concientización de la separación de residuos sólidos no peligrosos: Este programa se realiza en forma interna y
+              externa procurando informar  a la comunidad para mantener y mejorar el medio ambiente desde el  ámbito de su actividad.</li>
+            <li>Educación Ambiental: Este programa va dirigido a la  niñez en su mayoría, acudiendo a jardín de niños y primarias a realizar
+              pláticas y actividades en pro del medio ambiente.</li>
+          </ul>
+
+          <p class="card-text">Externamente, tenemos vinculación con Instituciones que integran a los prestadores en programas sociales como:</p>
+            <ol>
+              <LI>H. Ayuntamiento de Ecatepec:</LI>
+                <ul>
+                  <li>Museo Papalote Móvil.</li>
+                  <li> Yo si puedo.</li>
+                </ul>
+                <LI>CONALEP II:</LI>
+                <ul>
+                  <li>Atención de Escuelas Marginadas.</li>
+                </ul>
+                <LI>Universidad Tecnológica de Tecamac:</LI>
+                <ul>
+                  <li>Tutorías</li>
+                </ul>
+            </ol>
+            <br>
+            <br>
+        </div>
+      </div>
+
+      <mat-divider></mat-divider>
+
+    </div>
+
+
+  <!--<div class="card">
+    <div class="card-body">
+      <h4 class="card-title"><div class="Titulo2">Acerca de:</div></h4>
+      <p class="card-text"> Es el trámite que realizan los y las egresados(as) de esta Institución para la obtención de su Título y Cédula Profesional>, para ello deberán llevar a cabo en la jefatura de su división correspondiente la acreditación de alguna de las opciones de Titulación establecidas en el Reglamento respetivo y posteriormente presentar la documentación solicitada en la Oficina de Titulación.
+
+        <br>
+        <br>
+      </p>
+    </div>
+  </div>
+
+  <mat-divider></mat-divider>-->
+
+      </div>
+
+        <!-- Etiqueda de cerrado de la side nav bar, se elimina para retirar la barra de navegacion lateral -->
+    </mat-drawer-content>
+
+
+</mat-drawer-container>
+
+<!-- Div del body, esto centra el contenido en modo web y deja fuera los mat card -->
+
+
+

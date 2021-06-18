@@ -1,0 +1,225 @@
+<div class="container-fluid px-0">
+  <div class="row bg-dark h-100">
+    <div class="col-12 px-0">
+      <app-carousel [items]="carouselData"></app-carousel>
+    </div>
+  </div>
+</div>
+
+<mat-drawer-container class="side-container">
+
+  <!-- Inicio de la SIDE NAV BAR; Si se desea eliminar se borrara este bloque de codigo y el final mat drawer  -->
+    <mat-drawer mode="side" class="sidebar" id="side" #drawer opened>
+        <mat-selection-list role="list container" [multiple]="false">
+            <mat-list-option role="listitem" (click)="getId(1)">
+             PERFIL DEL EGRESADO
+            </mat-list-option>
+            <br>
+            <mat-list-option role="listitem" (click)="getId(2)">
+             MATERIAS
+            </mat-list-option>
+            <br>
+        </mat-selection-list>
+    </mat-drawer>
+
+    <mat-drawer-content class="side-content">
+        <button id="arrow" type="button" mat-button (click)="drawer.toggle()" (click)="open()">
+            <mat-icon id="right" class="open">arrow_forward</mat-icon>
+            <mat-icon id="left">arrow_back</mat-icon>
+        </button>
+
+        <mat-divider class="divider"></mat-divider>
+
+        <!-- Empieza el area para ingresar contenido en el panel lateral -->
+        <div class="text-side" >
+       <div class="box-shadow= 50px 50px;">
+
+
+   <h1 class="titulo">MAESTRÍA EN CIENCIAS INGENIERÍA QUÍMICA</h1>
+    <div *ngIf = "op">
+      <!-- Breadcrumb, ayuda a que el sitio sea mas agil y el usuario sepa en donde esta localizado, hacia donde puede ir y que paginas le anteceden -->
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Egresados y Exalumnos</li>
+        <li class="breadcrumb-item"><a routerLink="/egresadosyexalumnos">Posgrados</a></li>
+       <li class="breadcrumb-item active" aria-current="page">MaestriaIngenieriaQuimica</li>
+      </ol>
+    </nav>
+
+     <div class="cards">
+       <div class="card-body">
+        <h4 class="card-title"><div class="Titulo2">CONCEPTOS GENERALES</div></h4>
+         <p class="card-text"> La Ingeniería Química es la rama de la Ingeniería que se dedica al estudio,  síntesis, desarrollo,
+           diseño, operación y optimización de todos  aquellos procesos industriales que producen cambios físicos, químicos  y/o
+           bioquímicos en los materiales. Esta tambien se enfoca al diseño de nuevos materiales y tecnologías, es una forma
+           importante de investigación y de desarrollo.
+         </p>
+        <br>
+       </div>
+     </div>
+
+     <div class="cards">
+      <div class="card-body">
+       <h4 class="card-title"><div class="Titulo2">OBJETIVO</div></h4>
+        <p class="card-text"> Tiene como finalidad la formación de recursos humanos de alto nivel con conciencia social, dedicados
+          a la investigación y solución de problemas del campo de la Ingeniería Química, en particular en las áreas de ingeniería
+          de procesos y bioprocesos, así como tecnología de materiales, ambas áreas con enfoque ambiental, que son las líneas
+          relevantes a nivel nacional e internacional.
+        </p>
+        <br>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="card-body">
+       <h4 class="card-title"><div class="Titulo2">AREAS DE INVESTIGACIÓN</div></h4>
+       <p class="card-text">Ingeniería de procesos y bioprocesos.</p>
+       <p class="card-text">Ingeniería ambiental.</p>
+        <br>
+      </div>
+    </div>
+     </div>
+
+
+   <div *ngIf = "op2">
+     <!-- Breadcrumb, ayuda a que el sitio sea mas agil y el usuario sepa en donde esta localizado, hacia donde puede ir y que paginas le anteceden -->
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+       <li class="breadcrumb-item active" aria-current="page">Egresados y Exalumnos</li>
+       <li class="breadcrumb-item"><a href="/egresadosyexalumnos">Posgrados</a></li>
+       <li class="breadcrumb-item"><a href="/Mquimica">MaestriaIngenieriaQuimica</a></li>
+      </ol>
+    </nav>
+     <div class="cards">
+       <div class="card-body">
+         <h4 class="card-title"><div class="Titulo2">PERFIL DEL EGRESADO</div></h4>
+
+         <div class="row row-cols-1 row-cols-md-2 g-1">
+          <div class="col">
+            <p class="card-text">El egresado es un persona creativa, autocrítica y con libertad de pensamiento que posee las competencias para efectuar investigación básica y/o aplicada. <BR><BR>Particularmente posee las competencias para:<BR></p>
+           <UL>
+             <LI>Generar conocimientos científicos y tecnológicos a través del planteamiento y desarrollo de trabajos de investigación aplicando metodologías de investigación experimental.</LI>
+             <LI>Incorporarse y participar en trabajos de investigación y en el desarrollo científico y tecnológico del país, aplicando sus conocimientos y las metodologías necesarias, de forma original e innovadora.</LI>
+             <LI>Detectar y analizar problemas de relevancia en procesos productivos, planteando alternativas de solución originales e innovadoras.</LI>
+             <LI>Participar en actividades docentes a nivel de licenciatura y posgrado en instituciones de educación superior y centros de investigación.</LI>
+             <LI>Incorporarse al sector industrial en las áreas de producción y de evaluación y control de la calidad de los procesos y productos.</LI>
+             <LI>Innovar, mejorar, optimizar y asimilar tecnologías y procesos industriales.</LI>
+             <LI>Campo de acción. Los egresados trabajan en la industria química, farmacéutica, petrolera, de alimentos y de polímeros entre otras.</LI>
+           </UL>
+         <BR>
+         <BR>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="../../../../../assets/IMAGENES_EGRESADOS/GRADUATION.jpg" class="card-img-top">
+            </div>
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>
+
+
+    <div *ngIf = "op3">
+    <!-- Breadcrumb, ayuda a que el sitio sea mas agil y el usuario sepa en donde esta localizado, hacia donde puede ir y que paginas le anteceden -->
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+       <li class="breadcrumb-item active" aria-current="page">Egresados y Exalumnos</li>
+       <li class="breadcrumb-item"><a href="/egresadosyexalumnos">Posgrados</a></li>
+       <li class="breadcrumb-item"><a href="/Mquimica">MaestriaIngenieriaQuimica</a></li>
+      </ol>
+    </nav>
+    <h4 class="card-title"><div class="Titulo2">MATERIAS</div></h4>
+
+      <div class="row row-cols-1 row-cols-md-2 g-2">
+        <div class="col">
+          <div class="cards">
+            <div class="card-body">
+              <h4 class="card-title"><div class="Titulo2">BASICAS</div></h4>
+              <ul>
+                <li>Termodinámica.</li>
+                <li>Matemáticas.</li>
+                <li>Fenómenos de transporte.</li>
+                <li>Procesos de separación.</li>
+                <li>Ingeniería de reactores.</li>
+                <li>Simulación de procesos.</li>
+                <li>Control de procesos.</li>
+                <li>Diseño y análisis de experimentos.</li>
+                <li>Química ambiental.</li>
+                 <li>Ciencia de los materiales.</li>
+              </ul>
+              <BR>
+              <BR>
+            </div>
+          </div>
+          </div>
+
+          <div class="col">
+            <div class="cards">
+              <div class="card-body">
+                <h4 class="card-title"><div class="Titulo2">OPTATIVAS</div></h4>
+                <ul>
+                  <li>Catálisis heterogénea.</li>
+                  <li>Tópicos de nuevos materiales catalíticos.</li>
+                  <li>Catálisis homogénea avanzada.</li>
+                  <li>Ingeniería de fluidización.</li>
+                  <li>Diseño de equipos y plantas industriales.</li>
+                  <li>Instrumentación de control de procesos.</li>
+                  <li>Síntesis y escalamiento de procesos.</li>
+                  <li>Teoría de optimización.</li>
+                  <li>Desarrollo sostenible y economía ambiental.</li>
+                  <li>Procesos fisicoquímicos para el tratamiento de aguas.</li>
+                  <li>Ingeniería del medio ambiente.</li>
+                  <li>Diseño de reactores bioquímicos.</li>
+                  <li>Manejo y disposición de desechos sólidos.</li>
+                  <li>Manejo, tratamiento y aprovechamientos de lodos residuales.</li>
+                  <li>Control de contaminación del aire.</li>
+                  <li>Microbiología ambiental.</li>
+                  <li>Bioseparadores.</li>
+                  <li>Introducción a la nanotecnología.</li>
+                  <li>Reología en ingeniería</li>
+                  <li>Transferencia de masa y calor avanzado.</li>
+                  <li>Termodinámica estadística.</li>
+                  <li>Cristalización de polímeros.</li>
+                  <li>Cinética de polimerización, procesamiento de polímeros.</li>
+                  <li>Caracterización de polímeros.</li>
+                  <li>Biopolímeros.</li>
+                </ul>
+                <BR>
+                <BR>
+              </div>
+            </div>
+            </div>
+        </div>
+      </div>
+
+  <mat-divider></mat-divider>
+
+   </div>
+
+
+ <!--<div class="card">
+   <div class="card-body">
+     <h4 class="card-title"><div class="Titulo2">Acerca de:</div></h4>
+     <p class="card-text"> Es el trámite que realizan los y las egresados(as) de esta Institución para la obtención de su Título y Cédula Profesional>, para ello deberán llevar a cabo en la jefatura de su división correspondiente la acreditación de alguna de las opciones de Titulación establecidas en el Reglamento respetivo y posteriormente presentar la documentación solicitada en la Oficina de Titulación.
+
+       <br>
+       <br>
+     </p>
+   </div>
+ </div>
+
+ <mat-divider></mat-divider>-->
+
+     </div>
+
+
+
+       <!-- Etiqueda de cerrado de la side nav bar, se elimina para retirar la barra de navegacion lateral -->
+   </mat-drawer-content>
+
+
+</mat-drawer-container>
