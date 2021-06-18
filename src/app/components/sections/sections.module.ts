@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { MaterialModule } from '../material/material.module';
 import { BannerPComponent } from './banner-p/banner-p.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { PlantillaContenidoComponent } from './plantilla-contenido/plantilla-contenido.component';
 
 import { PaginaEgresadosComponent } from './EGRESADOS-EXALUMNOS/pagina-egresados/pagina-egresados.component';
 import { BannerEgresadosComponent } from './EGRESADOS-EXALUMNOS/banner-egresados/banner-egresados.component';
@@ -55,6 +56,7 @@ import { CuerpoQuimicaComponent } from './carrera/profesion/IngenieriaQuimica/cu
     HomeComponent,
     BannerPComponent,
     CarouselComponent,
+
     PaginaEgresadosComponent,
     BannerEgresadosComponent,
     BannerMquimicaComponent,
@@ -93,7 +95,10 @@ import { CuerpoQuimicaComponent } from './carrera/profesion/IngenieriaQuimica/cu
     CuerpoMecatronicaComponent,
     CarouselMecatronicaComponent,
     CarouselQuimicaComponent,
-    CuerpoQuimicaComponent
+    CuerpoQuimicaComponent,
+
+
+    PlantillaContenidoComponent
 
   ],
   imports: [

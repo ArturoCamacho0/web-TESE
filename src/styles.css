@@ -5,15 +5,16 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;background-c
 }
 
 body::-webkit-scrollbar {
-  width: 12px;
-}
 
-body::-webkit-scrollbar-track {
-  background: #ccc;
-  
-}
+    width: 12px;
+  }
 
-body::-webkit-scrollbar-thumb {
-  background-color: #eb2a30;
-  border-radius: 10px;
-}
+  body::-webkit-scrollbar-track {
+    background: #ccc;
+
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: #eb2a30;
+    border-radius: 10px;
+  }

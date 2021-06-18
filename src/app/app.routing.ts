@@ -14,10 +14,13 @@ import { PaginaMgestionComponent } from './components/sections/EGRESADOS-EXALUMN
 import { CuerpoComponent } from './components/sections/carrera/cuerpo/cuerpo.component';
 import { CuerpoSistemasComponent } from './components/sections/carrera/profesion/SistemasComputacionales/cuerpo-sistemas/cuerpo-sistemas.component';
 
+import { PlantillaContenidoComponent } from './components/sections/plantilla-contenido/plantilla-contenido.component'
+
 
 // Rutas
 const appRoutes: Routes = [
     { path: '', component: HomeComponent },
+
     { path: 'egresadosyexalumnos', component: PaginaEgresadosComponent },
     { path: 'Mquimica', component: PaginaMquimicaComponent},
     { path: 'Mbioquimica', component: PaginaMbioquimicaComponent},
@@ -26,7 +29,9 @@ const appRoutes: Routes = [
     { path: 'Mmecatronica', component: PaginaMmecatronicaComponent},
     { path: 'Mgestion', component:PaginaMgestionComponent},
     { path: 'Carreras', component: CuerpoComponent},
-    { path:'Carreras/Sistemas', component: CuerpoSistemasComponent}
+    { path:'Carreras/Sistemas', component: CuerpoSistemasComponent},
+
+    { path: 'plantillacontenido', component:PlantillaContenidoComponent }
 
 ];
 
