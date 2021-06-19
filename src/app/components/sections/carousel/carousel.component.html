@@ -1,0 +1,24 @@
+<div class="dsc-carousel" [ngStyle]="{'min-height': finalHeight}">
+  <div class="dsc-carousel__btns">
+    <i class="fa carousel-control-prev-icon" (click)="setBack()"></i>
+    <i class="fa carousel-control-next-icon" (click)="setNext()"></i>
+  </div>
+  <div class="dsc-carousel__content">
+      <ng-container *ngFor="let section of items;" >
+        <div class="dsc-carousel__content-item active" data-bs-interval="500" [ngStyle]="{'background-image': 'url(' + section.image + ')', 'margin-left': section.marginLeft + '%' }">
+          <h1>{{section.title.first}} &nbsp;<span>{{section.title.second}}</span></h1>
+          <h1><a href="{{section.link}}">Ir a la página</a></h1>
+        </div>
+      </ng-container>
+  </div>
+  <div class="carousel-indicators">
+      <button
+          class="{{currentPosition === item.id ? 'active': ''}}"
+          *ngFor="let item of items" (click)="setCurrentPosition(item.id)"
+          [matTooltipPosition]="position.value"
+          matTooltip="{{item.title.first}}"
+          data-bs-target="#carouselExampleDark"
+          >
+  </button>
+  </div>
+</div>

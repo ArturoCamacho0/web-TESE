@@ -6,14 +6,12 @@ import { routing, appRoutingProviders } from '../../app.routing';
 import { MaterialModule } from '../material/material.module';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { CarouselComponent } from './carousel/carousel.component';
 import { SectionsModule } from '../sections/sections.module';
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    FooterComponent,
-    CarouselComponent
+    FooterComponent
   ],
   imports: [
     CommonModule,
@@ -24,8 +22,7 @@ import { SectionsModule } from '../sections/sections.module';
   ],
   exports: [
     HeaderComponent,
-    FooterComponent,
-    CarouselComponent
+    FooterComponent
   ]
 })
 export class LayoutModule { }
