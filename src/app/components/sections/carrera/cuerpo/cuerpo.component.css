@@ -73,6 +73,7 @@ border-bottom: 1px solid #fd5c63;
 body {
   background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
 
+  margin-bottom: 20px;
 }
 
 
@@ -212,3 +213,4 @@ a{
   height: 10px;
   width: 10px;
 }
+
