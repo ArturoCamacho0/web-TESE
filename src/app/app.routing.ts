@@ -1,4 +1,4 @@
-import { OrganigramaComponent } from './components/sections/Identidad-institucional/organigrama/organigrama.component';
+
 import { MisionVisionComponent } from './components/sections/Identidad-institucional/mision-vision/mision-vision.component';
 import { HistoriaComponent } from './components/sections/Identidad-institucional/historia/historia.component';
 import { LogoComponent } from './components/sections/Identidad-institucional/logo/logo.component';
@@ -19,7 +19,7 @@ const appRoutes: Routes = [
     { path: 'Logo', component:LogoComponent},
     { path: 'Historia', component:HistoriaComponent},
     { path: 'Mision', component:MisionVisionComponent},
-    { path: 'Organigrama', component:OrganigramaComponent}
+
 ];
 
 // Exportar el modulo

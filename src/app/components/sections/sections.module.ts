@@ -11,7 +11,7 @@ import { InscripcionComponent } from './admisionytramites/inscripcion/inscripcio
 import { HistoriaComponent } from './Identidad-institucional/historia/historia.component';
 import { LogoComponent } from './Identidad-institucional/logo/logo.component';
 import { MisionVisionComponent } from './Identidad-institucional/mision-vision/mision-vision.component';
-import { OrganigramaComponent } from './Identidad-institucional/organigrama/organigrama.component';
+
 
 
 @NgModule({
@@ -25,7 +25,7 @@ import { OrganigramaComponent } from './Identidad-institucional/organigrama/orga
     HistoriaComponent,
     LogoComponent,
     MisionVisionComponent,
-    OrganigramaComponent,
+
 
   ],
   imports: [
