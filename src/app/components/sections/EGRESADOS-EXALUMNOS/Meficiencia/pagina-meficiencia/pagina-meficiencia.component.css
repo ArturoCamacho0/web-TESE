@@ -1,3 +1,5 @@
+/* Configuracion de estilos para la plantilla contenido. */
+
 /* Elementos css para el titulo, y subtitulos se configura el color del titulo y se le agrega un borde  por debajo */
 .titulo{
   text-align: center;
@@ -8,6 +10,7 @@
   line-height: 1.5ch;
   padding: 10px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 13px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+
 }
 
 /* Se utiliza para el primer subtitulo */
@@ -26,32 +29,65 @@
   color: #2c5234;
   font-weight: bold;
   text-align: center;
-  border-bottom: 1px solid #fd5c63;
   padding: 5px;
-  font-size: 3ch;
+  font-size: 4ch;
 }
+
+/*  */
+
+/* Cuerpo de la seccion SUBTITULO */
+.card-body{
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 13px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  margin:18px;
+}
+
+
+/* Se agrega un efecto de sombra al rededor del contenido */
+.container{
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+
+
+}
+
+.side-container{
+
+}
+
 
 /* Elementos CSS de la Sidebar */
 
+
 .sidebar {
   background-image: radial-gradient( circle farthest-corner at 47.4% 55%,  rgba(218,61,61,1) 0%, rgba(170,13,71,0.81) 90% );
+
+
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 
+
+body {
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+
+}
+
+
+
 /* Configuracion de estilos globales */
+
+
+
 a{
   text-decoration: none;
 }
-/*ALTO DE LA PAGINA*/
+
 .side-container{
   height: 100vh;
 }
 
 .sidebar {
-  padding: 2px;
+  padding: 10px;
   width: 20%;
-  /*line-height: 15px;*/
 }
 
 .side-content{
@@ -73,6 +109,7 @@ a{
   padding-top: 30px;
   margin: 10px;
 }
+
 
 .card-career{
   height: 100px;
@@ -162,19 +199,13 @@ a{
   border-top-style:none;
 }
 
-.tcard{
-  color: WHITE;
-  font-size: 4vh;
-  font-weight: 500vh;
-  text-align: CENTER;
-  text-shadow: 5px 5px 15px rgba(0, 0, 0, 2.5);
+.breadcrumb{
+  margin-left: 20px;
 }
 
-.img{
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 100vh;
+.card{
+  width: 100%;
+  height: 300px;
 }
 
 .card-img-top{

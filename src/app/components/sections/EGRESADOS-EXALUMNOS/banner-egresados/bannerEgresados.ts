@@ -27,14 +27,5 @@ export const CAROUSEL_DATA_ITEMS_EGRESADOS: ICarouselItem[] = [
         subtitle: '',
         link: '',
         image: "../../../../../assets/IMAGENES_EGRESADOS/C.jpg"
-    }, {
-      id: 4,
-      title: {
-          first: '',
-          second: ''
-      },
-      subtitle: '',
-      link: '',
-      image: "../../../../../assets/IMAGENES_EGRESADOS/A.jpg"
-  }
+    }
 ]

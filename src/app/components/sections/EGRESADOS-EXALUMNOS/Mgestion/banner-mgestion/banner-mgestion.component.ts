@@ -1,5 +1,5 @@
 import { CAROUSEL_DATA_ITEMS_MGESTION } from './bannerMgestion';
-import { ICarouselItem } from '../../../carousel/icarousel-item.metadata';
+import { ICarouselItemCarreras } from '../../../carrera/carousel-carreras/Icarousel-carreras.item.metadata';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./banner-mgestion.component.css']
 })
 export class BannerMgestionComponent implements OnInit {
-  public carouselData: ICarouselItem[]=CAROUSEL_DATA_ITEMS_MGESTION;
+  public carouselData: ICarouselItemCarreras[]=CAROUSEL_DATA_ITEMS_MGESTION;
 
   constructor() { }
 

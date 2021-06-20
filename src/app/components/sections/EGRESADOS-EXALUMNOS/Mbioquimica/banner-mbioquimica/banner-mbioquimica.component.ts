@@ -1,6 +1,6 @@
 import { CAROUSEL_DATA_ITEMS_MBIOQUIMICA } from './bannerMbioquimica';
-import { ICarouselItem } from '../../../carousel/icarousel-item.metadata';
 import { Component, OnInit } from '@angular/core';
+import { ICarouselItemCarreras } from '../../../carrera/carousel-carreras/Icarousel-carreras.item.metadata';
 
 @Component({
   selector: 'app-banner-mbioquimica',
@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./banner-mbioquimica.component.css']
 })
 export class BannerMbioquimicaComponent implements OnInit {
-  public carouselData: ICarouselItem[]=CAROUSEL_DATA_ITEMS_MBIOQUIMICA;
+  public carouselData: ICarouselItemCarreras[]=CAROUSEL_DATA_ITEMS_MBIOQUIMICA;
 
   constructor() { }
 

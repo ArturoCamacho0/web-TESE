@@ -1,5 +1,5 @@
 import { CAROUSEL_DATA_ITEMS_MEFICIENCIA } from './bannerMeficiencia';
-import { ICarouselItem } from '../../../carousel/icarousel-item.metadata';
+import { ICarouselItemCarreras } from '../../../carrera/carousel-carreras/icarousel-carreras.item.metadata'
 
 import { Component, OnInit } from '@angular/core';
 
@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./banner-meficiencia.component.css']
 })
 export class BannerMeficienciaComponent implements OnInit {
-  public carouselData: ICarouselItem[]=CAROUSEL_DATA_ITEMS_MEFICIENCIA;
+  public carouselData: ICarouselItemCarreras[]=CAROUSEL_DATA_ITEMS_MEFICIENCIA;
 
   constructor() { }
 

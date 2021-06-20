@@ -1,5 +1,6 @@
+
 import { CAROUSEL_DATA_ITEMS_MSISTEMAS } from './bannerMsistemas';
-import { ICarouselItem } from '../../../carousel/icarousel-item.metadata';
+import { ICarouselItemCarreras } from '../../../carrera/carousel-carreras/Icarousel-carreras.item.metadata';
 
 import { Component, OnInit } from '@angular/core';
 
@@ -9,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./banner-sistemas.component.css']
 })
 export class BannerSistemasComponent implements OnInit {
-  public carouselData: ICarouselItem[]=CAROUSEL_DATA_ITEMS_MSISTEMAS;
+  public carouselData: ICarouselItemCarreras[]=CAROUSEL_DATA_ITEMS_MSISTEMAS;
 
   constructor() { }
 

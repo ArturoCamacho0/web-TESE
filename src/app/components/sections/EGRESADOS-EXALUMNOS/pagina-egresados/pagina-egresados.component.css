@@ -31,27 +31,61 @@
   font-size: 3ch;
 }
 
-/* Elementos CSS de la Sidebar */
+/* Elementos CSS de la Sidebar
 
 .sidebar {
   background-image: radial-gradient( circle farthest-corner at 47.4% 55%,  rgba(218,61,61,1) 0%, rgba(170,13,71,0.81) 90% );
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
+*/
+.sidebar {
+  /* background-image: radial-gradient(
+    circle farthest-corner at 47.4% 55%,
+    rgba(218, 61, 61, 1) 0%,
+    rgba(170, 13, 71, 0.81) 90%
+  ); */
 
+  background-color: #eb2a31da;
+
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.mat-list-option{
+  color: #fff;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.bane{
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 550;
+    text-align: center;
+}
+
+.social{
+  display: flex;
+  flex-flow: row;
+  gap: 10px;
+  margin-left: 5%;
+  margin-right: 5%;
+  justify-content: center;
+}
 
 /* Configuracion de estilos globales */
 a{
   text-decoration: none;
 }
-/*ALTO DE LA PAGINA*/
+
 .side-container{
   height: 100vh;
 }
 
 .sidebar {
-  padding: 2px;
+  padding: 10px;
   width: 20%;
-  /*line-height: 15px;*/
 }
 
 .side-content{
@@ -202,3 +236,4 @@ a{
   width: 100%;
   height: 250px;
 }
+

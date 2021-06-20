@@ -1,39 +1,47 @@
-<div class="container-fluid px-0">
-  <div class="row bg-dark h-100">
-    <div class="col-12 px-0">
-      <app-carousel [items]="carouselData"></app-carousel>
-    </div>
-  </div>
-</div>
-
- <mat-drawer-container class="side-container">
+<mat-drawer-container class="side-container">
 
    <!-- Inicio de la SIDE NAV BAR; Si se desea eliminar se borrara este bloque de codigo y el final mat drawer  -->
      <mat-drawer mode="side" class="sidebar" id="side" #drawer opened>
          <mat-selection-list role="list container" [multiple]="false">
-             <mat-list-option role="listitem" (click)="getId(1)">
-              VINCULACIÓN EMPRESARIAL E INCUBADORA DE EMPRESAS
+             <mat-list-option role="listitem" (click)="getId(1)" style="margin-top: 10%;">
+              VINCULACIÓN E INCUBADORA DE EMPRESAS
              </mat-list-option>
              <br>
-             <mat-list-option role="listitem" (click)="getId(2)">
-              ACTIVIDADES Y CREDENCIALES EGRESADOS
+             <br>
+             <mat-list-option role="listitem" (click)="getId(2)" style="margin-top: 5%;">
+              ACTIVIDADES Y CREDENCIALES
              </mat-list-option>
+             <br>
              <br>
              <mat-list-option role="listitem" (click)="getId(3)">
               CURSOS Y DIPLOMADOS
              </mat-list-option>
              <br>
+             <br>
              <a href="http://tecnm.occ.com.mx/Bolsa_Trabajo"><mat-list-option>
               BOLSA DE TRABAJO
              </mat-list-option></a>
+             <br>
              <br>
              <mat-list-option role="listitem" (click)="getId(4)">
               HISTORIAL ACADÉMICO
              </mat-list-option>
              <br>
+             <br>
              <mat-list-option role="listitem" (click)="getId(5)">
               SERVICIO A LA COMUNIDAD
              </mat-list-option>
+             <br>
+             <br>
+             <br>
+             <p class="bane">REDES EGRESADOS</p>
+             <div class="social">
+              <a href="https://www.facebook.com/teseegresadosac/?ref=br_rs"><img src="../../../../assets/images/facebook.svg" width="40px" alt="facebook"/></a>
+              <a href="https://www.instagram.com/egresadostese/?utm_source=ig_profile_share&igshid=91yhwzw12htb"><img src="../../../../assets/images/instagram.svg" width="40px" alt="instagram"/></a>
+              <a href="https://twitter.com/EgresadosTese"><img src="https://img.icons8.com/fluent/48/000000/twitter.png" width="40px" alt="twitter"/></a>
+            </div>
+             <br>
+             <br>
          </mat-selection-list>
      </mat-drawer>
 
@@ -48,6 +56,16 @@
          <!-- Empieza el area para ingresar contenido en el panel lateral -->
          <div class="text-side" >
         <div class="box-shadow= 50px 50px;">
+
+
+          <!-- BANNER -->
+          <div class="container-fluid px-0">
+            <div class="row bg-dark h-100">
+              <div class="col-12 px-0">
+                <app-carousel-carreras [items]="carouselData"></app-carousel-carreras>
+              </div>
+            </div>
+          </div>
 
 
     <h1 class="titulo">EGRESADOS Y EXALUMNOS</h1>
@@ -130,7 +148,7 @@
         <div class="card">
           <img src="../../../../../assets/IMAGENES_EGRESADOS/ING_GESTION1.jpg" class="card-img-top">
           <div class="card-img-overlay">
-            <h1 class="tcard" style="margin-top:5vh;">MAESTRIA EN GESTIÓN ADMINISTRATIVA</h1>
+            <h1 class="tcard" style="margin-top:5vh;">MAESTRÍA EN GESTIÓN ADMINISTRATIVA</h1>
           </div>
         </div>
         </a>
@@ -169,21 +187,36 @@
           <BR>
           <BR>
 
-          <h1 class="Titulo2">PARA EGRESADOS Y ALUMNOS</h1>
-          <p class="card-text">En el apartado de Archivos disponibles puedes bajar el formato de inscripción; llénalo y entrégalo en la oficina del Centro de
-            Gestión Tecnológica, donde te atenderemos con gusto.</p>
-          <BR>
-          <BR>
+            <div class="row row-cols-1 row-cols-md-2 g-2">
+              <div class="col">
+                <div class="cards">
+                  <div class="card-body">
+                    <h4 class="card-title"><div class="Titulo2">EGRESADOS Y ALUMNOS</div></h4>
+                    <p class="card-text">En el apartado de Archivos disponibles puedes bajar el formato de inscripción; llénalo y entrégalo en la oficina del Centro de
+                      Gestión Tecnológica, donde te atenderemos con gusto.</p>
+                      <BR>
+                        <BR>
+                  </div>
+                </div>
+              </div>
 
-          <h4 class="card-title"><div class="Titulo2">PARA EMPRESAS</div></h4>
-          <p class="card-text">Enviar correo electrónico a la dirección agarcia@tese.edu.mx con los datos de la vacante, el perfil del puesto y los datos de la empresa.</p>
-          <BR>
-          <BR>
+                <div class="col">
+                  <div class="cards">
+                    <div class="card-body">
+                      <h4 class="card-title"><div class="Titulo2">EMPRESAS</div></h4>
+                      <p class="card-text">Enviar correo electrónico a la dirección agarcia@tese.edu.mx con los datos de la vacante, el perfil del puesto y los datos de la empresa.</p>
+                      <BR>
+                        <BR>
+                    </div>
+                  </div>
+                  </div>
+              </div>
+
 
           <h4 class="card-title"><div class="Titulo2">INCUBADORA DE EMPRESAS</div></h4>
           <p class="card-text">Es un área que brinda apoyo a emprendedores en la creación de empresas,  mediante servicios de articulación y acompañamiento empresarial para
             la elaboración y puesta en marcha de su plan de negocios. También acerca a  las empresas incubadas a posible financiamiento. Especialmente apoya la  puesta en
-            marcha de proyectos que comercializan un producto o un  servicio con alguna innovación tecnológica y que requiera de  infraestructura física y tecnología especializa.
+            marcha de proyectos que comercializan un producto o un  servicio con alguna innovación tecnológica y que requiera de  infraestructura física y tecnología especializada.
           </p>
 
             <UL>
@@ -312,7 +345,7 @@
             <div class="row row-cols-1 row-cols-md-2 g-2">
               <div class="col">
           <h4 class="card-title"><div class="Titulo2">DOCUMENTO ELECTRÓNICO</div></h4>
-          <p class="card-text">El alumno ingresa al sitiohttp://escolarweb.tese.edu.mxdonde captura su número de usuario y contraseña lo que permitirá entrar a su sesión,
+          <p class="card-text">El alumno ingresa al sitio<a href="http://escolarweb.tese.edu.mx"> http://escolarweb.tese.edu.mx </a>donde captura su número de usuario y contraseña lo que permitirá entrar a su sesión,
             ahí seleccionará la ventana académicos y posteriormente historial académico para imprimirlo.</p>
             <br>
             <br>
@@ -351,7 +384,7 @@
         <p class="card-body">
           <h4 class="card-title"><div class="Titulo2">SERVICIO A LA COMUNIDAD</div></h4>
           <p class="card-text">El Tecnológico de Estudios Superiores de Ecatepec cuenta con 6 programas de servicio social comunitario:</p>
-.
+
           <UL>
             <LI>Proyecto Integral de Desarrollo Social: Se apoya a las  comunidades de alto índice de marginación, en específico en el Municipio
                de Villa Victoria, así como a comunidades en zona de pobreza urbana en  el Municipio de Ecatepec.</LI>
@@ -416,11 +449,6 @@
 
         <!-- Etiqueda de cerrado de la side nav bar, se elimina para retirar la barra de navegacion lateral -->
     </mat-drawer-content>
-
-
 </mat-drawer-container>
 
 <!-- Div del body, esto centra el contenido en modo web y deja fuera los mat card -->
-
-
-

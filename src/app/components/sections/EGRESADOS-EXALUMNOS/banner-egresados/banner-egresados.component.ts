@@ -1,5 +1,5 @@
 import { CAROUSEL_DATA_ITEMS_EGRESADOS } from './bannerEgresados';
-import { ICarouselItem } from '../../carousel/icarousel-item.metadata';
+import { ICarouselItemCarreras } from '../../carrera/carousel-carreras/Icarousel-carreras.item.metadata';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './banner-egresados.component.html'
 })
 export class BannerEgresadosComponent implements OnInit {
-  public carouselData: ICarouselItem[]=CAROUSEL_DATA_ITEMS_EGRESADOS;
+  public carouselData: ICarouselItemCarreras[]=CAROUSEL_DATA_ITEMS_EGRESADOS;
   constructor() { }
 
   ngOnInit(): void {

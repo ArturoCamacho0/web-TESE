@@ -1,5 +1,6 @@
+import { ICarouselItemCarreras } from './../../../carrera/carousel-carreras/icarousel-carreras.item.metadata';
 import { CAROUSEL_DATA_ITEMS_MQUIMICA } from './bannerMquimica';
-import { ICarouselItem } from '../../../carousel/icarousel-item.metadata';
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./banner-mquimica.component.css']
 })
 export class BannerMquimicaComponent implements OnInit {
-  public carouselData: ICarouselItem[]=CAROUSEL_DATA_ITEMS_MQUIMICA;
+  public carouselData: ICarouselItemCarreras[]=CAROUSEL_DATA_ITEMS_MQUIMICA;
 
   constructor() { }
 
