@@ -5,21 +5,23 @@ export const CAROUSEL_DATA_ITEMS_BANNERP: ICarouselItem[] = [
     {
         id: 1,
         title: {
-            first: 'Inscribete al ',
-            second: 'TESE;'
+            first: 'Forma parte de ',
+            second: 'FAMILIATESE;'
         },
         subtitle: 'Prueba de imágen',
         link: 'localhost:4200/asd',
-        image: "assets/images/admisionytramitesimg/inscripcion/pexels-photo-1181243.jpeg"
+        image: "assets/images/admisionytramitesimg/inscripcion/pexels-photo-3178818.jpeg"
     }, {
         id: 2,
         title: {
-            first: 'Noticias',
-            second: ''
+            first: 'Inscripciones Abiertas;',
+            second: 'Convocatoria aqui',
+
+
         },
         subtitle: '',
         link: 'Carreras/Industrial',
-        image: "assets/images/tese2.jpg"
+        image: "assets/images/admisionytramitesimg/inscripcion/pexels-photo-4861373.jpeg"
     }, {
         id: 3,
         title: {
@@ -28,7 +30,7 @@ export const CAROUSEL_DATA_ITEMS_BANNERP: ICarouselItem[] = [
         },
         subtitle: '',
         link: 'Carreras/Industrial',
-        image: "assets/images/tese3.jpg"
+        image: "../../../../../assets/images/admisionytramitesimg/inscripcion/BOLETAINSCRIPCIO.jpg"
     }
 ]
 

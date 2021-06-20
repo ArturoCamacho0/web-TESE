@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { CAROUSEL_DATA_ITEMS_BANNERP } from './carousel';
 import { ICarouselItem } from '../../carousel/icarousel-item.metadata';
 @Component({
-  selector: 'app-cursos',
-  templateUrl: './cursos.component.html',
-  styleUrls: ['./cursos.component.css']
+  selector: 'app-reinscripcion',
+  templateUrl: './reinscripcion.component.html',
+  styleUrls: ['./reinscripcion.component.css']
 })
-export class CursosComponent implements OnInit {
+export class ReinscripcionComponent implements OnInit {
   public carouselData: ICarouselItem[]=CAROUSEL_DATA_ITEMS_BANNERP;
   constructor() { }
 
@@ -24,4 +24,5 @@ export class CursosComponent implements OnInit {
     let l = document.getElementById('left');
     l.classList.toggle('open');
   }
+
 }

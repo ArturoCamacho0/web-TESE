@@ -54,7 +54,7 @@
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="home">Home</a></li>
               <li class="breadcrumb-item"><a href="admisionytramites">Admision y Tramites</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Cursos</li>
+              <li class="breadcrumb-item active" aria-current="page">Servicio Social</li>
             </ol>
           </nav>
 
@@ -62,16 +62,26 @@
 eliminado sin ningun problema: Para la implementacion en tu componente tendras que realizar las importaciones necesarias en el ts; ir al archivo para mas informacion -->
           <app-carousel [items]="carouselData"></app-carousel>
 
-          <h1 class="titulo">Cursos Y Diplomados</h1>
+          <h1 class="titulo">Servicio social Y Practicas</h1>
 
           <div class="card">
             <div class="card-body">
               <h4 class="card-title">
-                <div class="Titulo2">Objetivos: </div>
+                <div class="Titulo2">Acerca de: </div>
               </h4>
               <br class="card-text" font-weight="bold"> <span STYLE="font-size:large;color:#414141; text-align: justify;">
-                La educación es un ingrediente fundamental a lo largo de la vida, para el desarrollo de la comunidad, municipio, estado y del país, que brinda al hombre la oportunidad de integrarse y pertenecer a la sociedad del conocimiento, para que cuente con las herramientas necesarias que respondan a las demandas del mundo laboral actual, competitivo y globalizado<br><br>
+                Conjunto de actividades de carácter temporal y obligatorio que presentan los estudiantes y pasantes de las carreras técnicas y profesionales, en el que aplicarán los conocimientos científicos, técnicos y humanísticos adquiridos en su formación.<br><br>
 
+                <span STYLE="font-weight: bold;">Nota de Advertencia:</span> Se solicita como requisito previo a la obtención del título profesional.
+                <br>
+                <span STYLE="font-weight: bold;">Usuarios:</span>
+                Alumnos del TESE haber acreditado al menos el 50% del plan de estudios de licenciatura Egresados que no hayan realizado su trámite.
+                 <br>
+                 <span STYLE="font-weight: bold;">Documentos que se obtienen:</span>
+                 Constancia de Prestación del Servicio Social.
+                 <br>
+                 <span STYLE="font-weight: bold;"> Vigencia</span>
+                 Permanente
 
                </span>
 
@@ -90,20 +100,69 @@ eliminado sin ningun problema: Para la implementacion en tu componente tendras q
     <mat-divider></mat-divider>
           <mat-divider></mat-divider>
           <mat-divider></mat-divider>
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  Documentación necesaria
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body"><ul class="list-group">
+                  <li class="list-group-item"><ul class="list-group">
+                    <li class="list-group-item"> 1. Acreditar el 50% del plan de estudios.
+
+                    </li>
+                    <li class="list-group-item">2. Asistir al curso de inducción al servicio social "SENSIER".</li>
+                    <li class="list-group-item">3. Solicitud – Registro/Autorización (debidamente requisitada desde tu sesión de alumno del Sistema de Control Escolar</li>
+                    <li class="list-group-item">4. Copia del comprobante del seguro colectivo accidentes escolares (Solicitar en la Unidad de Registro y Certificación)</li>
+                    <li class="list-group-item">5. Folder tamaño carta color Beige</li>
+
+                  </ul>
 
 
+                </ul></div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                  Opciones para obtener un lugar
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body"><ul class="list-group">
+                  <li class="list-group-item">1. Consultando mediante sesión de alumnos del Sistema de Control Escolar, el Catálogo de Entidades Receptoras autorizadas para realizar Servicio Social.
+                   </li>
+                  <li class="list-group-item">2. Participando en el desarrollo de Proyectos de Investigación a cargo de las áreas que integran este Tecnológico.</li>
+                  <li class="list-group-item">
+                    3. Participando en el desarrollo del Proyecto Servicio Social Comunitario, haciendo diferentes actividades integrales para beneficio de la comunidad</li>
+
+                </ul></div>
+              </div>
+            </div>
+            <mat-divider></mat-divider>
+
+        </div>
+
+          <mat-divider></mat-divider>
 
 
           <div class="card">
             <div class="card-body">
 
               <span class="text-center">
-                <div class="subtitulo">Perfil del egresado:
+                <div class="subtitulo">Duración:
 
                 </div>
 
                 <span STYLE="text-align: center;font-size:x-large;color:#414141;">
-                  Estos Diplomados se ofrecen a estudiantes, egresados, personal de los sectores público y privado, así como al público en general, interesados en su capacitación y actualización.
+                  En un lapso mínimo de seis meses, conforme a las fechas establecidas en el Departamento de Servicio Social y Seguimiento de Egresados.
                 </span>
 
               </span>
@@ -127,10 +186,17 @@ eliminado sin ningun problema: Para la implementacion en tu componente tendras q
             <div class="card-body">
 
               <span class="text-center">
-                <div class="subtitulo">Campo laboral</div>
+                <div class="subtitulo">Organismo Responsable:</div>
 
                 <span STYLE="text-align: center;font-size:x-large;color:#414141;">
-                  Brinda la oportunidad de integrarse y pertenecer a la sociedad del conocimiento, para que cuente con las herramientas necesarias que respondan a las demandas del mundo laboral actual, competitivo y globalizado.
+
+                  <span STYLE="font-weight: bold;">Organismo Responsable:</span> <br>
+
+                  Tecnológico de Estudios Superiores de Ecatepec <br>
+                  <span STYLE="font-weight: bold;">Oficinas:</span>
+                  <br>Av. Tecnológico S/N C.P. 55210 Col. Valle de Anáhuac, Ecatepec de Morelos, Estado de México Edificio D en Ventanillas
+                <br>  <span STYLE="font-weight: bold;">Telefono:</span> <br>
+                  01 (55) 50 00 23 42
 
 
 

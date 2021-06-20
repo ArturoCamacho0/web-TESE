@@ -3,7 +3,7 @@
 /* CSS Personalizado para la seccion */
 .list-group-item{
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  color: #464646;
+  color: #EA5455;
 
   font-weight: bold;
 }
@@ -20,10 +20,6 @@
   object-fit: cover;
 }
 
-
-.card12{
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
-}
 
 /* Configuracion de estilos para la plantilla contenido. */
 
@@ -52,16 +48,6 @@
   font-size: 4ch;
 }
 
-.card-text{ color: #555555;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight:lighter;
-  text-align: justify;
-  border-bottom: 1px solid #e6bb45;
-  padding: 10px;
-  font-size: 3ch;
-  line-height: 2.5ch;}
-
-
 /* Subtitulo central o ideas */
 .subtitulo {
   color: #2c5234;
@@ -72,12 +58,12 @@
   font-size: 3ch;
 }
 
-
 /*  */
 
 /* Cuerpo de la seccion SUBTITULO */
 .card-body {
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 13px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 
 /* Se agrega un efecto de sombra al rededor del contenido */
@@ -211,15 +197,15 @@ a {
 }
 
 .informatica:hover > mat-card {
-  background-image: url("../../../../assets/images/informatica.jpg");
+  background-image: url("../../../../../assets/images/informatica.jpg");
 }
 
 .quimica:hover > mat-card {
-  background-image: url("../../../../assets/images/quimica.jpg");
+  background-image: url("../../../../../assets/images/quimica.jpg");
 }
 
 .contador:hover > mat-card {
-  background-image: url("../../../../assets/images/contador.jpg");
+  background-image: url("../../../../../assets/images/contador.jpg");
 }
 
 .act {
@@ -277,9 +263,3 @@ a {
   border: 1px solid black;
   border-top-style: none;
 }
-
-
-
-
-
-

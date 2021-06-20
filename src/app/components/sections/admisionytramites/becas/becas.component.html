@@ -1,28 +1,28 @@
 <div class="container-fluid">
     <mat-drawer-container class="side-container">
-      
-  
+
+
         <mat-divider class="divider"></mat-divider>
-  
+
         <!-- Empieza el area para ingresar contenido en el panel lateral -->
         <div class="text-side">
           <div class="box-shadow= 50px 50px;">
-  
+
             <!-- Breadcrumb, ayuda a que el sitio sea mas agil y el usuario sepa en donde esta localizado, hacia donde puede ir y que paginas le anteceden -->
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item"><a href="#">Segundo Menu</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Plantilla de Ejemplo</li>
+                <li class="breadcrumb-item"><a href="home">Home</a></li>
+                <li class="breadcrumb-item"><a href="admisionytramites">Admision y Tramites</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Becas</li>
               </ol>
             </nav>
-  
+
             <!-- Carrousel dentro de la pagina; de no ser necesario puede ser
   eliminado sin ningun problema: Para la implementacion en tu componente tendras que realizar las importaciones necesarias en el ts; ir al archivo para mas informacion -->
             <app-carousel [items]="carouselData"></app-carousel>
-  
+
             <h1 class="titulo">BECAS</h1>
-  
+
             <div class="card">
               <div class="card-body">
                 <h4 class="card-title">
@@ -34,9 +34,9 @@
                 </p>
               </div>
             </div>
-  
+
             <mat-divider></mat-divider>
-  
+
             <div class="accordion accordion-flush" id="accordionFlushExample">
               <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingOne">
@@ -68,7 +68,7 @@
                   <div class="accordion-body">
                     <ul>
                     <li> Marzo</li>
-                    <li>Octubre</li> 
+                    <li>Octubre</li>
                     </ul>
                   </div>
                 </div>
@@ -96,37 +96,40 @@
               </div>
             </div>
             <mat-divider></mat-divider>
-  
-  
+            <mat-divider></mat-divider>
+            <div class="card12">
+              <img src= "../../../../../assets/images/admisionytramitesimg/becasimg/pexels-photo-1252500.jpeg" class="card-img-bottom" alt="...">
+            </div>
+
             <div class="card">
               <div class="card-body">
-  
+
                 <span class="text-center">
                   <div class="subtitulo">Aviso Importante</div>
-  
+
                   Debes estar al pendiente de las Convocatorias y las fechas que sete presentan asi como hora de atencion para las Becas de Educacion Superior, y por ultimo cumplir con los requisitos para tener derecho a la Becas que deceas.
                 </span>
               </div>
             </div>
-  
+
             <!-- Seccion de "carrousel", donde se puede enlazar a otras cosas que quiza no consideren poner una sidebar -->
             <div class="cards">
               <mat-card class="careers">
                 <div class="Titulo2">Becas Relacionadas:</div>
-  
+
                 <div class="row">
                   <a href="https://www.daad.de/en/study-and-research-in-germany/scholarships/dlr-daad-research-fellowships/" class="card-career DDRL col">
                     <mat-card>
                       <span class="h1">DLR-DAAD Research Fellowships</span>
                     </mat-card>
                   </a>
-  
+
                   <a href="https://research.fb.com/fellowship/" class="card-career facebook col">
                     <mat-card>
                       <span class="h1">Facebook research</span>
                     </mat-card>
                   </a>
-  
+
                   <a href="http://www.unesco.org/new/en/fellowships/programmes/unesco-poland-co-sponsored-fellowships-programme-engineering/" class="card-career unesco col">
                     <mat-card>
                       <span class="h1">Unesco</span>
@@ -134,10 +137,10 @@
                   </a>
                 </div>
               </mat-card>
-  
+
             </div>
-  
+
             <mat-divider></mat-divider>
-  
-          
+
+
   </div>

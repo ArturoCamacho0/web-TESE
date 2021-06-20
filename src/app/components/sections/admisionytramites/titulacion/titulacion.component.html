@@ -54,7 +54,7 @@
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="home">Home</a></li>
               <li class="breadcrumb-item"><a href="admisionytramites">Admision y Tramites</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Cursos</li>
+              <li class="breadcrumb-item active" aria-current="page">Titulacion</li>
             </ol>
           </nav>
 
@@ -62,19 +62,23 @@
 eliminado sin ningun problema: Para la implementacion en tu componente tendras que realizar las importaciones necesarias en el ts; ir al archivo para mas informacion -->
           <app-carousel [items]="carouselData"></app-carousel>
 
-          <h1 class="titulo">Cursos Y Diplomados</h1>
+          <h1 class="titulo">Titulacion</h1>
 
           <div class="card">
             <div class="card-body">
               <h4 class="card-title">
-                <div class="Titulo2">Objetivos: </div>
+                <div class="Titulo2">Proceso de Reinscripcion;</div>
               </h4>
               <br class="card-text" font-weight="bold"> <span STYLE="font-size:large;color:#414141; text-align: justify;">
-                La educación es un ingrediente fundamental a lo largo de la vida, para el desarrollo de la comunidad, municipio, estado y del país, que brinda al hombre la oportunidad de integrarse y pertenecer a la sociedad del conocimiento, para que cuente con las herramientas necesarias que respondan a las demandas del mundo laboral actual, competitivo y globalizado<br><br>
+                Es el trámite que realizan los y las egresados(as) de esta Institución para la obtención de su Título y Cédula Profesional, para ello deberán llevar a cabo en la jefatura de su división correspondiente la acreditación de alguna de las opciones de Titulación establecidas en el Reglamento respetivo y posteriormente presentar la documentación solicitada en la Oficina de Titulación.<br><br>
 
+                <span STYLE="font-weight: bold;"> Usuarios:</span> Los y Las egresados(as) de esta Institución
+                <br>
+                <span STYLE="font-weight: bold;">Documentos que se obtienen:</span>
 
+                Título y Cédula Profesional
+                 <br>
                </span>
-
                 <br>
                 <br>
 
@@ -90,20 +94,73 @@ eliminado sin ningun problema: Para la implementacion en tu componente tendras q
     <mat-divider></mat-divider>
           <mat-divider></mat-divider>
           <mat-divider></mat-divider>
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+               Opciones de Titulaciones
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body"><ul class="list-group">
+                  <li class="list-group-item"><ul class="list-group">
+                    <li class="list-group-item"> 1.Tesis Profesional
+
+                    </li>
+                    <li class="list-group-item">2. Proyecto de Investigación</li>
+                    <li class="list-group-item">3. Seminario de Titulación</li>
+                    <li class="list-group-item">4. Posgrado</li>
+                    <li class="list-group-item">5. Promedio General Sobresaliente</li>
+                    <li class="list-group-item">7. Experiencia Profesional</li>
+                    <li class="list-group-item">6. Créditos Adicionales de Especialidad</li>
+                    <li class="list-group-item">8. Examen de Conocimientos por áreas</li>
+                    <li class="list-group-item">9. Examen General de Egreso de Licenciatura (EGEL)</li>
+                    <li class="list-group-item">10. Memoria de Residencia</li>
+
+                  </ul>
 
 
+                </ul></div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+               Requisitos y Pasos
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body"><ul class="list-group">
+                  <li class="list-group-item">1. Requisitos para el trámite de titulación (FO-TESE-URC-19).
+                   </li>
+                  <li class="list-group-item">2. Características de fotografías para el trámite de titulación (FO-TESE-URC-22).</li>
+
+
+                </ul></div>
+              </div>
+            </div>
+            <mat-divider></mat-divider>
+
+        </div>
+
+          <mat-divider></mat-divider>
 
 
           <div class="card">
             <div class="card-body">
 
               <span class="text-center">
-                <div class="subtitulo">Perfil del egresado:
+                <div class="subtitulo">Pasos:
 
                 </div>
 
                 <span STYLE="text-align: center;font-size:x-large;color:#414141;">
-                  Estos Diplomados se ofrecen a estudiantes, egresados, personal de los sectores público y privado, así como al público en general, interesados en su capacitación y actualización.
+                 Para realizar tu trámite deberás ingresar al vínculo de Generación de Fichas de Pago (SICI) para generar tu referencia de pago y consultar el instructivo para realizar el pago de derechos de titulación, posteriormente deberás presentar el pago junto con el resto de los requisitos en la oficina detitulación.
                 </span>
 
               </span>
@@ -111,7 +168,7 @@ eliminado sin ningun problema: Para la implementacion en tu componente tendras q
           </div>
           <mat-divider></mat-divider>
           <div class="card12">
-            <img src= "../../../../../assets/images/admisionytramitesimg/serviciosocial/pexels-photo-3769021.jpeg" class="card-img-bottom" alt="...">
+            <img src= "../../../../../assets/images/admisionytramitesimg/titulacion/pexels-photo-2293027.jpeg" class="card-img-bottom" alt="...">
           </div>
 
 
@@ -127,10 +184,17 @@ eliminado sin ningun problema: Para la implementacion en tu componente tendras q
             <div class="card-body">
 
               <span class="text-center">
-                <div class="subtitulo">Campo laboral</div>
+                <div class="subtitulo">Lugares y horarios</div>
 
                 <span STYLE="text-align: center;font-size:x-large;color:#414141;">
-                  Brinda la oportunidad de integrarse y pertenecer a la sociedad del conocimiento, para que cuente con las herramientas necesarias que respondan a las demandas del mundo laboral actual, competitivo y globalizado.
+
+                  <span STYLE="font-weight: bold;">Organismo Responsable:</span> <br>
+
+                  Tecnológico de Estudios Superiores de Ecatepec <br>
+                  <span STYLE="font-weight: bold;">Oficinas:</span>
+                  <br>Av. Tecnológico S/N C.P. 55210 Col. Valle de Anáhuac, Ecatepec de Morelos, Estado de México Edificio D en Ventanillas
+                <br>  <span STYLE="font-weight: bold;">Telefono:</span> <br>
+                  01 (55) 50 00 23 42
 
 
 
@@ -140,13 +204,6 @@ Horario de Atención:  de Lunes a Viernes de 8:00 A 18:00 horas
               </span>
             </div>
           </div>
-          <mat-divider></mat-divider>
-          <div class="card12">
-            <img src= "../../../../../assets/images/admisionytramitesimg/serviciosocial/pexels-photo-3184644.jpeg" class="card-img-bottom" alt="...">
-          </div>
-
-
-
           <mat-divider></mat-divider>
 
 
@@ -168,7 +225,7 @@ Horario de Atención:  de Lunes a Viernes de 8:00 A 18:00 horas
 
                   <img src="../../../../../assets/images/admisionytramitesimg/reinscripcion/edomex_icono_pdf.gif" id="ctl00_ContentPlaceHolder2_Seccion_docs1_imagen_doc_0" width="21" height="21">
 
-                  <a id="http://ssocial.tese.edu.mx/ccyt_ssocial/">Servicio socila, prácticas y residencias para alumnos externos</a>
+                  <a id="ctl00_ContentPlaceHolder2_Seccion_docs1_liga0" href="http://www.tese.edu.mx/documentos2004/5886_SHFFYLY.doc">Características de Fotografías para Trámite de Titulación FO-TESE-URC-22</a>
 
 
 <br>
@@ -178,26 +235,6 @@ Horario de Atención:  de Lunes a Viernes de 8:00 A 18:00 horas
 
 
                   </div>
-
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="flush-headingOne">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#flush-collapsetwo" aria-expanded="false" aria-controls="flush-collapsetwo">
-                 Multimedia
-                </button>
-              </h2>
-              <div id="flush-collapsetwo" class="accordion-collapse collapse" aria-labelledby="flush-headingtwo"
-                data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">
-
-
-                  <img src="../../../../../assets/images/admisionytramitesimg/reinscripcion/6895_QZAVZFH.jpg" width="102%" height="80%">
-
-
-                  </div>
-
               </div>
             </div>
           </div>
