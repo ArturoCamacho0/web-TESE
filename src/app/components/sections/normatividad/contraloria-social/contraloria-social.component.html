@@ -1,0 +1,185 @@
+<div class="container-fluid">
+    <mat-drawer-container class="side-container">
+      <!-- Inicio de la SIDE NAV BAR; Si se desea eliminar se borrara este bloque de codigo y el final mat drawer  -->
+      <mat-drawer mode="side" class="sidebar" id="side" #drawer opened>
+        <mat-selection-list role="list container" [multiple]="false">
+            <a href="normatividad">
+                <mat-list-option>
+                  Normatividad
+                </mat-list-option>
+              </a>
+              <a href="informe">
+                <mat-list-option role="listitem">
+                  Informe de Actividades
+                </mat-list-option>
+                </a>
+                <a href="compromiso">
+                <mat-list-option role="listitem">
+                  Compromiso Social
+                </mat-list-option>
+                </a>
+        
+                <a href="politica">
+                  <mat-list-option>
+                    Politica del Sistema de Gestión Integral
+                  </mat-list-option>
+                </a>
+                <a href="calendario">
+                <mat-list-option role="listitem">
+                   Calendario Escolar
+                </mat-list-option>
+                </a>
+                <a href="contraloria">
+                <mat-list-option role="listitem">
+                  Contraloria Social
+                </mat-list-option>
+                </a>
+      
+        </mat-selection-list>
+      </mat-drawer>
+  
+      <mat-drawer-content class="side-content">
+        <button id="arrow" type="button" mat-button (click)="drawer.toggle()" (click)="open()">
+          <mat-icon id="right" class="open">arrow_forward</mat-icon>
+          <mat-icon id="left">arrow_back</mat-icon>
+        </button>
+  
+        <mat-divider class="divider"></mat-divider>
+  
+        <!-- Empieza el area para ingresar contenido en el panel lateral -->
+        <div class="text-side">
+          <div class="box-shadow= 50px 50px;">
+  
+            <!-- Breadcrumb, ayuda a que el sitio sea mas agil y el usuario sepa en donde esta localizado, hacia donde puede ir y que paginas le anteceden -->
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="normatividad">Normatividad</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Contraloria social</li>
+              </ol>
+            </nav>
+  
+            <!-- Carrousel dentro de la pagina; de no ser necesario puede ser
+  eliminado sin ningun problema: Para la implementacion en tu componente tendras que realizar las importaciones necesarias en el ts; ir al archivo para mas informacion -->
+            <app-carousel [items]="carouselData"></app-carousel>
+  
+            <h1 class="titulo">
+                Contraloria Social</h1>
+  
+            <div class="card">
+              
+                <h4 class="card-title">
+            <div class="Titulo2">Información referente a PRODEP
+
+            </div>
+                </h4>
+                
+              
+            </div>
+
+            
+  
+            <mat-divider></mat-divider>
+  
+            
+  
+            
+  
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    PRODEP 2017
+                  </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                  data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    
+Esquema de Contraloría Social.<br><br>
+
+PRODEP guía TESE-2018.<br><br>
+
+1.	Programa Institucional de Difusión de Contraloría Social<br>
+2.	Guía Operativa de Contraloría Social<br>
+3.	Ficha de Definición para la Operación<br>
+4.	Programa Anual de Trabajo de Contraloría Social<br>
+5.	Cobertura de Contraloría Social<br>
+6.	Informe Anual de Comité<br>
+7.	Reglas de operación Vigentes del Programa<br>
+8.	Informes<br>
+9.	Constitución y registro de Comité <br>
+10.	Quejas y Denuncias<br><br>
+Responsable de Contraloría Social<br>
+M  en A.F. Ma Cristina Peres Ayala<br>
+Jefa de la Unidad de Planeación<br>
+Av. Tecnológico s/n Col. Valle de Anahuac Secc. Fuentes, Ecatepec de Morelos,<br>
+Estado de México<br>
+Edificio de Gobierno<br>
+Tel. 50002311
+                    </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    PRODEP 2018
+                </button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                  data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    a) Información del Programa y Guía Operativa.<br><br>
+
+                    Guía Operativa (Qué es el Programa PRODEP, características generales,tipo,monto,periodo de ejecución y fecha de entrega), requisitos para entrega de apoyos conforme a la convocatoria, derechos y obligaciones de los beneficiarios, población objetivo, instancias normativas, ejecutoras y órganos de control que participan en el programa, datos de contacto, medios institucionales para presentar quejas, procedimientos para realizar las actividades de Contraloría Social, qué es Contralorìa Social, qué vigila, qué es un Comité de Contraloría Social y objetivo y funciones).
+                    
+                    <br> b) Medidas para promover la entidad de género entre hombres y mujeres  en la integración de los Comites.
+                    
+                    c) Esquema de Contraloría Social.<br>
+                    
+                    d) Programa Anual de Trabajo (Programa Institucional).<br><br>
+                    
+                     Formatos<br><br>
+                    
+                    
+                    
+                    1. Acta de registro del Comité de Contraloría social.<br>
+                    
+                     2. Minuta de la reunión.<br>
+                    
+                     3. Información pre llenada por el programa.<br>
+                      </div>
+                  </div>
+                </div>
+              
+            <mat-divider></mat-divider>
+            <!-- Seccion de documentos; Algunas paginas contienen documentos o enlaces a los que el usuario puede acceder/descargar, si lo necesitas puedes implementarlo en cada uno de los "accordion body" cada uno de estos representa a una opcion o documento -->
+            <div class="alert alert-primary d-flex align-items-center" id="acordeon" role="alert">
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                  class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img"
+                  aria-label="Warning:">
+                  <path
+                    d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                </svg> -->
+                
+                <div>
+                
+                  <div class="accordion" id="accordionPanelsStayOpenExample">
+                    <div class="accordion-item">
+                      
+                    </div>
+                   <h3> Derechos Reservados 2021© </h3>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+  
+        <!-- Etiqueda de cerrado de la side nav bar, se elimina para retirar la barra de navegacion lateral -->
+      </mat-drawer-content>
+    </mat-drawer-container>
+  </div>

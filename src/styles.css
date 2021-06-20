@@ -3,3 +3,16 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;background-color: #fff;
 }
+body::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  body::-webkit-scrollbar-track {
+    background: #ccc;
+
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: #eb2a30;
+    border-radius: 10px;
+  }
