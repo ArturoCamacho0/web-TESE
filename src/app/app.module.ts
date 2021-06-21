@@ -1,3 +1,4 @@
+import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -9,6 +10,7 @@ import { MaterialModule } from './components/material/material.module';
 import { LayoutModule } from './components/layout/layout.module';
 import { SectionsModule } from './components/sections/sections.module';
 
+
 @NgModule({
   declarations: [
     AppComponent
@@ -18,6 +20,7 @@ import { SectionsModule } from './components/sections/sections.module';
     routing,
     appRoutingProviders,
     BrowserAnimationsModule,
+
     MaterialModule,
 
     LayoutModule,
