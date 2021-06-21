@@ -24,7 +24,8 @@ import { ContactoComponent } from './contacto/contacto.component';
   ],
   exports: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ContactoComponent
   ]
 })
 export class LayoutModule { }

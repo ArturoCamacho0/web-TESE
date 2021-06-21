@@ -36,6 +36,7 @@ import { CuerpoIndustrialComponent } from './components/sections/carrera/profesi
 import { CuerpoMecanicaComponent } from './components/sections/carrera/profesion/IngenieriaMecanica/cuerpo-mecanica/cuerpo-mecanica.component';
 import { CuerpoMecatronicaComponent } from './components/sections/carrera/profesion/IngenieriaMecatronica/cuerpo-mecatronica/cuerpo-mecatronica.component';
 import { CuerpoQuimicaComponent } from './components/sections/carrera/profesion/IngenieriaQuimica/cuerpo-quimica/cuerpo-quimica.component';
+import { ContactoComponent } from './components/layout/contacto/contacto.component';
 
 
 
@@ -80,6 +81,7 @@ const appRoutes: Routes = [
 
 
     { path: 'plantillacontenido', component:PlantillaContenidoComponent },
+    { path: 'contact', component: ContactoComponent }
 
 ];
 
