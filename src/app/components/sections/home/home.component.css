@@ -119,3 +119,27 @@ a{
         display: none;
     }
 }
+
+mat-drawer.mat-drawer.sidebar.ng-tns-c28-0.ng-trigger.ng-trigger-transform.mat-drawer-side.mat-drawer-opened.ng-star-inserted {
+    padding: 0;
+  }
+  
+  mat-selection-list.mat-selection-list.mat-list-base.ng-tns-c28-0 {
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
+  }
+  
+  select.form-select {
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  select.form-select:hover{
+    background-color: #eb2a318f;
+  }
+  
+  select.form-select option{
+    background-color: #fff;
+  }

@@ -82,7 +82,7 @@ import { CuerpoQuimicaComponent } from './carrera/profesion/IngenieriaQuimica/cu
     PoliticaIntegralComponent,
     CompromisoSocialComponent,
     ContraloriaSocialComponent,
-    InformeActividadesComponent
+    InformeActividadesComponent,
 
     PaginaEgresadosComponent,
     BannerEgresadosComponent,

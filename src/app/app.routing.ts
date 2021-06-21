@@ -63,11 +63,10 @@ const appRoutes: Routes = [
     { path:'Carreras/Industrial',component: CuerpoIndustrialComponent},
     { path:'Carreras/Mecanica',component: CuerpoMecanicaComponent},
     { path:'Carreras/Mecatronica',component: CuerpoMecatronicaComponent},
-    { path:'Carreras/Quimica',component: CuerpoQuimicaComponent}
-  ];
+    { path:'Carreras/Quimica',component: CuerpoQuimicaComponent},
 
-{path: 'inscripcion', component:InscripcionComponent },
-{path:'admisionytramites',component:AdmisionytramitesComponent},
+    {path: 'inscripcion', component:InscripcionComponent },
+    {path:'admisionytramites',component:AdmisionytramitesComponent},
     { path: 'Logo', component:LogoComponent},
     { path: 'Historia', component:HistoriaComponent},
     { path: 'Mision', component:MisionVisionComponent},
@@ -77,7 +76,7 @@ const appRoutes: Routes = [
     {path: 'compromiso', component: CompromisoSocialComponent},
     {path: 'politica', component: PoliticaIntegralComponent},
     {path: 'contraloria', component: ContraloriaSocialComponent},
-    {path: 'informe', component: InformeActividadesComponent}
+    {path: 'informe', component: InformeActividadesComponent},
 
 
     { path: 'plantillacontenido', component:PlantillaContenidoComponent },
