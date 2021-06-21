@@ -11,6 +11,12 @@ import { InscripcionComponent } from './admisionytramites/inscripcion/inscripcio
 import { HistoriaComponent } from './Identidad-institucional/historia/historia.component';
 import { LogoComponent } from './Identidad-institucional/logo/logo.component';
 import { MisionVisionComponent } from './Identidad-institucional/mision-vision/mision-vision.component';
+import { NormatividadComponent } from './normatividad/normatividad.component';
+import { CalendarioEscolarComponent } from './normatividad/calendario-escolar/calendario-escolar.component';
+import { PoliticaIntegralComponent } from './normatividad/politica-integral/politica-integral.component';
+import { CompromisoSocialComponent } from './normatividad/compromiso-social/compromiso-social.component';
+import { ContraloriaSocialComponent } from './normatividad/contraloria-social/contraloria-social.component';
+import { InformeActividadesComponent } from './normatividad/informe-actividades/informe-actividades.component';
 
 
 
@@ -27,6 +33,12 @@ import { MisionVisionComponent } from './Identidad-institucional/mision-vision/m
     MisionVisionComponent,
 
 
+    NormatividadComponent,
+    CalendarioEscolarComponent,
+    PoliticaIntegralComponent,
+    CompromisoSocialComponent,
+    ContraloriaSocialComponent,
+    InformeActividadesComponent
   ],
   imports: [
     CommonModule,
@@ -34,7 +46,8 @@ import { MisionVisionComponent } from './Identidad-institucional/mision-vision/m
   ],
   exports: [
     HomeComponent,
-    CarouselComponent
+    CarouselComponent,
+    
   ]
 })
 export class SectionsModule { }
