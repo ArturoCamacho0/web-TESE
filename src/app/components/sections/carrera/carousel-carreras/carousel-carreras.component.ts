@@ -1,19 +1,21 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {ICarouselItemCarreras} from './Icarousel-carreras.item.metadata';
 
+
 @Component({
   selector: 'app-carousel-carreras',
   templateUrl: './carousel-carreras.component.html',
   styleUrls: ['./carousel-carreras.component.scss']
 })
 export class CarouselCarrerasComponent implements OnInit {
+  data:number;
+  m:number;
   /**
    * Custom Properties
    */
    @Input() height = 500;
    @Input() isFullScreen = false;
    @Input() items: ICarouselItemCarreras[] = [];
-
    /**
     * Final Properties
     */
@@ -22,6 +24,9 @@ export class CarouselCarrerasComponent implements OnInit {
    a="/";
    constructor() {
      this.finalHeight = this.isFullScreen ? '100vh' : `${this.height}px`;
+
+     setInterval(()=>this.automatic(),5000);
+     this.m=1;
     }
 
    ngOnInit() {
@@ -46,6 +51,7 @@ export class CarouselCarrerasComponent implements OnInit {
      }
      this.items.find(i => i.id === 0).marginLeft = finalPercentage;
      this.currentPosition = nextPosition;
+     this.m=0;
    }
 
    setBack() {
@@ -59,6 +65,16 @@ export class CarouselCarrerasComponent implements OnInit {
      }
      this.items.find(i => i.id === 0).marginLeft = finalPercentage;
      this.currentPosition = backPosition;
-
+     this.m=0;
    }
+   automatic(){
+     if(this.m==1){
+      this.setNext();
+     }
+     if(this.m==0){
+       this.m=1;
+     }
+   }
+
+
  }
