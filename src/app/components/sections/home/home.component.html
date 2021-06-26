@@ -3,6 +3,21 @@
 <mat-drawer-container class="side-container">
     <mat-drawer mode="side" class="sidebar" id="side" #drawer opened>
         <mat-selection-list role="list container" [multiple]="false">
+
+        <mat-accordion>
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Self aware panel
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <a
+                    href="https://www.google.com/maps/place/TecNM+-+Tecnol%C3%B3gico+de+Estudios+Superiores+de+Ecatepec/@19.510275,-99.04016,15z/data=!4m5!3m4!1s0x0:0x700d93a5d515a259!8m2!3d19.5102753!4d-99.0401602?hl=es-419">
+                    Ubicaci&oacute;n
+                </a>
+            </mat-expansion-panel>
+        </mat-accordion>
+
             <select class="form-select" aria-label="Default select example">
                 <option selected>La Institución</option>
                 <option><a href="#">
@@ -118,11 +133,16 @@
                     </a></option>
             </select>
             <select class="form-select" aria-label="Default select example">
-                <option><a
-                        href="https://www.google.com/maps/place/TecNM+-+Tecnol%C3%B3gico+de+Estudios+Superiores+de+Ecatepec/@19.510275,-99.04016,15z/data=!4m5!3m4!1s0x0:0x700d93a5d515a259!8m2!3d19.5102753!4d-99.0401602?hl=es-419">
-                        <mat-list-option>Ubicación</mat-list-option>
-                    </a></option>
+                <a
+                    href="https://www.google.com/maps/place/TecNM+-+Tecnol%C3%B3gico+de+Estudios+Superiores+de+Ecatepec/@19.510275,-99.04016,15z/data=!4m5!3m4!1s0x0:0x700d93a5d515a259!8m2!3d19.5102753!4d-99.0401602?hl=es-419">
+                    <mat-list-option>
+
+                        Ubicación
+
+                    </mat-list-option>
+                </a>
             </select>
+
             <select class="form-select" aria-label="Default select example">
                 <option><a href="#">
                         <mat-list-option>Investigación</mat-list-option>

@@ -10,6 +10,11 @@ import { LayoutModule } from './components/layout/layout.module';
 import { SectionsModule } from './components/sections/sections.module';
 import { ContactoComponent } from './components/layout/contacto/contacto.component';
 
+// Firebase
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { environment } from '../environments/environment';
+
 const router: Routes =[
   {
     path: 'contacto',
@@ -32,7 +37,9 @@ const router: Routes =[
 
     LayoutModule,
     SectionsModule,
-    RouterModule.forRoot(router)
+    RouterModule.forRoot(router),
+    AngularFireModule.initializeApp(environment.firebase),
+ 	  AngularFirestoreModule
   ],
   providers: [
     appRoutingProviders
