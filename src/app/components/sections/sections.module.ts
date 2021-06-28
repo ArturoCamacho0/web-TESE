@@ -13,6 +13,7 @@ import { BecasComponent } from './admisionytramites/becas/becas.component';
 import { CursosComponent } from './admisionytramites/cursos/cursos.component';
 import { TitulacionComponent } from './admisionytramites/titulacion/titulacion.component';
 import { ServiciosocialComponent } from './admisionytramites/serviciosocial/serviciosocial.component';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ServiciosocialComponent } from './admisionytramites/serviciosocial/serv
     BecasComponent,
     CursosComponent,
     TitulacionComponent,
-    ServiciosocialComponent
+    ServiciosocialComponent,
+    AdminComponent
   ],
   imports: [
     CommonModule,

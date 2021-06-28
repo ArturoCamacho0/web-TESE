@@ -12,7 +12,7 @@ import {TitulacionComponent} from './components/sections/admisionytramites/titul
 
 import {ServiciosocialComponent} from './components/sections/admisionytramites/serviciosocial/serviciosocial.component';
 
-
+import { AdminComponent } from './components/sections/admin/admin.component';
 
 // Rutas
 const appRoutes: Routes = [
@@ -25,7 +25,8 @@ const appRoutes: Routes = [
 {path:'cursos',component:CursosComponent},
 {path:'titulacion',component:TitulacionComponent},
 {path:'serviciosocial',component:ServiciosocialComponent},
-{path:'admisionytramites',component:AdmisionytramitesComponent}
+{path:'admisionytramites',component:AdmisionytramitesComponent},
+{path:'admin',component:AdminComponent}
 ];
 
 // Exportar el modulo

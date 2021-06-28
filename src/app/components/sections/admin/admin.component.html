@@ -1,0 +1,114 @@
+<div class="container-fluid">
+  <mat-drawer-container class="side-container">
+    <!-- Inicio de la SIDE NAV BAR; Si se desea eliminar se borrara este bloque de codigo y el final mat drawer  -->
+    <mat-drawer mode="side" class="sidebar" id="side" #drawer opened>
+      <mat-selection-list role="list container" [multiple]="false">
+  <h2 class="adminpnl">Admin Panel</h2>
+
+        <a href="inscripcion">
+          <mat-list-option role="listitem">
+          Agregacion: Paginas
+          </mat-list-option>
+        </a>
+<a href="reinscripcion">
+        <mat-list-option role="listitem">
+          Consultar: Paginas
+        </mat-list-option>
+        </a>
+<a href="becas">
+        <mat-list-option role="listitem">
+          Actualizacion: Paginas
+        </mat-list-option>
+         </a>
+<a href="cursos">
+        <mat-list-option role="listitem">
+          Eliminacion: Paginas
+
+        </mat-list-option>
+      </a>
+
+      </mat-selection-list>
+    </mat-drawer>
+
+    <mat-drawer-content class="side-content">
+      <button id="arrow" type="button" mat-button (click)="drawer.toggle()" (click)="open()">
+        <mat-icon id="right" class="open">arrow_forward</mat-icon>
+        <mat-icon id="left">arrow_back</mat-icon>
+      </button>
+
+      <mat-divider class="divider"></mat-divider>
+
+      <!-- Empieza el area para ingresar contenido en el panel lateral -->
+      <div class="text-side">
+        <div class="box-shadow= 50px 50px;">
+
+
+          <!-- Carrousel dentro de la pagina; de no ser necesario puede ser
+eliminado sin ningun problema: Para la implementacion en tu componente tendras que realizar las importaciones necesarias en el ts; ir al archivo para mas informacion -->
+
+
+          <h1 class="titulo">Accesos Directos</h1>
+
+          <div class="card">
+            <div class="card-body" style="text-align:center">
+             Creacion de las funcionalidades CRUD [Prueba]
+            </div>
+          </div>
+
+<mat-divider>
+  <br> <br>
+</mat-divider>
+
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">
+                <div class="Titulo2">Proceso de Edicion</div>
+              </h4>
+
+              <form class="mt-4">
+                <div class="row">
+                  <div class="col">
+              <input type="text" class="form-control form-control-lg" placeholder="Titulo">
+
+            </div>
+            <div class="col">
+              <input type="text" class="form-control form-control-lg" placeholder="TituloDescripcion">
+            </div>
+            <div class="col">
+              <input type="text" class="form-control form-control-lg" placeholder="Descripcion">
+
+            </div>
+
+            </div>
+            </form>
+            </div>
+          </div>
+<mat-divider></mat-divider>
+<mat-divider></mat-divider>
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">
+                <div class="Titulo2">Proceso de Lectura</div>
+              </h4>
+
+
+
+
+
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+          </div>
+        </div>
+
+      <!-- Etiqueda de cerrado de la side nav bar, se elimina para retirar la barra de navegacion lateral -->
+    </mat-drawer-content>
+  </mat-drawer-container>
+</div>
