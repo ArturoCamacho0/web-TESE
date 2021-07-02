@@ -9,6 +9,7 @@ import { MaterialModule } from './components/material/material.module';
 import { LayoutModule } from './components/layout/layout.module';
 import { SectionsModule } from './components/sections/sections.module';
 import { ContactoComponent } from './components/layout/contacto/contacto.component';
+import { LoginComponent } from './components/layout/login/login.component';
 
 // Firebase
 import { AngularFireModule } from '@angular/fire';
@@ -19,6 +20,10 @@ const router: Routes =[
   {
     path: 'contacto',
     component: ContactoComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   }
 ];
 
