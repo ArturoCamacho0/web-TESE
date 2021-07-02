@@ -1,0 +1,60 @@
+<section>
+        <!-- PAGE TITLE
+            ================================================== -->
+            <div id="intro" class=" bg-image shadow-2-strong">
+          <div class="mask d-flex align-items-center h-100" >
+            <div class="login container">
+                <div class="col-md-12">
+                </div>
+              <div class="row justify-content-center">
+                <div class="col-xl-5 col-md-8">
+                  <form class="bg-white rounded-5 shadow-5-strong p-5" >
+                    <!-- Email input -->
+                    <div class="form-outline mb-4">
+                        <h1 align="center" class="text-dark">Iniciar Sesión</h1>
+                        <label for="exampleInputuser1" class="h5 form-label">Usuario</label>
+                        <input type="user" class="form-control" v-model="user.username">
+                    </div>
+    
+                    <!-- Password input -->
+                    <div class="form-outline mb-4">
+                        <label for="exampleInputPassword1" class="h5 form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" v-model="user.pass">
+                    </div>
+    
+                    <!-- Submit button -->
+                    <button type="submit" class="btn-circle btn btn-danger"><span class="h6">Ingresar</span></button>
+                  </form>
+                </div>
+              </div>
+            </div>
+        </div>
+        </div>
+</section>
+    
+    <style>
+    
+  .btn-circle{
+    width: 100% !important;
+    height: 30px !important;
+    text-align: center !important;
+    padding: 6px 0 !important;
+    font-size: 12px !important;
+    line-height: 1.428571429 !important;
+    border-radius: 15px !important;
+  }
+    #intro {
+            background-image: url('../assets/images/legin.jpeg');
+            height: 100vh;
+            padding: 400px 100px;
+            text-align: center;
+            
+          }
+    
+          /* Height for devices larger than 576px */
+          @media (min-width: 992px) {
+            #intro {
+              margin-top: -58.59px;
+            }
+          }
+    </style>
