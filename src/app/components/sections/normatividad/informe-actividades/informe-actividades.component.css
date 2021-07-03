@@ -40,7 +40,7 @@
   
     font-size: 6ch;
     font-weight: bold;
-    color: #2c5234;
+    color: #eb2a31da;
     line-height: 1.5ch;
     padding: 10px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 13px 6px -1px,
@@ -49,13 +49,14 @@
   
   /* Se utiliza para el primer subtitulo */
   .Titulo2 {
-    color: #2c5234;
+    color: #eb2a31da;
     font-weight: bold;
     text-align: justify;
-    border-bottom: 2px solid #9c8412;
+    border-bottom: 3px solid #eb2a31da;
     padding: 5px;
     font-size: 4ch;
   }
+  
   
   /* Subtitulo central o ideas */
   .subtitulo {
@@ -123,17 +124,29 @@
   body {
     background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
   }
+
+  #acordeon{
+    background-color:#ffffff;
+    color:black;
+  }
   
   #acordeon > div{
     width: 100%;
+    
   }
   
   #acordeon > div div a{
     width: 100%;
+    color: black;
+
+
   }
   
+
+  
   .accordion-item:hover h2 button{
-    background-color: rgb(181, 215, 255);
+    background-color: rgb(243, 71, 71);
+    color:white
   }
   
   /* Configuracion de estilos globales */
@@ -272,4 +285,7 @@
     border: 1px solid black;
     border-top-style: none;
   }
-  
+  .accordion-color{
+    color:#ffffff;
+    background-color: #eb2a31da;
+  }
