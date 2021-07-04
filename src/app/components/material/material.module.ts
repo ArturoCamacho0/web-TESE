@@ -22,6 +22,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 @NgModule({
   declarations: [],
@@ -47,7 +48,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatFormFieldModule,
     MatStepperModule,
     MatDividerModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatExpansionModule
   ],
   exports: [
     MatButtonModule,
@@ -70,7 +72,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatFormFieldModule,
     MatStepperModule,
     MatDividerModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatExpansionModule
   ]
 })
 export class MaterialModule { }
