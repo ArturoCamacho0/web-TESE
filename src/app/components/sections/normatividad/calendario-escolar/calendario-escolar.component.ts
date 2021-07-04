@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CAROUSEL_DATA_ITEMS_BANNERP } from './carousel';
 import { ICarouselItem } from '../../carousel/icarousel-item.metadata';
+import { Observable } from 'rxjs';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-calendario-escolar',
@@ -9,9 +11,11 @@ import { ICarouselItem } from '../../carousel/icarousel-item.metadata';
 })
 export class CalendarioEscolarComponent implements OnInit {
   public carouselData: ICarouselItem[]=CAROUSEL_DATA_ITEMS_BANNERP;
+  items: Observable<any[]>
 
-
-  constructor() { }
+  constructor(firestore: AngularFirestore) { 
+    this.items = firestore.collection('Normatividad').valueChanges(); 
+  }
 
   ngOnInit(): void {
   }

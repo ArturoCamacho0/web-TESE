@@ -61,18 +61,33 @@
   
             <!-- Carrousel dentro de la pagina; de no ser necesario puede ser
   eliminado sin ningun problema: Para la implementacion en tu componente tendras que realizar las importaciones necesarias en el ts; ir al archivo para mas informacion -->
-            <app-carousel [items]="carouselData"></app-carousel>
+  <div *ngFor="let item of items | async">
+                
+                    
+    <img src= {{item.imagen}} width="100%" height="80%">      
+           
+           </div>
   
-            <h1 class="titulo">COMPROMISO SOCIAL</h1>
+            <h1 class="titulo">Compromiso Social</h1>
   
             <div class="card">
               <div class="card-body">
                 <h4 class="card-title">
-                  <div class="Titulo2">Acerca de:</div>
+                  <div class="Titulo2">
+                    <div *ngFor="let item of items | async">
+                
+                    
+                    {{item.titulo}}
+                    
+                    </div></div>
                 </h4>
-                <p class="card-text"> <b> El Tecnológico de Estudios Superiores de Ecatepec cuenta con:</b>
-                  <br>
-                  <br>
+                <p class="card-text"> <b> <div *ngFor="let item of items | async">
+                
+                    
+                  {{item.subtitulo}}
+                  
+                  </div></b>
+                  
                 </p>
               </div>
             </div>
@@ -85,13 +100,26 @@
               <div class="card-body">
   
                 <span class="text-center">
-                  <div class="subtitulo">Preparatoria Abierta</div>
-  
-                  Por medio de convenio con el SEIEM, se funge como Centro de asesoría y gestoría, 
-      en el que se atiende a la comunidad interna y externa.
-      <br> <br> 
-      La atención es en el Departamento de Servicio Social y Seguimiento de Egresados.
-      Ubicado en el Edificio “D” planta Baja los días sábado y domingo, en un horario de 8:00 am a 2:00 pm 
+                  <div class="subtitulo"><div *ngFor="let item of items | async">
+                
+                    
+                    {{item.prepa}}
+                    
+                    </div></div>
+                   <div *ngFor="let item of items | async">
+                
+                    
+                      {{item.desc1}}
+                      
+                      </div>
+      <br>
+      <div *ngFor="let item of items | async">
+                
+                    
+        {{item.desc2}}
+        
+        </div>
+     
                 </span>
               </div>
             </div>
@@ -107,7 +135,12 @@
                 <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
                   data-bs-parent="#accordionFlushExample">
                   <div class="accordion-body">
-                    <img src="../../../../assets/images/tese3.jpg" width="102%" height="80%">
+                    <div *ngFor="let item of items | async">
+                
+                    
+               <img src= {{item.imagen}} width="100%" height="80%">      
+                      
+                      </div>
                     </div>
                 </div>
               </div>

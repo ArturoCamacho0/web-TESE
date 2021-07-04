@@ -5,12 +5,12 @@ export const CAROUSEL_DATA_ITEMS_BANNERP: ICarouselItem[] = [
     {
         id: 1,
         title: {
-            first: 'Sobre nosotros',
+            first: '',
             second: ''
         },
-        subtitle: 'Prueba de imágen',
-        link: 'localhost:4200/asd',
-        image: "assets/images/tese1.jpg"
+        subtitle: '',
+        link: 'localhost:4200/normatividad',
+        image: "https://firebasestorage.googleapis.com/v0/b/app-tese.appspot.com/o/web-tese%2Fcomponentes%2FNormatividad%2FWhatsApp%20Image%202021-06-21%20at%2010.48.18%20AM.jpeg?alt=media&token=2569e2dd-7b0f-424b-8075-40a349c4b522"
     }, {
         id: 2,
         title: {
