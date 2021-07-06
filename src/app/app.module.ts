@@ -10,6 +10,7 @@ import { LayoutModule } from './components/layout/layout.module';
 import { SectionsModule } from './components/sections/sections.module';
 import { ContactoComponent } from './components/layout/contacto/contacto.component';
 import { LoginComponent } from './components/layout/login/login.component';
+import { RegistroComponent } from './components/layout/registro/registro.component'
 
 // Firebase
 import { AngularFireModule } from '@angular/fire';
@@ -24,6 +25,10 @@ const router: Routes =[
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'registro',
+    component: RegistroComponent
   }
 ];
 
