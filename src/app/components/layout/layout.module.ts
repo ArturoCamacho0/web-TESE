@@ -9,13 +9,15 @@ import { FooterComponent } from './footer/footer.component';
 import { SectionsModule } from '../sections/sections.module';
 import { ContactoComponent } from './contacto/contacto.component';
 import { LoginComponent } from './login/login.component';
+import { RegistroComponent } from './registro/registro.component';
 
 @NgModule({
   declarations: [
     HeaderComponent,
     FooterComponent,
     ContactoComponent,
-    LoginComponent
+    LoginComponent,
+    RegistroComponent
   ],
   imports: [
     CommonModule,
