@@ -34,44 +34,31 @@
     <div class="box-shadow= 50px 50px;">
       <nav arial-label="breadcrumb">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a class="color-nav" href="#">Home</a></li>
-          <li class="breadcrumb-item"><a class="color-nav" href="#">Identidad Institucional</a></li>
+          <li class="breadcrumb-item"><a class="ubicacion-pag" href="#">Home</a></li>
+          <li class="breadcrumb-item"><a class="ubicacion-pag" href="#">Identidad Institucional</a></li>
           <li class="breadcrumb-item active" aria-current="page">Historia</li>
         </ol>
       </nav>
     </div>
   </div>
 
-  <app-carousel [items]="carouselData"></app-carousel>
-  <h1 class="titulo-item text-center fs-4 fw-bold shadow p-3 mb-5 bg-body rounded">HISTORIA</h1>
-  <P class="lh-sm fs-4 shadow p-3 mb-5 bg-body rounded">
-    El Tecnológico de Estudios Superiores de Ecatepec se creó en 1990 por Decreto de la Legislatura del Estado,
-    como Organismo Descentralizado del Estado de México con personalidad jurídica y patrimonio propio,
-    Opera mediante el financiamiento de los Gobiernos Federal y Estatal,
-    así como por la generación de ingresos propios es el primer Tecnológico creado con carácter Descentralizado en el país,
-    actualmente oferta 11 programas educativos de nivel licenciatura, dos son de reciente creación,
-    el programa de Ingeniería en Gestión Empresarial y el de Ingeniería Aeronáutica,
-    todos los demás están reconocidos por su calidad por COPAES, además oferta 6 programas de Maestría,
-    tres en la categoría de investigación y tres con orientación profesional,
-    el programa de Maestría en ciencias en Ingeniería Bioquímica está reconocido por el CONACyT por su calidad,
-    pertenece al PNPC. Actualmente se atiende una matrícula de 6, 764 estudiantes de licenciatura y posgrado,
-    la cual es atendida por 351 docentes, 147 de tiempo completo,
-    de los cuales 28 se reconocen como perfil deseable y 10 tienen reconocimiento CONACYT por pertenecer al S.N.I.
-    <br>
-    <br>
-    Además como una prueba de la buena calidad de la educación que se imparte,
-     es la distinción que en diez ocasiones consecutivas, desde el 2004 al 2014,
-     ha recibido de parte del Gobierno Federal, a través de la Secretaria de Educación Pública,
-     por contar con programas académicos de calidad certificada, en las carreras que imparte.
-  </P>
+  <app-carousel [items]="carouselData" ></app-carousel>
+  <div class="lh-sm fs-4 shadow p-3 bg-body rounded" *ngFor="let item of items |async">
+    <h1 class="text-center fs-4 fw-bold">{{item.Titulo}}</h1>
+    <P>
+      {{item.Contenido}}
+
+    </P>
+  </div><br>
 
 
-  <div class="lh-sm fs-4 accordion accordion-flush shadow p-3 mb-5 bg-body rounded" id="accordionFlushExample">
-    <p class="fw-bold">Proporciona enseñanza superior en 11 carreras y seis posgrados, siendo estos:</p>
+
+  <div class="lh-sm fs-4 accordion accordion-flush shadow p-3 bg-body rounded" id="accordionFlushExample " *ngFor="let item of items |async">
+    <p class="fw-bold">{{item.Subtitulo1}}</p>
     <div class="accordion-item ">
       <h2 class="accordion-header" id="flush-headingOne">
-        <button class="accordion-button collapsed lh-sm fs-4  " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-          Carreras
+        <button class="accordion-button accordion-color-collapse collapsed lh-sm fs-4  " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+
         </button>
       </h2>
       <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
@@ -91,7 +78,7 @@
               </div>
             </div>
 
-            <div class="col-sm-3  mb-3">
+            <div class="col-sm-3 mb-3">
               <div class="card">
                 <img src="../../../../../assets/images/Ing-Bioquimica.png" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -210,7 +197,7 @@
     </div>
     <div class="accordion-item">
       <h2 class="accordion-header" id="flush-headingTwo">
-        <button class="accordion-button collapsed lh-sm fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+        <button class="accordion-button accordion-color-collapse collapsed lh-sm fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
           Posgrados
         </button>
       </h2>
@@ -294,7 +281,7 @@
 
   </div>
 
-  <div class="accordion accordion-flush lh-sm fs-4 shadow p-3 mb-5 bg-body rounded" id="accordionFlushExample">
+  <div class="accordion accordion-flush lh-sm fs-4 shadow p-3 bg-body rounded" id="accordionFlushExample">
     <p class="fw-bold">Actividades TESE</p>
     <div class="accordion-item">
       <h2 class="accordion-header" id="flush-headingThree">
@@ -413,7 +400,7 @@
     </div>
   </div>
 
-  <div class="lh-sm fs-4 shadow p-3 mb-5 bg-body rounded">
+  <div class="lh-sm fs-4 shadow p-3 bg-body rounded">
      <P>
     Desde su creación, el Tecnológico ha tenido el compromiso de desarrollar una cultura de Sistemas de Gestión entre todos los
     miembros que conforman su comunidad, por lo que periódicamente se elaboran proyectos estratégicos de impacto hacia las actividades
@@ -430,11 +417,11 @@
   </p>
   </div>
 
-  <div class="accordion accordion-flush lh-sm fs-4 shadow p-3 mb-5 bg-body rounded" id="accordionFlushExample">
+  <div class="accordion accordion-flush lh-sm fs-4 shadow p-3 bg-body rounded" id="accordionFlushExample">
     <p class="fw-bold">Extra</p>
     <div class="accordion-item">
       <h2 class="accordion-header" id="flush-headingSeis">
-        <button class="accordion-button collapsed lh-sm fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeis" aria-expanded="false" aria-controls="flush-collapseSeis">
+        <button class="accordion-button accordion-color-collapse collapsed lh-sm fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeis" aria-expanded="false" aria-controls="flush-collapseSeis">
         2014 Norma ISO: 14000
         </button>
       </h2>
@@ -467,7 +454,7 @@
     </div>
     <div class="accordion-item">
       <h2 class="accordion-header" id="flush-heading7">
-        <button class="accordion-button collapsed lh-sm fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse7" aria-expanded="false" aria-controls="flush-collapse7">
+        <button class="accordion-button accordion-color-collapse collapsed lh-sm fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse7" aria-expanded="false" aria-controls="flush-collapse7">
         Cursos TESE
         </button>
       </h2>

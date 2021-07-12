@@ -1,3 +1,5 @@
+import { Observable } from 'rxjs';
+import { AngularFirestore } from '@angular/fire/firestore';
 import { Component, OnInit } from '@angular/core';
 import { CAROUSEL_DATA_ITEMS_BANNERP } from './carousel';
 import { ICarouselItem } from '../../carousel/icarousel-item.metadata';
@@ -8,9 +10,16 @@ import { ICarouselItem } from '../../carousel/icarousel-item.metadata';
   styleUrls: ['./historia.component.css']
 })
 export class HistoriaComponent implements OnInit {
+  items: Observable<any[]>
+
 
   public carouselData: ICarouselItem[]=CAROUSEL_DATA_ITEMS_BANNERP;
-  constructor() { }
+  constructor(firestore: AngularFirestore) {
+    this.items = firestore.collectionGroup('HistoriaDatos').valueChanges();
+
+   }
+
+
 
   ngOnInit(): void {
   }

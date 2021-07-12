@@ -1,3 +1,5 @@
+import { Observable } from 'rxjs';
+import { AngularFirestore } from '@angular/fire/firestore';
 import { Component, OnInit } from '@angular/core';
 import { CAROUSEL_DATA_ITEMS_BANNERP } from './carousel';
 import { ICarouselItem } from '../../carousel/icarousel-item.metadata';
@@ -8,9 +10,21 @@ import { ICarouselItem } from '../../carousel/icarousel-item.metadata';
 })
 export class LogoComponent implements OnInit {
 
+   /*variable tipo observable*/
+  items: Observable<any[]>
+  imgs: Observable<any[]>
+
    /* Una clase export que se necesita para el carrousel y su flujo de datos */
    public carouselData: ICarouselItem[]=CAROUSEL_DATA_ITEMS_BANNERP;
-   constructor() { }
+
+
+   /*Agregar firebase en el contructor y llamado de datos*/
+   constructor(firestore: AngularFirestore) {
+     /* Logo = nombre de coleccion*/
+     this.items = firestore.collectionGroup('LogoDatos').valueChanges();
+     this.imgs = firestore.collectionGroup('LogoImg').valueChanges();
+
+   }
 
    ngOnInit(): void {
    }
