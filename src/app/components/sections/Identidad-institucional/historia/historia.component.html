@@ -43,22 +43,35 @@
   </div>
 
   <app-carousel [items]="carouselData" ></app-carousel>
-  <div class="lh-sm fs-4 shadow p-3 bg-body rounded" *ngFor="let item of items |async">
-    <h1 class="text-center fs-4 fw-bold">{{item.Titulo}}</h1>
-    <P>
-      {{item.Contenido}}
+  <h1 class="titulo-item text-center fs-4 fw-bold shadow p-3 mb-5 bg-body rounded">HISTORIA</h1>
+  <P class="lh-sm fs-4 shadow p-3 mb-5 bg-body rounded">
+    El Tecnológico de Estudios Superiores de Ecatepec se creó en 1990 por Decreto de la Legislatura del Estado,
+    como Organismo Descentralizado del Estado de México con personalidad jurídica y patrimonio propio,
+    Opera mediante el financiamiento de los Gobiernos Federal y Estatal,
+    así como por la generación de ingresos propios es el primer Tecnológico creado con carácter Descentralizado en el país,
+    actualmente oferta 11 programas educativos de nivel licenciatura, dos son de reciente creación,
+    el programa de Ingeniería en Gestión Empresarial y el de Ingeniería Aeronáutica,
+    todos los demás están reconocidos por su calidad por COPAES, además oferta 6 programas de Maestría,
+    tres en la categoría de investigación y tres con orientación profesional,
+    el programa de Maestría en ciencias en Ingeniería Bioquímica está reconocido por el CONACyT por su calidad,
+    pertenece al PNPC. Actualmente se atiende una matrícula de 6, 764 estudiantes de licenciatura y posgrado,
+    la cual es atendida por 351 docentes, 147 de tiempo completo,
+    de los cuales 28 se reconocen como perfil deseable y 10 tienen reconocimiento CONACYT por pertenecer al S.N.I.
+    <br>
+    <br>
+    Además como una prueba de la buena calidad de la educación que se imparte,
+     es la distinción que en diez ocasiones consecutivas, desde el 2004 al 2014,
+     ha recibido de parte del Gobierno Federal, a través de la Secretaria de Educación Pública,
+     por contar con programas académicos de calidad certificada, en las carreras que imparte.
+  </P>
 
-    </P>
-  </div><br>
 
-
-
-  <div class="lh-sm fs-4 accordion accordion-flush shadow p-3 bg-body rounded" id="accordionFlushExample " *ngFor="let item of items |async">
-    <p class="fw-bold">{{item.Subtitulo1}}</p>
+  <div class="lh-sm fs-4 accordion accordion-flush shadow p-3 mb-5 bg-body rounded" id="accordionFlushExample">
+    <p class="fw-bold">Proporciona enseñanza superior en 11 carreras y seis posgrados, siendo estos:</p>
     <div class="accordion-item ">
       <h2 class="accordion-header" id="flush-headingOne">
-        <button class="accordion-button accordion-color-collapse collapsed lh-sm fs-4  " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-
+        <button class="accordion-button collapsed lh-sm fs-4  " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+          Carreras
         </button>
       </h2>
       <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
@@ -78,7 +91,7 @@
               </div>
             </div>
 
-            <div class="col-sm-3 mb-3">
+            <div class="col-sm-3  mb-3">
               <div class="card">
                 <img src="../../../../../assets/images/Ing-Bioquimica.png" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -281,15 +294,16 @@
 
   </div>
 
+
   <div class="accordion accordion-flush lh-sm fs-4 shadow p-3 bg-body rounded" id="accordionFlushExample">
     <p class="fw-bold">Actividades TESE</p>
     <div class="accordion-item">
-      <h2 class="accordion-header" id="flush-headingThree">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-        <p class="lh-sm fs-4">Programas educativos del TESE</p>
+      <h2 class="accordion-header" id="flush-headingSeis">
+        <button class="accordion-button accordion-color-collapse collapsed lh-sm fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeis" aria-expanded="false" aria-controls="flush-collapseSeis">
+          Programas educativos del TESE
         </button>
       </h2>
-      <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+      <div id="flush-collapseSeis" class="accordion-collapse collapse" aria-labelledby="flush-headingSeis" data-bs-parent="#accordionFlushExample">
         <div class="accordion-body">
           <P>
             Los programas educativos del TESEestán sometidos a evaluación y acreditación permanentes,
@@ -328,77 +342,81 @@
           del sector gubernamental y del sector productivo. Por lo que una vez concluidos los mismos y autorizado el plan curricular,
           se le autorizo al Tecnológico su impartición e inició actividades en el periodo 2014-1 con una matrícula de 153 alumnos.
           </p>
-
+          <hr>
         </div>
       </div>
-
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="flush-headingCuatro">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseCuatro" aria-expanded="false" aria-controls="flush-collapseCuatro">
-          <p class="lh-sm fs-4">Ambito académico</p>
-          </button>
-        </h2>
-        <div id="flush-collapseCuatro" class="accordion-collapse collapse" aria-labelledby="flush-headingCuatro" data-bs-parent="#accordionFlushExample">
-          <div class="accordion-body">
-            <p>
-              En el ámbito académico, hoy se cuenta con otro importante avance:
-              Fueron autorizadas por la Dirección de Institutos Tecnológicos Descentralizados a partir del semestre 2012-2,
-              10 especialidades denominadas: Sistemas autómatas industriales, mantenimiento industrial, alimentos, biotecnología,
-              procesos químicos en desarrollo sustentable, bases de datos, calidad y productividad, contabilidad integral,
-              sistemas de información y automatización de procesos.
-              Además en el 2015 nuevamente se realiza la autorización de especialidades por parte del Tecnológico Nacional de México para la Ingeniería
-              Electrónica la de Automatización de Procesos Industriales y Comunicaciones Digitales y Móviles para el caso de la Ingeniería
-              Bioquímica las especialidades en Biotecnología y Alimentos y para la Ingeniería en Química la especialidad en Petroquímica.
-            </p>
-            <br>
-            <p>
-              Las estrategias para brindar educación de calidad con pertinencia,
-              se han complementado con la oferta de estudios de posgrado,
-              ya que representan la continuación natural en la formación tanto de nuestros egresados de licenciatura en sus respectivas áreas,
-              como de profesionistas de otras instituciones afines. Dentro del Subsistema, es la Institución que imparte la mayor cantidad de posgrados.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="flush-headingCinco">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseCinco" aria-expanded="false" aria-controls="flush-collapseCinco">
-          <p class="lh-sm fs-4">Programas de investigación tecnológica</p>
-          </button>
-        </h2>
-        <div id="flush-collapseCinco" class="accordion-collapse collapse" aria-labelledby="flush-headingCinco" data-bs-parent="#accordionFlushExample">
-          <div class="accordion-body">
-            <p>
-              Mediante programas de investigación tecnológica, asesoría y asistencia técnica, concertación de convenios,
-              cartas compromiso y acuerdos de buena voluntad, se fortalece la colaboración e intercambio académico y/o
-              profesional con los distintos sectores de la sociedad. </p>
-            <br>
-            <p>
-              Asimismo, en el Tecnológico se realizan continuamente actividades que le confieren mayor prestigio,
-              como el pertenecer a destacados organismos y asociaciones, entre los que destaca: la Asociación Nacional de Universidades e
-              Instituciones de Educación Superior (ANUIES) la Asociación Nacional de Facultades y Escuelas de Ingeniería, A.C.(ANFEI)
-              la Asociación Mexicana de Directivos de la Investigación Aplicada y el Desarrollo Tecnológico, A. C. (ADIAT),
-              y la Asociación Nacional de Instituciones de Educación en Informática, A.C.(ANIEI). De igual forma,
-              está incorporado al Registro Nacional de Instituciones y Empresas científicas y Tecnológicas (RENIECYT),
-              es miembro observador de la Asociación Nacional de Facultades y Escuelas de Contaduría y Administración, A. C. (ANFESCA),
-              y es Miembro Regular en la Organización Universitaria Interamericana (OUI).
-            </p>
-            <br>
-            <p>
-              Fomenta, además, las actividades de investigación científica y tecnológica en las áreas de Tratamiento de aguas residuales,
-              Restauración de suelos contaminados, Síntesis y caracterización de polímeros conductores,
-              y la Producción de metabolismos de interés agroalimentario. Dentro de estas líneas,
-              se han desarrollado proyectos con el apoyo de instancias externas, como el COSNET y el CONACYT. En este último,
-              destaca el ingreso de la Maestría en Ciencias en Ingeniería Bioquímica al Programa Integral de Fortalecimiento del Posgrado (PIFOP 2.0)
-              y al Padrón Nacional de Posgrado (PNP).
-            </p>
-          </div>
-        </div>
-      </div>
-
     </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-heading7">
+        <button class="accordion-button accordion-color-collapse collapsed lh-sm fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse7" aria-expanded="false" aria-controls="flush-collapse7">
+          Ambito académico
+        </button>
+      </h2>
+      <div id="flush-collapse7" class="accordion-collapse collapse" aria-labelledby="flush-heading7" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+          <p>
+            En el ámbito académico, hoy se cuenta con otro importante avance:
+            Fueron autorizadas por la Dirección de Institutos Tecnológicos Descentralizados a partir del semestre 2012-2,
+            10 especialidades denominadas: Sistemas autómatas industriales, mantenimiento industrial, alimentos, biotecnología,
+            procesos químicos en desarrollo sustentable, bases de datos, calidad y productividad, contabilidad integral,
+            sistemas de información y automatización de procesos.
+            Además en el 2015 nuevamente se realiza la autorización de especialidades por parte del Tecnológico Nacional de México para la Ingeniería
+            Electrónica la de Automatización de Procesos Industriales y Comunicaciones Digitales y Móviles para el caso de la Ingeniería
+            Bioquímica las especialidades en Biotecnología y Alimentos y para la Ingeniería en Química la especialidad en Petroquímica.
+          </p>
+          <br>
+          <p>
+            Las estrategias para brindar educación de calidad con pertinencia,
+            se han complementado con la oferta de estudios de posgrado,
+            ya que representan la continuación natural en la formación tanto de nuestros egresados de licenciatura en sus respectivas áreas,
+            como de profesionistas de otras instituciones afines. Dentro del Subsistema, es la Institución que imparte la mayor cantidad de posgrados.
+          </p>
+          <hr>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-heading8">
+        <button class="accordion-button accordion-color-collapse collapsed lh-sm fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse8" aria-expanded="false" aria-controls="flush-collapse8">
+          Programas de investigación tecnológica
+        </button>
+      </h2>
+      <div id="flush-collapse8" class="accordion-collapse collapse" aria-labelledby="flush-heading8" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+          <p>
+            Mediante programas de investigación tecnológica, asesoría y asistencia técnica, concertación de convenios,
+            cartas compromiso y acuerdos de buena voluntad, se fortalece la colaboración e intercambio académico y/o
+            profesional con los distintos sectores de la sociedad. </p>
+          <br>
+          <p>
+            Asimismo, en el Tecnológico se realizan continuamente actividades que le confieren mayor prestigio,
+            como el pertenecer a destacados organismos y asociaciones, entre los que destaca: la Asociación Nacional de Universidades e
+            Instituciones de Educación Superior (ANUIES) la Asociación Nacional de Facultades y Escuelas de Ingeniería, A.C.(ANFEI)
+            la Asociación Mexicana de Directivos de la Investigación Aplicada y el Desarrollo Tecnológico, A. C. (ADIAT),
+            y la Asociación Nacional de Instituciones de Educación en Informática, A.C.(ANIEI). De igual forma,
+            está incorporado al Registro Nacional de Instituciones y Empresas científicas y Tecnológicas (RENIECYT),
+            es miembro observador de la Asociación Nacional de Facultades y Escuelas de Contaduría y Administración, A. C. (ANFESCA),
+            y es Miembro Regular en la Organización Universitaria Interamericana (OUI).
+          </p>
+          <br>
+          <p>
+            Fomenta, además, las actividades de investigación científica y tecnológica en las áreas de Tratamiento de aguas residuales,
+            Restauración de suelos contaminados, Síntesis y caracterización de polímeros conductores,
+            y la Producción de metabolismos de interés agroalimentario. Dentro de estas líneas,
+            se han desarrollado proyectos con el apoyo de instancias externas, como el COSNET y el CONACYT. En este último,
+            destaca el ingreso de la Maestría en Ciencias en Ingeniería Bioquímica al Programa Integral de Fortalecimiento del Posgrado (PIFOP 2.0)
+            y al Padrón Nacional de Posgrado (PNP).
+          </p>
+          <hr>
+        </div>
+      </div>
+    </div>
+
   </div>
+
+
 
   <div class="lh-sm fs-4 shadow p-3 bg-body rounded">
      <P>
