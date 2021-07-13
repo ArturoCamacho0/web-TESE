@@ -44,10 +44,10 @@
 
   <app-carousel [items]="carouselData" ></app-carousel>
   <div class="lh-sm fs-4 shadow p-3 mb-5 bg-body rounded">
-    <div *ngFor="let title of titles | async">
+    <div *ngFor="let title of titles | async" >
     <h1 class="titulo-item text-center fs-4 fw-bold  mb-5">{{title.Titulo}}</h1>
     </div>
-    <div *ngFor="let contend of contends | async">
+    <div *ngFor="let contend of contends | async" class=" margen">
       <P>
         {{contend.contenido}}
     <br>
@@ -63,10 +63,10 @@
       <p class="fw-bold">{{dropdown.Titulo_drop}}</p>
 
 
-    <div class="accordion-item " *ngFor="let dropdowns_title of dropdowns_titles | async">
+    <div class="accordion-item " >
       <h2 class="accordion-header" id="flush-headingOne">
         <button class="accordion-button collapsed lh-sm fs-4  " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-          {{dropdowns_title.Titulo_subdrop}}
+          CARRERAS
         </button>
       </h2>
       <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
@@ -74,12 +74,12 @@
 
           <div class="row">
 
-            <div class="col-sm-3 mb-3" *ngFor="let dropdowns_contend of dropdowns_contends | async" >
+            <div class="col-sm-3 mb-3" *ngFor="let dropdowns_title of dropdowns_titles | async" >
 
               <div class="card">
-                <img src="{{dropdowns_contend.Dir_subdrop}}" class="card-img-top" alt="...">
+                <img src="{{dropdowns_title.Dir_subdrop}}" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h3 class="card-title"> {{dropdowns_contend.Titulo_subdrop}}</h3>
+                  <h3 class="card-title"> {{dropdowns_title.Titulo_subdrop}}</h3>
 
                   <a href="#" class="btn btn-primary">Mas Info..</a>
                 </div>

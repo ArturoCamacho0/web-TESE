@@ -24,7 +24,7 @@ export class HistoriaComponent implements OnInit {
     this.contends = firestore.collectionGroup('Contenidos-historia').valueChanges();
     this.dropdowns = firestore.collectionGroup('Dropdowns-historia').valueChanges();
     this.dropdowns_titles = firestore.collectionGroup('Contenido-dropdown').valueChanges();
-    this.dropdowns_contends = firestore.collectionGroup('Subcontenido_drop').valueChanges();
+
    }
 
 
