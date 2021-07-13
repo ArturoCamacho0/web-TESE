@@ -1,8 +1,9 @@
+import { AdminIdentidadInstitucionalComponent } from './components/sections/Identidad-institucional/admin-identidad-institucional/admin-identidad-institucional.component';
 
 import { MisionVisionComponent } from './components/sections/Identidad-institucional/mision-vision/mision-vision.component';
 import { HistoriaComponent } from './components/sections/Identidad-institucional/historia/historia.component';
 import { LogoComponent } from './components/sections/Identidad-institucional/logo/logo.component';
-import { ModuleWithProviders } from '@angular/core';
+import { ModuleWithProviders, Component } from '@angular/core';
 import {Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/sections/home/home.component';
 import { PlantillaContenidoComponent } from './components/sections/plantilla-contenido/plantilla-contenido.component';
@@ -81,7 +82,10 @@ const appRoutes: Routes = [
 
 
     { path: 'plantillacontenido', component:PlantillaContenidoComponent },
-    { path: 'contact', component: ContactoComponent }
+    { path: 'contact', component: ContactoComponent },
+
+    //Administracion
+    {path: 'admin-identidad', component:AdminIdentidadInstitucionalComponent}
 
 ];
 

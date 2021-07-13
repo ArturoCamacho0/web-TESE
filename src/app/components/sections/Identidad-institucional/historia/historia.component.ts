@@ -10,13 +10,21 @@ import { ICarouselItem } from '../../carousel/icarousel-item.metadata';
   styleUrls: ['./historia.component.css']
 })
 export class HistoriaComponent implements OnInit {
-  items: Observable<any[]>
+
+  titles: Observable<any[]>
+  contends: Observable<any[]>
+  dropdowns: Observable<any[]>
+  dropdowns_titles: Observable<any[]>
+  dropdowns_contends: Observable<any[]>
 
 
   public carouselData: ICarouselItem[]=CAROUSEL_DATA_ITEMS_BANNERP;
   constructor(firestore: AngularFirestore) {
-    this.items = firestore.collectionGroup('HistoriaDatos').valueChanges();
-
+    this.titles= firestore.collectionGroup('Titulos-historia').valueChanges();
+    this.contends = firestore.collectionGroup('Contenidos-historia').valueChanges();
+    this.dropdowns = firestore.collectionGroup('Dropdowns-historia').valueChanges();
+    this.dropdowns_titles = firestore.collectionGroup('Contenido-dropdown').valueChanges();
+    this.dropdowns_contends = firestore.collectionGroup('Subcontenido_drop').valueChanges();
    }
 
 

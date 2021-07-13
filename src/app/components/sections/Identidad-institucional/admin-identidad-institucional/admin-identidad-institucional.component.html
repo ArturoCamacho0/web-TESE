@@ -1,0 +1,102 @@
+<div class="">
+  <mat-drawer-container class="side-container">
+    <mat-drawer mode="side"class="sidebar" id="side" #drawer opened>
+      <mat-selection-list role="list-container" [multiple]="false">
+        <a href="Historia">
+          <mat-list-option>
+            Historia
+          </mat-list-option>
+        </a>
+        <a href="Mision">
+          <mat-list-option role="/Logo">
+            Mision Vision
+          </mat-list-option>
+        </a>
+
+        <a href="http://www.tese.edu.mx/documentos2004/7285_BGNZNIQ.pdf">
+          <mat-list-option role="/Logo">
+            Organigrama
+          </mat-list-option>
+        </a>
+      </mat-selection-list>
+    </mat-drawer>
+
+    <mat-drawer-content class="side-content">
+      <button id="arrow" type="button" mat-button (click)="drawer.toggle()" (click)="open()">
+        <mat-icon id="right" class="open">arrow_forward</mat-icon>
+        <mat-icon id="left">arrow_back</mat-icon>
+      </button>
+      <mat-divider class="divider"></mat-divider>
+
+    <div class="text-side">
+      <div class="box-shadow= 50px 50px;">
+        <nav arial-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a class="ubicacion-pag" href="#">Administracion</a></li>
+            <li class="breadcrumb-item"><a class="ubicacion-pag" href="#">Identidad Institucional</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Logo</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
+
+    <div class="accordion accordion-flush lh-sm fs-4 shadow p-3 bg-body rounded" id="accordionFlushExample">
+      <p class="fw-bold">Panel de Adminstracion</p>
+      <div class="accordion-item" >
+        <h2 class="accordion-header" id="flush-headingSeis">
+          <button class="accordion-button accordion-color-collapse collapsed lh-sm fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeis" aria-expanded="false" aria-controls="flush-collapseSeis">
+          Contenido Logo
+          </button>
+        </h2>
+        <div id="flush-collapseSeis" class="accordion-collapse collapse" aria-labelledby="flush-headingSeis" data-bs-parent="#accordionFlushExample" >
+          <div class="accordion-body" >
+            <form class="row g-3">
+
+              <div class="col-12" *ngFor="let title of titles | async" >
+                <label for="inputAddress" class="form-label" >TITULO</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="{{title.Titulo}}">
+              </div>
+              <div class="col-12" *ngFor="let contend of contends | async" >
+                <label for="inputAddress2" class="form-label">Contenido</label>
+                <input type="text" class="form-control" id="inputAddress2" placeholder="{{contend.contenido}}">
+              </div>
+              <div class="col-md-5">
+                <label for="inputCity" class="form-label">DIRECCION IMAGEN</label>
+                <input type="text" class="form-control" id="inputCity">
+              </div>
+              <div class="col-md-5">
+                <label for="inputCity" class="form-label">TITULO IMAGEN</label>
+                <input type="text" class="form-control" id="inputCity">
+              </div>
+
+
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary">Guardar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-heading7">
+          <button class="accordion-button accordion-color-collapse collapsed lh-sm fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse7" aria-expanded="false" aria-controls="flush-collapse7">
+          Contenido Historia
+          </button>
+        </h2>
+        <div id="flush-collapse7" class="accordion-collapse collapse" aria-labelledby="flush-heading7" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+
+    </mat-drawer-content>
+  </mat-drawer-container>
+  </div>

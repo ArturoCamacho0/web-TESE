@@ -41,26 +41,31 @@
     </div>
 
     <app-carousel class="mb-5" [items]="carouselData"></app-carousel>
-    <section  *ngFor="let item of items | async">
 
-    <div class="lh-sm fs-4 shadow p-3 bg-body rounded">
-      <h1 class="text-center fs-4 fw-bold">{{item.Titulo}}</h1>
-      <p>
-        {{item.Contenido}}
+
+    <div class="lh-sm fs-4 shadow p-3 mb-5 bg-body rounded">
+      <div  *ngFor="let title of titles  | async" >
+        <h1 class="text-center fs-4 fw-bold">{{title.Titulo}}</h1>
+      </div>
+
+      <div *ngFor="let contend of contends | async">
+        <p>
+          {{contend.contenido}}
         <br>
-    </p>
+    </p></div>
+
 
 
     </div>
-    </section>
 
 
-     <div class="shadow text-center p-3 mb-5 bg-body rounded" *ngFor="let img of imgs | async">
+
+     <div class="shadow text-center p-3 mb-5 bg-body rounded" *ngFor="let picture of pictures | async">
        <p>
-         <img src="{{img.Link}}" class="img-fluid rounded" alt="...">
+         <img src="{{picture.Dir}}" class="img-fluid rounded" alt="...">
        </p>
       <br>
-      <h1 class="text-center fs-4 fw-bold mb-3"> {{img.Titulo}}</h1>
+      <h1 class="text-center fs-4 fw-bold mb-3">{{picture.Titulo}} </h1>
     </div>
 
 

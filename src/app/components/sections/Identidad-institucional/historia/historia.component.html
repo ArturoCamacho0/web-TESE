@@ -43,35 +43,30 @@
   </div>
 
   <app-carousel [items]="carouselData" ></app-carousel>
-  <h1 class="titulo-item text-center fs-4 fw-bold shadow p-3 mb-5 bg-body rounded">HISTORIA</h1>
-  <P class="lh-sm fs-4 shadow p-3 mb-5 bg-body rounded">
-    El Tecnológico de Estudios Superiores de Ecatepec se creó en 1990 por Decreto de la Legislatura del Estado,
-    como Organismo Descentralizado del Estado de México con personalidad jurídica y patrimonio propio,
-    Opera mediante el financiamiento de los Gobiernos Federal y Estatal,
-    así como por la generación de ingresos propios es el primer Tecnológico creado con carácter Descentralizado en el país,
-    actualmente oferta 11 programas educativos de nivel licenciatura, dos son de reciente creación,
-    el programa de Ingeniería en Gestión Empresarial y el de Ingeniería Aeronáutica,
-    todos los demás están reconocidos por su calidad por COPAES, además oferta 6 programas de Maestría,
-    tres en la categoría de investigación y tres con orientación profesional,
-    el programa de Maestría en ciencias en Ingeniería Bioquímica está reconocido por el CONACyT por su calidad,
-    pertenece al PNPC. Actualmente se atiende una matrícula de 6, 764 estudiantes de licenciatura y posgrado,
-    la cual es atendida por 351 docentes, 147 de tiempo completo,
-    de los cuales 28 se reconocen como perfil deseable y 10 tienen reconocimiento CONACYT por pertenecer al S.N.I.
+  <div class="lh-sm fs-4 shadow p-3 mb-5 bg-body rounded">
+    <div *ngFor="let title of titles | async">
+    <h1 class="titulo-item text-center fs-4 fw-bold  mb-5">{{title.Titulo}}</h1>
+    </div>
+    <div *ngFor="let contend of contends | async">
+      <P>
+        {{contend.contenido}}
     <br>
-    <br>
-    Además como una prueba de la buena calidad de la educación que se imparte,
-     es la distinción que en diez ocasiones consecutivas, desde el 2004 al 2014,
-     ha recibido de parte del Gobierno Federal, a través de la Secretaria de Educación Pública,
-     por contar con programas académicos de calidad certificada, en las carreras que imparte.
-  </P>
+  </P></div>
 
 
-  <div class="lh-sm fs-4 accordion accordion-flush shadow p-3 mb-5 bg-body rounded" id="accordionFlushExample">
-    <p class="fw-bold">Proporciona enseñanza superior en 11 carreras y seis posgrados, siendo estos:</p>
-    <div class="accordion-item ">
+</div>
+
+
+
+  <div class="lh-sm fs-4 accordion accordion-flush shadow p-3 mb-5 bg-body rounded" id="accordionFlushExample" *ngFor="let dropdown of dropdowns | async">
+
+      <p class="fw-bold">{{dropdown.Titulo_drop}}</p>
+
+
+    <div class="accordion-item " *ngFor="let dropdowns_title of dropdowns_titles | async">
       <h2 class="accordion-header" id="flush-headingOne">
         <button class="accordion-button collapsed lh-sm fs-4  " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-          Carreras
+          {{dropdowns_title.Titulo_subdrop}}
         </button>
       </h2>
       <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
@@ -79,124 +74,12 @@
 
           <div class="row">
 
-            <div class="col-sm-3 mb-3">
+            <div class="col-sm-3 mb-3" *ngFor="let dropdowns_contend of dropdowns_contends | async" >
 
               <div class="card">
-                <img src="../../../../../assets/images/Ing-Quimica.png" class="card-img-top" alt="...">
+                <img src="{{dropdowns_contend.Dir_subdrop}}" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h3 class="card-title">Ingeniería Química</h3>
-
-                  <a href="#" class="btn btn-primary">Mas Info..</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-sm-3  mb-3">
-              <div class="card">
-                <img src="../../../../../assets/images/Ing-Bioquimica.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h3 class="card-title">Ingeniería Bioquímica</h3>
-
-                  <a href="#" class="btn btn-primary">Mas Info..</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-sm-3  mb-3">
-              <div class="card">
-                <img src="../../../../../assets/images/Ing-Electronica.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h3 class="card-title">Ingeniería Electrónica</h3>
-
-                  <a href="#" class="btn btn-primary">Mas Info..</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-sm-3  mb-3">
-              <div class="card">
-                <img src="../../../../../assets/images/Ing-industrial.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h3 class="card-title">Ingeniería Industrial</h3>
-
-                  <a href="#" class="btn btn-primary">Mas info..</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-sm-3  mb-3">
-              <div class="card">
-                <img src="../../../../../assets/images/Ing-Mecanica.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h3 class="card-title">Ingeniería Mecánica</h3>
-
-                  <a href="#" class="btn btn-primary">Mas Info.</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-sm-3  mb-3">
-              <div class="card">
-                <img src="../../../../../assets/images/Ing-Mecatronica.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h3 class="card-title">Ingeniería Mecatrónica</h3>
-
-                  <a href="#" class="btn btn-primary">Mas Info..</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-sm-3 mb-3">
-              <div class="card">
-                <img src="../../../../../assets/images/Ing-Sistemas-Computacionales.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h3 class="card-title">Ingeniería Sistemas Computacionales</h3>
-
-                  <a href="#" class="btn btn-primary">Mas Info..</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-sm-3 mb-3">
-              <div class="card">
-                <img src="../../../../../assets/images/Ing-Gestion-Informatica.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h3 class="card-title">Ingeniería en Informática</h3>
-
-                  <a href="#" class="btn btn-primary">Mas Info..</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-sm-3 mb-3">
-              <div class="card">
-                <img src="../../../../../assets/images/Ing-Gestion-Empresarial.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h3 class="card-title">Ingeniería en Gestión Empresarial</h3>
-
-                  <a href="#" class="btn btn-primary">Mas Info..</a>
-                </div>
-              </div>
-            </div>
-
-
-
-            <div class="col-sm-3 mb-3">
-              <div class="card">
-                <img src="../../../../../assets/images/Ing-Contador-Publico.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h3 class="card-title">Contador Público</h3>
-
-                  <a href="#" class="btn btn-primary">Mas Info..</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-sm-3 mb-3">
-              <div class="card">
-                <img src="../../../../../assets/images/Ing-Aeronautica.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h3 class="card-title">Ingeniería Aeronáutica</h3>
+                  <h3 class="card-title"> {{dropdowns_contend.Titulo_subdrop}}</h3>
 
                   <a href="#" class="btn btn-primary">Mas Info..</a>
                 </div>
@@ -295,7 +178,7 @@
   </div>
 
 
-  <div class="accordion accordion-flush lh-sm fs-4 shadow p-3 bg-body rounded" id="accordionFlushExample">
+  <div class="accordion accordion-flush lh-sm fs-4 shadow p-3 mb-5  bg-body rounded" id="accordionFlushExample">
     <p class="fw-bold">Actividades TESE</p>
     <div class="accordion-item">
       <h2 class="accordion-header" id="flush-headingSeis">
@@ -418,22 +301,7 @@
 
 
 
-  <div class="lh-sm fs-4 shadow p-3 bg-body rounded">
-     <P>
-    Desde su creación, el Tecnológico ha tenido el compromiso de desarrollar una cultura de Sistemas de Gestión entre todos los
-    miembros que conforman su comunidad, por lo que periódicamente se elaboran proyectos estratégicos de impacto hacia las actividades
-    sustantivas y adjetivas de la institución. Ejemplo de ello es que en el año 2006 se obtuvo la certificación de los procesos de Inscripción,
-    Reinscripción y Titulación, bajo la Norma ISO 900I:2000, reconocida por EMA (México) UKAS (Reino Unido) y ANAB (Estados Unidos), y
-    en el 2008 se le otorgó la recomendación para certificar tres nuevos procesos: Servicios de Consulta de Información Documental,
-    Ingreso y Alta de Personal y Administración de Recursos Financieros. Sin embargo al paso del tiempo se han ido incrementando
-    otros procesos de las diversas áreas que integran a la Institución en este sentido al cierre del 2012 se tienen certificados nueve procesos,
-    aunado a los anteriores: Selección, Planeación y Promoción Cultural.Además se cuenta con la certificación de Equidad de Género.
-  </P>
-  <br>
-  <p>
-    Para el año de 2014 se obtuvo la recertificación hasta el año de 2017 de ISO 9001:2008.
-  </p>
-  </div>
+
 
   <div class="accordion accordion-flush lh-sm fs-4 shadow p-3 bg-body rounded" id="accordionFlushExample">
     <p class="fw-bold">Extra</p>
