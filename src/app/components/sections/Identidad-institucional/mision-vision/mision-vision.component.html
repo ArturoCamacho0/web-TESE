@@ -43,9 +43,9 @@
     <app-carousel [items]="carouselData"></app-carousel>
     <div class="lh-sm fs-4 shadow p-3 bg-body rounded" *ngFor="let contend of contends | async" >
       <h1 class="text-center fs-4 fw-bold ">{{contend.Titulo}}</h1>
-      <span>
+      <p class="margen">
         {{contend.contenido}}
-      </span>
+      </p>
 
   </div>
 
