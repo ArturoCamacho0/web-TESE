@@ -1,3 +1,5 @@
+
+
 <div class="">
   <mat-drawer-container class="side-container">
     <mat-drawer mode="side"class="sidebar" id="side" #drawer opened>
@@ -43,67 +45,146 @@
 
     <div class="accordion accordion-flush lh-sm fs-4 shadow p-3 bg-body rounded" id="accordionFlushExample">
       <p class="fw-bold">Panel de Adminstracion</p>
+
       <div class="accordion-item" >
-        <h2 class="accordion-header" id="flush-headingSeis">
-          <button class="accordion-button accordion-color-collapse collapsed lh-sm fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeis" aria-expanded="false" aria-controls="flush-collapseSeis">
+        <h2 class="accordion-header" id="flush-headingOne">
+          <button class="accordion-button accordion-color-collapse collapsed lh-sm fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
           Contenido Logo
           </button>
         </h2>
-        <div id="flush-collapseSeis" class="accordion-collapse collapse" aria-labelledby="flush-headingSeis" data-bs-parent="#accordionFlushExample" >
+        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample" >
           <div class="accordion-body" >
-            <form class="row g-3">
+            <form>
+
+              <label for="inputAddress" class="form-label fw-bold" >TITULO</label>
+
+              <div *ngFor="let title of titles | async"  class="row g-3">
+
+                <div class="col-10">
+                  <input type="text" class="form-control" id="inputAddress" value="{{title.Titulo}}">
+                </div>
+
+                <div class="col">
+                  <button type="button" class="btn btn-success">Actualizar</button>
+                </div>
+
+                <br>
+                <hr>
+            </div>
+
+              <label for="exampleFormControlTextarea1" class="form-label fw-bold">CONTENIDO</label>
+
+              <div *ngFor="let contend of contends | async" class="row g-3">
+
+                <div class="col-10" >
+                  <textarea class="form-control" id="exampleFormControlTextarea1" value="{{contend.contenido}}" rows="3"></textarea>
+                </div>
+
+                <div class="col">
+                  <button type="button" class="btn btn-danger">Eliminar</button>
+                </div>
+
+                <div class="col">
+                  <button type="button" class="btn btn-success">Actualizar</button>
+                </div>
 
 
-              <div class="col-12" *ngFor="let title of titles | async" >
-                <label for="inputAddress" class="form-label" >TITULO</label>
-                <input type="text" class="form-control" id="inputAddress" value="{{title.Titulo}}">
-              </div>
+            </div>
 
-              <label for="exampleFormControlTextarea1" class="form-label">CONTENIDO</label>
-              <div class="col-12" *ngFor="let contend of contends | async">
-                <textarea class="form-control" id="exampleFormControlTextarea1" value="{{contend.contenido}}" rows="3"></textarea>
-              </div>
-              <div class="col-12">
-                <label for="inputAddress2" class="form-label">Agregar Contenido</label>
+            <br>
+
+            <label for="inputAddress2" class="form-label">Agregar Contenido</label>
+
+            <div class="row g-3">
+
+               <div class="col-11">
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
               </div>
+
+              <div class="col">
+                <button type="button" class="btn btn-secondary">Agregar</button>
+              </div>
+
+            </div>
+
               <hr>
-              <label for="exampleFormControlTextarea1" class="form-label">IMAGEN</label>
+              <label for="exampleFormControlTextarea1" class="form-label fw-bold" >IMAGEN</label>
 
 
               <div class="row g-3" *ngFor="let img of imgs | async">
-                <div class="col">
-                  <label for="inputAddress2" class="form-label">RUTA DE LA IMAGEN</label>
+                <label for="inputAddress2" class="form-label">RUTA DE LA IMAGEN</label>
+                <div class="col-10">
                   <input type="text" class="form-control" placeholder="First name" aria-label="First name" value="{{img.Dir}}">
-                  <i class="bi bi-pencil-square"></i>
                 </div>
+
                 <div class="col">
-                  <label for="inputAddress2" class="form-label">TITULO IMAGEN</label>
+                  <button type="button" class="btn btn-success">Actualizar</button>
+                </div>
+
+                <label for="inputAddress2" class="form-label">TITULO IMAGEN</label>
+                <div class="col-10">
+
                   <input type="text" class="form-control" placeholder="Last name" aria-label="Last name" value="{{img.Titulo}}">
+                </div>
+
+                <div class="col">
+                  <button type="button" class="btn btn-success">Actualizar</button>
                 </div>
               </div>
 
               <br>
               <hr>
-
-
-
             </form>
           </div>
         </div>
       </div>
+
       <div class="accordion-item">
-        <h2 class="accordion-header" id="flush-heading7">
-          <button class="accordion-button accordion-color-collapse collapsed lh-sm fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse7" aria-expanded="false" aria-controls="flush-collapse7">
+        <h2 class="accordion-header" id="flush-headingTwo">
+          <button class="accordion-button accordion-color-collapse collapsed lh-sm fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
           Contenido Historia
           </button>
         </h2>
-        <div id="flush-collapse7" class="accordion-collapse collapse" aria-labelledby="flush-heading7" data-bs-parent="#accordionFlushExample">
+        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
           <div class="accordion-body">
 
           </div>
         </div>
+
+
       </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingTree">
+          <button class="accordion-button accordion-color-collapse collapsed lh-sm fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTree" aria-expanded="false" aria-controls="flush-collapseTree">
+          Contenido Mision Vision
+          </button>
+        </h2>
+        <div id="flush-collapseTree" class="accordion-collapse collapse" aria-labelledby="flush-headingTree" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+
+          </div>
+        </div>
+
+
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingFour">
+          <button class="accordion-button accordion-color-collapse collapsed lh-sm fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+          Contenido Organigrama
+          </button>
+        </h2>
+        <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+
+          </div>
+        </div>
+
+
+      </div>
+
+
 
     </div>
 
