@@ -53,27 +53,41 @@
           <div class="accordion-body" >
             <form class="row g-3">
 
+
               <div class="col-12" *ngFor="let title of titles | async" >
                 <label for="inputAddress" class="form-label" >TITULO</label>
-                <input type="text" class="form-control" id="inputAddress" placeholder="{{title.Titulo}}">
-              </div>
-              <div class="col-12" *ngFor="let contend of contends | async" >
-                <label for="inputAddress2" class="form-label">Contenido</label>
-                <input type="text" class="form-control" id="inputAddress2" placeholder="{{contend.contenido}}">
-              </div>
-              <div class="col-md-5">
-                <label for="inputCity" class="form-label">DIRECCION IMAGEN</label>
-                <input type="text" class="form-control" id="inputCity">
-              </div>
-              <div class="col-md-5">
-                <label for="inputCity" class="form-label">TITULO IMAGEN</label>
-                <input type="text" class="form-control" id="inputCity">
+                <input type="text" class="form-control" id="inputAddress" value="{{title.Titulo}}">
               </div>
 
-
+              <label for="exampleFormControlTextarea1" class="form-label">CONTENIDO</label>
+              <div class="col-12" *ngFor="let contend of contends | async">
+                <textarea class="form-control" id="exampleFormControlTextarea1" value="{{contend.contenido}}" rows="3"></textarea>
+              </div>
               <div class="col-12">
-                <button type="submit" class="btn btn-primary">Guardar</button>
+                <label for="inputAddress2" class="form-label">Agregar Contenido</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
               </div>
+              <hr>
+              <label for="exampleFormControlTextarea1" class="form-label">IMAGEN</label>
+
+
+              <div class="row g-3" *ngFor="let img of imgs | async">
+                <div class="col">
+                  <label for="inputAddress2" class="form-label">RUTA DE LA IMAGEN</label>
+                  <input type="text" class="form-control" placeholder="First name" aria-label="First name" value="{{img.Dir}}">
+                  <i class="bi bi-pencil-square"></i>
+                </div>
+                <div class="col">
+                  <label for="inputAddress2" class="form-label">TITULO IMAGEN</label>
+                  <input type="text" class="form-control" placeholder="Last name" aria-label="Last name" value="{{img.Titulo}}">
+                </div>
+              </div>
+
+              <br>
+              <hr>
+
+
+
             </form>
           </div>
         </div>

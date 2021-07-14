@@ -10,11 +10,13 @@ export class AdminIdentidadInstitucionalComponent implements OnInit {
 
   titles: Observable<any[]>
   contends: Observable<any[]>
+  imgs:Observable<any[]>
 
 
   constructor(firestore: AngularFirestore) {
-    this.titles = firestore.collectionGroup('Titulos').valueChanges();
-    this.contends = firestore.collectionGroup('Contenidos').valueChanges();
+    this.titles = firestore.collectionGroup('Titulos-logo').valueChanges();
+    this.contends = firestore.collectionGroup('Contenidos-logo').valueChanges();
+    this.imgs = firestore.collectionGroup('Imagenes-logo').valueChanges();
   }
 
   ngOnInit(): void {
