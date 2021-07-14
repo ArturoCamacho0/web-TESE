@@ -54,7 +54,7 @@
         </h2>
         <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample" >
           <div class="accordion-body" >
-            <form>
+
 
               <label for="inputAddress" class="form-label fw-bold" >TITULO</label>
 
@@ -71,6 +71,7 @@
                 <br>
                 <hr>
             </div>
+
 
               <label for="exampleFormControlTextarea1" class="form-label fw-bold">CONTENIDO</label>
 
@@ -92,20 +93,30 @@
             </div>
 
             <br>
+            <h1>Agregar Contenido</h1>
 
-            <label for="inputAddress2" class="form-label">Agregar Contenido</label>
+
+            <form class="" [formGroup]="ingresarContentLogo" (ngSubmit)="agregarContenido()">
+
+
+
 
             <div class="row g-3">
-
+<span *ngIf="submittedContLogo && ingresarContentLogo.invalid" class="alert alert-danger" >
+              El campo debe tener datos para agregar contenido
+           </span>
                <div class="col-11">
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                formControlName="contenido"></textarea>
               </div>
 
               <div class="col">
-                <button type="button" class="btn btn-secondary">Agregar</button>
+                <button type="submit" class="btn btn-secondary">Agregar</button>
               </div>
 
             </div>
+          </form>
+
 
               <hr>
               <label for="exampleFormControlTextarea1" class="form-label fw-bold" >IMAGEN</label>
@@ -134,7 +145,7 @@
 
               <br>
               <hr>
-            </form>
+
           </div>
         </div>
       </div>

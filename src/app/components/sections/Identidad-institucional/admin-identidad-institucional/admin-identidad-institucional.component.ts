@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
 @Component({
   selector: 'app-admin-identidad-institucional',
@@ -8,12 +9,20 @@ import { Observable } from 'rxjs';
 })
 export class AdminIdentidadInstitucionalComponent implements OnInit {
 
+  ingresarContentLogo: FormGroup;
+  submittedContLogo = false;
+
   titles: Observable<any[]>
   contends: Observable<any[]>
   imgs:Observable<any[]>
 
 
-  constructor(firestore: AngularFirestore) {
+  constructor(firestore: AngularFirestore, private fbl : FormBuilder) {
+
+    this.ingresarContentLogo = this.fbl.group({
+      contenido:['',Validators.required]
+    })
+
     this.titles = firestore.collectionGroup('Titulos-logo').valueChanges();
     this.contends = firestore.collectionGroup('Contenidos-logo').valueChanges();
     this.imgs = firestore.collectionGroup('Imagenes-logo').valueChanges();
@@ -32,5 +41,16 @@ export class AdminIdentidadInstitucionalComponent implements OnInit {
 
     let l = document.getElementById('left');
     l.classList.toggle('open');
+  }
+  agregarContenido(){
+
+    this.submittedContLogo = true;
+    if(this.ingresarContentLogo.invalid){
+      return;
+    }
+    const logo: any = {
+      contenido:this.ingresarContentLogo.value.contenido
+    }
+    console.log(logo);
   }
 }
