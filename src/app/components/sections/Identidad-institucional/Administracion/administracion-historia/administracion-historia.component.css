@@ -188,15 +188,15 @@ a {
 }
 
 .informatica:hover > mat-card {
-  background-image: url("../../../../../assets/images/informatica.jpg");
+  background-image: url("../../../../../../assets/images/informatica.jpg");
 }
 
 .quimica:hover > mat-card {
-  background-image: url("../../../../../assets/images/quimica.jpg");
+  background-image: url("../../../../../../assets/images/quimica.jpg");
 }
 
 .contador:hover > mat-card {
-  background-image: url("../../../../../assets/images/contador.jpg");
+  background-image: url("../../../../../../assets/images/contador.jpg");
 }
 
 .act {
