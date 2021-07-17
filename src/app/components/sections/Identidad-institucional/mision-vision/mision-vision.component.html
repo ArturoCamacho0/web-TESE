@@ -32,8 +32,8 @@
       <div class="box-shadow= 50px 50px;">
         <nav arial-label="breadcrumb">
           <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item"><a href="#">Identidad Institucional</a></li>
+            <li class="breadcrumb-item"><a class="ubicacion-pag" href="#">Home</a></li>
+            <li class="breadcrumb-item"><a class="ubicacion-pag" href="#">Identidad Institucional</a></li>
             <li class="breadcrumb-item active" aria-current="page">Mision y Vision</li>
           </ol>
         </nav>
@@ -41,34 +41,16 @@
     </div>
 
     <app-carousel [items]="carouselData"></app-carousel>
-    <h1 class="text-center fs-4 fw-bold shadow p-3 mb-5 bg-body rounded">Misión 2019-2024</h1>
-    <div class="lh-sm fs-4 shadow p-3 mb-5 bg-body rounded">
-      <span>
-        Ofrecer educación superior tecnológica pertinente e integral de calidad, para formar profesionistas con atributos de egreso y
-        competencias para identificar y resolver problemas de su especialidad,
-        con un sentido científico, tecnológico, humanístico, ético y sostenible,
-        comprometidos con el desarrollo tecnológico, con sentido social,
-        así como generar y aplicar conocimientos en beneficio del entorno Local,
-        Estatal y Nacional
-      </span>
+    <div class="lh-sm fs-4 shadow p-3 bg-body rounded" *ngFor="let contend of contends | async" >
+      <h1 class="text-center fs-4 fw-bold ">{{contend.Titulo}}</h1>
+      <p class="margen">
+        {{contend.contenido}}
+      </p>
 
-    </div>
+  </div>
+
 
     <br>
-    <h1 class="text-center fs-4 fw-bold shadow p-3 mb-5 bg-body rounded"> Visión 2019-2024 </h1>
-    <div class="lh-sm fs-4 shadow p-3 mb-5 bg-body rounded">
-      <span>
-        Ser la Institución de Educación Superior Tecnológica del Estado de México
-         y del país con reconocimiento nacional e internacional en la generación y
-          aplicación del conocimiento, por la excelencia de la formación y
-          los servicios que otorga, para la generación de soluciones
-          innovadoras que aporten a las prioridades locales, estatales y
-          nacionales en un ambiente sostenible, de inclusión, equidad y transparencia.
-      </span>
-
-    </div>
-
-
 
     <mat-card >
       <mat-card-header>
@@ -78,14 +60,18 @@
         <mat-card-subtitle style="font-size: 2ch;">PDF</mat-card-subtitle>
       </mat-card-header>
 
-      <mat-card-content>
+      <div *ngFor="let document of documents | async">
+        <mat-card-content>
         <p>
-         <img  class="img-icon" src="../../../../assets/images/PDF-ICON.png">
+         <img  class="img-icon" src="{{document.Icono_Documento}}">
         </p>
       </mat-card-content>
       <mat-card-actions style="margin-right: auto;">
-       <a href="http://www.tese.edu.mx/documentos2004/9249_ITKITWD.pdf" class="enlace-pdf" mat-button>MOSTRAR</a>
+       <a href="{{document.Dir_Documento}}" class="enlace-pdf" mat-button>MOSTRAR</a>
       </mat-card-actions>
+    </div>
+
+
     </mat-card>
 
 
