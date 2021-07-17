@@ -12,9 +12,7 @@
   </div>
 
 
-   <h1 class="titulo">MAESTRÍA EN CIENCIAS INGENIERÍA BIOQUÍMICA</h1>
-
-      <!-- Breadcrumb, ayuda a que el sitio sea mas agil y el usuario sepa en donde esta localizado, hacia donde puede ir y que paginas le anteceden -->
+    <!-- Breadcrumb, ayuda a que el sitio sea mas agil y el usuario sepa en donde esta localizado, hacia donde puede ir y que paginas le anteceden -->
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -24,25 +22,49 @@
       </ol>
     </nav>
 
+    <h1 class="titulo">
+      <div *ngFor="let item of items | async">
+        {{item.BioquimicaTitulo}}
+      </div>
+     </h1>
+
      <div class="cards">
         <div class="card-body" style="background-color:#E3E3E3; text-align: center;">
-          <h4 class="card-title"><div class="Titulo2">CONCEPTOS GENERALES</div></h4>
-         <p class="card-text"> La producción biotecnológica dio origen a diversos productos al mercado como
-           fermentados, yogures, antibióticos, hormonas, vitaminas, algunos precursores de medicamentos,
-           bebidas alcohólicas entre otros. <br>La ingeniería bioquímica es el medio de que los procesos de laboratorio
-           son comprendidos con el fin de llevarlo a un nivel de escala industrial.
-         </p>
+          <h4 class="card-title"><div class="Titulo2">
+            <div *ngFor="let item of items | async">
+              {{item.ConceptosGenerales}}
+            </div>
+          </div></h4>
+         <p class="card-text">
+           <div *ngFor="let item of items | async">
+          {{item.BioquimicaGenerales}}
+        </div>
         <br>
        </div>
      </div>
 
      <div class="cards">
       <div class="card-body" style="text-align: center;">
-       <h4 class="card-title"><div class="Titulo2">OBJETIVO</div></h4>
-        <p class="card-text"> Formar profesionistas de la ingeniería con alta calidad académica para desarrollas
-          aspectos de la bioquímica y fomentar la aplicación de las investigaciones en este campo, de tal forma
-          que se optimicen los recursos humanos y materiales.
-        </p>
+       <h4 class="card-title"><div class="Titulo2"><div *ngFor="let item of items | async">
+        {{item.Objetivo}}
+      </div></div></h4>
+        <p class="card-text">
+          <div *ngFor="let item of items | async">
+            {{item.BioquimicaObjetivo}}
+          </div>
+        <br>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="card-body" style="text-align: center;">
+       <h4 class="card-title"><div class="Titulo2"><div *ngFor="let item of items | async">
+        {{item.CampoAccion}}
+      </div></div></h4>
+        <p class="card-text">
+          <div *ngFor="let item of items | async">
+            {{item.BioquimicaCampo}}
+          </div>
         <br>
       </div>
     </div>
@@ -53,29 +75,59 @@
           <h2 class="accordion-header" id="flush-headingOne">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
               data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-              <h4 class="card-title"><div class="subtitulo">PERFIL DEL EGRESADO</div></h4>
+              <h4 class="card-title"><div class="subtitulo">
+                <div *ngFor="let item of items | async">
+                  {{item.PerfilEgresado}}
+                </div>
+              </div></h4>
             </button>
           </h2>
           <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
             data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">
+            <div class="accordion-body" style="text-align: justify;">
               <div class="row row-cols-1 row-cols-md-2 g-1">
                 <div class="col">
-                  <p class="card-text">El egresado de esta maestría adquirirá las competencias para:<BR></p>
-                 <UL>
-                   <LI>Generar conocimientos científicos y tecnológicos a través del planteamiento y desarrollo de trabajos de investigación aplicando metodologías de investigación experimental.</LI>
-                   <LI>Incorporarse y participar en trabajos de investigación y en el desarrollo científico y tecnológico del país, aplicando sus conocimientos y las metodologías necesarias, de forma original e innovadora.</LI>
-                   <LI>Detectar y analizar problemas de relevancia en procesos productivos, planteando alternativas de solución originales e innovadoras.</LI>
-                   <LI>Participar en actividades docentes a nivel de licenciatura y posgrado en instituciones de educación superior y centros de investigación.</LI>
-                   <LI>Incorporarse al sector industrial en las áreas de producción y de evaluación y control de la calidad de los procesos y productos.</LI>
-                   <LI>Innovar, mejorar, optimizar y asimilar tecnologías y procesos industriales.</LI>
-                 </UL>
-               <BR>
-               <BR>
+                  <p class="card-text">
+                    <div *ngFor="let item of items | async">
+                      {{item.BioquimicaPerfil}}
+                    </div>
+                    <BR>
+                 <ul>
+                   <li>
+                    <div *ngFor="let item of items | async">
+                      {{item.BioquimicaPerfilop1}}
+                    </div>
+                   </li>
+                   <li>
+                      <div *ngFor="let item of items | async">
+                      {{item.BioquimicaPerfilop2}}
+                    </div>
+                   </li>
+                   <li>
+                      <div *ngFor="let item of items | async">
+                      {{item.BioquimicaPerfilop3}}
+                    </div>
+                   </li>
+                   <li>
+                      <div *ngFor="let item of items | async">
+                      {{item.BioquimicaPerfilop4}}
+                    </div>
+                   </li>
+                   <li>
+                      <div *ngFor="let item of items | async">
+                      {{item.BioquimicaPerfilop5}}
+                    </div>
+                   </li>
+                   <li>
+                      <div *ngFor="let item of items | async">
+                      {{item.BioquimicaPerfilop6}}
+                    </div>
+                   </li>
+                 </ul>
                 </div>
                 <div class="col">
                   <div class="card">
-                    <img src="../../../../../assets/IMAGENES_EGRESADOS/GRADUATION1.jpg" class="card-img-top">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/app-tese.appspot.com/o/EgresadosYExalumnos%2FMBioquimica%2FBioquimicaPerfil.jpg?alt=media&token=85808ff3-91a6-4b4d-9e23-b52e4913c15d" class="card-img-top">
                   </div>
                 </div>
                 </div>
@@ -89,7 +141,11 @@
           <h2 class="accordion-header" id="flush-headingTwo">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
               data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-              <h4 class="card-title"><div class="subtitulo">MATERIAS</div></h4>
+              <h4 class="card-title"><div class="subtitulo">
+                <div *ngFor="let item of items | async">
+                  {{item.Materias}}
+                </div>
+              </div></h4>
             </button>
           </h2>
           <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
@@ -100,17 +156,18 @@
                 <div class="col">
                   <div class="cards">
                     <div class="card-body">
-                      <h4 class="card-title"><div class="Titulo2">BASICAS</div></h4>
+                      <h4 class="card-title"><div class="Titulo2">
+                        <div *ngFor="let item of items | async">
+                          {{item.Basicas}}
+                        </div>
+                      </div></h4>
                       <ul>
-                        <li>Bioquímica.</li>
-                        <li>Diseño estadístico de experimentos.</li>
-                        <li>Ingeniería bioquímica.</li>
-                        <li>Metodología de la investigación.</li>
-                        <li>Microbiología aplicada.</li>
-                        <li>Técnicas analíticas.</li>
+                        <div *ngFor="let materiasbasicas of materiasB | async">
+                          <li>{{materiasbasicas.BioquimicaMateriaBasica}}</li>
+                        </div>
                       </ul>
-                      <BR>
-                      <BR>
+                      <br>
+                      <br>
                     </div>
                   </div>
                   </div>
@@ -118,40 +175,15 @@
                   <div class="col">
                     <div class="cards">
                       <div class="card-body">
-                        <h4 class="card-title"><div class="Titulo2">OPTATIVAS</div></h4>
+                        <h4 class="card-title"><div class="Titulo2">
+                          <div *ngFor="let item of items | async">
+                            {{item.Optativas}}
+                          </div>
+                        </div></h4>
                         <ul>
-                          <li>Alimentos funcionales y nutracéuticos.</li>
-                          <li>Biocombustibles.</li>
-                          <li>Biología molecular.</li>
-                          <li>Bioprocesos.</li>
-                          <li>Bioquímica microbiana.</li>
-                          <li>Bioquímica nutricional.</li>
-                          <li>Bioseparaciones.</li>
-                          <li>Biotecnología ambiental.</li>
-                          <li>Biotecnología industrial.</li>
-                          <li>Desarrollo de nuevos productos.</li>
-                          <li>Enzimología.</li>
-                          <li>Fisicoquímica de alimentos.</li>
-                          <li>Ingeniería de alimentos.</li>
-                          <li>Ingeniería de bioreactores.</li>
-                          <li>Ingeniería genética.</li>
-                          <li>Ingeniería de procesos.</li>
-                          <li>Ingeniería metabólica.</li>
-                          <li>Innovación tecnológica de alimentos y biotecnología.</li>
-                          <li>Mecanismos de desarrollo limpio</li>
-                          <li>Microbiología de alimentos.</li>
-                          <li>Termodinámica estadística.</li>
-                          <li>Optimización y simulación de procesos.</li>
-                          <li>Química de alimentos.</li>
-                          <li>Química de productos naturales.</li>
-                          <li>Tecnología de alimentos balanceados.</li>
-                          <li>Tecnología de alimentos de origen animal</li>
-                          <li>Tecnología de alimentos de origen vegetal</li>
-                          <li>Tecnología de fermentaciones</li>
-                          <li>Transferencia de calor y masa</li>
-                          <li>Tratamiento y disposición de residuos sólidos</li>
-                          <li>Tratamiento de aguas residuales</li>
-                          <li>Toxicología de alimentos</li>
+                          <div *ngFor="let materiasoptativas of materiasO | async">
+                            <li>{{materiasoptativas.BioquimicaMateriaOptativa}}</li>
+                          </div>
                         </ul>
                       </div>
                     </div>
@@ -166,16 +198,32 @@
           <h2 class="accordion-header" id="flush-headingThree">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
               data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-              <h4 class="card-title"><div class="subtitulo">AREAS DE INVESTIGACIÓN</div></h4>
+              <h4 class="card-title"><div class="subtitulo">
+                <div *ngFor="let item of items | async">
+                  {{item.Areas}}
+                </div>
+              </div></h4>
             </button>
           </h2>
           <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
             data-bs-parent="#accordionFlushExample">
             <div class="accordion-body" style="text-align: center;">
               <ul style="list-style-type: none;">
-              <li>Alimentos.</li>
-              <li>Ingeniería ambiental.</li>
-              <li>Biotecnología.</li>
+              <li>
+                <div *ngFor="let item of items | async">
+                  {{item.BioquimicaAreasop1}}
+                </div>
+              </li>
+              <li>
+                <div *ngFor="let item of items | async">
+                  {{item.BioquimicaAreasop2}}
+                </div>
+              </li>
+              <li>
+                <div *ngFor="let item of items | async">
+                  {{item.BioquimicaAreasop3}}
+                </div>
+              </li>
             </ul>
             <br>
             <br>
@@ -183,10 +231,5 @@
         </div>
       </div>
     </div>
-
-
-
-  <mat-divider></mat-divider>
-
-   </div>
+  </div>
 </div>

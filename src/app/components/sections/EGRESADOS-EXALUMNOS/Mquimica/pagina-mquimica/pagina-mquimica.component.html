@@ -11,9 +11,6 @@
         </div>
       </div>
 
-
-    <h1 class="titulo">MAESTRÍA EN CIENCIAS INGENIERÍA QUÍMICA</h1>
-
       <!-- Breadcrumb, ayuda a que el sitio sea mas agil y el usuario sepa en donde esta localizado, hacia donde puede ir y que paginas le anteceden -->
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
@@ -24,33 +21,41 @@
         </ol>
       </nav>
 
+      <h1 class="titulo">
+        <div *ngFor="let item of items | async">
+          {{item.QuimicaTitulo}}
+        </div>
+      </h1>
+
       <div class="cards">
         <div class="card-body" style="background-color:#E3E3E3; text-align: center;">
-          <h4 class="card-title"><div class="Titulo2">CONCEPTOS GENERALES</div></h4>
-          <h3> La Ingeniería Química es la rama de la Ingeniería que se dedica al estudio,  síntesis, desarrollo,
-            diseño, operación y optimización de todos  aquellos procesos industriales que producen cambios físicos, químicos  y/o
-            bioquímicos en los materiales. <br>Esta tambien se enfoca al diseño de nuevos materiales y tecnologías, es una forma
-            importante de investigación y de desarrollo.
+          <h4 class="card-title"><div class="Titulo2">
+            <div *ngFor="let item of items | async">
+              {{item.ConceptosGenerales}}
+            </div>
+          </div></h4>
+          <h3> <div *ngFor="let item of items | async">
+            {{item.QuimicaGenerales}}
+          </div>
           </h3>
        </div>
      </div>
 
      <div class="cards">
       <div class="card-body" style="text-align: center;">
-       <h4 class="card-title"><div class="Titulo2">OBJETIVO</div></h4>
-        <p class="card-text"> Tiene como finalidad la formación de recursos humanos de alto nivel con conciencia social, dedicados
-          a la investigación y solución de problemas del campo de la Ingeniería Química, en particular en las áreas de ingeniería
-          de procesos y bioprocesos, así como tecnología de materiales, ambas áreas con enfoque ambiental, que son las líneas
-          relevantes a nivel nacional e internacional.
-        </p>
+       <h4 class="card-title"><div class="Titulo2">
+        <div *ngFor="let item of items | async">
+          {{item.Objetivo}}
+        </div>
+       </div></h4>
+        <p class="card-text">
+          <div *ngFor="let item of items | async">
+            {{item.QuimicaObjetivo}}
+          </div>
         <br>
         <br>
       </div>
     </div>
-
-
-  <mat-divider></mat-divider>
-
 
   <div class="accordion accordion-flush" id="accordionFlushExample">
 
@@ -58,21 +63,63 @@
       <h2 class="accordion-header" id="flush-headingOne" >
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
           data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-          <h4 class="card-title"><div class="subtitulo">PERFIL DEL EGRESADO</div></h4>
+          <h4 class="card-title"><div class="subtitulo">
+            <div *ngFor="let item of items | async">
+              {{item.PerfilEgresado}}
+            </div>
+          </div></h4>
         </button>
       </h2>
       <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
         data-bs-parent="#accordionFlushExample">
         <div class="accordion-body">
-          <p class="card-text">El egresado es un persona creativa, autocrítica y con libertad de pensamiento que posee las competencias para efectuar investigación básica y/o aplicada. <BR>Particularmente posee las competencias para:<BR></p>
+          <p class="card-text">
+            <div *ngFor="let item of items | async">
+              {{item.QuimicaPerfil}}
+            </div>
             <UL>
-              <LI>Generar conocimientos científicos y tecnológicos a través del planteamiento y desarrollo de trabajos de investigación aplicando metodologías de investigación experimental.</LI>
-              <LI>Incorporarse y participar en trabajos de investigación y en el desarrollo científico y tecnológico del país, aplicando sus conocimientos y las metodologías necesarias, de forma original e innovadora.</LI>
-              <LI>Detectar y analizar problemas de relevancia en procesos productivos, planteando alternativas de solución originales e innovadoras.</LI>
-              <LI>Participar en actividades docentes a nivel de licenciatura y posgrado en instituciones de educación superior y centros de investigación.</LI>
-              <LI>Incorporarse al sector industrial en las áreas de producción y de evaluación y control de la calidad de los procesos y productos.</LI>
-              <LI>Innovar, mejorar, optimizar y asimilar tecnologías y procesos industriales.</LI>
-              <LI>Campo de acción. Los egresados trabajan en la industria química, farmacéutica, petrolera, de alimentos y de polímeros entre otras.</LI>
+              <LI>
+                <div *ngFor="let item of items | async">
+                {{item.QuimicaPerfilop1}}
+                </div>
+              </LI>
+
+              <LI>
+                <div *ngFor="let item of items | async">
+                  {{item.QuimicaPerfilop2}}
+                </div>
+              </LI>
+
+              <LI>
+                <div *ngFor="let item of items | async">
+                  {{item.QuimicaPerfilop3}}
+                </div>
+              </LI>
+
+              <LI>
+                <div *ngFor="let item of items | async">
+                  {{item.QuimicaPerfilop4}}
+                </div>
+              </LI>
+
+              <LI>
+                <div *ngFor="let item of items | async">
+                  {{item.QuimicaPerfilop5}}
+                </div>
+              </LI>
+
+              <LI>
+                <div *ngFor="let item of items | async">
+                  {{item.QuimicaPerfilop6}}
+                </div>
+              </LI>
+
+              <LI>
+                <div *ngFor="let item of items | async">
+                  {{item.QuimicaPerfilop7}}
+                </div>
+              </LI>
+
             </UL>
     </div>
     <br>
@@ -84,7 +131,11 @@
       <h2 class="accordion-header" id="flush-headingTwo">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
           data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-          <h4 class="card-title"><div class="subtitulo">MATERIAS</div></h4>
+          <h4 class="card-title"><div class="subtitulo">
+            <div *ngFor="let item of items | async">
+              {{item.Materias}}
+            </div>
+          </div></h4>
         </button>
       </h2>
       <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
@@ -95,18 +146,15 @@
             <div class="col">
               <div class="cards">
                 <div class="card-body">
-                  <h4 class="card-title"><div class="Titulo2">BASICAS</div></h4>
+                  <h4 class="card-title"><div class="Titulo2">
+                    <div *ngFor="let item of items | async">
+                      {{item.Basicas}}
+                    </div>
+                  </div></h4>
                   <ul>
-                    <li>Termodinámica.</li>
-                    <li>Matemáticas.</li>
-                    <li>Fenómenos de transporte.</li>
-                    <li>Procesos de separación.</li>
-                    <li>Ingeniería de reactores.</li>
-                    <li>Simulación de procesos.</li>
-                    <li>Control de procesos.</li>
-                    <li>Diseño y análisis de experimentos.</li>
-                    <li>Química ambiental.</li>
-                    <li>Ciencia de los materiales.</li>
+                    <div *ngFor="let materiasBasicas of materiasB | async">
+                      <li>{{materiasBasicas.QuimicaMateriaBasica}}</li>
+                    </div>
                   </ul>
                 </div>
               </div>
@@ -115,33 +163,15 @@
               <div class="col">
                 <div class="cards">
                   <div class="card-body">
-                    <h4 class="card-title"><div class="Titulo2">OPTATIVAS</div></h4>
+                    <h4 class="card-title"><div class="Titulo2">
+                      <div *ngFor="let item of items | async">
+                        {{item.Optativas}}
+                      </div>
+                    </div></h4>
                     <ul>
-                      <li>Catálisis heterogénea.</li>
-                      <li>Tópicos de nuevos materiales catalíticos.</li>
-                      <li>Catálisis homogénea avanzada.</li>
-                      <li>Ingeniería de fluidización.</li>
-                      <li>Diseño de equipos y plantas industriales.</li>
-                      <li>Instrumentación de control de procesos.</li>
-                      <li>Síntesis y escalamiento de procesos.</li>
-                      <li>Teoría de optimización.</li>
-                      <li>Desarrollo sostenible y economía ambiental.</li>
-                      <li>Procesos fisicoquímicos para el tratamiento de aguas.</li>
-                      <li>Ingeniería del medio ambiente.</li>
-                      <li>Diseño de reactores bioquímicos.</li>
-                      <li>Manejo y disposición de desechos sólidos.</li>
-                      <li>Manejo, tratamiento y aprovechamientos de lodos residuales.</li>
-                      <li>Control de contaminación del aire.</li>
-                      <li>Microbiología ambiental.</li>
-                      <li>Bioseparadores.</li>
-                      <li>Introducción a la nanotecnología.</li>
-                      <li>Reología en ingeniería</li>
-                      <li>Transferencia de masa y calor avanzado.</li>
-                      <li>Termodinámica estadística.</li>
-                      <li>Cristalización de polímeros.</li>
-                      <li>Cinética de polimerización, procesamiento de polímeros.</li>
-                      <li>Caracterización de polímeros.</li>
-                      <li>Biopolímeros.</li>
+                      <div *ngFor="let materiasOptativas of materiasO | async">
+                        <li>{{materiasOptativas.QuimicaMateriaOptativa}}</li>
+                      </div>
                     </ul>
                   </div>
                 </div>
@@ -156,15 +186,27 @@
       <h2 class="accordion-header" id="flush-headingThree">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
           data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-          <h4 class="card-title"><div class="subtitulo">AREAS DE INVESTIGACIÓN</div></h4>
+          <h4 class="card-title"><div class="subtitulo">
+              <div *ngFor="let item of items | async">
+              {{item.Areas}}
+              </div>
+          </div></h4>
         </button>
       </h2>
       <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
         data-bs-parent="#accordionFlushExample">
         <div class="accordion-body" style="text-align: center;">
           <ul style="list-style-type: none;">
-          <li>Ingeniería de procesos y bioprocesos.</li>
-          <li>Ingeniería ambiental.</li>
+          <li>
+            <div *ngFor="let item of items | async">
+            {{item.QuimicaAreasop1}}
+            </div>
+          </li>
+          <li>
+            <div *ngFor="let item of items | async">
+              {{item.QuimicaAreasop2}}
+              </div>
+          </li>
         </ul>
         <br>
         <br>
@@ -172,8 +214,6 @@
     </div>
   </div>
 </div>
-  <mat-divider></mat-divider>
-
 </div>
    </div>
 

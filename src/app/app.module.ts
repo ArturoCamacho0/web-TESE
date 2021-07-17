@@ -32,9 +32,7 @@ const router: Routes =[
     routing,
     appRoutingProviders,
     BrowserAnimationsModule,
-
     MaterialModule,
-
     LayoutModule,
     SectionsModule,
     RouterModule.forRoot(router),

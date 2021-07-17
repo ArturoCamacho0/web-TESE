@@ -3,14 +3,25 @@ import { Component, OnInit } from '@angular/core';
 import { CAROUSEL_DATA_ITEMS_MQUIMICA } from '../banner-mquimica/bannerMquimica';
 import { ICarouselItem } from '../../../carousel/icarousel-item.metadata';
 
+import { Observable } from 'rxjs';
+import { AngularFirestore } from '@angular/fire/firestore';
+
 @Component({
   selector: 'app-pagina-mquimica',
   templateUrl: './pagina-mquimica.component.html',
   styleUrls: ['./pagina-mquimica.component.css']
 })
 export class PaginaMquimicaComponent implements OnInit {
+  items: Observable<any[]>
+  materiasB: Observable<any[]>
+  materiasO: Observable<any[]>
+
   public carouselData: ICarouselItem[]=CAROUSEL_DATA_ITEMS_MQUIMICA;
-   constructor() { }
+  constructor(firestore: AngularFirestore) {
+    this.items = firestore.collection('EgresadosYExalumnos').valueChanges();
+    this.materiasB = firestore.collection('/EgresadosYExalumnos/MCienciasIngenieriaQuimica/QuimicaMateriasBasicas').valueChanges();
+    this.materiasO = firestore.collection('/EgresadosYExalumnos/MCienciasIngenieriaQuimica/QuimicaMateriasOptativas').valueChanges();
+  }
 
   ngOnInit(): void {
   }

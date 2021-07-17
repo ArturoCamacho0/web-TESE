@@ -123,9 +123,6 @@ import { CuerpoQuimicaComponent } from './carrera/profesion/IngenieriaQuimica/cu
     CarouselMecatronicaComponent,
     CarouselQuimicaComponent,
     CuerpoQuimicaComponent,
-
-
-
   ],
   imports: [
     CommonModule,
@@ -140,7 +137,7 @@ import { CuerpoQuimicaComponent } from './carrera/profesion/IngenieriaQuimica/cu
   exports: [
     HomeComponent,
     CarouselComponent,
-    
+
   ]
 })
 export class SectionsModule { }

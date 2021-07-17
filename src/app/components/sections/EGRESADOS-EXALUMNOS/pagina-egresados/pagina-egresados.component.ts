@@ -3,15 +3,23 @@ import { Component, OnInit } from '@angular/core';
 import { CAROUSEL_DATA_ITEMS_EGRESADOS } from '../banner-egresados/bannerEgresados';
 import { ICarouselItem } from '../../carousel/icarousel-item.metadata';
 
+import { Observable } from 'rxjs';
+import { AngularFirestore } from '@angular/fire/firestore';
+
 @Component({
   selector: 'app-pagina-egresados',
   templateUrl: './pagina-egresados.component.html',
   styleUrls: ['./pagina-egresados.component.css']
 })
 export class PaginaEgresadosComponent implements OnInit {
+
+  items: Observable<any[]>
+
   public carouselData: ICarouselItem[]=CAROUSEL_DATA_ITEMS_EGRESADOS;
 
-  constructor() { }
+  constructor(firestore: AngularFirestore) {
+    this.items = firestore.collection('EgresadosYExalumnos').valueChanges();
+  }
 
   ngOnInit(): void {
   }
@@ -82,5 +90,6 @@ export class PaginaEgresadosComponent implements OnInit {
     let l = document.getElementById('left');
     l.classList.toggle('open');
   }
+
 
 }

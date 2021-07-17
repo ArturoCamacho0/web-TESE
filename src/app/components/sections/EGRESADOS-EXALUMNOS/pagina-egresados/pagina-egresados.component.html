@@ -4,37 +4,39 @@
      <mat-drawer mode="side" class="sidebar" id="side" #drawer opened>
          <mat-selection-list role="list container" [multiple]="false">
              <mat-list-option role="listitem" (click)="getId(1)" style="margin-top: 10%;">
-              VINCULACIÓN E INCUBADORA DE EMPRESAS
+              Vinculación e Incubadora de empresas
              </mat-list-option>
              <br>
              <br>
              <mat-list-option role="listitem" (click)="getId(2)" style="margin-top: 5%;">
-              ACTIVIDADES Y CREDENCIALES
+              Actividades y Credenciales
              </mat-list-option>
              <br>
              <br>
              <mat-list-option role="listitem" (click)="getId(3)">
-              CURSOS Y DIPLOMADOS
+              Cursos y Diplomados
              </mat-list-option>
              <br>
              <br>
-             <a href="http://tecnm.occ.com.mx/Bolsa_Trabajo"><mat-list-option>
-              BOLSA DE TRABAJO
-             </mat-list-option></a>
+             <mat-list-option role="listitem">
+             <div *ngFor="let item of items | async">
+              <a href={{item.BLink}} class=option>{{item.BTitle}}</a>
+             </div>
+            </mat-list-option>
              <br>
              <br>
              <mat-list-option role="listitem" (click)="getId(4)">
-              HISTORIAL ACADÉMICO
+              Historial académico
              </mat-list-option>
              <br>
              <br>
              <mat-list-option role="listitem" (click)="getId(5)">
-              SERVICIO A LA COMUNIDAD
+              Servicio a la comunidad
              </mat-list-option>
              <br>
              <br>
              <br>
-             <p class="bane">REDES EGRESADOS</p>
+             <p class="bane">Redes sociales Egresados</p>
              <div class="social">
               <a href="https://www.facebook.com/teseegresadosac/?ref=br_rs"><img src="../../../../assets/images/facebook.svg" width="40px" alt="facebook"/></a>
               <a href="https://www.instagram.com/egresadostese/?utm_source=ig_profile_share&igshid=91yhwzw12htb"><img src="../../../../assets/images/instagram.svg" width="40px" alt="instagram"/></a>
@@ -88,7 +90,7 @@
 
         <a routerLink="/Mquimica">
         <div class="card">
-          <img src="../../../../../assets/IMAGENES_EGRESADOS/ING_QUIMICA1.jpg" class="card-img-top">
+          <img src="https://firebasestorage.googleapis.com/v0/b/app-tese.appspot.com/o/EgresadosYExalumnos%2FBannerEgresados%2FPOSGRADOS%2FING_QUIMICA1.jpg?alt=media&token=d3386360-bed9-47c0-a9de-b6b5623085da" class="card-img-top">
           <div class="card-img-overlay">
             <h1 class="tcard" style="margin-top:5vh;">MAESTRÍA EN CIENCIAS INGENIERÍA QUÍMICA</h1>
           </div>
@@ -102,7 +104,7 @@
         <a routerLink="/Mbioquimica">
         <div class="card">
 
-          <img src="../../../../../assets/IMAGENES_EGRESADOS/ING_BIOQUIMICA1.jpg" class="card-img-top">
+          <img src="https://firebasestorage.googleapis.com/v0/b/app-tese.appspot.com/o/EgresadosYExalumnos%2FBannerEgresados%2FPOSGRADOS%2FING_BIOQUIMICA1.jpg?alt=media&token=d6819f93-abd5-4f19-adf9-406dd3206528" class="card-img-top">
           <div class="card-img-overlay">
             <h1 class="tcard" style="margin-top:5vh;">MAESTRÍA EN CIENCIAS INGENIERÍA BIOQUÍMICA</h1>
           </div>
@@ -113,7 +115,7 @@
       <div class="col">
         <a routerLink="/Msistemas">
         <div class="card">
-          <img src="../../../../../assets/IMAGENES_EGRESADOS/ING_SISTEMAS1.jpg" class="card-img-top">
+          <img src="https://firebasestorage.googleapis.com/v0/b/app-tese.appspot.com/o/EgresadosYExalumnos%2FBannerEgresados%2FPOSGRADOS%2FING_SISTEMAS1.jpg?alt=media&token=eed529d0-cf2b-4a5a-8fd5-5cce9bc1de93" class="card-img-top">
           <div class="card-img-overlay">
             <h1 class="tcard" style="margin-top:5vh;">MAESTRÍA EN SISTEMAS COMPUTACIONALES</h1>
           </div>
@@ -124,7 +126,7 @@
       <div class="col">
         <a routerLink="/Meficienciaenergetica">
         <div class="card">
-          <img src="../../../../../assets/IMAGENES_EGRESADOS/ING_ER1.jpg" class="card-img-top">
+          <img src="https://firebasestorage.googleapis.com/v0/b/app-tese.appspot.com/o/EgresadosYExalumnos%2FBannerEgresados%2FPOSGRADOS%2FING_ER1.jpg?alt=media&token=1f8ebd78-4310-43f6-8455-3d395c02641a" class="card-img-top">
           <div class="card-img-overlay">
             <h1 class="tcard" style="margin-top:5vh;">MAESTRÍA EN EFICIENCIA ENERGÉTICA Y ENERGÍAS RENOVABLES</h1>
           </div>
@@ -135,7 +137,7 @@
       <div class="col">
         <a routerLink="/Mmecatronica">
         <div class="card">
-          <img src="../../../../../assets/IMAGENES_EGRESADOS/ING_MECATRONICA1.jpg" class="card-img-top">
+          <img src="https://firebasestorage.googleapis.com/v0/b/app-tese.appspot.com/o/EgresadosYExalumnos%2FBannerEgresados%2FPOSGRADOS%2FING_MECATRONICA1.jpg?alt=media&token=66b7e1a9-9ba2-44b4-8c31-0268f162d3fa" class="card-img-top">
           <div class="card-img-overlay">
             <h1 class="tcard" style="margin-top:5vh;">MAESTRÍA EN CIENCIAS EN INGENIERÍA MECATRÓNICA</h1>
           </div>
@@ -146,7 +148,7 @@
       <div class="col">
         <a routerLink="/Mgestion">
         <div class="card">
-          <img src="../../../../../assets/IMAGENES_EGRESADOS/ING_GESTION1.jpg" class="card-img-top">
+          <img src="https://firebasestorage.googleapis.com/v0/b/app-tese.appspot.com/o/EgresadosYExalumnos%2FBannerEgresados%2FPOSGRADOS%2FING_GESTION1.jpg?alt=media&token=7b2258b8-162c-464e-a014-7f4322814b28" class="card-img-top">
           <div class="card-img-overlay">
             <h1 class="tcard" style="margin-top:5vh;">MAESTRÍA EN GESTIÓN ADMINISTRATIVA</h1>
           </div>
@@ -160,7 +162,7 @@
       <!-- Breadcrumb, ayuda a que el sitio sea mas agil y el usuario sepa en donde esta localizado, hacia donde puede ir y que paginas le anteceden -->
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="#">Home</a></li>
+         <li class="breadcrumb-item"><a href="#">Home</a></li>
          <li class="breadcrumb-item active" aria-current="page">Egresados y Exalumnos</li>
          <li class="breadcrumb-item"><a href="/egresadosyexalumnos">Posgrados</a></li>
         </ol>
@@ -168,22 +170,42 @@
 
       <div class="cards">
         <div class="card-body">
-          <h4 class="card-title"><div class="Titulo2">VINCULACIÓN EMPRESARIAL E INCUBADORA DE EMPRESAS</div></h4>
-          <p class="card-text"> El Centro de Gestión Tecnológica es el área responsable de coordinar diversos programas
-            y actividades que aportan elementos empresariales a la formación integral de los estudiantes del Tecnológico
-            de Estudios Superiores de Ecatepec (TESE).
-          </p>
-          <BR>
-          <BR>
-          <h4 class="card-title"><div class="Titulo2">OBJETIVO</div></h4>
+          <h4 class="card-title"><div class="Titulo2">
+            <div *ngFor="let item of items | async">
+              {{item.VTitle1}}
+            </div>
+          </div></h4>
 
-            <UL>
-              <LI>Apoyar a egresados y estudiantes para la obtención de empleo, mediante la creación de un acervo dinámico de vacantes y su difusión.</LI>
-              <LI>Este servicio es interno y externo: primeramente se beneficia a los alumnos y egresados que son colocados en empleos acordes con sus
-                estudios. También se brinda un servicio al sector productivo, al enviar candidatos a cubrir vacantes con las especificaciones requeridas.</LI>
-              <LI>El interesado deberá acudir a una entrevista directa con el encargado de la Bolsa de Trabajo. Si cumple con los requisitos, se le entregará
-                  una carta de presentación específica para la empresa que oferta la vacante.</LI>
-            </UL>
+          <p class="card-text">
+            <div *ngFor="let item of items | async">
+              {{item.VDescripcion1}}
+            </div>
+          <br>
+          <br>
+          <h4 class="card-title"><div class="Titulo2">
+            <div *ngFor="let item of items | async ">
+              {{item.VTitle2}}
+            </div>
+          </div></h4>
+          <ul>
+            <li>
+              <div *ngFor="let item of items | async">
+                {{item.VDescripcion2op1}}
+            </div>
+          </li>
+
+          <li>
+            <div *ngFor="let item of items | async">
+              {{item.VDescripcion2op2}}
+          </div>
+          </li>
+
+          <li>
+            <div *ngFor="let item of items | async">
+              {{item.VDescripcion2op3}}
+          </div>
+          </li>
+          </ul>
           <BR>
           <BR>
 
@@ -191,9 +213,14 @@
               <div class="col">
                 <div class="cards">
                   <div class="card-body">
-                    <h4 class="card-title"><div class="Titulo2">EGRESADOS Y ALUMNOS</div></h4>
-                    <p class="card-text">En el apartado de Archivos disponibles puedes bajar el formato de inscripción; llénalo y entrégalo en la oficina del Centro de
-                      Gestión Tecnológica, donde te atenderemos con gusto.</p>
+                    <h4 class="card-title"><div class="Titulo2">
+                      <div *ngFor="let item of items | async">
+                        {{item.VTitle3}}
+                      </div></div></h4>
+                    <p class="card-text">
+                      <div *ngFor="let item of items | async">
+                        {{item.VDescripcion3}}
+                      </div>
                       <BR>
                         <BR>
                   </div>
@@ -203,8 +230,15 @@
                 <div class="col">
                   <div class="cards">
                     <div class="card-body">
-                      <h4 class="card-title"><div class="Titulo2">EMPRESAS</div></h4>
-                      <p class="card-text">Enviar correo electrónico a la dirección agarcia@tese.edu.mx con los datos de la vacante, el perfil del puesto y los datos de la empresa.</p>
+                      <h4 class="card-title"><div class="Titulo2">
+                        <div *ngFor="let item of items | async">
+                          {{item.VTitle4}}
+                        </div>
+                      </div></h4>
+                      <p class="card-text">
+                        <div *ngFor="let item of items | async">
+                          {{item.VDescripcion4}}
+                        </div>
                       <BR>
                         <BR>
                     </div>
@@ -213,20 +247,31 @@
               </div>
 
 
-          <h4 class="card-title"><div class="Titulo2">INCUBADORA DE EMPRESAS</div></h4>
-          <p class="card-text">Es un área que brinda apoyo a emprendedores en la creación de empresas,  mediante servicios de articulación y acompañamiento empresarial para
-            la elaboración y puesta en marcha de su plan de negocios. También acerca a  las empresas incubadas a posible financiamiento. Especialmente apoya la  puesta en
-            marcha de proyectos que comercializan un producto o un  servicio con alguna innovación tecnológica y que requiera de  infraestructura física y tecnología especializada.
-          </p>
+          <h4 class="card-title"><div class="Titulo2">
+            <div *ngFor="let item of items | async">
+              {{item.VTitle5}}
+            </div>
+          </div></h4>
+            <div *ngFor="let item of items | async">
+              {{item.VDescripcion5}}
+            </div>
 
-            <UL>
-              <LI>Formato de ingreso (proyecto).</LI>
-              <LI>Consultor externo.</LI>
-            </UL>
+              <ul>
+                <li>
+                  <div *ngFor="let item of items | async">
+                    {{item.VDescripcion5op1}}
+                  </div>
+                </li>
+
+                <li>
+                  <div *ngFor="let item of items | async">
+                    {{item.VDescripcion5op2}}
+                  </div>
+                </li>
+
+            </ul>
           <BR>
           <BR>
-
-
         </div>
       </div>
       </div>
@@ -244,31 +289,87 @@
 
       <div class="cards">
         <div class="card-body">
-          <h4 class="card-title"><div class="Titulo2">ACTIVIDADES DE EGRESADO</div></h4>
-            <UL>
-              <LI>Difusión de cursos de Educación Continua.</LI>
-              <LI>Reclutamientos masivos de personal gestionados por la Bolsa de trabajo del TESE.</LI>
-              <LI>Encuestas para estudios de egresados.</LI>
-            </UL>
+          <h4 class="card-title"><div class="Titulo2">
+            <div *ngFor="let item of items | async">
+              {{item.ATitle1}}
+            </div>
+          </div></h4>
+          <ul>
+            <li>
+              <div *ngFor="let item of items | async">
+                {{item.ADescripcion1op1}}
+              </div>
+            </li>
+            <li>
+              <div *ngFor="let item of items | async">
+                {{item.ADescripcion1op2}}
+              </div>
+            </li>
+            <li>
+              <div *ngFor="let item of items | async">
+                {{item.ADescripcion1op3}}
+              </div>
+            </li>
+            </ul>
+
           <BR>
           <BR>
 
-          <h4 class="card-title"><div class="Titulo2">BENEFICIOS DE LA INSTITUCIÓN</div></h4>
-          <UL>
-            <LI>Descuento del 50% en cursos de Educación Continua e Idiomas.</LI>
-            <LI>Acceso a la Biblioteca y préstamo de libros a domicilio.</LI>
-          </UL>
+          <h4 class="card-title"><div class="Titulo2">
+            <div *ngFor="let item of items | async">
+              {{item.ATitle2}}
+            </div>
+          </div></h4>
+          <ul>
+            <li>
+              <div *ngFor="let item of items | async">
+                {{item.ADescripcion2op1}}
+              </div>
+            </li>
+            <li>
+              <div *ngFor="let item of items | async">
+                {{item.ADescripcion2op2}}
+              </div>
+            </li>
+          </ul>
           <BR>
           <BR>
 
-            <h4 class="card-title"><div class="Titulo2">CREDENCIAL DE EGRESADOS</div></h4>
-              <p class="card-text">Para acceder a los beneficios es necesario contar con su credencial de egresado. <BR>Procedimiento para adquirir la credencial de egresado.</p>
-            <OL>
-              <LI>Ingresar a la página <a href="http://sici.tese.edu.mx/sici_online/sici_online.aspx">"http://sici.tese.edu.mx" </a>para generar ficha de pago.</LI>
-              <LI>Realizar el pago en cualquier sucursal bancaria.</LI>
-              <LI>Presentar pago en el área de sistemas de la Unidad de Registro y Certificación, la cual esta ubicada a un costado de recepción en el Edificio D.</LI>
-              <LI>La entrega de la credencial se realizará inmediatamente en los horarios mencionados.</LI>
-            </OL>
+            <h4 class="card-title"><div class="Titulo2">
+              <div *ngFor="let item of items | async">
+                {{item.ATitle3}}
+              </div>
+            </div></h4>
+              <p class="card-text">
+                <div *ngFor="let item of items | async">
+                  {{item.ADescripcion3}}
+                </div>
+                <br>
+                <ol>
+                  <li>
+                    <div *ngFor="let item of items | async">
+                      {{item.ADescripcion3op1}}<a href={{item.ADescripcion3op1Link}}>{{item.ADescripcion3op1Link}}</a>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div *ngFor="let item of items | async">
+                      {{item.ADescripcion3op2}}
+                    </div>
+                  </li>
+
+                  <li>
+                    <div *ngFor="let item of items | async">
+                      {{item.ADescripcion3op3}}
+                    </div>
+                  </li>
+
+                  <li>
+                    <div *ngFor="let item of items | async">
+                      {{item.ADescripcion3op4}}
+                    </div>
+                  </li>
+                </ol>
           <BR>
           <BR>
         </div>
@@ -288,37 +389,75 @@
 
       <div class="cards">
         <div class="card-body">
-          <h4 class="card-title"><div class="Titulo2">CURSOS Y DIPLOMADOS</div></h4>
-          <p class="card-text">La educación es un ingrediente fundamental a lo largo de la vida, para el desarrollo de la comunidad,
-            municipio, estado y del país, que brinda al hombre la oportunidad de integrarse y pertenecer a la sociedad del conocimiento,
-            para que cuente con las herramientas necesarias que respondan a las demandas del mundo laboral actual, competitivo y
-            globalizado.</p>
+          <h4 class="card-title">
+            <div class="Titulo2">
+              <div *ngFor="let item of items | async">
+                {{item.CTitle1}}
+              </div>
+            </div></h4>
+          <p class="card-text">
+              <div *ngFor="let item of items | async">
+                {{item.CDescripcion1}}
+              </div>
           <BR>
           <BR>
 
-          <h4 class="card-title"><div class="Titulo2">PERFIL DEL EGRESADO</div></h4>
-          <p class="card-text">Estos Diplomados se ofrecen a estudiantes, egresados, personal de los sectores público y privado, así como al
-            público en general, interesados en su capacitación y actualización.</p>
+          <h4 class="card-title"><div class="Titulo2">
+                <div *ngFor="let item of items | async">
+                  {{item.CTitle2}}
+                </div>
+          </div></h4>
+          <p class="card-text">
+                <div *ngFor="let item of items | async">
+                  {{item.CDescripcion2}}
+                </div>
           <BR>
           <BR>
 
-            <h1 class="Titulo2">CAMPO LABORAL</h1>
-              <p class="card-text">Brinda la oportunidad de integrarse y pertenecer a la sociedad del conocimiento, para que cuente con
-                las herramientas necesarias que respondan a las demandas del mundo laboral actual, competitivo y globalizado.</p>
+            <h1 class="Titulo2">
+                  <div *ngFor="let item of items | async">
+                    {{item.CTitle3}}
+                  </div>
+            </h1>
+              <p class="card-text">
+                    <div *ngFor="let item of items | async">
+                      {{item.CDescripcion3}}
+                    </div>
           <BR>
           <BR>
-            <h1 class="Titulo2">CURSOS DEL CENTRO DE IDIOMAS</h1>
-              <p class="card-text">El Centro de Idiomas del Tecnológico de Estudios Superiores de Ecatepec, basa su enseñanza en el Marco
-                Común Europeo de Referencia para la enseñanza de las lenguas extranjeras (MCER) y calibra su oferta de cursos con la escala
-                de los niveles de competencia. El cuadro siguiente presenta la descripción general de los niveles del MCER:</p>
+            <h1 class="Titulo2">
+                  <div *ngFor="let item of items | async">
+                    {{item.CTitle4}}
+                  </div>
+            </h1>
+              <p class="card-text">
+                    <div *ngFor="let item of items | async">
+                      {{item.CDescripcion4}}
+                    </div>
+                    <br>
+                <ul>
+                  <li>
+                    <div *ngFor="let item of items | async">
+                      {{item.CDescripcion4op1}}
+                    </div>
+                  </li>
 
-                <UL>
-                  <LI>BÁSICO: A1, A2 (KET)</LI>
-                  <LI>iNDEPENDIENTE: B1 (PET), B2 (FCE)</LI>
-                  <LI>COMPETENTE: C1 (CAE), C2 (CPE)</LI>
-                </UL>
+                  <li>
+                    <div *ngFor="let item of items | async">
+                      {{item.CDescripcion4op2}}
+                    </div>
+                  </li>
+
+                  <li>
+                    <div *ngFor="let item of items | async">
+                      {{item.CDescripcion4op3}}
+                    </div>
+                  </li>
+                </ul>
+              <br>
+              <br>
         </div>
-        </div>
+      </div>
     </div>
 
 
@@ -334,38 +473,76 @@
 
       <div class="cards">
         <div class="card-body">
-          <h4 class="card-title"><div class="Titulo2">HISTORIAL ACADÉMICO</div></h4>
-          <p class="card-text">Es una consulta que los alumnos inscritos o egresados pueden hacer de su trayectoria académica
-            en el sitio <a href="http://escolarweb.tese.edu.mx">http://escolarweb.tese.edu.mx</a> previa identificación de usuario y contraseña. Si el documento se obtiene
-            por esta vía solo tendrá un carácter informativo y si se requiere que el documento tenga mas formalidad deberá
-            acudir a la ventanilla de su carrera previo pago en la caja de Tesorería.</p>
+          <h4 class="card-title"><div class="Titulo2">
+            <div *ngFor="let item of items | async">
+              {{item.HTitle1}}
+            </div>
+          </div></h4>
+          <p class="card-text">
+            <div *ngFor="let item of items | async">
+              {{item.HDescripcion1}}
+            </div>
           <br>
           <br>
 
-            <div class="row row-cols-1 row-cols-md-2 g-2">
-              <div class="col">
-          <h4 class="card-title"><div class="Titulo2">DOCUMENTO ELECTRÓNICO</div></h4>
-          <p class="card-text">El alumno ingresa al sitio<a href="http://escolarweb.tese.edu.mx"> http://escolarweb.tese.edu.mx </a>donde captura su número de usuario y contraseña lo que permitirá entrar a su sesión,
-            ahí seleccionará la ventana académicos y posteriormente historial académico para imprimirlo.</p>
-            <br>
-            <br>
-
+          <div class="row row-cols-1 row-cols-md-2 g-2">
+            <div class="col">
+            <h4 class="card-title"><div class="Titulo2">
+              <div *ngFor="let item of items | async">
+                {{item.HTitle2}}
+              </div>
+              </div></h4>
+              <p class="card-text">
+                <div *ngFor="let item of items | async">
+                  {{item.HDescripcion2}}
+                </div>
+                <br>
+                <br>
             </div>
             <div class="col">
-              <h4 class="card-title"><div class="Titulo2">DOCUMENTO OFICIAL</div></h4>
-              <p class="card-text">Deberá pasar a la caja de Tesorería del TESE para pagar y posteriormente a la ventanilla de su carrera quien se lo entregara al momento.</p>
-          <BR>
-          <BR>
+              <h4 class="card-title"><div class="Titulo2">
+                <div *ngFor="let item of items | async">
+                  {{item.HTitle3}}
+                </div>
+              </div></h4>
+              <p class="card-text">
+                <div *ngFor="let item of items | async">
+                  {{item.HDescripcion3}}
+                </div>
+          <br>
+          <br>
           </div>
           </div>
 
-            <h1 class="Titulo2">HORARIO Y LUGAR</h1>
-              <p class="card-text">Av. Tecnológico S/N C.P. 55210 Col. Valle de Anáhuac, Ecatepec de Morelos, Estado de México</p>
-              <UL>
-                <LI>Edificio D en Ventanillas</LI>
-                <LI>Teléfono: 01 (55) 50 00 23 42</LI>
-                <LI>De Lunes a Viernes de 8:00 A 18:00 Horas.</LI>
-              </UL>
+            <h1 class="Titulo2">
+              <div *ngFor="let item of items | async">
+                {{item.HTitle4}}
+              </div>
+            </h1>
+              <p class="card-text">
+                <div *ngFor="let item of items | async">
+                  {{item.HDescripcion4}}
+                </div>
+                <ul>
+                  <li>
+                    <div *ngFor="let item of items | async">
+                      {{item.HDescripcion4op1}}
+                    </div>
+                  </li>
+
+                  <li>
+                    <div *ngFor="let item of items | async">
+                      {{item.HDescripcion4op2}}
+                    </div>
+                  </li>
+
+                  <li>
+                    <div *ngFor="let item of items | async">
+                      {{item.HDescripcion4op3}}
+                    </div>
+                  </li>
+                </ul>
+                <br>
         </div>
       </div>
     </div>
@@ -382,56 +559,112 @@
 
       <div class="cards">
         <p class="card-body">
-          <h4 class="card-title"><div class="Titulo2">SERVICIO A LA COMUNIDAD</div></h4>
-          <p class="card-text">El Tecnológico de Estudios Superiores de Ecatepec cuenta con 6 programas de servicio social comunitario:</p>
+          <h4 class="card-title"><div class="Titulo2">
+            <div *ngFor="let item of items | async">
+              {{item.STitle1}}
+            </div>
+          </div></h4>
+          <p class="card-text">
+            <div *ngFor="let item of items | async">
+              {{item.SDescripcion1}}
+            </div>
+            <ul>
+              <li>
+                <div *ngFor="let item of items | async">
+                  {{item.SDescripcion1op1}}
+                </div>
+              </li>
 
-          <UL>
-            <LI>Proyecto Integral de Desarrollo Social: Se apoya a las  comunidades de alto índice de marginación, en específico en el Municipio
-               de Villa Victoria, así como a comunidades en zona de pobreza urbana en  el Municipio de Ecatepec.</LI>
-            <li>Apoyo a Microempresas: Se apoya a microempresas en áreas  específicas con problemáticas en las que puedan contribuir los
-              prestadores de servicio social de acuerdo a su perfil profesional, como  requisito se solicita que se encuentren en zona de
-              pobreza urbana en el  Municipio de Ecatepec.</li>
-              <li>Preparatoria Abierta: Por medio de convenio con el SEIEM, fungimos como centro de asesoría y gestoría, en el que se
-                atiende a la comunidad interna y externa.</li>
-          </UL>
+              <li>
+                <div *ngFor="let item of items | async">
+                  {{item.SDescripcion1op2}}
+                </div>
+              </li>
+
+              <li>
+                <div *ngFor="let item of items | async">
+                  {{item.SDescripcion1op3}}
+                </div>
+              </li>
+            </ul>
           <BR>
           <BR>
 
-          <h4 class="card-title"><div class="Titulo2">INEA</div></h4>
+          <h4 class="card-title"><div class="Titulo2">
+              <div *ngFor="let item of items | async">
+                {{item.STitle2}}
+              </div>
+          </div></h4>
           <ul>
-            <li>En este programa se atiende a la comunidad interna y externa con asesorías, inscripción y trámites diversos.</li>
-            <li>Concientización de la separación de residuos sólidos no peligrosos: Este programa se realiza en forma interna y
-              externa procurando informar  a la comunidad para mantener y mejorar el medio ambiente desde el  ámbito de su actividad.</li>
-            <li>Educación Ambiental: Este programa va dirigido a la  niñez en su mayoría, acudiendo a jardín de niños y primarias a realizar
-              pláticas y actividades en pro del medio ambiente.</li>
-          </ul>
+            <li>
+              <div *ngFor="let item of items | async">
+              {{item.SDescripcion2op1}}
+            </div>
+          </li>
+          <li>
+            <div *ngFor="let item of items | async">
+            {{item.SDescripcion2op2}}
+          </div>
+        </li>
+        <li>
+          <div *ngFor="let item of items | async">
+          {{item.SDescripcion2op3}}
+        </div>
+      </li>
+    </ul>
 
-          <p class="card-text">Externamente, tenemos vinculación con Instituciones que integran a los prestadores en programas sociales como:</p>
+          <p class="card-text">
+            <div *ngFor="let item of items | async">
+              {{item.SDescripcion2}}
+            </div>
             <ol>
-              <LI>H. Ayuntamiento de Ecatepec:</LI>
+              <li>
+                <div *ngFor="let item of items | async">
+                  {{item.SDescripcion2op4a}}
+                </div>
+              </li>
                 <ul>
-                  <li>Museo Papalote Móvil.</li>
-                  <li> Yo si puedo.</li>
+                  <li>
+                    <div *ngFor="let item of items | async">
+                      {{item.SDescripcion2op5a}}
+                    </div>
+                  </li>
+                  <li>
+                    <div *ngFor="let item of items | async">
+                      {{item.SDescripcion2op5b}}
+                    </div>
+                  </li>
                 </ul>
-                <LI>CONALEP II:</LI>
+                <li>
+                  <div *ngFor="let item of items | async">
+                    {{item.SDescripcion2op4b}}
+                  </div>
+                </li>
                 <ul>
-                  <li>Atención de Escuelas Marginadas.</li>
+                  <li>
+                    <div *ngFor="let item of items | async">
+                      {{item.SDescripcion2op6a}}
+                    </div>
+                  </li>
                 </ul>
-                <LI>Universidad Tecnológica de Tecamac:</LI>
+                <LI>
+                  <div *ngFor="let item of items | async">
+                    {{item.SDescripcion2op4c}}
+                  </div>
+                </LI>
                 <ul>
-                  <li>Tutorías</li>
+                  <li>
+                    <div *ngFor="let item of items | async">
+                      {{item.SDescripcion2op7a}}
+                    </div>
+                  </li>
                 </ul>
             </ol>
             <br>
             <br>
         </div>
       </div>
-
-      <mat-divider></mat-divider>
-
     </div>
-
-      </div>
-
-    </mat-drawer-content>
+  </div>
+  </mat-drawer-content>
 </mat-drawer-container>

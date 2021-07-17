@@ -4,16 +4,13 @@
 
     <!-- BANNER -->
     <div class="container-fluid px-0">
-        div class="row bg-dark h-100">
         <div class="col-12 px-0">
         <app-carousel-carreras [items]="carouselData"></app-carousel-carreras>
         </div>
       </div>
      </div>
 
-
-   <h1 class="titulo">MAESTRÍA EN GESTIÓN ADMINISTRATIVA</h1>
-      <!-- Breadcrumb, ayuda a que el sitio sea mas agil y el usuario sepa en donde esta localizado, hacia donde puede ir y que paginas le anteceden -->
+    <!-- Breadcrumb, ayuda a que el sitio sea mas agil y el usuario sepa en donde esta localizado, hacia donde puede ir y que paginas le anteceden -->
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -23,27 +20,38 @@
       </ol>
     </nav>
 
+    <h1 class="titulo">
+      <div *ngFor="let item of items | async">
+        {{item.GestionTitulo}}
+      </div>
+     </h1>
+
     <div class="cards">
       <div class="card-body" style="background-color:#E3E3E3; text-align: center;">
-        <h4 class="card-title"><div class="Titulo2">CONCEPTOS GENERALES</div></h4>
-         <p class="card-text"> La  maestria en la gestión hace posible la realización de proceso en tiempo y
-           forma permitiendo alcanzar altos niveles de eficiencia y el alcance de metas y su adaptación a
-           condiciones diferentes a las planeadas.
-         </p>
+        <h4 class="card-title"><div class="Titulo2">
+            <div *ngFor="let item of items | async">
+              {{item.ConceptosGenerales}}
+            </div>
+        </div></h4>
+         <p class="card-text">
+            <div *ngFor="let item of items | async">
+              {{item.GestionGenerales}}
+            </div>
         <br>
        </div>
      </div>
 
      <div class="cards">
       <div class="card-body" style="text-align: center;">
-       <h4 class="card-title"><div class="Titulo2">OBJETIVO</div></h4>
-        <p class="card-text"> Formar capital humano idóneo con capacidad creativa e innovadora en el ámbito
-          administrativo, para la dirección, desarrollo, y promoción efectiva de las empresas, con conocimientos
-          científicos y tecnológicos de vanguardia capacidad de análisis para la formulación e implantación de
-          estrategias, así como con habilidades de liderazgo, negociación y manejo de grupos de trabajo,
-          coadyuvantes al cumplimiento de objetivos organizacionales sin perder de vista las normas éticas y
-          de responsabilidad social con un enfoque de sustentabilidad.
-        </p>
+       <h4 class="card-title"><div class="Titulo2">
+          <div *ngFor="let item of items | async">
+            {{item.Objetivo}}
+          </div>
+       </div></h4>
+        <p class="card-text">
+            <div *ngFor="let item of items | async">
+              {{item.GestionObjetivo}}
+            </div>
         <br>
       </div>
       </div>
@@ -54,7 +62,11 @@
             <h2 class="accordion-header" id="flush-headingOne">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                 data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                <h4 class="card-title"><div class="subtitulo">PERFIL DEL EGRESADO</div></h4>
+                <h4 class="card-title"><div class="subtitulo">
+                    <div *ngFor="let item of items | async">
+                      {{item.PerfilEgresado}}
+                    </div>
+                </div></h4>
               </button>
             </h2>
             <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
@@ -62,17 +74,46 @@
               <div class="accordion-body" style="text-align: justify;">
                 <div class="row row-cols-1 row-cols-md-2 g-2">
                   <div class="col">
-                    <p class="card-text">El egresado tendrá conocimiento en:</p>
-                    <li>La aplicación de modelos de gestión administrativa para el diseño y desarrollo de proyectos de innovación y mejora administrativa.</li>
-                    <li>Formulación e implantación de estrategias administrativas a través del uso de tecnologías de información y comunicación.</li>
-                    <li>Formular planes estratégicos orientados a la competitividad y sustentabilidad organizacional.</li>
-                    <li>Diseño de administración y control de sistemas de gestión de calidad.</li>
-                    <li>Toma de decisiones estratégicas.</li>
-                    <li>Inglés como segunda lengua.</li>
+                    <p class="card-text">
+                      <div *ngFor="let item of items | async">
+                        {{item.GestionPerfil}}
+                      </div>
+                      <ul>
+                      <li>
+                        <div *ngFor="let item of items | async">
+                          {{item.GestionPerfilop1}}
+                        </div>
+                      </li>
+                      <li>
+                        <div *ngFor="let item of items | async">
+                          {{item.GestionPerfilop2}}
+                        </div>
+                      </li>
+                      <li>
+                        <div *ngFor="let item of items | async">
+                          {{item.GestionPerfilop3}}
+                        </div>
+                      </li>
+                      <li>
+                        <div *ngFor="let item of items | async">
+                          {{item.GestionPerfilop4}}
+                        </div>
+                      </li>
+                      <li>
+                        <div *ngFor="let item of items | async">
+                          {{item.GestionPerfilop5}}
+                        </div>
+                      </li>
+                      <li>
+                        <div *ngFor="let item of items | async">
+                          {{item.GestionPerfilop6}}
+                        </div>
+                      </li>
+                  </ul>
                   </div>
                   <div class="col">
                     <div class="card">
-                      <img src="../../../../../assets/IMAGENES_EGRESADOS/grad.jpg" class="card-img-top">
+                      <img src="https://firebasestorage.googleapis.com/v0/b/app-tese.appspot.com/o/EgresadosYExalumnos%2FMGestion%2Fgrad.jpg?alt=media&token=6e18cb62-413e-449f-ad0f-eae6d594557d" class="card-img-top">
                     </div>
                   </div>
                   </div>
@@ -86,20 +127,41 @@
             <h2 class="accordion-header" id="flush-headingTwo">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                 data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                <h4 class="card-title"><div class="subtitulo">ESTRUCTURA DEL PLAN DE ESTUDIOS</div></h4>
+                <h4 class="card-title"><div class="subtitulo">
+                    <div *ngFor="let item of items | async">
+                      {{item.PlanEstudios}}
+                    </div>
+                </div></h4>
               </button>
             </h2>
             <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
               data-bs-parent="#accordionFlushExample">
               <div class="accordion-body">
                 <ul>
-                  <li>24 CREDITOS Asignaturas Básicas</li>
-                  <li>12 CREDITOS Seminarios Tópicos Selectos</li>
-                  <li>24 CREDITOS Asignaturas Optativas</li>
-                  <li>40 CREDITOS Trabajo de Tesis</li>
-                  <li>con un total de 100 Créditos</li>
+                    <li>
+                      <div *ngFor="let item of items | async">
+                        {{item.GestionPlanop1}}
+                      </div>
+                    </li>
+                    <li>
+                      <div *ngFor="let item of items | async">
+                        {{item.GestionPlanop2}}
+                      </div>
+                    </li>
+                    <li>
+                      <div *ngFor="let item of items | async">
+                        {{item.GestionPlanop3}}
+                      </div>
+                    </li>
+                    <li>
+                      <div *ngFor="let item of items | async">
+                        {{item.GestionPlanop4}}
+                      </div>
+                    </li>
                   </ul>
-
+                    <div *ngFor="let item of items | async">
+                      {{item.GestionPlan}}
+                    </div>
               </div>
             </div>
           </div>
@@ -108,19 +170,25 @@
           <h2 class="accordion-header" id="flush-headingFour">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
               data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
-              <h4 class="card-title"><div class="subtitulo">DURACION Y CRÉDITOS</div></h4>
+              <h4 class="card-title"><div class="subtitulo">
+                <div *ngFor="let item of items | async">
+                  {{item.DuracionYCreditos}}
+                </div>
+              </div></h4>
             </button>
           </h2>
           <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
             data-bs-parent="#accordionFlushExample">
             <div class="accordion-body" style="text-align: center;">
-              <p class="card-text">El tiempo para el desarrollo de la Maestría en Gestión Administrativa es
-                de cuatro semestres. Cada semestre tendrá una duración efectiva de 16 semanas, sin incluir
-                periodo de evaluación.<BR></p>
-              <p class="card-text">El plan y programa de Maestría en Gestión Administrativa fue diseñado
-                de tal forma que el estudiante cubra la estructura académica, desarrolle su tesis y apruebe
-                el examen de grado de Maestro en dos años, contados a partir de la fecha en que inicie sus estudios
-                </p>
+              <p class="card-text">
+                <div *ngFor="let item of items | async">
+                  {{item.GestionDuracion}}
+                </div>
+                <br>
+              <p class="card-text">
+                <div *ngFor="let item of items | async">
+                  {{item.GestionCreditos}}
+                </div>
                 <br>
             </div>
           </div>
@@ -130,27 +198,41 @@
           <h2 class="accordion-header" id="flush-headingThree">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
               data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-              <h4 class="card-title"><div class="subtitulo">CARRERAS RELACIONADAS</div></h4>
+              <h4 class="card-title"><div class="subtitulo">
+                <div *ngFor="let item of items | async">
+                  {{item.CarrerasR}}
+                </div>
+              </div></h4>
             </button>
           </h2>
           <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
             data-bs-parent="#accordionFlushExample">
             <div class="accordion-body" style="text-align: center;">
               <ul style="list-style-type: none;">
-                <li>Administración.</li>
-                <li>Ingenierías tales como Ingeniería en Gestión Empresarial, industrial o a fin.</li>
-                <li>Contaduría.</li>
-                <li>Economía y Finanzas</li>
-            </ul>
+                <li>
+                  <div *ngFor="let item of items | async">
+                    {{item.GestionCarreras1}}
+                  </div>
+                </li>
+                <li>
+                  <div *ngFor="let item of items | async">
+                    {{item.GestionCarreras2}}
+                  </div>
+                </li>
+                <li>
+                  <div *ngFor="let item of items | async">
+                    {{item.GestionCarreras3}}
+                  </div>
+                </li>
+                <li>
+                  <div *ngFor="let item of items | async">
+                    {{item.GestionCarreras4}}
+                  </div>
+                </li>
+              </ul>
             <br>
           </div>
         </div>
       </div>
-
-
-      </div>
-
-
-  <mat-divider></mat-divider>
-
-   </div>
+  </div>
+</div>

@@ -38,8 +38,6 @@ import { CuerpoMecatronicaComponent } from './components/sections/carrera/profes
 import { CuerpoQuimicaComponent } from './components/sections/carrera/profesion/IngenieriaQuimica/cuerpo-quimica/cuerpo-quimica.component';
 import { ContactoComponent } from './components/layout/contacto/contacto.component';
 
-
-
 // Rutas
 const appRoutes: Routes = [
     { path: '', component: HomeComponent },
