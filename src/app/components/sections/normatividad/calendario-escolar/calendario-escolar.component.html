@@ -61,7 +61,7 @@
   
             <!-- Carrousel dentro de la pagina; de no ser necesario puede ser
   eliminado sin ningun problema: Para la implementacion en tu componente tendras que realizar las importaciones necesarias en el ts; ir al archivo para mas informacion -->
-  <app-carousel [items]="carouselData"></app-carousel>
+ 
   
             <h1 class="titulo">Calendario Escolar</h1>
   
@@ -130,16 +130,14 @@
                   </h2>
                   <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
                     aria-labelledby="panelsStayOpen-headingOne">
-                    <div class="accordion-body">
-                      <mat-card-content>
-                      </mat-card-content>
-                      <div *ngFor="let item of items | async">
+                    
+                    
                       <mat-card-actions style="margin-right: auto; font-size: 8pt;"> 
-                        <a href="{{item.link}}" target="_blank" class="enlace-pdf"
-                          mat-button><img src={{item.pdf}} width="8%" height="8%"><br>PDF "Calendario Escolar"</a>
+                        <a href="http://www.tese.edu.mx/documentos2004/9110_ELFJJYP.pdf" target="_blank" class="enlace-pdf"
+                          mat-button><img src="../../../../assets/images/pdf.jpg" width="8%" height="8%"><br>PDF "Calendario Escolar"</a>
                       
-                      </mat-card-actions></div>
-                    </div>
+                      </mat-card-actions>
+                    
                   </div>
                 </div>
                
