@@ -13,7 +13,7 @@ import { connectableObservableDescriptor } from 'rxjs/internal/observable/Connec
 export class AdministracionMisionComponent implements OnInit {
 
   contends_mision: any[]=[];
-  documents_mision: Observable<any[]>
+  documents_mision: any[]=[];
 
   ingresarMision: FormGroup;
   ingresarDocumento: FormGroup;
@@ -25,7 +25,6 @@ export class AdministracionMisionComponent implements OnInit {
     private _misionService: MisionService, private fbd: FormBuilder,
     ) {
 
-   this.documents_mision = firestore.collection('/Identidad/Mision/MisionDocumentos').valueChanges();
 
 
     this.ingresarMision = this.fbm.group({
@@ -41,6 +40,7 @@ export class AdministracionMisionComponent implements OnInit {
 
   ngOnInit(): void {
     this.getContenido_Mision()
+    this.getDocumento()
   }
   onClick(){
     let full = document.getElementById('side');
@@ -89,6 +89,31 @@ export class AdministracionMisionComponent implements OnInit {
     })
 
   }
+
+  getDocumento(){
+    this._misionService.getDocumento().subscribe(data =>{
+      this.documents_mision = [];
+       data.forEach((element:any) => {
+
+         this.documents_mision.push({
+           id:element.payload.doc.id,
+           ...element.payload.doc.data()
+         })
+
+       });
+       console.log(this.documents_mision);
+    });
+  }
+
+  eliminarDocumento(id: string){
+    this._misionService.eliminarDocumento(id).then(()=>{
+      console.log('CONTENIO Mision ELIMINADO');
+    }).catch(error =>{
+      console.log(error
+       )
+    })
+  }
+
   getContenido_Mision(){
     this._misionService.getContenido_Mision().subscribe(data =>{
       this.contends_mision = [];

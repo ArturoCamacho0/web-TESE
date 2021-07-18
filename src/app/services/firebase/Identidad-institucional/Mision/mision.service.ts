@@ -24,14 +24,24 @@ export class MisionService {
     return this.firestore.collection('/Identidad/Mision/MisionDatos').snapshotChanges();
   }
 
+  eliminarContenido_Mision(id: string): Promise<any>{
+    return this.firestore.collection('/Identidad/Mision/MisionDatos').doc(id).delete();
+  }
+
    agregarDocumento(documento: any) : Promise<any>{
      return this.firestore.collection('/Identidad/Mision/MisionDocumentos').add(documento);
 
    }
 
-   eliminarContenido_Mision(id: string): Promise<any>{
-    return this.firestore.collection('/Identidad/Mision/MisionDatos').doc(id).delete();
+   getDocumento(): Observable<any>{
+    return this.firestore.collection('/Identidad/Mision/MisionDocumentos').snapshotChanges();
   }
+
+  eliminarDocumento(id: string): Promise<any>{
+    return this.firestore.collection('/Identidad/Mision/MisionDocumentos').doc(id).delete();
+  }
+
+
 
 
 

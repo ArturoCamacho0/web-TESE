@@ -95,7 +95,7 @@
 
       <h1 class="fw-bold">Seccion de Documentos Relacionados</h1>
       <form>
-            <div class="row g-3" *ngFor="let mision_docuements of documents_mision |async">
+            <div class="row g-3" *ngFor="let mision_docuements of documents_mision ">
               <label for="inputAddress" class="form-label fw-bold" >Ruta de Documento</label>
 
               <div class="col-10">
@@ -103,7 +103,7 @@
               </div>
 
               <div class="col">
-                <button type="button" class="btn btn-danger">Eliminar</button>
+                <button type="button" (click)="eliminarDocumento(mision_docuements.id)" class="btn btn-danger">Eliminar</button>
               </div>
 
               <div class="col">
