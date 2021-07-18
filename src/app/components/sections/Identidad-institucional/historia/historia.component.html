@@ -15,11 +15,14 @@
           Logo
         </mat-list-option>
       </a>
-      <a href="http://www.tese.edu.mx/documentos2004/7285_BGNZNIQ.pdf">
+      <div *ngFor="let dir_organigrama of organigrama | async">
+        <a href="{{dir_organigrama.Dir}}">
         <mat-list-option >
           Organigrama
         </mat-list-option>
       </a>
+    </div>
+
     </mat-selection-list>
   </mat-drawer>
 
@@ -74,7 +77,7 @@
 
           <div class="row">
 
-            <div class="col-sm-3 mb-3" *ngFor="let dropdowns_title of dropdowns_titles | async" >
+            <div class="col-sm-3 mb-3" *ngFor="let dropdowns_title of dropdowns_img | async" >
 
               <div class="card">
                 <img src="{{dropdowns_title.Dir_subdrop}}" class="card-img-top" alt="...">

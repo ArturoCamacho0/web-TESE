@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { LogoService } from 'src/app/services/firebase/Identidad-institucional/logo.service';
+import { LogoService } from 'src/app/services/firebase/Identidad-institucional/Logo/logo.service';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { FormBuilder ,FormGroup, Validators} from '@angular/forms';
 import { Observable } from 'rxjs';
@@ -20,6 +20,8 @@ export class AdministracionLogoComponent implements OnInit {
  titles_logo: Observable<any[]>
  contends_logo: Observable<any[]>
  imgs_logo:Observable<any[]>
+
+ contenido_logo: any[] = [];
   constructor(firestore: AngularFirestore, private fblogo : FormBuilder,
     private _logoService: LogoService, private router:Router) {
 
@@ -30,6 +32,7 @@ this.titles_logo = firestore.collectionGroup('Titulos-logo').valueChanges();
 
       //LOGO
     this.ingresarContentLogo = this.fblogo.group({
+      id_logo:['',Validators.required],
       contenido_logo:['', Validators.required]
 
     })
@@ -40,6 +43,7 @@ this.titles_logo = firestore.collectionGroup('Titulos-logo').valueChanges();
 
 
   ngOnInit(): void {
+    this.getContenido_Logo()
   }
   onClick(){
     let full = document.getElementById('side');
@@ -60,7 +64,7 @@ this.titles_logo = firestore.collectionGroup('Titulos-logo').valueChanges();
       return;
     }
     const logo: any = {
-
+      id_logo:this.ingresarContentLogo.value.id_logo,
       contenido:this.ingresarContentLogo.value.contenido_logo
     }
     this._logoService.agregarContenido(logo).then(()=>{
@@ -70,6 +74,29 @@ this.titles_logo = firestore.collectionGroup('Titulos-logo').valueChanges();
       console.log(error);
     }
     )
+  }
+
+  getContenido_Logo(){
+    this._logoService.getContenido_Logo().subscribe(data =>{
+      this.contenido_logo = [];
+       data.forEach((element:any) => {
+
+         this.contenido_logo.push({
+           id:element.payload.doc.id,
+           ...element.payload.doc.data()
+         })
+
+       });
+       console.log(this.contenido_logo);
+    });
+  }
+  eliminarContenido_Logo(id: string){
+    this._logoService.eliminarContenido_Logo(id).then(()=>{
+      console.log('CONTENIO ELIMINADO');
+    }).catch(error =>{
+      console.log(error
+       )
+    })
   }
 
 }

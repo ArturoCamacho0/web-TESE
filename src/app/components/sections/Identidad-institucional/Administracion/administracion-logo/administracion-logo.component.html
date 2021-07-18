@@ -64,14 +64,14 @@
 
         <label for="exampleFormControlTextarea1" class="form-label fw-bold">CONTENIDO</label>
 
-      <div *ngFor="let logo_contend of contends_logo | async" class="row g-3">
+      <div *ngFor="let logo_contend of contenido_logo" class="row g-3">
 
         <div class="col-10" >
           <textarea class="form-control" id="exampleFormControlTextarea1" value="{{logo_contend.contenido}}" rows="3"></textarea>
         </div>
 
         <div class="col">
-          <button type="button" class="btn btn-danger">Eliminar</button>
+          <button (click)="eliminarContenido_Logo(logo_contend.id)" type="button" class="btn btn-danger">Eliminar</button>
         </div>
 
         <div class="col">
@@ -92,6 +92,12 @@
     <span *ngIf="submittedContLogo && ingresarContentLogo.invalid" class="alert alert-danger" >
       El campo debe tener datos para agregar contenido
     </span>
+
+      <label for="exampleFormControlTextarea1" class="form-label ">POSICION EN PAGINA</label>
+      <div class="col-11">
+        <input class="form-control" id="exampleFormControlTextarea1" rows="3" type="number"
+        formControlName="id_logo">
+      </div>
 
       <label for="exampleFormControlTextarea1" class="form-label ">CONTENIDO</label>
       <div class="col-11">

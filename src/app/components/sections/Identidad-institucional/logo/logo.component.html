@@ -13,11 +13,13 @@
           </mat-list-option>
         </a>
 
-        <a href="http://www.tese.edu.mx/documentos2004/7285_BGNZNIQ.pdf">
-          <mat-list-option role="/Logo">
+        <div *ngFor="let dir_organigrama of organigrama | async">
+          <a href="{{dir_organigrama.Dir}}">
+          <mat-list-option >
             Organigrama
           </mat-list-option>
         </a>
+      </div>
       </mat-selection-list>
     </mat-drawer>
 
@@ -48,7 +50,7 @@
         <h1 class="text-center fs-4 fw-bold">{{title.Titulo}}</h1>
       </div>
 
-      <div *ngFor="let contend of contends | async">
+      <div *ngFor="let contend of contenido_logo">
         <p class="margen">
  {{contend.contenido}}
         <br>
