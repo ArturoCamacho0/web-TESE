@@ -52,16 +52,12 @@
           </div>
 
           <label for="inputAddress" class="form-label fw-bold" >CONTENIDO</label>
-          <div class="col-10" >
+          <div class="col-11" >
             <textarea class="form-control" id="exampleFormControlTextarea1" value="{{mision_contends.contenido}}" rows="3"></textarea>
           </div>
 
           <div class="col">
             <button type="button" (click)="eliminarContenido_Mision(mision_contends.id)"  class="btn btn-danger">Eliminar</button>
-          </div>
-
-          <div class="col">
-            <button type="button" class="btn btn-success">Actualizar</button>
           </div>
 
         </div>
@@ -79,7 +75,7 @@
           </div>
 
           <label for="inputAddress" class="form-label fw-bold" >CONTENIDO</label>
-          <div class="col-10" >
+          <div class="col-11" >
             <textarea class="form-control" id="exampleFormControlTextarea1" value="" rows="3" placeholder="contenido" formControlName="contenido_mision"></textarea>
           </div>
 
@@ -107,8 +103,10 @@
               </div>
 
               <div class="col">
-                <button type="button" class="btn btn-success">Actualizar</button>
+                <button type="submit" class="btn btn-success">Editar</button>
               </div>
+
+
 
             </div>
           </form>
@@ -120,7 +118,7 @@
               <span *ngIf="submitedDocumento && ingresarDocumento.invalid" class="alert alert-danger">El campo debe tener datos para Agregar</span>
               <label for="inputAddress" class="form-label fw-bold" >RUTA DE DOCUMENTO</label>
 
-              <div class="col-10">
+              <div class="col-11">
                 <input type="text" class="form-control" id="inputAddress" value="" placeholder="Ruta" formControlName="Dir_Documento">
               </div>
 
