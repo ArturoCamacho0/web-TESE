@@ -8,7 +8,7 @@ export const CAROUSEL_DATA_ITEMS_MECATRONICA: ICarouselItemCarreras[]=[
     },
     subtitle: '',
     link: '',
-    image: "assets/images/Carreras/mecatronica.jpg"
+    image: "https://firebasestorage.googleapis.com/v0/b/app-tese.appspot.com/o/web-tese%2Fcomponentes%2FCarreras%2FMecatronica.jpg?alt=media&token=999c79b6-ed73-4913-8d7b-5ce59b8c0b48"
   },{
     id:2,
     title:{
@@ -17,6 +17,6 @@ export const CAROUSEL_DATA_ITEMS_MECATRONICA: ICarouselItemCarreras[]=[
     },
     subtitle: '',
     link: '',
-    image: "assets/images/Carreras/mecatronica1.jpg"
+    image: "https://firebasestorage.googleapis.com/v0/b/app-tese.appspot.com/o/web-tese%2Fcomponentes%2FCarreras%2FMecatronica1.jpg?alt=media&token=bdf7eead-8eaa-463e-b18b-5ae638ffeec7"
   }
 ]

@@ -8,7 +8,7 @@ export const CAROUSEL_DATA_ITEMS_SISTEMAS: ICarouselItemCarreras[]=[
     },
     subtitle: '',
     link: '',
-    image: "assets/images/Carreras/SistemasComputacionalesLogo.jpg"
+    image: "https://firebasestorage.googleapis.com/v0/b/app-tese.appspot.com/o/web-tese%2Fcomponentes%2FCarreras%2FSistemasComputacionalesLogo.jpg?alt=media&token=2c5e013e-c52d-4bce-ac54-64a49830c75b"
   },{
     id:2,
     title:{
@@ -17,7 +17,7 @@ export const CAROUSEL_DATA_ITEMS_SISTEMAS: ICarouselItemCarreras[]=[
     },
     subtitle: '',
     link: '',
-    image: "assets/images/Carreras/sistemas1.jpg"
+    image: "https://firebasestorage.googleapis.com/v0/b/app-tese.appspot.com/o/web-tese%2Fcomponentes%2FCarreras%2Fsistemas1.jpg?alt=media&token=1951221e-0dec-41e4-ae5f-6999b8ffc6ee"
   }
 ]
 

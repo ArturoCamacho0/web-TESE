@@ -40,7 +40,7 @@
    <div class="card">
      <div class="card-body">
        <h4 class="card-title"><div class="Titulo2">Objetivo de la carrera: </div></h4>
-       <p class="card-text"> <p>Formar integralmente profesionales que contribuyan a la gestión de empresas e innovación de procesos así como al diseño, implementación y desarrollo de sistemas estratégicos de negocios, optimizando recursos en un entorno global, con ética y responsabilidad social.
+       <p class="card-text"><div *ngFor="let item of items | async">{{item.ObjetivoGestion}}</div>
      </div>
    </div>
 
@@ -57,22 +57,22 @@
        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
          <div class="accordion-body">
            <ol start="1">
-            <LI >Desarrollar y aplicar habilidades directivas y la ingeniería en el diseño, creación, gestión, desarrollo, fortalecimiento e innovación de las organizaciones, con una orientación sistémica y sustentable para la toma de decisiones en forma efectiva.
-            <LI >Diseñar e innovar estructuras administrativas y procesos, con base en las necesidades de las organizaciones para competir eficientemente en mercados globales.
-            <LI >Gestionar eficientemente los recursos de la organización con visión compartida, con el fin de suministrar bienes y servicios de calidad.
-            <LI >Aplicar métodos cuantitativos y cualitativos para el análisis e interpretación de datos y modelado de sistemas, en los procesos organizacionales para la mejora continua, atendiendo estándares de calidad mundial.
-            <LI >Diseñar, evaluar y emprender nuevos negocios y proyectos empresariales, que promuevan el desarrollo sustentable y la responsabilidad social, en un mercado competitivo.
-            <LI >Diseñar e implementar estrategias de mercadotecnia basadas en información recopilada de fuentes primarias y secundarias del consumidor o usuario de algún producto, de acuerdo a oportunidades y amenazas del mercado.
-            <LI >Establecer programas para el fortalecimiento de la seguridad e higiene en las organizaciones.
-            <LI >Gestionar sistemas integrales de calidad, ejerciendo un liderazgo efectivo y un compromiso ético, aplicando las herramientas básicas de la ingeniería.
-            <LI >Interpretar y aplicar normas legales que incidan en la creación y desarrollo de las organizaciones.
-            <LI >Integrar, dirigir y desarrollar equipos de trabajo para la mejora continua y el crecimiento integral de las organizaciones.
-            <LI >Analizar e interpretar la información financiera para detectar oportunidades de mejora e inversión en un mundo global, que incidan en la rentabilidad del negocio.
-            <LI >Utilizar las nuevas tecnologías de información en la organización, para optimizar los procesos de comunicación y eficientar la toma de decisiones.
-            <LI >Propiciar el desarrollo del capital humano, para la realización de los objetivos organizacionales, dentro de un marco ético y un contexto multicultural.
-            <LI >Aplicar métodos de investigación para desarrollar e innovar sistemas, procesos y productos en las diferentes dimensiones de la organización.
-            <LI >Gestionar la cadena de suministros de las organizaciones con un enfoque orientado a procesos.
-            <LI >Analizar e interpretar la economía global para facilitar la toma de decisiones en la organización.
+            <LI ><div *ngFor="let item of items | async">{{item.PerfilEgresoGestion}}</div>
+            <LI ><div *ngFor="let item of items | async">{{item.PerfilEgresoGestion1}}</div>
+            <LI ><div *ngFor="let item of items | async">{{item.PerfilEgresoGestion2}}</div>
+            <LI ><div *ngFor="let item of items | async">{{item.PerfilEgresoGestion3}}</div>
+            <LI ><div *ngFor="let item of items | async">{{item.PerfilEgresoGestion4}}</div>
+            <LI ><div *ngFor="let item of items | async">{{item.PerfilEgresoGestion5}}</div>
+            <LI ><div *ngFor="let item of items | async">{{item.PerfilEgresoGestion6}}</div>
+            <LI ><div *ngFor="let item of items | async">{{item.PerfilEgresoGestion7}}</div>
+            <LI ><div *ngFor="let item of items | async">{{item.PerfilEgresoGestion8}}</div>
+            <LI ><div *ngFor="let item of items | async">{{item.PerfilEgresoGestion9}}</div>
+            <LI ><div *ngFor="let item of items | async">{{item.PerfilEgresoGestion10}}</div>
+            <LI ><div *ngFor="let item of items | async">{{item.PerfilEgresoGestion11}}</div>
+            <LI ><div *ngFor="let item of items | async">{{item.PerfilEgresoGestion12}}</div>
+            <LI ><div *ngFor="let item of items | async">{{item.PerfilEgresoGestion13}}</div>
+            <LI ><div *ngFor="let item of items | async">{{item.PerfilEgresoGestion14}}</div>
+            <LI ><div *ngFor="let item of items | async">{{item.PerfilEgresoGestion15}}</div>
           </ol>
         </div>
        </div>
@@ -103,7 +103,7 @@
   <div class="accordion-item">
     <h2 class="accordion-header" id="panelsStayOpen-headingUno">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseUno" aria-expanded="false" aria-controls="panelsStayOpen-collapseUno">
-        Oferta Educativa. Ingeniería Gestión Empresarial
+        <div *ngFor="let item of items | async">{{item.TituloBoton1Gestion}}</div>
       </button>
     </h2>
     <div id="panelsStayOpen-collapseUno" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingUno">
@@ -115,7 +115,7 @@
   <div class="accordion-item">
     <h2 class="accordion-header" id="panelsStayOpen-headingDos">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseDos" aria-expanded="false" aria-controls="panelsStayOpen-collapseDos">
-        Administración de la Salud y Seguridad Ocupacional
+        <div *ngFor="let item of items | async">{{item.TituloBoton2Gestion}}</div>
       </button>
     </h2>
     <div id="panelsStayOpen-collapseDos" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingDos">
@@ -127,7 +127,7 @@
   <div class="accordion-item">
     <h2 class="accordion-header" id="panelsStayOpen-headingTres">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTres" aria-expanded="false" aria-controls="panelsStayOpen-collapseTres">
-        Álgebra Lineal
+        <div *ngFor="let item of items | async">{{item.TituloBoton3Gestion}}</div>
       </button>
     </h2>
     <div id="panelsStayOpen-collapseTres" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTres">
@@ -139,7 +139,7 @@
   <div class="accordion-item">
     <h2 class="accordion-header" id="panelsStayOpen-headingCuatro">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseCuatro" aria-expanded="false" aria-controls="panelsStayOpen-collapseCuatro">
-        Cadena de Suministros
+        <div *ngFor="let item of items | async">{{item.TituloBoton4Gestion}}</div>
       </button>
     </h2>
     <div id="panelsStayOpen-collapseCuatro" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingCuatro">
@@ -151,7 +151,7 @@
   <div class="accordion-item">
     <h2 class="accordion-header" id="panelsStayOpen-headingcinco">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsecinco" aria-expanded="false" aria-controls="panelsStayOpen-collapsecinco">
-        Cálculo Diferencial
+        <div *ngFor="let item of items | async">{{item.TituloBoton5Gestion}}</div>
       </button>
     </h2>
     <div id="panelsStayOpen-collapsecinco" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingcinco">
@@ -163,7 +163,7 @@
   <div class="accordion-item">
     <h2 class="accordion-header" id="panelsStayOpen-headingseis">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseseis" aria-expanded="false" aria-controls="panelsStayOpen-collapseseis">
-        Cálculo Integral
+        <div *ngFor="let item of items | async">{{item.TituloBoton6Gestion}}</div>
       </button>
     </h2>
     <div id="panelsStayOpen-collapseseis" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingseis">
@@ -175,7 +175,7 @@
   <div class="accordion-item">
     <h2 class="accordion-header" id="panelsStayOpen-headingsiete">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsesiete" aria-expanded="false" aria-controls="panelsStayOpen-collapsesiete">
-        Calidad Aplicada a la Gestión Empresarial
+        <div *ngFor="let item of items | async">{{item.TituloBoton7Gestion}}</div>
       </button>
     </h2>
     <div id="panelsStayOpen-collapsesiete" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingsiete">
@@ -187,7 +187,7 @@
   <div class="accordion-item">
     <h2 class="accordion-header" id="panelsStayOpen-headingocho">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseocho" aria-expanded="false" aria-controls="panelsStayOpen-collapseocho">
-        Contabilidad Orientada a los Negocios
+        <div *ngFor="let item of items | async">{{item.TituloBoton8Gestion}}</div>
       </button>
     </h2>
     <div id="panelsStayOpen-collapseocho" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingocho">
@@ -199,7 +199,7 @@
   <div class="accordion-item">
     <h2 class="accordion-header" id="panelsStayOpen-headingnueve">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsenueve" aria-expanded="false" aria-controls="panelsStayOpen-collapsenueve">
-        Costos Empresariales
+        <div *ngFor="let item of items | async">{{item.TituloBoton9Gestion}}</div>
       </button>
     </h2>
     <div id="panelsStayOpen-collapsenueve" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingnueve">
@@ -211,7 +211,7 @@
   <div class="accordion-item">
     <h2 class="accordion-header" id="panelsStayOpen-heading10">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse10" aria-expanded="false" aria-controls="panelsStayOpen-collapse10">
-        Desarrollo Humano
+        <div *ngFor="let item of items | async">{{item.TituloBoton10Gestion}}</div>
       </button>
     </h2>
     <div id="panelsStayOpen-collapse10" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading10">
