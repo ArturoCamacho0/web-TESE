@@ -51,7 +51,7 @@ export class AdministracionHistoriaComponent implements OnInit {
   ingresarNorma: FormGroup;
   submited_norma = false;
 
-  titles_historia: Observable<any[]>
+  titles: any [] = [];
 
 
   constructor(firestore: AngularFirestore, private fbc: FormBuilder,
@@ -101,7 +101,6 @@ export class AdministracionHistoriaComponent implements OnInit {
       contenido_nor:['', Validators.required]
     })
 
-          this.titles_historia = firestore.collection('/Identidad/Historia/Titulos-historia').valueChanges();
 
   }
 
@@ -114,6 +113,7 @@ export class AdministracionHistoriaComponent implements OnInit {
    this.getInvestigacion()
    this.getCurso()
    this. getNorma()
+   this.getTitulos()
   }
   onClick(){
     let full = document.getElementById('side');
@@ -451,6 +451,21 @@ export class AdministracionHistoriaComponent implements OnInit {
       console.log(error
        )
     })
+  }
+
+  getTitulos(){
+    this._historiaService.getTitulos().subscribe(data =>{
+      this.titles = [];
+       data.forEach((element:any) => {
+
+         this.titles.push({
+           id:element.payload.doc.id,
+           ...element.payload.doc.data()
+         })
+
+       });
+       console.log(this.titles);
+    });
   }
 
 }

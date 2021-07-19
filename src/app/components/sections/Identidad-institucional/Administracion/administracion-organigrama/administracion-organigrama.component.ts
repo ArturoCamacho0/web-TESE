@@ -1,3 +1,4 @@
+import { OrganigramaService } from './../../../../../services/firebase/Identidad-institucional/Organigrama/organigrama.service';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
@@ -11,14 +12,14 @@ export class AdministracionOrganigramaComponent implements OnInit {
 
 
 
-  contends_organigrama: Observable<any[]>
+  organigrama : any [] = [];
 
-  constructor(firestore: AngularFirestore) {
+  constructor(firestore: AngularFirestore,private _organigramaService: OrganigramaService) {
 
-    this.contends_organigrama = firestore.collection('/Identidad/Organigrama/DatosOrganigrama').valueChanges();
-  }
+      }
 
   ngOnInit(): void {
+    this.getOrganigrama()
   }
   onClick(){
     let full = document.getElementById('side');
@@ -31,6 +32,20 @@ export class AdministracionOrganigramaComponent implements OnInit {
 
     let l = document.getElementById('left');
     l.classList.toggle('open');
+  }
+  getOrganigrama(){
+    this._organigramaService.getOrganigrama().subscribe(data =>{
+      this.organigrama = [];
+       data.forEach((element:any) => {
+
+         this.organigrama.push({
+           id:element.payload.doc.id,
+           ...element.payload.doc.data()
+         })
+
+       });
+       console.log(this.organigrama);
+    });
   }
 
 }

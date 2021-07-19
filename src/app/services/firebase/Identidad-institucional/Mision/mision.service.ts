@@ -10,9 +10,6 @@ export class MisionService {
 
   constructor(private firestore: AngularFirestore) {
 
-
-
-
    }
 
    agregarMision(mision_contenido: any) : Promise<any>{
@@ -39,6 +36,10 @@ export class MisionService {
 
   eliminarDocumento(id: string): Promise<any>{
     return this.firestore.collection('/Identidad/Mision/MisionDocumentos').doc(id).delete();
+  }
+
+  getOrganigrama(): Observable<any>{
+    return this.firestore.collection('/Identidad/Organigrama/DatosOrganigrama').snapshotChanges();
   }
 
 

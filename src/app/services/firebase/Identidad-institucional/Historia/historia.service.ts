@@ -11,6 +11,11 @@ export class HistoriaService {
 
 
    }
+
+   getTitulos(): Observable<any>{
+    return this.firestore.collection('/Identidad/Historia/Titulos-historia').snapshotChanges();
+  }
+
    agregarContenido_H(contenido_h:any): Promise<any>{
     return this.firestore.collection('/Identidad/Historia/Contenidos-historia').add(contenido_h);
    }
@@ -105,6 +110,10 @@ export class HistoriaService {
 
   eliminarNorma(id: string): Promise<any>{
     return this.firestore.collection('/Identidad/Historia/Dropdowns-historia/1006/Contenido-dropdownE').doc(id).delete();
+  }
+
+  getOrganigrama(): Observable<any>{
+    return this.firestore.collection('/Identidad/Organigrama/DatosOrganigrama').snapshotChanges();
   }
 
 

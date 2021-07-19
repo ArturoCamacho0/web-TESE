@@ -54,7 +54,7 @@
 
     <section class="lh-sm fs-4 shadow p-3 mb-5 bg-body rounded">
       <form>
-        <div *ngFor="let historia_titles of titles_historia | async" class="row g-3">
+        <div *ngFor="let historia_titles of titles" class="row g-3">
 
           <label for="inputAddress" class="form-label fw-bold" >TITULO</label>
           <div class="col-10">
@@ -72,6 +72,12 @@
         <label for="inputAddress" class="form-label fw-bold" >CONTENIDO</label>
         <div class="row g-3" *ngFor="let historia_contends of contends_historia">
 
+          <label for="inputAddress" class="form-label" >Posicion en Pagina</label>
+          <div class="col-10">
+            <input class="form-control" value="{{historia_contends.id_contenido}}" row="3" type="number">
+          </div>
+
+          <label for="inputAddress" class="form-label" >Contenido de Parrafo</label>
           <div class="col-10" >
             <textarea class="form-control" id="exampleFormControlTextarea1" value="{{historia_contends.contenido}}" rows="3"></textarea>
           </div>
@@ -316,6 +322,12 @@
 
                 <div class="row g-3" *ngFor="let programas_dropdown of dropdown_programas ">
 
+                  <label for="inputAddress" class="form-label" >Posicion en Pagina</label>
+                  <div class="col-2">
+                    <input class="form-control" value="{{programas_dropdown.id_programa}}" row="3" type="number">
+                  </div>
+
+                  <label for="inputAddress" class="form-label" >Contenido de Parrafo</label>
                   <div class="col-10" >
                     <textarea class="form-control" id="exampleFormControlTextarea1" value="{{programas_dropdown.contenido}}" rows="3"></textarea>
                   </div>
@@ -373,6 +385,11 @@
                 <label for="inputAddress" class="form-label" >AMBITO ACADEMICO</label>
 
                 <div class="row g-3" *ngFor="let ambito_dropdown of dropdown_ambito">
+
+                  <label for="inputAddress" class="form-label" >Posicion en Pagina</label>
+                  <div class="col-2">
+                    <input class="form-control" value="{{ambito_dropdown.id_ambito}}" row="3" type="number">
+                  </div>
 
                   <div class="col-10" >
                     <textarea class="form-control" id="exampleFormControlTextarea1" value="{{ambito_dropdown.contenido}}" rows="3"></textarea>
@@ -433,6 +450,11 @@
                 <label for="inputAddress" class="form-label" >PROGRAMAS DE INVESTIGACION TECNOLOGICA</label>
 
                 <div class="row g-3" *ngFor="let investigacion_dropdown of dropdown_investigacion">
+
+                  <label for="inputAddress" class="form-label" >Posicion en Pagina</label>
+                  <div class="col-2">
+                    <input class="form-control" value="{{investigacion_dropdown.id_programa}}" row="3" type="number">
+                  </div>
 
                   <div class="col-10" >
                     <textarea class="form-control" id="exampleFormControlTextarea1" value="{{investigacion_dropdown.contenido}}" rows="3"></textarea>
@@ -504,6 +526,11 @@
 
                   <div class="row g-3" *ngFor="let normas_dropdown of dropdown_normas ">
 
+                  <label for="inputAddress" class="form-label" >Posicion en Pagina</label>
+                  <div class="col-2">
+                    <input class="form-control" value="{{normas_dropdown.id_norma}}" row="3" type="number">
+                  </div>
+
                     <div class="col-10" >
                       <textarea class="form-control" id="exampleFormControlTextarea1" value="{{normas_dropdown.contenido}}" rows="3"></textarea>
                     </div>
@@ -525,7 +552,6 @@
               <form [formGroup]="ingresarNorma" (ngSubmit)="agregarNorma()">
                 <div class="row g-3">
                   <span *ngIf="submited_norma && ingresarNorma.invalid" class="alert alert-danger">El campo debe tener datos para Agregar</span>
-
 
                   <div class="col-10" >
                     <label for="inputAddress" class="form-label" >Posicion en Pagina</label>
@@ -562,6 +588,11 @@
                   <label for="inputAddress" class="form-label" >CURSOS</label>
 
                   <div class="row g-3" *ngFor="let cursos_dropdown of dropdown_cursos ">
+
+                  <label for="inputAddress" class="form-label" >Posicion en Pagina</label>
+                  <div class="col-2">
+                    <input class="form-control" value="{{cursos_dropdown.id_curso}}" row="3" type="number">
+                  </div>
 
                     <div class="col-10" >
                       <textarea class="form-control" id="exampleFormControlTextarea1" value="{{cursos_dropdown.contenido}}" rows="3"></textarea>

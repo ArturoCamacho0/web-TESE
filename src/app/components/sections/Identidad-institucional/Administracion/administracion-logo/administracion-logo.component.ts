@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { LogoService } from 'src/app/services/firebase/Identidad-institucional/Logo/logo.service';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { FormBuilder ,FormGroup, Validators} from '@angular/forms';
-import { Observable } from 'rxjs';
+
 
 @Component({
   selector: 'app-administracion-logo',
@@ -14,21 +14,19 @@ export class AdministracionLogoComponent implements OnInit {
 
   //LOGO
  ingresarContentLogo: FormGroup;
+
  submittedContLogo = false;
 
 
- titles_logo: Observable<any[]>
- contends_logo: Observable<any[]>
- imgs_logo:Observable<any[]>
+ titles_logo: any[] = [];
+ imgs_logo:any[] = [];
+
+
 
  contenido_logo: any[] = [];
   constructor(firestore: AngularFirestore, private fblogo : FormBuilder,
-    private _logoService: LogoService, private router:Router) {
-
-this.titles_logo = firestore.collectionGroup('Titulos-logo').valueChanges();
-      this.contends_logo = firestore.collectionGroup('Contenidos-logo').valueChanges();
-      this.imgs_logo = firestore.collectionGroup('Imagenes-logo').valueChanges();
-
+    private _logoService: LogoService, private router:Router,
+    private aRoute: ActivatedRoute, private fbtitl : FormBuilder) {
 
       //LOGO
     this.ingresarContentLogo = this.fblogo.group({
@@ -36,7 +34,6 @@ this.titles_logo = firestore.collectionGroup('Titulos-logo').valueChanges();
       contenido_logo:['', Validators.required]
 
     })
-
     }
 
 
@@ -44,6 +41,8 @@ this.titles_logo = firestore.collectionGroup('Titulos-logo').valueChanges();
 
   ngOnInit(): void {
     this.getContenido_Logo()
+    this.getTitulos()
+    this.getImagen()
   }
   onClick(){
     let full = document.getElementById('side');
@@ -98,5 +97,42 @@ this.titles_logo = firestore.collectionGroup('Titulos-logo').valueChanges();
        )
     })
   }
+
+
+
+  getTitulos(){
+    this._logoService.getTitulos().subscribe(data =>{
+      this.titles_logo = [];
+       data.forEach((element:any) => {
+
+         this.titles_logo.push({
+           id:element.payload.doc.id,
+
+           ...element.payload.doc.data()
+         })
+
+       });
+       console.log(this.titles_logo);
+    });
+  }
+
+
+
+  getImagen(){
+    this._logoService.getImagen().subscribe(data =>{
+      this.imgs_logo = [];
+       data.forEach((element:any) => {
+
+         this.imgs_logo.push({
+           id:element.payload.doc.id,
+           ...element.payload.doc.data()
+         })
+
+       });
+       console.log(this.imgs_logo);
+    });
+  }
+
+
 
 }

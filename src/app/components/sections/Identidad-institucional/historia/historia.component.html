@@ -15,7 +15,7 @@
           Logo
         </mat-list-option>
       </a>
-      <div *ngFor="let dir_organigrama of organigrama | async">
+      <div *ngFor="let dir_organigrama of organigrama">
         <a href="{{dir_organigrama.Dir}}">
         <mat-list-option >
           Organigrama
@@ -47,10 +47,10 @@
 
   <app-carousel [items]="carouselData" ></app-carousel>
   <div class="lh-sm fs-4 shadow p-3 mb-5 bg-body rounded">
-    <div *ngFor="let title of titles | async" >
+    <div *ngFor="let title of titles" >
     <h1 class="titulo-item text-center fs-4 fw-bold  mb-5">{{title.Titulo}}</h1>
     </div>
-    <div *ngFor="let contend of contends | async" class=" margen">
+    <div *ngFor="let contend of contends_historia " class=" margen">
       <P>
         {{contend.contenido}}
     <br>
@@ -77,7 +77,7 @@
 
           <div class="row">
 
-            <div class="col-sm-3 mb-3" *ngFor="let dropdowns_title of dropdowns_img | async" >
+            <div class="col-sm-3 mb-3" *ngFor="let dropdowns_title of dropdown_carreras " >
 
               <div class="card">
                 <img src="{{dropdowns_title.Dir_subdrop}}" class="card-img-top" alt="...">
@@ -105,7 +105,7 @@
 
           <div class="row">
 
-            <div class="col-sm-3 mb-3" *ngFor="let A_dropdowns_titles of dropdowns_titles_A | async">
+            <div class="col-sm-3 mb-3" *ngFor="let A_dropdowns_titles of dropdown_posgrados">
               <div class="card">
                 <img src="{{A_dropdowns_titles.Dir_subdrop}}" class="card-img-top" alt="..." >
                 <div class="card-body">
@@ -135,7 +135,7 @@
       <div id="flush-collapseTree" class="accordion-collapse collapse" aria-labelledby="flush-headingTree" data-bs-parent="#accordionFlushExample">
 
 
-        <div class="accordion-body" *ngFor="let B_dropdowns_titles of dropdowns_titles_B | async">
+        <div class="accordion-body" *ngFor="let B_dropdowns_titles of dropdown_programas">
           <P>
             {{B_dropdowns_titles.contenido}}
           </P>
@@ -153,7 +153,7 @@
         </button>
       </h2>
       <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
-        <div class="accordion-body"  *ngFor="let C_dropdowns_titles of dropdowns_titles_C | async">
+        <div class="accordion-body"  *ngFor="let C_dropdowns_titles of dropdown_ambito">
           <p>
             {{C_dropdowns_titles.contenido}}
           </p>
@@ -171,7 +171,7 @@
         </button>
       </h2>
       <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
-        <div class="accordion-body" *ngFor="let D_dropdowns_titles of dropdowns_titles_D | async">
+        <div class="accordion-body" *ngFor="let D_dropdowns_titles of dropdown_investigacion">
           <p>
             {{D_dropdowns_titles.contenido}}
           </p>
@@ -196,7 +196,7 @@
         </button>
       </h2>
       <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
-        <div class="accordion-body" *ngFor="let E_dropdowns_titles of dropdowns_titles_E | async">
+        <div class="accordion-body" *ngFor="let E_dropdowns_titles of dropdown_normas">
           <p>
             {{E_dropdowns_titles.contenido}}
           </p>
@@ -214,7 +214,7 @@
         </button>
       </h2>
       <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample">
-        <div class="accordion-body" *ngFor="let F_dropdowns_titles of dropdowns_titles_F | async">
+        <div class="accordion-body" *ngFor="let F_dropdowns_titles of dropdown_cursos ">
           <p>
             {{F_dropdowns_titles.contenido}}
           </p>
