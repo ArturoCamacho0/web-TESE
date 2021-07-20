@@ -60,6 +60,11 @@ import { CuerpoMecatronicaComponent } from './carrera/profesion/IngenieriaMecatr
 import { CarouselMecatronicaComponent } from './carrera/profesion/IngenieriaMecatronica/carousel-mecatronica/carousel-mecatronica.component';
 import { CarouselQuimicaComponent } from './carrera/profesion/IngenieriaQuimica/carousel-quimica/carousel-quimica.component';
 import { CuerpoQuimicaComponent } from './carrera/profesion/IngenieriaQuimica/cuerpo-quimica/cuerpo-quimica.component';
+import { AdministracionLogoComponent } from './Identidad-institucional/Administracion/administracion-logo/administracion-logo.component';
+import { AdministracionHistoriaComponent } from './Identidad-institucional/Administracion/administracion-historia/administracion-historia.component';
+import { AdministracionMisionComponent } from './Identidad-institucional/Administracion/administracion-mision/administracion-mision.component';
+import { AdministracionOrganigramaComponent } from './Identidad-institucional/Administracion/administracion-organigrama/administracion-organigrama.component';
+
 
 
 
@@ -123,6 +128,12 @@ import { CuerpoQuimicaComponent } from './carrera/profesion/IngenieriaQuimica/cu
     CarouselMecatronicaComponent,
     CarouselQuimicaComponent,
     CuerpoQuimicaComponent,
+    AdministracionLogoComponent,
+    AdministracionHistoriaComponent,
+    AdministracionMisionComponent,
+    AdministracionOrganigramaComponent,
+
+
 
 
 
@@ -140,7 +151,6 @@ import { CuerpoQuimicaComponent } from './carrera/profesion/IngenieriaQuimica/cu
   exports: [
     HomeComponent,
     CarouselComponent,
-    
   ]
 })
 export class SectionsModule { }

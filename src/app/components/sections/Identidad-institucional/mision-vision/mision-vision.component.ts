@@ -1,3 +1,5 @@
+import { Observable } from 'rxjs';
+import { AngularFirestore } from '@angular/fire/firestore';
 import { Component, OnInit } from '@angular/core';
 import { CAROUSEL_DATA_ITEMS_BANNERP } from './carousel';
 import { ICarouselItem } from '../../carousel/icarousel-item.metadata';
@@ -9,8 +11,13 @@ import { ICarouselItem } from '../../carousel/icarousel-item.metadata';
 })
 export class MisionVisionComponent implements OnInit {
 
+  documents: Observable<any[]>
+  contends: Observable<any[]>
   public carouselData: ICarouselItem[]=CAROUSEL_DATA_ITEMS_BANNERP;
-  constructor() { }
+  constructor(firestore: AngularFirestore) {
+    this.documents = firestore.collectionGroup('MisionDocumentos').valueChanges();
+    this.contends = firestore.collectionGroup('MisionDatos').valueChanges();
+   }
 
   ngOnInit(): void {
   }

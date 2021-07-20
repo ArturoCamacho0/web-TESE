@@ -2,20 +2,20 @@
   <mat-drawer-container class="side-container">
     <mat-drawer mode="side"class="sidebar" id="side" #drawer opened>
       <mat-selection-list role="list-container" [multiple]="false">
-        <a href="Historia">
+        <a href="admin-historia">
           <mat-list-option>
             Historia
           </mat-list-option>
         </a>
-        <a href="Mision">
+        <a href="admin-mision">
           <mat-list-option role="/Logo">
             Mision Vision
           </mat-list-option>
         </a>
 
-        <a href="http://www.tese.edu.mx/documentos2004/7285_BGNZNIQ.pdf">
+        <a href="admin-logo">
           <mat-list-option role="/Logo">
-            Organigrama
+            Logo
           </mat-list-option>
         </a>
       </mat-selection-list>
@@ -32,44 +32,35 @@
       <div class="box-shadow= 50px 50px;">
         <nav arial-label="breadcrumb">
           <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a class="ubicacion-pag" href="#">Home</a></li>
+            <li class="breadcrumb-item"><a class="ubicacion-pag" href="#">Administracion</a></li>
             <li class="breadcrumb-item"><a class="ubicacion-pag" href="#">Identidad Institucional</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Logo</li>
+            <li class="breadcrumb-item active" aria-current="page">Organigrama</li>
           </ol>
         </nav>
       </div>
     </div>
 
-    <app-carousel class="mb-5" [items]="carouselData"></app-carousel>
+    <h1 class="fw-bold lh-sm fs-4 shadow p-3 mb-5 bg-body rounded">Panel Administracion Organigrama</h1>
 
+    <section class="lh-sm fs-4 shadow p-3 mb-5 bg-body rounded">
+      <form>
 
-    <div class="lh-sm fs-4 shadow p-3 mb-5 bg-body rounded">
-      <div  *ngFor="let title of titles  | async" >
-        <h1 class="text-center fs-4 fw-bold">{{title.Titulo}}</h1>
+        <div *ngFor="let organigrama_contends of contends_organigrama | async" class="row g-3">
+          <label for="inputAddress" class="form-label fw-bold" >Ruta de Organigrama</label>
+        <div class="col">
+          <input type="text" class="form-control" id="inputAddress" value="{{organigrama_contends.Dir}}">
+        </div>
+
+        <div class="col">
+          <button type="button" class="btn btn-success">Actualizar</button>
+        </div>
       </div>
 
-      <div *ngFor="let contend of contends | async">
-        <p class="margen">
- {{contend.contenido}}
-        <br>
-    </p></div>
-
-
-
-    </div>
-
-
-
-     <div class="shadow text-center p-3 mb-5 bg-body rounded" *ngFor="let picture of pictures | async">
-       <p>
-         <img src="{{picture.Dir}}" class="img-fluid rounded" alt="...">
-       </p>
-      <br>
-      <h1 class="text-center fs-4 fw-bold mb-3">{{picture.Titulo}} </h1>
-    </div>
-
+      </form>
+    </section>
 
 
     </mat-drawer-content>
   </mat-drawer-container>
   </div>
+

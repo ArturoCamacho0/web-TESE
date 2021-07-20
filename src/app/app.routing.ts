@@ -1,8 +1,11 @@
+import { AdministracionOrganigramaComponent } from './components/sections/Identidad-institucional/Administracion/administracion-organigrama/administracion-organigrama.component';
+import { AdministracionMisionComponent } from './components/sections/Identidad-institucional/Administracion/administracion-mision/administracion-mision.component';
+import { AdministracionLogoComponent } from './components/sections/Identidad-institucional/Administracion/administracion-logo/administracion-logo.component';
 
 import { MisionVisionComponent } from './components/sections/Identidad-institucional/mision-vision/mision-vision.component';
 import { HistoriaComponent } from './components/sections/Identidad-institucional/historia/historia.component';
 import { LogoComponent } from './components/sections/Identidad-institucional/logo/logo.component';
-import { ModuleWithProviders } from '@angular/core';
+import { ModuleWithProviders, Component } from '@angular/core';
 import {Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/sections/home/home.component';
 import { PlantillaContenidoComponent } from './components/sections/plantilla-contenido/plantilla-contenido.component';
@@ -37,6 +40,7 @@ import { CuerpoMecanicaComponent } from './components/sections/carrera/profesion
 import { CuerpoMecatronicaComponent } from './components/sections/carrera/profesion/IngenieriaMecatronica/cuerpo-mecatronica/cuerpo-mecatronica.component';
 import { CuerpoQuimicaComponent } from './components/sections/carrera/profesion/IngenieriaQuimica/cuerpo-quimica/cuerpo-quimica.component';
 import { ContactoComponent } from './components/layout/contacto/contacto.component';
+import { AdministracionHistoriaComponent } from './components/sections/Identidad-institucional/Administracion/administracion-historia/administracion-historia.component';
 
 
 
@@ -81,7 +85,15 @@ const appRoutes: Routes = [
 
 
     { path: 'plantillacontenido', component:PlantillaContenidoComponent },
-    { path: 'contact', component: ContactoComponent }
+    { path: 'contact', component: ContactoComponent },
+    { path: 'admin-logo', component: AdministracionLogoComponent},
+    { path: 'admin-historia', component: AdministracionHistoriaComponent},
+    { path: 'admin-mision', component: AdministracionMisionComponent},
+    { path: 'admin-organigrama', component: AdministracionOrganigramaComponent}
+
+
+
+
 
 ];
 
