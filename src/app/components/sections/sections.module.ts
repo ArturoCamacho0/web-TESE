@@ -64,6 +64,7 @@ import { AdministracionLogoComponent } from './Identidad-institucional/Administr
 import { AdministracionHistoriaComponent } from './Identidad-institucional/Administracion/administracion-historia/administracion-historia.component';
 import { AdministracionMisionComponent } from './Identidad-institucional/Administracion/administracion-mision/administracion-mision.component';
 import { AdministracionOrganigramaComponent } from './Identidad-institucional/Administracion/administracion-organigrama/administracion-organigrama.component';
+import { ImgLogoComponent } from './Identidad-institucional/Administracion/administracion-logo/Edit/img-logo/img-logo.component';
 
 
 
@@ -133,6 +134,8 @@ import { AdministracionOrganigramaComponent } from './Identidad-institucional/Ad
     AdministracionHistoriaComponent,
     AdministracionMisionComponent,
     AdministracionOrganigramaComponent,
+    ImgLogoComponent,
+
 
 
 

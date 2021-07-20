@@ -13,11 +13,13 @@
             Logo
           </mat-list-option>
         </a>
-        <a href="http://www.tese.edu.mx/documentos2004/7285_BGNZNIQ.pdf">
-          <mat-list-option role="/Logo">
+        <div *ngFor="let dir_organigrama of organigrama">
+          <a href="{{dir_organigrama.Dir}}">
+          <mat-list-option >
             Organigrama
           </mat-list-option>
         </a>
+      </div>
       </mat-selection-list>
     </mat-drawer>
 
@@ -41,7 +43,7 @@
     </div>
 
     <app-carousel [items]="carouselData"></app-carousel>
-    <div class="lh-sm fs-4 shadow p-3 bg-body rounded" *ngFor="let contend of contends | async" >
+    <div class="lh-sm fs-4 shadow p-3 bg-body rounded" *ngFor="let contend of contends_mision" >
       <h1 class="text-center fs-4 fw-bold ">{{contend.Titulo}}</h1>
       <p class="margen">
         {{contend.contenido}}
@@ -60,10 +62,10 @@
         <mat-card-subtitle style="font-size: 2ch;">PDF</mat-card-subtitle>
       </mat-card-header>
 
-      <div *ngFor="let document of documents | async">
+      <div *ngFor="let document of documents_mision">
         <mat-card-content>
         <p>
-         <img  class="img-icon" src="{{document.Icono_Documento}}">
+         <img  class="img-icon" src="../../../../../assets/images/PDF-ICON.png">
         </p>
       </mat-card-content>
       <mat-card-actions style="margin-right: auto;">

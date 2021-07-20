@@ -1,3 +1,4 @@
+import { ImgLogoComponent } from './components/sections/Identidad-institucional/Administracion/administracion-logo/Edit/img-logo/img-logo.component';
 import { AdministracionOrganigramaComponent } from './components/sections/Identidad-institucional/Administracion/administracion-organigrama/administracion-organigrama.component';
 import { AdministracionMisionComponent } from './components/sections/Identidad-institucional/Administracion/administracion-mision/administracion-mision.component';
 import { AdministracionLogoComponent } from './components/sections/Identidad-institucional/Administracion/administracion-logo/administracion-logo.component';
@@ -89,7 +90,8 @@ const appRoutes: Routes = [
     { path: 'admin-logo', component: AdministracionLogoComponent},
     { path: 'admin-historia', component: AdministracionHistoriaComponent},
     { path: 'admin-mision', component: AdministracionMisionComponent},
-    { path: 'admin-organigrama', component: AdministracionOrganigramaComponent}
+    { path: 'admin-organigrama', component: AdministracionOrganigramaComponent},
+    { path: 'edit-img-logo/:id', component: ImgLogoComponent}
 
 
 

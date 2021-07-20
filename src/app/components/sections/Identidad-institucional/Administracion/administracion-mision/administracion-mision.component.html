@@ -44,7 +44,7 @@
 
     <section  class="lh-sm fs-4 shadow p-3 mb-5 bg-body rounded">
       <form>
-        <div *ngFor="let mision_contends of contends_mision | async" class="row g-3">
+        <div *ngFor="let mision_contends of contends_mision " class="row g-3">
 
           <label for="inputAddress" class="form-label fw-bold" >TITULO</label>
           <div class="col-10">
@@ -52,42 +52,84 @@
           </div>
 
           <label for="inputAddress" class="form-label fw-bold" >CONTENIDO</label>
-          <div class="col-10" >
+          <div class="col-11" >
             <textarea class="form-control" id="exampleFormControlTextarea1" value="{{mision_contends.contenido}}" rows="3"></textarea>
           </div>
 
           <div class="col">
-            <button type="button" class="btn btn-danger">Eliminar</button>
-          </div>
-
-          <div class="col">
-            <button type="button" class="btn btn-success">Actualizar</button>
+            <button type="button" (click)="eliminarContenido_Mision(mision_contends.id)"  class="btn btn-danger">Eliminar</button>
           </div>
 
         </div>
         <hr>
       </form>
-        <div class="row g-3">
+      <label for="inputAddress" class="form-label fw-bold" >Agregar Titulo y Contenido</label>
 
+      <form [formGroup]="ingresarMision" (ngSubmit)="agregarMision()">
+        <div class="row g-3">
+          <span *ngIf="submitedMision && ingresarMision.invalid" class="alert alert-danger">Los campos deben tener datos para ingresar</span>
           <label for="inputAddress" class="form-label fw-bold" >TITULO</label>
+
           <div class="col-10">
-            <input type="text" class="form-control" id="inputAddress" value="">
+            <input type="text" class="form-control" id="inputAddress" value="" formControlName="titulo_mision" placeholder="Titulo">
           </div>
 
           <label for="inputAddress" class="form-label fw-bold" >CONTENIDO</label>
-          <div class="col-10" >
-            <textarea class="form-control" id="exampleFormControlTextarea1" value="" rows="3"></textarea>
+          <div class="col-11" >
+            <textarea class="form-control" id="exampleFormControlTextarea1" value="" rows="3" placeholder="contenido" formControlName="contenido_mision"></textarea>
           </div>
 
           <div class="col">
-            <button type="button" class="btn btn-success">Agregar</button>
+            <button type="submit" class="btn btn-success">Agregar</button>
           </div>
 
         </div>
-      <form>
-
       </form>
     </section>
+
+    <section class="lh-sm fs-4 shadow p-3 mb-5 bg-body rounded">
+
+      <h1 class="fw-bold">Seccion de Documentos Relacionados</h1>
+      <form>
+            <div class="row g-3" *ngFor="let mision_docuements of documents_mision ">
+              <label for="inputAddress" class="form-label fw-bold" >Ruta de Documento</label>
+
+              <div class="col-10">
+                <input type="text" class="form-control" id="inputAddress" value="{{mision_docuements.Dir_Documento}} " placeholder="Titulo">
+              </div>
+
+              <div class="col">
+                <button type="button" (click)="eliminarDocumento(mision_docuements.id)" class="btn btn-danger">Eliminar</button>
+              </div>
+
+              <div class="col">
+                <button type="submit" class="btn btn-success">Editar</button>
+              </div>
+
+
+
+            </div>
+          </form>
+          <hr>
+          <label for="inputAddress" class="form-label fw-bold" >Agregar Documento</label>
+          <hr>
+          <form [formGroup]="ingresarDocumento" (ngSubmit)="agregarDocumento()">
+            <div class="row">
+              <span *ngIf="submitedDocumento && ingresarDocumento.invalid" class="alert alert-danger">El campo debe tener datos para Agregar</span>
+              <label for="inputAddress" class="form-label fw-bold" >RUTA DE DOCUMENTO</label>
+
+              <div class="col-11">
+                <input type="text" class="form-control" id="inputAddress" value="" placeholder="Ruta" formControlName="Dir_Documento">
+              </div>
+
+              <div class="col">
+                <button type="submit" class="btn btn-success">Agregar</button>
+              </div>
+
+            </div>
+          </form>
+    </section>
+
 
 
     </mat-drawer-content>

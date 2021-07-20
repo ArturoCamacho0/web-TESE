@@ -13,11 +13,13 @@
           </mat-list-option>
         </a>
 
-        <a href="http://www.tese.edu.mx/documentos2004/7285_BGNZNIQ.pdf">
-          <mat-list-option role="/Logo">
+        <div *ngFor="let dir_organigrama of organigrama">
+          <a href="{{dir_organigrama.Dir}}">
+          <mat-list-option >
             Organigrama
           </mat-list-option>
         </a>
+      </div>
       </mat-selection-list>
     </mat-drawer>
 
@@ -44,11 +46,11 @@
 
 
     <div class="lh-sm fs-4 shadow p-3 mb-5 bg-body rounded">
-      <div  *ngFor="let title of titles  | async" >
+      <div  *ngFor="let title of titles_logo " >
         <h1 class="text-center fs-4 fw-bold">{{title.Titulo}}</h1>
       </div>
 
-      <div *ngFor="let contend of contends | async">
+      <div *ngFor="let contend of contenido_logo">
         <p class="margen">
  {{contend.contenido}}
         <br>
@@ -60,7 +62,7 @@
 
 
 
-     <div class="shadow text-center p-3 mb-5 bg-body rounded" *ngFor="let picture of pictures | async">
+     <div class="shadow text-center p-3 mb-5 bg-body rounded" *ngFor="let picture of imgs_logo">
        <p>
          <img src="{{picture.Dir}}" class="img-fluid rounded" alt="...">
        </p>
