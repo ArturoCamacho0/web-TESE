@@ -69,6 +69,7 @@ import { AdministracionOrganigramaComponent } from './Identidad-institucional/Ad
 
 
 
+
 @NgModule({
   declarations: [
     HomeComponent,

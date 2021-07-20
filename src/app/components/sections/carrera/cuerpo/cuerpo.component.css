@@ -1,275 +1,269 @@
+/* Configuracion de estilos para la plantilla contenido. */
 
+/* Elementos css para el titulo, y subtitulos se configura el color del titulo y se le agrega un borde  por debajo */
+.titulo {
+  text-align: center;
 
-/* CSS Personalizado para la seccion */
-.list-group-item{
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    color: #EA5455;
+  font-family: sans-serif;
 
-    font-weight: bold;
-  }
+  font-size: 6ch;
+  font-weight: bold;
+  color: #2c5234;
+  line-height: 1.5ch;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 13px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
 
+/* Se utiliza para el primer subtitulo */
+.Titulo2 {
+  color: #2c5234;
+  font-weight: bold;
+  text-align: justify;
+  border-bottom: 2px solid #9c8412;
+  padding: 5px;
+  font-size: 4ch;
+}
 
-  .btn-grad {background-image: linear-gradient(to right, #EB3349 0%, #F45C43  51%, #EB3349  100%)}
-  .btn-grad {
-     margin: 10px;
-     padding: 15px 45px;
-     text-align: center;
-     text-transform: uppercase;
-     transition: 0.5s;
-     background-size: 200% auto;
-     color: white;
-     box-shadow: 0 0 20px #eee;
-     border-radius: 10px;
-     display: block;
-   }
+/* Subtitulo central o ideas */
+.subtitulo {
+  color: #2c5234;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 1px solid #fd5c63;
+  padding: 5px;
+  font-size: 3ch;
+}
 
-   .btn-grad:hover {
-     background-position: right center; /* change the direction of the change here */
-     color: #fff;
-     text-decoration: none;
-   }
+/*  */
 
+/* Cuerpo de la seccion SUBTITULO */
+.card-body {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 13px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
 
-  /* Configuracion de estilos para la plantilla contenido. */
+/* Se agrega un efecto de sombra al rededor del contenido */
+.container {
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
+    rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
 
-  /* Elementos css para el titulo, y subtitulos se configura el color del titulo y se le agrega un borde  por debajo */
-  .titulo {
-    text-align: center;
+.container-fluid {
+  padding: 0;
+}
+/* Elementos CSS de la Sidebar */
 
-    font-family: sans-serif;
+.sidebar {
+  /* background-image: radial-gradient(
+    circle farthest-corner at 47.4% 55%,
+    rgba(218, 61, 61, 1) 0%,
+    rgba(170, 13, 71, 0.81) 90%
+  ); */
 
-    font-size: 6ch;
-    font-weight: bold;
-    color: #2c5234;
-    line-height: 1.5ch;
-    padding: 10px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 13px 6px -1px,
-      rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-  }
+  background-color: #eb2a31da;
+  background-size: inherit;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
 
-  /* Se utiliza para el primer subtitulo */
-  .Titulo2 {
-    color: #2c5234;
-    font-weight: bold;
-    text-align: justify;
-    border-bottom: 2px solid #9c8412;
-    padding: 5px;
-    font-size: 4ch;
-  }
+.mat-list-option{
+  color: #fff;
+  text-align: center;
+  font-size: 1.2rem;
+}
 
-  /* Subtitulo central o ideas */
-  .subtitulo {
-    color: #2c5234;
-    font-weight: bold;
-    text-align: center;
-    border-bottom: 1px solid #fd5c63;
-    padding: 5px;
-    font-size: 3ch;
-  }
+.text-side h1{
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
 
-  /*  */
+.subtitulo, .Titulo2{
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+}
 
-  /* Cuerpo de la seccion SUBTITULO */
-  .card-body {
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 13px 6px -1px,
-      rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-  }
+body::-webkit-scrollbar {
+  display: none;
+}
 
-  /* Se agrega un efecto de sombra al rededor del contenido */
-  .container {
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
-      rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
-  }
+body {
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+}
 
-  .container-fluid {
-    padding: 0;
-  }
-  /* Elementos CSS de la Sidebar */
+#acordeon > div{
+  width: 100%;
+  color: white;
+  border-color: tomato;
+  background-color: tomato;
 
-  .sidebar {
-    /* background-image: radial-gradient(
-      circle farthest-corner at 47.4% 55%,
-      rgba(218, 61, 61, 1) 0%,
-      rgba(170, 13, 71, 0.81) 90%
-    ); */
+}
+.accordion-color-collapse{
+  background-color: white;
+  color: black;
 
-    background-color: #eb2a31da;
+}
+#acordeon > div div a{
+  width: 100%;
+  color:black;
+  border-color: tomato;
+  background-color: tomato;
+}
 
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  }
+.accordion-item:hover h2 button{
+  background-color: #eb2a31da;
+  color: white;
+  border-color:  #eb2a31da;
 
-  .mat-list-option{
-    color: #fff;
-    text-align: center;
-    font-size: 1.2rem;
-  }
+}
 
-  .text-side h1{
-    margin-top: 15px;
-    margin-bottom: 15px;
-  }
+/* Configuracion de estilos globales */
 
-  .subtitulo, .Titulo2{
-    margin-bottom: 15px;
-    padding-bottom: 15px;
-  }
+a {
+  text-decoration: none;
+}
 
-  body::-webkit-scrollbar {
-    display: none;
-  }
+.side-container {
+  height: initial;
+}
 
-  body {
-    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
-  }
+.sidebar {
+  padding: 10px;
+  width: 20%;
+}
 
-  #acordeon > div{
-    width: 100%;
-  }
+.side-content {
+  padding: 15px;
+}
 
-  #acordeon > div div a{
-    width: 100%;
-  }
+.cards {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  background-color: #fff;
+}
 
-  .accordion-item:hover h2 button{
-    background-color: rgb(181, 215, 255);
-  }
+.careers {
+  width: 98%;
+  margin-right: 0;
+  margin-left: 0;
+  padding-top: 30px;
+  margin: 10px;
+}
 
-  /* Configuracion de estilos globales */
+.row {
+  gap: 10px;
+  margin-top: 40px;
+}
 
-  a {
-    text-decoration: none;
-  }
+.card-career {
+  height: 100px;
+}
 
-  .side-container {
-    height: 100vh;
-  }
+.card-career > mat-card {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: black;
+}
 
-  .sidebar {
-    padding: 10px;
-    width: 20%;
-  }
+.card-career > mat-card > span {
+  font-size: 1.3rem;
+  text-align: center;
+}
 
-  .side-content {
-    padding: 15px;
-  }
+.card-career:hover > mat-card > span {
+  display: none;
+}
 
-  .cards {
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    background-color: #fff;
-  }
+.card-career:hover > mat-card {
+  filter: blur(1px);
+}
 
-  .careers {
-    width: 98%;
-    margin-right: 0;
-    margin-left: 0;
-    padding-top: 30px;
-    margin: 10px;
-  }
+.informatica:hover > mat-card {
+  background-image: url("../../../../../assets/images/informatica.jpg");
+}
 
-  .row {
-    gap: 10px;
-    margin-top: 40px;
-  }
+.quimica:hover > mat-card {
+  background-image: url("../../../../../assets/images/quimica.jpg");
+}
 
-  .card-career {
-    height: 100px;
-  }
+.contador:hover > mat-card {
+  background-image: url("../../../../../assets/images/contador.jpg");
+}
 
-  .card-career > mat-card {
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    color: black;
-  }
+.act {
+  background-color: white;
+  color: black;
+  text-align: center;
+}
 
+.open {
+  display: none;
+}
+
+@media screen and (max-width: 860px) {
   .card-career > mat-card > span {
-    font-size: 1.3rem;
-    text-align: center;
+    font-size: 1rem;
   }
 
-  .card-career:hover > mat-card > span {
+  #side {
+    width: 70vw;
+  }
+
+  #arrow {
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text-side {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (min-width: 860px) {
+  #arrow {
     display: none;
   }
 
-  .card-career:hover > mat-card {
-    filter: blur(1px);
-  }
-
-  .informatica:hover > mat-card {
-    background-image: url("../../../../../assets/images/informatica.jpg");
-  }
-
-  .quimica:hover > mat-card {
-    background-image: url("../../../../../assets/images/quimica.jpg");
-  }
-
-  .contador:hover > mat-card {
-    background-image: url("../../../../../assets/images/contador.jpg");
-  }
-
-  .act {
-    background-color: white;
-    color: black;
-    text-align: center;
-  }
-
-  .open {
+  .divider {
     display: none;
   }
+}
 
-  @media screen and (max-width: 860px) {
-    .card-career > mat-card > span {
-      font-size: 1rem;
-    }
+#container {
+  overflow: hidden; /* change to hidden */
+  margin: 0 auto;
+  margin-top: 37px;
+  height: 100%;
+  width: 875px;
+  box-shadow: 0 30 30px 5px #999;
+  -webkit-box-shadow: 30 0 30px 5px #999;
+  -o-box-shadow: 0 30 30px 5px #999;
+  border: 1px solid black;
+  border-top-style: none;
+}
+.accordion-color{
+  background-color: #eb2a31da;
+  color:white;
+  border-color: #eb2a31da;
 
-    #side {
-      width: 70vw;
-    }
-
-    #arrow {
-      margin-bottom: 20px;
-      font-weight: bold;
-      font-size: 2rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .text-side {
-      margin-top: 20px;
-    }
-  }
-
-  @media screen and (min-width: 860px) {
-    #arrow {
-      display: none;
-    }
-
-    .divider {
-      display: none;
-    }
-  }
-
-  #container {
-    overflow: hidden; /* change to hidden */
-    margin: 0 auto;
-    margin-top: 37px;
-    height: 100%;
-    width: 875px;
-    -moz-box-shadow: 0 30 30px 5px #999;
-    -webkit-box-shadow: 30 0 30px 5px #999;
-    -o-box-shadow: 0 30 30px 5px #999;
-    border: 1px solid black;
-    border-top-style: none;
-  }
+}
+.ubicacion-pag{
+  color: #eb2a31da;
+}
+.margen{
+  margin:5vh;
+}
 

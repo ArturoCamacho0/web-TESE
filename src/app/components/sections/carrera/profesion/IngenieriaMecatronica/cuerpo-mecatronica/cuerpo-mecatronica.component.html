@@ -40,7 +40,7 @@
    <div class="card">
      <div class="card-body">
        <h4 class="card-title"><div class="Titulo2">Objetivo de la carrera: </div></h4>
-       <p class="card-text"><div *ngFor="let item of items | async">{{item.ObjetivoMecatronica}}</div>
+       <p class="card-text"><div *ngFor="let Obj of Obj | async">{{Obj.campo}}</div>
      </div>
    </div>
 
@@ -55,7 +55,7 @@
          </button>
        </h2>
        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-        <div *ngFor="let item of items | async">{{item.ObjetivoGeneralMecatronica}}</div><br>
+        <div *ngFor="let Obj of Obj | async">{{Obj.campo1}}</div>
         </div>
 
      </div>
@@ -68,14 +68,7 @@
        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
          <div class="accordion-body">
            <ol start="1">
-            <LI ><div *ngFor="let item of items | async">{{item.PerfilEgresoMecatronica1}}</div>
-            <LI ><div *ngFor="let item of items | async">{{item.PerfilEgresoMecatronica2}}</div>
-            <LI ><div *ngFor="let item of items | async">{{item.PerfilEgresoMecatronica3}}</div>
-            <LI ><div *ngFor="let item of items | async">{{item.PerfilEgresoMecatronica4}}</div>
-            <LI ><div *ngFor="let item of items | async">{{item.PerfilEgresoMecatronica5}}</div>
-            <LI ><div *ngFor="let item of items | async">{{item.PerfilEgresoMecatronica6}}</div>
-            <LI ><div *ngFor="let item of items | async">{{item.PerfilEgresoMecatronica7}}</div>
-            <LI ><div *ngFor="let item of items | async">{{item.PerfilEgresoMecatronica8}}</div>
+            <div *ngFor="let PerEgre of PerEgre | async"><LI >{{PerEgre.campo}}</LI></div>
             </ol>
         </div>
        </div>
@@ -87,7 +80,7 @@
         </button>
       </h2>
       <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-        <div *ngFor="let item of items | async">{{item.CampoLaboralMecatronica}}</div><br>
+        <div *ngFor="let CamLab of CamLab | async">{{CamLab.campo}}</div>
       </div>
     </div>
    </div>
@@ -107,24 +100,24 @@
   <div class="accordion-item">
     <h2 class="accordion-header" id="panelsStayOpen-headingThree">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-        <div *ngFor="let item of items | async">{{item.Boton1Mecatronica}}</div>
+        <div *ngFor="let Tit of Tit | async">{{Tit.campo}}</div>
       </button>
     </h2>
     <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
-      <div class="accordion-body">
-       <a href="http://www.tese.edu.mx/documentos2004/2108_itrmejc.pdf">Ver</a>
+      <div class="accordion-body" *ngFor="let Cit of Cit | async">
+        <a href="{{Cit.campo}}">Ver</a>
       </div>
     </div>
   </div>
    <div class="accordion-item">
      <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-        <div *ngFor="let item of items | async">{{item.Boton2Mecatronica}}</div>
+        <div *ngFor="let Tit of Tit | async">{{Tit.campo1}}</div>
        </button>
      </h2>
      <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
-       <div class="accordion-body">
-        <a href="http://www.tese.edu.mx/documentos2004/9001_UBOWPXC.pdf">Detalles</a>
+      <div class="accordion-body" *ngFor="let Cit of Cit | async">
+        <a href="{{Cit.campo1}}">Detalles</a>
        </div>
      </div>
    </div>

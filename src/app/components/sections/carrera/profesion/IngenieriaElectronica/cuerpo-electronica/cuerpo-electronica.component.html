@@ -40,7 +40,7 @@
    <div class="card">
      <div class="card-body">
        <h4 class="card-title"><div class="Titulo2">Objetivo de la carrera: </div></h4>
-       <p class="card-text"><div *ngFor="let item of items | async">{{item.ObjetivoElectronica}}</div>
+       <p class="card-text"><div *ngFor="let Obj of Obj | async">{{Obj.campo}}</div>
      </div>
    </div>
 
@@ -57,25 +57,7 @@
        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
          <div class="accordion-body">
            <ol start="1">
-            <LI ><div *ngFor="let item of items | async">{{item.PerfilEgresoElectronica1}}</div>
-            <LI ><div *ngFor="let item of items | async">{{item.PerfilEgresoElectronica2}}</div>
-            <LI ><div *ngFor="let item of items | async">{{item.PerfilEgresoElectronica3}}</div>
-            <LI ><div *ngFor="let item of items | async">{{item.PerfilEgresoElectronica4}}</div>
-            <LI ><div *ngFor="let item of items | async">{{item.PerfilEgresoElectronica5}}</div>
-            <LI ><div *ngFor="let item of items | async">{{item.PerfilEgresoElectronica6}}</div>
-            <LI ><div *ngFor="let item of items | async">{{item.PerfilEgresoElectronica7}}</div>
-            <LI ><div *ngFor="let item of items | async">{{item.PerfilEgresoElectronica8}}</div>
-            <LI ><div *ngFor="let item of items | async">{{item.PerfilEgresoElectronica9}}</div>
-            <LI ><div *ngFor="let item of items | async">{{item.PerfilEgresoElectronica10}}</div>
-            <LI ><div *ngFor="let item of items | async">{{item.PerfilEgresoElectronica11}}</div>
-            <LI ><div *ngFor="let item of items | async">{{item.PerfilEgresoElectronica12}}</div>
-            <LI ><div *ngFor="let item of items | async">{{item.PerfilEgresoElectronica13}}</div>
-            <LI ><div *ngFor="let item of items | async">{{item.PerfilEgresoElectronica14}}</div>
-            <LI ><div *ngFor="let item of items | async">{{item.PerfilEgresoElectronica15}}</div>
-            <LI ><div *ngFor="let item of items | async">{{item.PerfilEgresoElectronica16}}</div>
-            <LI ><div *ngFor="let item of items | async">{{item.PerfilEgresoElectronica17}}</div>
-            <LI ><div *ngFor="let item of items | async">{{item.PerfilEgresoElectronica18}}</div>
-            <LI ><div *ngFor="let item of items | async">{{item.PerfilEgresoElectronica19}}</div>
+            <div *ngFor="let PerEgre of PerEgre | async"><LI >{{PerEgre.campo}}</LI></div>
           </ol>
         </div>
        </div>
@@ -89,20 +71,7 @@
       <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
         <div class="accordion-body">
           <ul>
-            <LI ><div *ngFor="let item of items | async">{{item.PerfilProfesionalElectronica1}}</div>
-            <LI ><div *ngFor="let item of items | async">{{item.PerfilProfesionalElectronica2}}</div>
-            <LI ><div *ngFor="let item of items | async">{{item.PerfilProfesionalElectronica3}}</div>
-            <LI ><div *ngFor="let item of items | async">{{item.PerfilProfesionalElectronica4}}</div>
-            <LI ><div *ngFor="let item of items | async">{{item.PerfilProfesionalElectronica5}}</div>
-            <LI ><div *ngFor="let item of items | async">{{item.PerfilProfesionalElectronica6}}</div>
-            <LI ><div *ngFor="let item of items | async">{{item.PerfilProfesionalElectronica7}}</div>
-            <LI ><div *ngFor="let item of items | async">{{item.PerfilProfesionalElectronica8}}</div>
-            <LI ><div *ngFor="let item of items | async">{{item.PerfilProfesionalElectronica9}}</div>
-            <LI ><div *ngFor="let item of items | async">{{item.PerfilProfesionalElectronica10}}</div>
-            <LI ><div *ngFor="let item of items | async">{{item.PerfilProfesionalElectronica11}}</div>
-            <LI ><div *ngFor="let item of items | async">{{item.PerfilProfesionalElectronica12}}</div>
-            <LI ><div *ngFor="let item of items | async">{{item.PerfilProfesionalElectronica13}}</div>
-            <LI ><div *ngFor="let item of items | async">{{item.PerfilProfesionalElectronica14}}</div>
+            <div *ngFor="let PerProf of PerProf | async"><LI >{{PerProf.campo}}</LI></div>
           </ul>
         </div>
       </div>
@@ -114,7 +83,7 @@
         </button>
       </h2>
       <div id="flush-collapseThr" class="accordion-collapse collapse" aria-labelledby="flush-headingThr" data-bs-parent="#accordionFlushExample">
-        <div *ngFor="let item of items | async">{{item.VisionElectronica}}</div>
+        <div *ngFor="let Vis of Vis | async">{{Vis.campo}}</div>
         <br>
       </div>
     </div>
@@ -125,7 +94,7 @@
         </button>
       </h2>
       <div id="flush-collapseTh" class="accordion-collapse collapse" aria-labelledby="flush-headingTh" data-bs-parent="#accordionFlushExample">
-        <div *ngFor="let item of items | async">{{item.Objetivo1Electronica}}</div>
+        <div *ngFor="let Obj of Obj | async">{{Obj.campo1}}</div>
         <br>
       </div>
     </div>
@@ -138,23 +107,7 @@
       <div id="flush-collapseCua" class="accordion-collapse collapse" aria-labelledby="flush-headingCua" data-bs-parent="#accordionFlushExample">
         <div class="accordion-body">
           <ul>
-            <LI><div *ngFor="let item of items | async">{{item.FuncionElectronica1}}</div>
-            <LI><div *ngFor="let item of items | async">{{item.FuncionElectronica2}}</div>
-            <LI><div *ngFor="let item of items | async">{{item.FuncionElectronica3}}</div>
-            <LI><div *ngFor="let item of items | async">{{item.FuncionElectronica4}}</div>
-            <LI><div *ngFor="let item of items | async">{{item.FuncionElectronica5}}</div>
-            <LI><div *ngFor="let item of items | async">{{item.FuncionElectronica6}}</div>
-            <LI><div *ngFor="let item of items | async">{{item.FuncionElectronica7}}</div>
-            <LI><div *ngFor="let item of items | async">{{item.FuncionElectronica8}}</div>
-            <LI><div *ngFor="let item of items | async">{{item.FuncionElectronica9}}</div>
-            <LI><div *ngFor="let item of items | async">{{item.FuncionElectronica10}}</div>
-            <LI><div *ngFor="let item of items | async">{{item.FuncionElectronica11}}</div>
-            <LI><div *ngFor="let item of items | async">{{item.FuncionElectronica12}}</div>
-            <LI><div *ngFor="let item of items | async">{{item.FuncionElectronica13}}</div>
-            <LI><div *ngFor="let item of items | async">{{item.FuncionElectronica14}}</div>
-            <LI><div *ngFor="let item of items | async">{{item.FuncionElectronica15}}</div>
-            <LI><div *ngFor="let item of items | async">{{item.FuncionElectronica16}}</div>
-            <LI><div *ngFor="let item of items | async">{{item.FuncionElectronica17}}</div>
+            <div *ngFor="let Fun of Fun | async"><LI>{{Fun.campo}}</LI></div>
           </ul>
         </div>
       </div>
@@ -176,60 +129,60 @@
   <div class="accordion-item">
     <h2 class="accordion-header" id="panelsStayOpen-headingThree">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-        <div *ngFor="let item of items | async">{{item.TituloBoton1Electronica}}</div>
+        <div *ngFor="let Tit of Tit | async">{{Tit.campo1}}</div>
       </button>
     </h2>
     <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
-      <div class="accordion-body">
-       <a href="http://www.tese.edu.mx/documentos2004/2104_DYLLGZY.pdf">Ver</a>
+      <div class="accordion-body" *ngFor="let Cit of Cit | async">
+        <a href="{{Cit.campo1}}">Ver</a>
       </div>
     </div>
   </div>
    <div class="accordion-item">
      <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-        <div *ngFor="let item of items | async">{{item.TituloBoton2Electronica}}</div>
+        <div *ngFor="let Tit of Tit | async">{{Tit.campo2}}</div>
        </button>
      </h2>
      <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
-       <div class="accordion-body">
-        <a href="http://www.tese.edu.mx/documentos2004/8999_EFBFZWI.pdf">Detalles</a>
+      <div class="accordion-body" *ngFor="let Cit of Cit | async">
+        <a href="{{Cit.campo2}}">Detalles</a>
        </div>
      </div>
    </div>
    <div class="accordion-item">
     <h2 class="accordion-header" id="panelsStayOpen-headinguno">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseuno" aria-expanded="false" aria-controls="panelsStayOpen-collapseuno">
-        <div *ngFor="let item of items | async">{{item.TituloBoton3Electronica}}</div>
+        <div *ngFor="let Tit of Tit | async">{{Tit.campo3}}</div>
       </button>
     </h2>
     <div id="panelsStayOpen-collapseuno" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headinguno">
-      <div class="accordion-body">
-       <a href="http://www.tese.edu.mx/documentos2004/3131_RRVVQZQ.pdf">Detalles</a>
+      <div class="accordion-body" *ngFor="let Cit of Cit | async">
+        <a href="{{Cit.campo3}}">Detalles</a>
       </div>
     </div>
   </div>
   <div class="accordion-item">
     <h2 class="accordion-header" id="panelsStayOpen-headingdos">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsedos" aria-expanded="false" aria-controls="panelsStayOpen-collapsedos">
-        <div *ngFor="let item of items | async">{{item.TituloBoton4Electronica}}</div>
+        <div *ngFor="let Tit of Tit | async">{{Tit.campo4}}</div>
       </button>
     </h2>
     <div id="panelsStayOpen-collapsedos" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingdos">
-      <div class="accordion-body">
-       <a href="http://www.tese.edu.mx/documentos2004/6251_VERGVUK.pdf">Detalles</a>
+      <div class="accordion-body" *ngFor="let Cit of Cit | async">
+        <a href="{{Cit.campo4}}">Detalles</a>
       </div>
     </div>
   </div>
   <div class="accordion-item">
     <h2 class="accordion-header" id="panelsStayOpen-headingtres">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsetres" aria-expanded="false" aria-controls="panelsStayOpen-collapsetres">
-        <div *ngFor="let item of items | async">{{item.TituloBoton5Electronica}}</div>
+        <div *ngFor="let Tit of Tit | async">{{Tit.campo5}}</div>
       </button>
     </h2>
     <div id="panelsStayOpen-collapsetres" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingtres">
-      <div class="accordion-body">
-       <a href="http://www.tese.edu.mx/documentos2004/6251_VERGVUK.pdf">Detalles</a>
+      <div class="accordion-body" *ngFor="let Cit of Cit | async">
+        <a href="{{Cit.campo5}}">Detalles</a>
       </div>
     </div>
   </div>
@@ -239,7 +192,7 @@
  <div class="accordion-item">
   <h2 class="accordion-header" id="panelsStayOpen-headingcero">
     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsecero" aria-expanded="false" aria-controls="panelsStayOpen-collapsecero">
-      <div *ngFor="let item of items | async">{{item.TituloBoton6Electronica}}</div>
+      <div *ngFor="let Tit of Tit | async">{{Tit.campo6}}</div>
     </button>
   </h2>
   <div id="panelsStayOpen-collapsecero" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingcero">
@@ -247,67 +200,67 @@
 <div class="accordion-item">
   <h2 class="accordion-header" id="panelsStayOpen-headingcuatro">
     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsecuatro" aria-expanded="false" aria-controls="panelsStayOpen-collapsecuatro">
-      <div *ngFor="let item of items | async">{{item.TituloBoton7Electronica}}</div>
+      <div *ngFor="let Tit of Tit | async">{{Tit.campo7}}</div>
     </button>
   </h2>
   <div id="panelsStayOpen-collapsecuatro" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingcuatro">
     <div class="accordion-item">
       <h2 class="accordion-header" id="panelsStayOpen-headingA">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseA" aria-expanded="false" aria-controls="panelsStayOpen-collapseA">
-          <div *ngFor="let item of items | async">{{item.TituloBoton8Electronica}}</div>
+          <div *ngFor="let Tit of Tit | async">{{Tit.campo8}}</div>
         </button>
       </h2>
       <div id="panelsStayOpen-collapseA" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingA">
-        <div class="accordion-body">
-         <a href="http://www.tese.edu.mx/documentos2004/6202_JNCAKVB.doc">Detalles</a>
+        <div class="accordion-body" *ngFor="let Cit of Cit | async">
+          <a href="{{Cit.campo6}}">Detalles</a>
         </div>
       </div>
     </div>
     <div class="accordion-item">
       <h2 class="accordion-header" id="panelsStayOpen-headingB">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseB" aria-expanded="false" aria-controls="panelsStayOpen-collapseB">
-          <div *ngFor="let item of items | async">{{item.TituloBoton9Electronica}}</div>
+          <div *ngFor="Tit of Tit | async">{{Tit.campo9}}</div>
         </button>
       </h2>
       <div id="panelsStayOpen-collapseB" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingB">
-        <div class="accordion-body">
-         <a href="http://www.tese.edu.mx/documentos2004/6203_CKWTBME.doc">Detalles</a>
+        <div class="accordion-body" *ngFor="let Cit of Cit | async">
+          <a href="{{Cit.campo7}}">Detalles</a>
         </div>
       </div>
     </div>
     <div class="accordion-item">
       <h2 class="accordion-header" id="panelsStayOpen-headingC">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseC" aria-expanded="false" aria-controls="panelsStayOpen-collapseC">
-          <div *ngFor="let item of items | async">{{item.TituloBoton10Electronica}}</div>
+          <div *ngFor="let Tit of Tit | async">{{Tit.campo10}}</div>
         </button>
       </h2>
       <div id="panelsStayOpen-collapseC" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingC">
-        <div class="accordion-body">
-         <a href="http://www.tese.edu.mx/documentos2004/6204_UFAAHEY.docx">Detalles</a>
+        <div class="accordion-body" *ngFor="let Cit of Cit | async">
+          <a href="{{Cit.campo8}}">Detalles</a>
         </div>
       </div>
     </div>
     <div class="accordion-item">
       <h2 class="accordion-header" id="panelsStayOpen-headingD">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseD" aria-expanded="false" aria-controls="panelsStayOpen-collapseD">
-          <div *ngFor="let item of items | async">{{item.TituloBoton11Electronica}}</div>
+          <div *ngFor="let Tit of Tit | async">{{Tit.campo11}}</div>
         </button>
       </h2>
       <div id="panelsStayOpen-collapseD" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingD">
-        <div class="accordion-body">
-         <a href="http://www.tese.edu.mx/documentos2004/6205_JRBZMPU.doc">Detalles</a>
+        <div class="accordion-body" *ngFor="let Cit of Cit | async">
+          <a href="{{Cit.campo9}}">Detalles</a>
         </div>
       </div>
     </div>
     <div class="accordion-item">
       <h2 class="accordion-header" id="panelsStayOpen-headingE">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseE" aria-expanded="false" aria-controls="panelsStayOpen-collapseE">
-          <div *ngFor="let item of items | async">{{item.TituloBoton12Electronica}}</div>
+          <div *ngFor="let Tit of Tit | async">{{Tit.campo12}}</div>
         </button>
       </h2>
       <div id="panelsStayOpen-collapseE" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingE">
-        <div class="accordion-body">
-         <a href="http://www.tese.edu.mx/documentos2004/6206_SUZGSRK.doc">Detalles</a>
+        <div class="accordion-body" *ngFor="let Cit of Cit | async">
+          <a href="{{Cit.campo10}}">Detalles</a>
         </div>
       </div>
     </div>
@@ -317,31 +270,31 @@
 <div class="accordion-item">
   <h2 class="accordion-header" id="panelsStayOpen-headingcinco">
     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsecinco" aria-expanded="false" aria-controls="panelsStayOpen-collapsecinco">
-      <div *ngFor="let item of items | async">{{item.TituloBoton13Electronica}}</div>
+      <div *ngFor="let Tit of Tit | async">{{Tit.campo13}}</div>
     </button>
   </h2>
   <div id="panelsStayOpen-collapsecinco" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingcinco">
     <div class="accordion-item">
       <h2 class="accordion-header" id="panelsStayOpen-headingF">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseF" aria-expanded="false" aria-controls="panelsStayOpen-collapseF">
-          <div *ngFor="let item of items | async">{{item.TituloBoton14Electronica}}</div>
+          <div *ngFor="let Tit of Tit | async">{{Tit.campo14}}</div>
         </button>
       </h2>
       <div id="panelsStayOpen-collapseF" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingF">
-        <div class="accordion-body">
-         <a href="http://www.tese.edu.mx/documentos2004/6200_XUWXZTE.docx">Detalles</a>
+        <div class="accordion-body" *ngFor="let Cit of Cit | async">
+          <a href="{{Cit.campo11}}">Detalles</a>
         </div>
       </div>
     </div>
     <div class="accordion-item">
       <h2 class="accordion-header" id="panelsStayOpen-headingG">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseG" aria-expanded="false" aria-controls="panelsStayOpen-collapseG">
-          <div *ngFor="let item of items | async">{{item.TituloBoton15Electronica}}</div>
+          <div *ngFor="let Tit of Tit | async">{{Tit.campo15}}</div>
         </button>
       </h2>
       <div id="panelsStayOpen-collapseG" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingG">
-        <div class="accordion-body">
-         <a href="http://www.tese.edu.mx/documentos2004/6247_JSRLDFG.docx">Detalles</a>
+        <div class="accordion-body" *ngFor="let Cit of Cit | async">
+          <a href="{{Cit.campo12}}">Detalles</a>
         </div>
       </div>
     </div>
@@ -351,55 +304,55 @@
 <div class="accordion-item">
   <h2 class="accordion-header" id="panelsStayOpen-headingseis">
     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseseis" aria-expanded="false" aria-controls="panelsStayOpen-collapseseis">
-      <div *ngFor="let item of items | async">{{item.TituloBoton16Electronica}}</div>
+      <div *ngFor="let Tit of Tit | async">{{Tit.campo16}}</div>
     </button>
   </h2>
   <div id="panelsStayOpen-collapseseis" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingseis">
     <div class="accordion-item">
       <h2 class="accordion-header" id="panelsStayOpen-headingH">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseH" aria-expanded="false" aria-controls="panelsStayOpen-collapseH">
-          <div *ngFor="let item of items | async">{{item.TituloBoton17Electronica}}</div>
+          <div *ngFor="let Tit of Tit | async">{{Tit.campo17}}</div>
         </button>
       </h2>
       <div id="panelsStayOpen-collapseH" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingH">
-        <div class="accordion-body">
-         <a href="http://www.tese.edu.mx/documentos2004/6198_QEKZJTG.pdf">Detalles</a>
+        <div class="accordion-body" *ngFor="let Cit of Cit | async">
+          <a href="{{Cit.campo13}}">Detalles</a>
         </div>
       </div>
     </div>
     <div class="accordion-item">
       <h2 class="accordion-header" id="panelsStayOpen-headingI">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseI" aria-expanded="false" aria-controls="panelsStayOpen-collapseI">
-          <div *ngFor="let item of items | async">{{item.TituloBoton18Electronica}}</div>
+          <div *ngFor="let Tit of Tit | async">{{Tit.campo18}}</div>
         </button>
       </h2>
       <div id="panelsStayOpen-collapseI" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingI">
-        <div class="accordion-body">
-         <a href="http://www.tese.edu.mx/documentos2004/6196_JIVFGED.pdf">Detalles</a>
+        <div class="accordion-body" *ngFor="let Cit of Cit | async">
+          <a href="{{Cit.campo14}}">Detalles</a>
         </div>
       </div>
     </div>
     <div class="accordion-item">
       <h2 class="accordion-header" id="panelsStayOpen-headingJ">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseJ" aria-expanded="false" aria-controls="panelsStayOpen-collapseJ">
-          <div *ngFor="let item of items | async">{{item.TituloBoton19Electronica}}</div>
+          <div *ngFor="let Tit of Tit | async">{{Tit.campo19}}</div>
         </button>
       </h2>
       <div id="panelsStayOpen-collapseJ" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingJ">
-        <div class="accordion-body">
-         <a href="http://www.tese.edu.mx/documentos2004/6192_IGFPHXS.pdf">Detalles</a>
+        <div class="accordion-body" *ngFor="let Cit of Cit | async">
+          <a href="{{Cit.campo15}}">Detalles</a>
         </div>
       </div>
     </div>
     <div class="accordion-item">
       <h2 class="accordion-header" id="panelsStayOpen-headingK">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseK" aria-expanded="false" aria-controls="panelsStayOpen-collapseK">
-          <div *ngFor="let item of items | async">{{item.TituloBoton20Electronica}}</div>
+          <div *ngFor="let Tit of Tit | async">{{Tit.campo20}}</div>
         </button>
       </h2>
       <div id="panelsStayOpen-collapseK" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingK">
-        <div class="accordion-body">
-         <a href="http://www.tese.edu.mx/documentos2004/6197_JBEAHMZ.pdf">Detalles</a>
+        <div class="accordion-body" *ngFor="let Cit of Cit | async">
+          <a href="{{Cit.campo16}}">Detalles</a>
         </div>
       </div>
     </div>
@@ -409,31 +362,31 @@
 <div class="accordion-item">
   <h2 class="accordion-header" id="panelsStayOpen-headingsiete">
     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsesiete" aria-expanded="false" aria-controls="panelsStayOpen-collapsesiete">
-      <div *ngFor="let item of items | async">{{item.TituloBoton21Electronica}}</div>
+      <div *ngFor="let Tit of Tit | async">{{Tit.campo21}}</div>
     </button>
   </h2>
   <div id="panelsStayOpen-collapsesiete" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingsiete">
     <div class="accordion-item">
       <h2 class="accordion-header" id="panelsStayOpen-headingL">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseL" aria-expanded="false" aria-controls="panelsStayOpen-collapseL">
-          <div *ngFor="let item of items | async">{{item.TituloBoton22Electronica}}</div>
+          <div *ngFor="let Tit of Tit | async">{{Tit.campo22}}</div>
         </button>
       </h2>
       <div id="panelsStayOpen-collapseL" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingL">
-        <div class="accordion-body">
-         <a href="http://www.tese.edu.mx/documentos2004/5483_GQPINOY.pdf">Detalles</a>
+        <div class="accordion-body" *ngFor="let Cit of Cit | async">
+          <a href="{{Cit.campo17}}">Detalles</a>
         </div>
       </div>
     </div>
     <div class="accordion-item">
       <h2 class="accordion-header" id="panelsStayOpen-headingM">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseM" aria-expanded="false" aria-controls="panelsStayOpen-collapseM">
-          <div *ngFor="let item of items | async">{{item.TituloBoton23Electronica}}</div>
+          <div *ngFor="let Tit of Tit | async">{{Tit.campo23}}</div>
         </button>
       </h2>
       <div id="panelsStayOpen-collapseM" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingM">
-        <div class="accordion-body">
-         <a href="http://www.tese.edu.mx/documentos2004/6250_OPONQPL.pdf">Detalles</a>
+        <div class="accordion-body" *ngFor="let Cit of Cit | async">
+          <a href="{{Cit.campo18}}">Detalles</a>
         </div>
       </div>
     </div>
@@ -443,12 +396,12 @@
 <div class="accordion-item">
   <h2 class="accordion-header" id="panelsStayOpen-headingN">
     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseN" aria-expanded="false" aria-controls="panelsStayOpen-collapseN">
-      <div *ngFor="let item of items | async">{{item.TituloBoton24Electronica}}</div>
+      <div *ngFor="let Tit of Tit | async">{{Tit.campo24}}</div>
     </button>
   </h2>
   <div id="panelsStayOpen-collapseN" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingN">
-    <div class="accordion-body">
-     <a href="http://www.tese.edu.mx/documentos2004/5115_NQEKUER.pdf">Detalles</a>
+    <div class="accordion-body" *ngFor="let Cit of Cit | async">
+      <a href="{{Cit.campo19}}">Detalles</a>
     </div>
   </div>
 </div>
@@ -456,12 +409,12 @@
 <div class="accordion-item">
   <h2 class="accordion-header" id="panelsStayOpen-headingÑ">
     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseÑ" aria-expanded="false" aria-controls="panelsStayOpen-collapseÑ">
-      <div *ngFor="let item of items | async">{{item.TituloBoton25Electronica}}</div>
+      <div *ngFor="let Tit of Tit | async">{{Tit.campo25}}</div>
     </button>
   </h2>
   <div id="panelsStayOpen-collapseÑ" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingÑ">
-    <div class="accordion-body">
-     <a href="http://www.tese.edu.mx/documentos2004/6254_KLDGTHA.pdf">Detalles</a>
+    <div class="accordion-body" *ngFor="let Cit of Cit | async">
+      <a href="{{Cit.campo20}}">Detalles</a>
     </div>
   </div>
 </div>
@@ -469,12 +422,12 @@
 <div class="accordion-item">
   <h2 class="accordion-header" id="panelsStayOpen-headingO">
     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseO" aria-expanded="false" aria-controls="panelsStayOpen-collapseO">
-      <div *ngFor="let item of items | async">{{item.TituloBoton26Electronica}}</div>
+      <div *ngFor="let Tit of Tit | async">{{Tit.campo26}}</div>
     </button>
   </h2>
   <div id="panelsStayOpen-collapseO" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingO">
-    <div class="accordion-body">
-     <a href="http://www.tese.edu.mx/documentos2004/6254_KLDGTHA.pdf">Detalles</a>
+    <div class="accordion-body" *ngFor="let Cit of Cit | async">
+      <a href="{{Cit.campo21}}">Detalles</a>
     </div>
   </div>
 </div>

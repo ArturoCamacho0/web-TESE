@@ -9,10 +9,22 @@ import { Observable } from 'rxjs';
 })
 export class CuerpoAeronauticaComponent implements OnInit {
 
-  items: Observable<any[]>
+  Info: Observable<any[]>
+  CamLab: Observable<any[]>
+  Obj: Observable<any[]>
+  PerEgre: Observable<any[]>
+  PerIng: Observable<any[]>
+  Tit: Observable<any[]>
+  Cit: Observable<any[]>
 
   constructor(firestore: AngularFirestore) {
-       this.items = firestore.collection('Carrera').valueChanges();
+    this.Info = firestore.collectionGroup('Info').valueChanges();
+    this.CamLab = firestore.collectionGroup('CampoLaboral-Aeronautica').valueChanges();
+    this.Obj = firestore.collectionGroup('Objetivo-Aeronautica').valueChanges();
+    this.PerEgre = firestore.collectionGroup('PerfilEgreso-Aeronautica').valueChanges();
+    this.PerIng = firestore.collectionGroup('PerfilIngreso-Aeronautica').valueChanges();
+    this.Tit = firestore.collectionGroup('TituloBoton-Aeronautica').valueChanges();
+    this.Cit = firestore.collectionGroup('ContenidoBoton-Aeronautica').valueChanges();
   }
 
   ngOnInit(): void {

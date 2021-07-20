@@ -9,10 +9,16 @@ import { Observable } from 'rxjs';
 })
 export class CuerpoContadorComponent implements OnInit {
 
-  items: Observable<any[]>
+  Obj: Observable<any[]>
+  PerEgre: Observable<any[]>
+  Tit: Observable<any[]>
+  Cit: Observable<any[]>
 
   constructor(firestore: AngularFirestore) {
-       this.items = firestore.collection('Carrera').valueChanges();
+       this.Obj = firestore.collectionGroup('Objetivo-Contador').valueChanges();
+       this.PerEgre = firestore.collectionGroup('PerfilEgreso-Contador').valueChanges();
+       this.Tit = firestore.collectionGroup('TituloBoton-Contador').valueChanges();
+       this.Cit = firestore.collectionGroup('ContenidoBoton-Contador').valueChanges();
   }
 
   ngOnInit(): void {
