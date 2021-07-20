@@ -22,7 +22,6 @@
     box-shadow: rgba(0, 0, 0, 0.1) 0px 13px 6px -1px,
       rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   }
-
   /* Se utiliza para el primer subtitulo */
   .Titulo2 {
     color: #2c5234;
@@ -32,7 +31,6 @@
     padding: 5px;
     font-size: 4ch;
   }
-
   /* Subtitulo central o ideas */
   .subtitulo {
     color: #2c5234;
@@ -50,18 +48,15 @@
     box-shadow: rgba(0, 0, 0, 0.1) 0px 13px 6px -1px,
       rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   }
-
   /* Se agrega un efecto de sombra al rededor del contenido */
   .container {
     box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
       rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
   }
-
   .container-fluid {
     padding: 0;
   }
   /* Elementos CSS de la Sidebar */
-
   .sidebar {
     /* background-image: radial-gradient(
       circle farthest-corner at 47.4% 55%,
@@ -75,18 +70,15 @@
       rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
       rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   }
-
   .mat-list-option{
     color: #fff;
     text-align: center;
     font-size: 1.2rem;
   }
-
   .text-side h1{
     margin-top: 15px;
     margin-bottom: 15px;
   }
-
   .subtitulo, .Titulo2{
     margin-bottom: 15px;
     padding-bottom: 15px;
@@ -137,7 +129,6 @@
     justify-content: center;
     background-color: #fff;
   }
-
   .careers {
     width: 98%;
     margin-right: 0;
@@ -145,7 +136,6 @@
     padding-top: 30px;
     margin: 10px;
   }
-
   .row {
     gap: 10px;
     margin-top: 40px;
@@ -167,7 +157,6 @@
     background-color: white;
     color: black;
   }
-
   .card-career > mat-card > span {
     font-size: 1.3rem;
     text-align: center;
@@ -220,22 +209,18 @@
       justify-content: center;
       align-items: center;
     }
-
     .text-side {
       margin-top: 20px;
     }
   }
-
   @media screen and (min-width: 860px) {
     #arrow {
       display: none;
     }
-
     .divider {
       display: none;
     }
   }
-
   #container {
     overflow: hidden; /* change to hidden */
     margin: 0 auto;

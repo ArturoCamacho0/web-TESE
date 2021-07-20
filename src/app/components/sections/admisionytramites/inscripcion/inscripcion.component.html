@@ -3,37 +3,35 @@
     <!-- Inicio de la SIDE NAV BAR; Si se desea eliminar se borrara este bloque de codigo y el final mat drawer  -->
     <mat-drawer mode="side" class="sidebar" id="side" #drawer opened>
       <mat-selection-list role="list container" [multiple]="false">
-        <a href="inscripcion">
+        <a href="#">
           <mat-list-option>
             Inscripcion
           </mat-list-option>
         </a>
-<a href="reinscripcion">
+
         <mat-list-option role="listitem">
           Reinscripcion
         </mat-list-option>
-        </a>
-<a href="becas">
+
         <mat-list-option role="listitem">
           Becas
         </mat-list-option>
-         </a>
-<a href="cursos">
+
+
         <mat-list-option role="listitem">
           Cursos
-
         </mat-list-option>
-      </a>
-<a href="titulacion">
         <mat-list-option role="listitem">
           Titulacion
         </mat-list-option>
-      </a>
-<a href="serviciosocial">
+
         <mat-list-option role="listitem">
           Servicio Social
         </mat-list-option>
-      </a>
+
+        <mat-list-option role="listitem">
+          Practicas
+        </mat-list-option>
       </mat-selection-list>
     </mat-drawer>
 
@@ -52,8 +50,8 @@
           <!-- Breadcrumb, ayuda a que el sitio sea mas agil y el usuario sepa en donde esta localizado, hacia donde puede ir y que paginas le anteceden -->
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="home">Home</a></li>
-              <li class="breadcrumb-item"><a href="admisionytramites">Admision y Tramites</a></li>
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item"><a href="#">Admision y Tramites</a></li>
               <li class="breadcrumb-item active" aria-current="page">Inscripcion</li>
             </ol>
           </nav>
@@ -82,13 +80,6 @@ eliminado sin ningun problema: Para la implementacion en tu componente tendras q
 
             </div>
           </div>
-
-
-            <div class="card12">
-            <img src= "../../../../../assets/images/admisionytramitesimg/inscripcion/pexels-photo-2897053.jpeg" class="card-img-bottom" alt="...">
-          </div>
-
-
     <!-- Seccion de "carrousel", donde se puede enlazar a otras cosas que quiza no consideren poner una sidebar -->
     <div class="cards">
       <mat-card class="careers">
@@ -177,11 +168,6 @@ eliminado sin ningun problema: Para la implementacion en tu componente tendras q
 
           <mat-divider></mat-divider>
 
-          <div class="card12">
-            <img src= "../../../../../assets/images/admisionytramitesimg/inscripcion/pexels-photo-2065490.jpeg" class="card-img-bottom" alt="...">
-
-            <mat-divider></mat-divider>
-          </div>
           <div class="card">
             <div class="card-body">
 
@@ -245,23 +231,20 @@ eliminado sin ningun problema: Para la implementacion en tu componente tendras q
           </div>
 
 
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-headingOne">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#flush-collapsetwo" aria-expanded="false" aria-controls="flush-collapsetwo">
-               Multimedia
-              </button>
-            </h2>
-            <div id="flush-collapsetwo" class="accordion-collapse collapse" aria-labelledby="flush-headingtwo"
-              data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body">
-
-
-                <img src="../../../../../assets/images/admisionytramitesimg/inscripcion/BOLETAINSCRIPCIO.jpg" width="102%" height="80%">
-
-
-                </div>
-
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  Calendario de Inscripciones
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  <img src="../../../../../assets/images/admisionytramitesimg/inscripcion/BOLETAINSCRIPCIO.jpg" width="102%" height="80%">
+                  </div>
+              </div>
             </div>
           </div>
           <mat-divider></mat-divider>
