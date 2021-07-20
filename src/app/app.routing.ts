@@ -22,6 +22,7 @@ import { PaginaMsistemasComponent } from './components/sections/EGRESADOS-EXALUM
 import { PaginaMeficienciaComponent } from './components/sections/EGRESADOS-EXALUMNOS/Meficiencia/pagina-meficiencia/pagina-meficiencia.component';
 import { PaginaMmecatronicaComponent } from './components/sections/EGRESADOS-EXALUMNOS/Mmecatronica/pagina-mmecatronica/pagina-mmecatronica.component';
 import { PaginaMgestionComponent } from './components/sections/EGRESADOS-EXALUMNOS/Mgestion/pagina-mgestion/pagina-mgestion.component';
+import { EgresadosComponent } from './components/sections/egresados/egresados.component';
 
 //import carreras
 import { CuerpoComponent } from './components/sections/carrera/cuerpo/cuerpo.component';
@@ -50,6 +51,8 @@ const appRoutes: Routes = [
     { path: 'Mmecatronica', component: PaginaMmecatronicaComponent},
     { path: 'Mgestion', component:PaginaMgestionComponent},
     { path: 'Carreras', component: CuerpoComponent},
+    { path: 'Egresados', component: EgresadosComponent},
+
     { path:'Carreras/Sistemas', component: CuerpoSistemasComponent},
     { path:'Carreras', component: CuerpoComponent},
     { path:'Carreras/Sistemas', component: CuerpoSistemasComponent},

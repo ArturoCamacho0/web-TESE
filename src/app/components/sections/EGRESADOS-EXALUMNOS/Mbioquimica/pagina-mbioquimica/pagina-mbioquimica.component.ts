@@ -19,6 +19,7 @@ export class PaginaMbioquimicaComponent implements OnInit {
 
   public carouselData: ICarouselItem[]=CAROUSEL_DATA_ITEMS_MBIOQUIMICA;
   constructor(firestore: AngularFirestore) {
+    
     this.items = firestore.collection('EgresadosYExalumnos').valueChanges();
     this.materiasB = firestore.collection('/EgresadosYExalumnos/MCienciasIngenieriaBioquimica/BioquimicaMateriasBasicas').valueChanges();
     this.materiasO = firestore.collection('/EgresadosYExalumnos/MCienciasIngenieriaBioquimica/BioquimicaMateriasOptativas').valueChanges();
