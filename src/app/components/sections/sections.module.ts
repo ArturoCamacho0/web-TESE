@@ -62,6 +62,8 @@ import { CarouselQuimicaComponent } from './carrera/profesion/IngenieriaQuimica/
 import { CuerpoQuimicaComponent } from './carrera/profesion/IngenieriaQuimica/cuerpo-quimica/cuerpo-quimica.component';
 
 
+import { BecasComponent } from './admisionytramites/becas/becas.component';
+
 
 
 @NgModule({
@@ -125,6 +127,9 @@ import { CuerpoQuimicaComponent } from './carrera/profesion/IngenieriaQuimica/cu
     CuerpoQuimicaComponent,
 
 
+
+    //AdmisionytramitesComponent
+    BecasComponent
 
   ],
   imports: [

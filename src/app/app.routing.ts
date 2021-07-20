@@ -1,4 +1,9 @@
 
+import { TitulacionComponent } from './components/sections/admisionytramites/titulacion/titulacion.component';
+
+
+
+
 import { MisionVisionComponent } from './components/sections/Identidad-institucional/mision-vision/mision-vision.component';
 import { HistoriaComponent } from './components/sections/Identidad-institucional/historia/historia.component';
 import { LogoComponent } from './components/sections/Identidad-institucional/logo/logo.component';
@@ -37,6 +42,10 @@ import { CuerpoMecanicaComponent } from './components/sections/carrera/profesion
 import { CuerpoMecatronicaComponent } from './components/sections/carrera/profesion/IngenieriaMecatronica/cuerpo-mecatronica/cuerpo-mecatronica.component';
 import { CuerpoQuimicaComponent } from './components/sections/carrera/profesion/IngenieriaQuimica/cuerpo-quimica/cuerpo-quimica.component';
 import { ContactoComponent } from './components/layout/contacto/contacto.component';
+
+
+import { BecasComponent } from './components/sections/admisionytramites/becas/becas.component';
+
 
 
 
@@ -81,7 +90,12 @@ const appRoutes: Routes = [
 
 
     { path: 'plantillacontenido', component:PlantillaContenidoComponent },
-    { path: 'contact', component: ContactoComponent }
+    { path: 'contact', component: ContactoComponent },
+
+
+
+    { path: 'becas', component: BecasComponent },
+    { path: 'titulacion', component: TitulacionComponent }
 
 ];
 

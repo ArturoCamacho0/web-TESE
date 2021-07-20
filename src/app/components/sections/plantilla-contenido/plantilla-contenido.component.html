@@ -45,6 +45,9 @@
 eliminado sin ningun problema: Para la implementacion en tu componente tendras que realizar las importaciones necesarias en el ts; ir al archivo para mas informacion -->
           <app-carousel [items]="carouselData"></app-carousel>
 
+
+
+
           <h1 class="titulo">TITULO</h1>
 
           <div class="card">
@@ -52,16 +55,23 @@ eliminado sin ningun problema: Para la implementacion en tu componente tendras q
               <h4 class="card-title">
                 <div class="Titulo2">Acerca de:</div>
               </h4>
-              <p class="card-text"> Es el trámite que realizan los y las egresados(as) de esta Institución para la
-                obtención de su Título y Cédula Profesional>, para ello deberán llevar a cabo en la jefatura de su
-                división correspondiente la acreditación de alguna de las opciones de Titulación establecidas en el
-                Reglamento respetivo y posteriormente presentar la documentación solicitada en la Oficina de Titulación.
-                <br>
-                <br>
+              <div *ngFor="let item of items | async">
+              <p class="card-text">
+
+
+
+                  {{item.Titulo}}
+
+                  {{item.TextoCentral}}
+
+
+
+
+
               </p>
             </div>
           </div>
-
+        </div>
           <mat-divider></mat-divider>
 
           <div class="accordion accordion-flush" id="accordionFlushExample">
@@ -69,7 +79,14 @@ eliminado sin ningun problema: Para la implementacion en tu componente tendras q
               <h2 class="accordion-header" id="flush-headingOne">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                  Accordion Item #1
+
+                  <div *ngFor="let item of items | async">
+
+                    {{item.TITULOD3}}
+
+
+                    </div>
+
                 </button>
               </h2>
               <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
@@ -82,7 +99,12 @@ eliminado sin ningun problema: Para la implementacion en tu componente tendras q
               <h2 class="accordion-header" id="flush-headingTwo">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                  Accordion Item #2
+                  <div *ngFor="let item of items | async">
+
+                    {{item.TITULOD2}}
+
+
+                    </div>
                 </button>
               </h2>
               <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
@@ -115,17 +137,12 @@ eliminado sin ningun problema: Para la implementacion en tu componente tendras q
             <div class="card-body">
 
               <span class="text-center">
-                <div class="subtitulo">Texto central</div>
+                <div class="subtitulo">Texto x</div>
 
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus aspernatur aliquid rem consectetur
-                quam veniam, ab doloremque id ullam in modi sit. Dolore beatae tempora similique atque esse placeat nam?
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse voluptatem quo animi pariatur eaque
-                veritatis voluptate, expedita enim accusantium aliquid molestiae libero, mollitia voluptatibus ipsa
-                assumenda facere ut sint at!lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam illum
-                quia consequuntur nihil asperiores repellat odio nesciunt illo, quo cum a amet dolorum esse facere!
-                Adipisci quis dolore nemo voluptas? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Consequuntur quo modi quisquam iusto saepe accusamus odit, corrupti velit suscipit similique expedita.
-                Ullam praesentium libero earum! Beatae deserunt molestias quia ad!
+                <div *ngFor="let item of items | async">
+
+                {{item.TextoCentral}}
+                </div>
               </span>
             </div>
           </div>
