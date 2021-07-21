@@ -34,6 +34,12 @@
             Contraloria Social
           </mat-list-option>
         </a>
+
+        <a href="admin-compromiso">
+          <mat-list-option>
+            Admin
+          </mat-list-option>
+        </a>
   
         </mat-selection-list>
       </mat-drawer>
@@ -69,27 +75,38 @@
            
            
   
-            <h1 class="titulo">Compromiso Social</h1>
+            <h1 class="titulo">
+              <div *ngFor="let contend of titles " class=" ">
+                <P>
+                  {{contend.contenido}}
+              <br>
+            </P></div>
+            </h1>
   
             <div class="card">
               <div class="card-body">
                 <h4 class="card-title">
                   <div class="Titulo2">
-                    <div *ngFor="let item of items | async">
-                
-                    
-                    {{item.titulo}}
-                    
-                    </div></div>
+                    <span STYLE="font-size:large;color:#414141; text-align: justify; font-family: Arial, Helvetica, sans-serif; font-size: x-large; color:#414141;">
+
+                <div *ngFor="let contend of content_inscripcion " class=" ">
+                  <P>
+                    {{contend.contenido}}
+                <br>
+              </P></div>
+
+
+
+              </span>
+                    </div>
                 </h4>
-                <p class="card-text"> <b> <div *ngFor="let item of items | async">
-                
-                    
-                  {{item.subtitulo}}
-                  
-                  </div></b>
-                  
-                </p>
+                <p class="card-text"> 
+                  <div *ngFor="let contend of content_inscripcion1 " class=" ">
+                   
+                      {{contend.contenido}}
+                  <br>
+               </div>
+               
               </div>
             </div>
   
@@ -100,28 +117,14 @@
             <div class="card">
               <div class="card-body">
   
-                <span class="text-center">
-                  <div class="subtitulo"><div *ngFor="let item of items | async">
-                
-                    
-                    {{item.prepa}}
-                    
-                    </div></div>
-                   <div *ngFor="let item of items | async">
-                
-                    
-                      {{item.desc1}}
-                      
+               
+                 </div>
+                  
                       </div>
       <br>
-      <div *ngFor="let item of items | async">
-                
-                    
-        {{item.desc2}}
-        
-        </div>
+      
      
-                </span>
+                
               </div>
             </div>
   
@@ -138,7 +141,7 @@
                   <div class="accordion-body">
                    
                 
-                    <img src="../../../../assets/images/im1.jpeg" width="100%" height="80%">      
+                    <img src="../../../../assets/images/im3.jpeg" width="100%" height="80%">      
              
                 </div>
               </div>
@@ -166,8 +169,8 @@
                 </div>
               </div>
             </div>
-          </div>
-        </div>
+          
+        
   
         <!-- Etiqueda de cerrado de la side nav bar, se elimina para retirar la barra de navegacion lateral -->
       </mat-drawer-content>

@@ -11,7 +11,7 @@ import { InscripcionComponent } from './components/sections/admisionytramites/in
 
 import {NormatividadComponent} from './components/sections/normatividad/normatividad.component';
 import {CalendarioEscolarComponent} from './components/sections/normatividad/calendario-escolar/calendario-escolar.component';
-import { CompromisoSocialComponent } from './components/sections/normatividad/compromiso-social/compromiso-social.component';
+import {CompromisoSocialComponent} from './components/sections/normatividad/compromiso-social/compromiso-social.component';
 import {PoliticaIntegralComponent} from './components/sections/normatividad/politica-integral/politica-integral.component';
 import {ContraloriaSocialComponent} from './components/sections/normatividad/contraloria-social/contraloria-social.component'
 import {InformeActividadesComponent} from './components/sections/normatividad/informe-actividades/informe-actividades.component';
@@ -37,6 +37,7 @@ import { CuerpoMecanicaComponent } from './components/sections/carrera/profesion
 import { CuerpoMecatronicaComponent } from './components/sections/carrera/profesion/IngenieriaMecatronica/cuerpo-mecatronica/cuerpo-mecatronica.component';
 import { CuerpoQuimicaComponent } from './components/sections/carrera/profesion/IngenieriaQuimica/cuerpo-quimica/cuerpo-quimica.component';
 import { ContactoComponent } from './components/layout/contacto/contacto.component';
+import { AdminCompromisoComponent } from './components/sections/normatividad/admin/admin-compromiso/admin-compromiso/admin-compromiso.component';
 
 
 
@@ -78,6 +79,7 @@ const appRoutes: Routes = [
     {path: 'politica', component: PoliticaIntegralComponent},
     {path: 'contraloria', component: ContraloriaSocialComponent},
     {path: 'informe', component: InformeActividadesComponent},
+    { path: 'admin-compromiso', component: AdminCompromisoComponent}, 
 
 
     { path: 'plantillacontenido', component:PlantillaContenidoComponent },
