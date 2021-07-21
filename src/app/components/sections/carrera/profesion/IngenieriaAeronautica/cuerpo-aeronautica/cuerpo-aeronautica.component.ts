@@ -14,8 +14,7 @@ export class CuerpoAeronauticaComponent implements OnInit {
   Obj: Observable<any[]>
   PerEgre: Observable<any[]>
   PerIng: Observable<any[]>
-  Tit: Observable<any[]>
-  Cit: Observable<any[]>
+  Bot: Observable<any[]>
 
   constructor(firestore: AngularFirestore) {
     this.Info = firestore.collectionGroup('Info').valueChanges();
@@ -23,8 +22,7 @@ export class CuerpoAeronauticaComponent implements OnInit {
     this.Obj = firestore.collectionGroup('Objetivo-Aeronautica').valueChanges();
     this.PerEgre = firestore.collectionGroup('PerfilEgreso-Aeronautica').valueChanges();
     this.PerIng = firestore.collectionGroup('PerfilIngreso-Aeronautica').valueChanges();
-    this.Tit = firestore.collectionGroup('TituloBoton-Aeronautica').valueChanges();
-    this.Cit = firestore.collectionGroup('ContenidoBoton-Aeronautica').valueChanges();
+    this.Bot = firestore.collectionGroup('Boton-Aeronautica').valueChanges();
   }
 
   ngOnInit(): void {

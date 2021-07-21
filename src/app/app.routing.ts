@@ -40,9 +40,24 @@ import { CuerpoIndustrialComponent } from './components/sections/carrera/profesi
 import { CuerpoMecanicaComponent } from './components/sections/carrera/profesion/IngenieriaMecanica/cuerpo-mecanica/cuerpo-mecanica.component';
 import { CuerpoMecatronicaComponent } from './components/sections/carrera/profesion/IngenieriaMecatronica/cuerpo-mecatronica/cuerpo-mecatronica.component';
 import { CuerpoQuimicaComponent } from './components/sections/carrera/profesion/IngenieriaQuimica/cuerpo-quimica/cuerpo-quimica.component';
+
+import { CarreraPrincipalComponent } from './components/sections/carrera/Administracion-Carreras/carrera-principal/carrera-principal.component';
+import { AeronauticaComponent } from './components/sections/carrera/Administracion-Carreras/aeronautica/aeronautica.component';
+import { BioquimicaComponent } from './components/sections/carrera/Administracion-Carreras/bioquimica/bioquimica.component';
+import { ContadorPublicoComponent } from './components/sections/carrera/Administracion-Carreras/contador-publico/contador-publico.component';
+import { ElectronicaComponent } from './components/sections/carrera/Administracion-Carreras/electronica/electronica.component';
+import { GestionEmpresarialComponent } from './components/sections/carrera/Administracion-Carreras/gestion-empresarial/gestion-empresarial.component';
+import { IndustrialComponent } from './components/sections/carrera/Administracion-Carreras/industrial/industrial.component';
+import { InformaticaComponent } from './components/sections/carrera/Administracion-Carreras/informatica/informatica.component';
+import { MecanicaComponent } from './components/sections/carrera/Administracion-Carreras/mecanica/mecanica.component';
+import { MecatronicaComponent } from './components/sections/carrera/Administracion-Carreras/mecatronica/mecatronica.component';
+import { QuimicaComponent } from './components/sections/carrera/Administracion-Carreras/quimica/quimica.component';
+import { SistemasComputacionalesComponent } from './components/sections/carrera/Administracion-Carreras/sistemas-computacionales/sistemas-computacionales.component';
+
 import { ContactoComponent } from './components/layout/contacto/contacto.component';
 import { AdministracionHistoriaComponent } from './components/sections/Identidad-institucional/Administracion/administracion-historia/administracion-historia.component';
 
+import { MenuComponent } from './components/sections/carrera/menu/menu.component';
 
 
 // Rutas
@@ -70,6 +85,19 @@ const appRoutes: Routes = [
     { path:'Carreras/Mecanica',component: CuerpoMecanicaComponent},
     { path:'Carreras/Mecatronica',component: CuerpoMecatronicaComponent},
     { path:'Carreras/Quimica',component: CuerpoQuimicaComponent},
+    {path:'Admin-Carrera',component: CarreraPrincipalComponent},
+    {path:'Admin-Carrera/Aeronautica',component: AeronauticaComponent},
+    {path:'Admin-Carrera/Bioquimica',component: BioquimicaComponent},
+    {path:'Admin-Carrera/ContadorPublico',component: ContadorPublicoComponent},
+    {path:'Admin-Carrera/Electronica',component: ElectronicaComponent},
+    {path:'Admin-Carrera/Gestion',component: GestionEmpresarialComponent},
+    {path:'Admin-Carrera/Industrial',component: IndustrialComponent},
+    {path:'Admin-Carrera/Informatica',component: InformaticaComponent},
+    {path:'Admin-Carrera/Mecanica',component: MecanicaComponent},
+    {path:'Admin-Carrera/Mecatronica',component: MecatronicaComponent},
+    {path:'Admin-Carrera/Quimica',component: QuimicaComponent},
+    {path:'Admin-Carrera/Sistemas',component: SistemasComputacionalesComponent},
+    {path:'prueba',component: MenuComponent},
 
     {path: 'inscripcion', component:InscripcionComponent },
     {path:'admisionytramites',component:AdmisionytramitesComponent},

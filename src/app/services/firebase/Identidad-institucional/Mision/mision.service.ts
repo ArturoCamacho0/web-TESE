@@ -8,9 +8,7 @@ import { Injectable } from '@angular/core';
 })
 export class MisionService {
 
-  constructor(private firestore: AngularFirestore) {
-
-   }
+  constructor(private firestore: AngularFirestore) {}
 
    agregarMision(mision_contenido: any) : Promise<any>{
      return this.firestore.collection('/Identidad/Mision/MisionDatos').add(mision_contenido);

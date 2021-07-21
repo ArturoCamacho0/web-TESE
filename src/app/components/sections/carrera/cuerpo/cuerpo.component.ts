@@ -14,6 +14,7 @@ export class CuerpoComponent implements OnInit {
   mac: Observable<any[]>
   vac: Observable<any[]>
   Tit: Observable<any[]>
+  Bot: Observable<any[]>
   Cit: Observable<any[]>
 
   constructor(firestore: AngularFirestore) {
@@ -23,6 +24,7 @@ export class CuerpoComponent implements OnInit {
        this.vac = firestore.collectionGroup('VisionDivAcad-Carrera').valueChanges();
        this.Tit = firestore.collectionGroup('TituloBoton-Carrera').valueChanges();
        this.Cit = firestore.collectionGroup('DireccionBoton-Carrera').valueChanges();
+       this.Bot = firestore.collectionGroup('Boton-Carrera').valueChanges();
   }
 
   ngOnInit(): void {

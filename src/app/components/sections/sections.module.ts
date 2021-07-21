@@ -65,6 +65,18 @@ import { AdministracionHistoriaComponent } from './Identidad-institucional/Admin
 import { AdministracionMisionComponent } from './Identidad-institucional/Administracion/administracion-mision/administracion-mision.component';
 import { AdministracionOrganigramaComponent } from './Identidad-institucional/Administracion/administracion-organigrama/administracion-organigrama.component';
 import { ImgLogoComponent } from './Identidad-institucional/Administracion/administracion-logo/Edit/img-logo/img-logo.component';
+import { CarreraPrincipalComponent } from './carrera/Administracion-Carreras/carrera-principal/carrera-principal.component';
+import { ContadorPublicoComponent } from './carrera/Administracion-Carreras/contador-publico/contador-publico.component';
+import { GestionEmpresarialComponent } from './carrera/Administracion-Carreras/gestion-empresarial/gestion-empresarial.component';
+import { AeronauticaComponent } from './carrera/Administracion-Carreras/aeronautica/aeronautica.component';
+import { BioquimicaComponent } from './carrera/Administracion-Carreras/bioquimica/bioquimica.component';
+import { ElectronicaComponent } from './carrera/Administracion-Carreras/electronica/electronica.component';
+import { IndustrialComponent } from './carrera/Administracion-Carreras/industrial/industrial.component';
+import { InformaticaComponent } from './carrera/Administracion-Carreras/informatica/informatica.component';
+import { MecanicaComponent } from './carrera/Administracion-Carreras/mecanica/mecanica.component';
+import { MecatronicaComponent } from './carrera/Administracion-Carreras/mecatronica/mecatronica.component';
+import { QuimicaComponent } from './carrera/Administracion-Carreras/quimica/quimica.component';
+import { SistemasComputacionalesComponent } from './carrera/Administracion-Carreras/sistemas-computacionales/sistemas-computacionales.component';
 
 
 
@@ -135,6 +147,18 @@ import { ImgLogoComponent } from './Identidad-institucional/Administracion/admin
     AdministracionMisionComponent,
     AdministracionOrganigramaComponent,
     ImgLogoComponent,
+    CarreraPrincipalComponent,
+    ContadorPublicoComponent,
+    GestionEmpresarialComponent,
+    AeronauticaComponent,
+    BioquimicaComponent,
+    ElectronicaComponent,
+    IndustrialComponent,
+    InformaticaComponent,
+    MecanicaComponent,
+    MecatronicaComponent,
+    QuimicaComponent,
+    SistemasComputacionalesComponent,
 
 
 

@@ -11,14 +11,12 @@ export class CuerpoContadorComponent implements OnInit {
 
   Obj: Observable<any[]>
   PerEgre: Observable<any[]>
-  Tit: Observable<any[]>
-  Cit: Observable<any[]>
+  Bot: Observable<any[]>
 
   constructor(firestore: AngularFirestore) {
        this.Obj = firestore.collectionGroup('Objetivo-Contador').valueChanges();
        this.PerEgre = firestore.collectionGroup('PerfilEgreso-Contador').valueChanges();
-       this.Tit = firestore.collectionGroup('TituloBoton-Contador').valueChanges();
-       this.Cit = firestore.collectionGroup('ContenidoBoton-Contador').valueChanges();
+       this.Bot = firestore.collectionGroup('Boton-Contador').valueChanges();
   }
 
   ngOnInit(): void {
