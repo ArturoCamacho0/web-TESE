@@ -65,6 +65,10 @@ import { AdministracionHistoriaComponent } from './Identidad-institucional/Admin
 import { AdministracionMisionComponent } from './Identidad-institucional/Administracion/administracion-mision/administracion-mision.component';
 import { AdministracionOrganigramaComponent } from './Identidad-institucional/Administracion/administracion-organigrama/administracion-organigrama.component';
 import { ImgLogoComponent } from './Identidad-institucional/Administracion/administracion-logo/Edit/img-logo/img-logo.component';
+import { EditCarreraComponent } from './Identidad-institucional/Administracion/administracion-historia/Edit/edit-carrera/edit-carrera.component';
+import { EditPosgradoComponent } from './Identidad-institucional/Administracion/administracion-historia/Edit/edit-posgrado/edit-posgrado.component';
+import { EditDocumentoComponent } from './Identidad-institucional/Administracion/administracion-mision/Edit/edit-documento/edit-documento.component';
+import { EditOrgranigramaComponent } from './Identidad-institucional/Administracion/administracion-organigrama/Edit/edit-orgranigrama/edit-orgranigrama.component';
 
 
 
@@ -134,6 +138,10 @@ import { ImgLogoComponent } from './Identidad-institucional/Administracion/admin
     AdministracionMisionComponent,
     AdministracionOrganigramaComponent,
     ImgLogoComponent,
+    EditCarreraComponent,
+    EditPosgradoComponent,
+    EditDocumentoComponent,
+    EditOrgranigramaComponent,
 
 
 

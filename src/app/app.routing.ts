@@ -1,3 +1,5 @@
+import { EditPosgradoComponent } from './components/sections/Identidad-institucional/Administracion/administracion-historia/Edit/edit-posgrado/edit-posgrado.component';
+import { EditCarreraComponent } from './components/sections/Identidad-institucional/Administracion/administracion-historia/Edit/edit-carrera/edit-carrera.component';
 import { ImgLogoComponent } from './components/sections/Identidad-institucional/Administracion/administracion-logo/Edit/img-logo/img-logo.component';
 import { AdministracionOrganigramaComponent } from './components/sections/Identidad-institucional/Administracion/administracion-organigrama/administracion-organigrama.component';
 import { AdministracionMisionComponent } from './components/sections/Identidad-institucional/Administracion/administracion-mision/administracion-mision.component';
@@ -42,6 +44,7 @@ import { CuerpoMecatronicaComponent } from './components/sections/carrera/profes
 import { CuerpoQuimicaComponent } from './components/sections/carrera/profesion/IngenieriaQuimica/cuerpo-quimica/cuerpo-quimica.component';
 import { ContactoComponent } from './components/layout/contacto/contacto.component';
 import { AdministracionHistoriaComponent } from './components/sections/Identidad-institucional/Administracion/administracion-historia/administracion-historia.component';
+import { EditDocumentoComponent } from './components/sections/Identidad-institucional/Administracion/administracion-mision/Edit/edit-documento/edit-documento.component';
 
 
 
@@ -91,8 +94,10 @@ const appRoutes: Routes = [
     { path: 'admin-historia', component: AdministracionHistoriaComponent},
     { path: 'admin-mision', component: AdministracionMisionComponent},
     { path: 'admin-organigrama', component: AdministracionOrganigramaComponent},
-    { path: 'edit-img-logo/:id', component: ImgLogoComponent}
-
+    { path: 'edit-img-logo/:id', component: ImgLogoComponent},
+    { path: 'edit-carrera-historia/:id', component: EditCarreraComponent},
+    { path: 'edit-posgrado-historia/:id', component: EditPosgradoComponent},
+    { path: 'edit-documento/:id', component:EditDocumentoComponent}
 
 
 

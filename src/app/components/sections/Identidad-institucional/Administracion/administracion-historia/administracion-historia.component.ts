@@ -60,6 +60,8 @@ export class AdministracionHistoriaComponent implements OnInit {
     private fbamb: FormBuilder, private fbinv: FormBuilder,
     private fbcur: FormBuilder, private fbnor: FormBuilder) {
 
+
+
     this.ingresarContend_H = this.fbc.group({
       contenido_h:['', Validators.required],
       id_contenido: ['', Validators.required]
@@ -67,12 +69,14 @@ export class AdministracionHistoriaComponent implements OnInit {
 
     this.ingresarCarreras = this.fbcar.group({
       Dir_imagen:['', Validators.required],
-      Nombre_Carrera:['', Validators.required]
+      Nombre_Carrera:['', Validators.required],
+      ruta:['', Validators.required]
     })
 
     this.ingresarPosgrados = this.fbpos.group({
       Dir_imagen:['', Validators.required],
-      Nombre_Posgrado:['', Validators.required]
+      Nombre_Posgrado:['', Validators.required],
+      ruta:['', Validators.required]
     })
 
     this.ingresarPrograma = this.fbpro.group({
@@ -176,7 +180,8 @@ export class AdministracionHistoriaComponent implements OnInit {
     }
     const carrera: any = {
       Dir_subdrop: this.ingresarCarreras.value.Dir_imagen,
-      Titulo_subdrop: this.ingresarCarreras.value.Nombre_Carrera
+      Titulo_subdrop: this.ingresarCarreras.value.Nombre_Carrera,
+      ruta: this.ingresarCarreras.value.ruta
     }
     this._historiaService.agregarCarrera(carrera).then(()=>{
       console.log('Carrera agregada');
@@ -217,7 +222,8 @@ export class AdministracionHistoriaComponent implements OnInit {
     }
     const posgrado: any = {
       Dir_subdrop: this.ingresarPosgrados.value.Dir_imagen,
-      Titulo_subdrop: this.ingresarPosgrados.value.Nombre_Posgrado
+      Titulo_subdrop: this.ingresarPosgrados.value.Nombre_Posgrado,
+      ruta: this.ingresarPosgrados.value.ruta
     }
     this._historiaService.agregarPosgrado(posgrado).then(()=>{
       console.log('posgrado agregado');
