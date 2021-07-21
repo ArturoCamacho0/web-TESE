@@ -46,20 +46,22 @@
       <form>
         <div *ngFor="let mision_contends of contends_mision " class="row g-3">
 
-          <label for="inputAddress" class="form-label fw-bold" >TITULO</label>
+
           <div class="col-10">
-            <input type="text" class="form-control" id="inputAddress" value="{{mision_contends.Titulo}}">
+            <label for="inputAddress" class="form-label fw-bold" >{{mision_contends.Titulo}}</label>
           </div>
 
           <label for="inputAddress" class="form-label fw-bold" >CONTENIDO</label>
-          <div class="col-11" >
-            <textarea class="form-control" id="exampleFormControlTextarea1" value="{{mision_contends.contenido}}" rows="3"></textarea>
+          <div class="col-10" >
+            <p class="fs-6">{{mision_contends.contenido}}</p>
+
           </div>
 
           <div class="col">
             <button type="button" (click)="eliminarContenido_Mision(mision_contends.id)"  class="btn btn-danger">Eliminar</button>
           </div>
 
+          <hr>
         </div>
         <hr>
       </form>
@@ -75,7 +77,7 @@
           </div>
 
           <label for="inputAddress" class="form-label fw-bold" >CONTENIDO</label>
-          <div class="col-11" >
+          <div class="col-10" >
             <textarea class="form-control" id="exampleFormControlTextarea1" value="" rows="3" placeholder="contenido" formControlName="contenido_mision"></textarea>
           </div>
 
@@ -118,7 +120,7 @@
               <span *ngIf="submitedDocumento && ingresarDocumento.invalid" class="alert alert-danger">El campo debe tener datos para Agregar</span>
               <label for="inputAddress" class="form-label fw-bold" >RUTA DE DOCUMENTO</label>
 
-              <div class="col-11">
+              <div class="col-10">
                 <input type="text" class="form-control" id="inputAddress" value="" placeholder="Ruta" formControlName="Dir_Documento">
               </div>
 

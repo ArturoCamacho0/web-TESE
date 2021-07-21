@@ -47,12 +47,12 @@
 
         <div *ngFor="let organigrama_contends of organigrama" class="row g-3">
           <label for="inputAddress" class="form-label fw-bold" >Ruta de Organigrama</label>
-        <div class="col">
+        <div class="col-10">
           <input type="text" class="form-control" id="inputAddress" value="{{organigrama_contends.Dir}}">
         </div>
 
         <div class="col">
-          <button type="button" class="btn btn-success">Actualizar</button>
+          <button type="button" [routerLink]="['/edit-organigrama/',organigrama_contends.id]" class="btn btn-success">Editar</button>
         </div>
       </div>
 

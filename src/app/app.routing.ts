@@ -1,3 +1,4 @@
+import { EditOrgranigramaComponent } from './components/sections/Identidad-institucional/Administracion/administracion-organigrama/Edit/edit-orgranigrama/edit-orgranigrama.component';
 import { EditPosgradoComponent } from './components/sections/Identidad-institucional/Administracion/administracion-historia/Edit/edit-posgrado/edit-posgrado.component';
 import { EditCarreraComponent } from './components/sections/Identidad-institucional/Administracion/administracion-historia/Edit/edit-carrera/edit-carrera.component';
 import { ImgLogoComponent } from './components/sections/Identidad-institucional/Administracion/administracion-logo/Edit/img-logo/img-logo.component';
@@ -97,7 +98,8 @@ const appRoutes: Routes = [
     { path: 'edit-img-logo/:id', component: ImgLogoComponent},
     { path: 'edit-carrera-historia/:id', component: EditCarreraComponent},
     { path: 'edit-posgrado-historia/:id', component: EditPosgradoComponent},
-    { path: 'edit-documento/:id', component:EditDocumentoComponent}
+    { path: 'edit-documento/:id', component:EditDocumentoComponent},
+    { path: 'edit-organigrama/:id', component: EditOrgranigramaComponent}
 
 
 
