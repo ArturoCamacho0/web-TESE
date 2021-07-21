@@ -11,6 +11,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
   templateUrl: './pagina-mquimica.component.html',
   styleUrls: ['./pagina-mquimica.component.css']
 })
+
 export class PaginaMquimicaComponent implements OnInit {
   items: Observable<any[]>
   materiasB: Observable<any[]>

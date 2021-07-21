@@ -1,0 +1,27 @@
+<div>
+<div style="text-align: center;">
+  <button type="button" class="btn btn-success">Crear Nuevo</button>
+</div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>nombre</th>
+        <th>apellido</th>
+        <th>Opciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of collection.data">
+        <td>{{item.id}}</td>
+        <td>{{item.nombre}}</td>
+        <td>{{item.apellido}}</td>
+        <td>
+          <button type="button" class="btn btn-info">Actualizar</button>
+          <button type="button" class="btn btn-danger" (click)="eliminar(item)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

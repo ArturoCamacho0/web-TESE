@@ -1,3 +1,4 @@
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { routing, appRoutingProviders } from './app.routing'
@@ -37,7 +38,9 @@ const router: Routes =[
     SectionsModule,
     RouterModule.forRoot(router),
     AngularFireModule.initializeApp(environment.firebase),
- 	  AngularFirestoreModule
+ 	  AngularFirestoreModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [
     appRoutingProviders

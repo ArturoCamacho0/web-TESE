@@ -60,7 +60,7 @@ import { CuerpoMecatronicaComponent } from './carrera/profesion/IngenieriaMecatr
 import { CarouselMecatronicaComponent } from './carrera/profesion/IngenieriaMecatronica/carousel-mecatronica/carousel-mecatronica.component';
 import { CarouselQuimicaComponent } from './carrera/profesion/IngenieriaQuimica/carousel-quimica/carousel-quimica.component';
 import { CuerpoQuimicaComponent } from './carrera/profesion/IngenieriaQuimica/cuerpo-quimica/cuerpo-quimica.component';
-import { EgresadosComponent } from './egresados/egresados.component';
+import { PanelEgresadosComponent } from './EGRESADOS-EXALUMNOS/panel-egresados/panel-egresados.component';
 
 
 
@@ -124,7 +124,7 @@ import { EgresadosComponent } from './egresados/egresados.component';
     CarouselMecatronicaComponent,
     CarouselQuimicaComponent,
     CuerpoQuimicaComponent,
-    EgresadosComponent,
+    PanelEgresadosComponent
   ],
   imports: [
     CommonModule,

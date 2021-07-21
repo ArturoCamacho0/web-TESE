@@ -4,17 +4,23 @@
      <mat-drawer mode="side" class="sidebar" id="side" #drawer opened>
          <mat-selection-list role="list container" [multiple]="false">
              <mat-list-option role="listitem" (click)="getId(1)" style="margin-top: 10%;">
-              Vinculación e Incubadora de empresas
+              <div *ngFor="let item of items | async">
+                {{item.VTitle1}}
+              </div>
              </mat-list-option>
              <br>
              <br>
              <mat-list-option role="listitem" (click)="getId(2)" style="margin-top: 5%;">
-              Actividades y Credenciales
+              <div *ngFor="let item of items | async">
+                {{item.ATitle}}
+              </div>
              </mat-list-option>
              <br>
              <br>
              <mat-list-option role="listitem" (click)="getId(3)">
-              Cursos y Diplomados
+              <div *ngFor="let item of items | async">
+                {{item.CTitle1}}
+              </div>
              </mat-list-option>
              <br>
              <br>
@@ -26,12 +32,16 @@
              <br>
              <br>
              <mat-list-option role="listitem" (click)="getId(4)">
-              Historial académico
+              <div *ngFor="let item of items | async">
+                {{item.HTitle1}}
+              </div>
              </mat-list-option>
              <br>
              <br>
              <mat-list-option role="listitem" (click)="getId(5)">
-              Servicio a la comunidad
+              <div *ngFor="let item of items | async">
+                {{item.STitle1}}
+              </div>
              </mat-list-option>
              <br>
              <br>
@@ -92,7 +102,10 @@
         <div class="card">
           <img src="https://firebasestorage.googleapis.com/v0/b/app-tese.appspot.com/o/EgresadosYExalumnos%2FBannerEgresados%2FPOSGRADOS%2FING_QUIMICA1.jpg?alt=media&token=d3386360-bed9-47c0-a9de-b6b5623085da" class="card-img-top">
           <div class="card-img-overlay">
-            <h1 class="tcard" style="margin-top:5vh;">MAESTRÍA EN CIENCIAS INGENIERÍA QUÍMICA</h1>
+            <h1 class="tcard" style="margin-top:5vh;">
+              <div *ngFor="let item of items | async">
+                {{item.QuimicaTitulo}}
+              </div></h1>
           </div>
 
         </div>
@@ -106,7 +119,11 @@
 
           <img src="https://firebasestorage.googleapis.com/v0/b/app-tese.appspot.com/o/EgresadosYExalumnos%2FBannerEgresados%2FPOSGRADOS%2FING_BIOQUIMICA1.jpg?alt=media&token=d6819f93-abd5-4f19-adf9-406dd3206528" class="card-img-top">
           <div class="card-img-overlay">
-            <h1 class="tcard" style="margin-top:5vh;">MAESTRÍA EN CIENCIAS INGENIERÍA BIOQUÍMICA</h1>
+            <h1 class="tcard" style="margin-top:5vh;">
+              <div *ngFor="let item of items | async">
+                {{item.BioquimicaTitulo}}
+              </div>
+            </h1>
           </div>
         </div>
       </a>
@@ -117,7 +134,10 @@
         <div class="card">
           <img src="https://firebasestorage.googleapis.com/v0/b/app-tese.appspot.com/o/EgresadosYExalumnos%2FBannerEgresados%2FPOSGRADOS%2FING_SISTEMAS1.jpg?alt=media&token=eed529d0-cf2b-4a5a-8fd5-5cce9bc1de93" class="card-img-top">
           <div class="card-img-overlay">
-            <h1 class="tcard" style="margin-top:5vh;">MAESTRÍA EN SISTEMAS COMPUTACIONALES</h1>
+            <h1 class="tcard" style="margin-top:5vh;">
+              <div *ngFor="let item of items | async">
+                {{item.SistemasTitulo}}
+              </div></h1>
           </div>
         </div>
         </a>
@@ -128,7 +148,11 @@
         <div class="card">
           <img src="https://firebasestorage.googleapis.com/v0/b/app-tese.appspot.com/o/EgresadosYExalumnos%2FBannerEgresados%2FPOSGRADOS%2FING_ER1.jpg?alt=media&token=1f8ebd78-4310-43f6-8455-3d395c02641a" class="card-img-top">
           <div class="card-img-overlay">
-            <h1 class="tcard" style="margin-top:5vh;">MAESTRÍA EN EFICIENCIA ENERGÉTICA Y ENERGÍAS RENOVABLES</h1>
+            <h1 class="tcard" style="margin-top:5vh;">
+              <div *ngFor="let item of items | async">
+                {{item.EficienciaTitulo}}
+              </div>
+            </h1>
           </div>
         </div>
         </a>
@@ -139,7 +163,11 @@
         <div class="card">
           <img src="https://firebasestorage.googleapis.com/v0/b/app-tese.appspot.com/o/EgresadosYExalumnos%2FBannerEgresados%2FPOSGRADOS%2FING_MECATRONICA1.jpg?alt=media&token=66b7e1a9-9ba2-44b4-8c31-0268f162d3fa" class="card-img-top">
           <div class="card-img-overlay">
-            <h1 class="tcard" style="margin-top:5vh;">MAESTRÍA EN CIENCIAS EN INGENIERÍA MECATRÓNICA</h1>
+            <h1 class="tcard" style="margin-top:5vh;">
+              <div *ngFor="let item of items | async">
+                {{item.MecatronicaTitulo}}
+              </div>
+            </h1>
           </div>
         </div>
         </a>
@@ -150,7 +178,10 @@
         <div class="card">
           <img src="https://firebasestorage.googleapis.com/v0/b/app-tese.appspot.com/o/EgresadosYExalumnos%2FBannerEgresados%2FPOSGRADOS%2FING_GESTION1.jpg?alt=media&token=7b2258b8-162c-464e-a014-7f4322814b28" class="card-img-top">
           <div class="card-img-overlay">
-            <h1 class="tcard" style="margin-top:5vh;">MAESTRÍA EN GESTIÓN ADMINISTRATIVA</h1>
+            <h1 class="tcard" style="margin-top:5vh;">
+              <div *ngFor="let item of items | async">
+                {{item.GestionTitulo}}
+              </div></h1>
           </div>
         </div>
         </a>

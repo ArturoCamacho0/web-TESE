@@ -15,8 +15,9 @@ export class PaginaMsistemasComponent implements OnInit {
   items: Observable<any[]>
 
   public carouselData: ICarouselItem[]=CAROUSEL_DATA_ITEMS_MSISTEMAS;
+  
   constructor(firestore: AngularFirestore) {
-    this.items = firestore.collection('EgresadosYExalumnos').valueChanges();
+    this.items = firestore.collection('/EgresadosYExalumnos').valueChanges();
   }
 
   ngOnInit(): void {
