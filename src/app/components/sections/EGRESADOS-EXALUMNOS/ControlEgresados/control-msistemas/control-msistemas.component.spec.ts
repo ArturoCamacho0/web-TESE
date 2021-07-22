@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PanelEgresadosComponent } from './panel-egresados.component';
+import { ControlMsistemasComponent } from './control-msistemas.component';
 
-describe('PanelEgresadosComponent', () => {
-  let component: PanelEgresadosComponent;
-  let fixture: ComponentFixture<PanelEgresadosComponent>;
+describe('ControlMsistemasComponent', () => {
+  let component: ControlMsistemasComponent;
+  let fixture: ComponentFixture<ControlMsistemasComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PanelEgresadosComponent ]
+      declarations: [ ControlMsistemasComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PanelEgresadosComponent);
+    fixture = TestBed.createComponent(ControlMsistemasComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

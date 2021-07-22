@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 import { MquimicaService } from 'src/app/services/firebase/Egresado/MQuimica/Mquimica.service';
 
@@ -12,21 +12,58 @@ import { MquimicaService } from 'src/app/services/firebase/Egresado/MQuimica/Mqu
 export class ControlMquimicaComponent implements OnInit {
 
   submitedConcepto = false;
+  submitedObjetivo = false;
+  submitedPerfil = false;
+  submitedMateriaB = false;
+  submitedMateriaO = false;
+  submitedArea = false;
 
   Concepto: any[]=[];
-  ConceptoD: any[]=[];
+  Objetivo: any[]=[];
+  Perfil: any[]=[];
+  MateriaB: any[]=[];
+  MateriaO: any[]=[];
+  Area: any[]=[];
 
   ingresarConcepto: FormGroup;
-  ingresarConceptoD: FormGroup;
+  ingresarObjetivo: FormGroup;
+  ingresarPerfil: FormGroup;
+  ingresarMateriaB: FormGroup;
+  ingresarMateriaO: FormGroup;
+  ingresarArea: FormGroup;
+
+  inputAddressArea : FormControl;
 
   constructor(private fbq: FormBuilder, private _MquimicaService: MquimicaService) {
     this.ingresarConcepto=this.fbq.group({
       ConceptoQuimica:['', Validators.required]
     })
+    this.ingresarObjetivo=this.fbq.group({
+      ObjetivoQuimica:['', Validators.required]
+    })
+    this.ingresarPerfil=this.fbq.group({
+      PerfilQuimica:['', Validators.required]
+    })
+    this.ingresarMateriaB=this.fbq.group({
+      MateriaBQuimica:['', Validators.required]
+    })
+    this.ingresarMateriaO=this.fbq.group({
+      MateriaOQuimica:['', Validators.required]
+    })
+    this.ingresarArea=this.fbq.group({
+      AreaQuimica:['', Validators.required]
+    })
+
+    this.inputAddressArea = new FormControl();
   }
 
   ngOnInit(): void {
-    this.getConcepto()
+    this.getConcepto(),
+    this.getObjetivo(),
+    this.getPerfil(),
+    this.getMateriaB(),
+    this.getMateriaO(),
+    this.getArea()
   }
 
   /*AGREGAR REGISTROS*/
@@ -36,17 +73,93 @@ export class ControlMquimicaComponent implements OnInit {
       return;
     }
     const Concepto : any={
-      ConceptosMQuimicaDesc: this.ingresarConcepto.value.conceptos
+      ConceptosMQuimicaDesc: this.ingresarConcepto.value.ConceptoQuimica
     }
     this._MquimicaService.crearConcepto(Concepto).then(()=>{
-      console.log('El concepto ha sido registrado...');
+      console.log('REGISTRO AGREGADO...');
     }).catch(error =>{
       console.log(error);
     })
   }
 
+  agregarObjetivo(){
+    this.submitedObjetivo=true;
+    if(this.ingresarObjetivo.invalid){
+      return;
+    }
+    const Objetivo : any={
+      ObjetivoMquimicaDesc: this.ingresarObjetivo.value.ObjetivoQuimica
+    }
+    this._MquimicaService.crearObjetivo(Objetivo).then(()=>{
+      console.log('REGISTRO AGREGADO...');
+    }).catch(error =>{
+      console.log(error);
+    })
+  }
 
-  /*EVENTOS BOTON*/
+  agregarPerfil(){
+    this.submitedPerfil=true;
+    if(this.ingresarPerfil.invalid){
+      return;
+    }
+    const Perfil : any={
+      PerfilMQuimicaDesc: this.ingresarPerfil.value.PerfilQuimica
+    }
+    this._MquimicaService.crearPerfil(Perfil).then(()=>{
+      console.log('REGISTRO AGREGADO...');
+    }).catch(error =>{
+      console.log(error);
+    })
+  }
+
+  agregarMateriaB(){
+    this.submitedMateriaB=true;
+    if(this.ingresarMateriaB.invalid){
+      return;
+    }
+    const MateriaB : any={
+      QuimicaMateriaBasica: this.ingresarMateriaB.value.MateriaBQuimica
+    }
+    this._MquimicaService.crearMateriaB(MateriaB).then(()=>{
+      console.log('REGISTRO AGREGADO...');
+    }).catch(error =>{
+      console.log(error);
+    })
+  }
+
+  agregarMateriaO(){
+    this.submitedMateriaO=true;
+    if(this.ingresarMateriaO.invalid){
+      return;
+    }
+    const MateriaO : any={
+      QuimicaMateriaOptativa: this.ingresarMateriaO.value.MateriaOQuimica
+    }
+    this._MquimicaService.crearMateriaO(MateriaO).then(()=>{
+      console.log('REGISTRO AGREGADO...');
+    }).catch(error =>{
+      console.log(error);
+    })
+  }
+
+  agregarArea(){
+    this.submitedArea=true;
+    if(this.ingresarArea.invalid){
+      return;
+    }
+    const Area : any={
+      AreaMquimicaOpc: this.ingresarArea.value.AreaQuimica
+    }
+    this._MquimicaService.crearArea(Area).then(()=>{
+      console.log('REGISTRO AGREGADO...');
+    }).catch(error =>{
+      console.log(error);
+    })
+  }
+
+  /*EDITAR REGISTROS*/
+
+   /*EVENTOS BOTON*/
   onClick(){
     let full = document.getElementById('side');
     full.classList.toggle('active');
@@ -75,4 +188,137 @@ export class ControlMquimicaComponent implements OnInit {
     })
   }
 
+  getObjetivo(){
+    this._MquimicaService.getObjetivo().subscribe(data =>{
+      this.Objetivo=[];
+      data.forEach((element:any) =>{
+        /*console.log(element.payload.doc.data());*/
+        this.Objetivo.push({
+          id:element.payload.doc.id,
+          ...element.payload.doc.data()
+        })
+      })
+      console.log(this.Objetivo);
+    })
+  }
+
+  getPerfil(){
+    this._MquimicaService.getPerfil().subscribe(data =>{
+      this.Perfil=[];
+      data.forEach((element:any) =>{
+        /*console.log(element.payload.doc.data());*/
+        this.Perfil.push({
+          id:element.payload.doc.id,
+          ...element.payload.doc.data()
+        })
+      })
+      console.log(this.Perfil);
+    })
+  }
+
+  getMateriaB(){
+    this._MquimicaService.getMateriaB().subscribe(data =>{
+      this.MateriaB=[];
+      data.forEach((element:any) =>{
+        /*console.log(element.payload.doc.data());*/
+        this.MateriaB.push({
+          id:element.payload.doc.id,
+          ...element.payload.doc.data()
+        })
+      })
+      console.log(this.MateriaB);
+    })
+  }
+
+  getMateriaO(){
+    this._MquimicaService.getMateriaO().subscribe(data =>{
+      this.MateriaO=[];
+      data.forEach((element:any) =>{
+        /*console.log(element.payload.doc.data());*/
+        this.MateriaO.push({
+          id:element.payload.doc.id,
+          ...element.payload.doc.data()
+        })
+      })
+      console.log(this.MateriaO);
+    })
+  }
+
+  getArea(){
+    this._MquimicaService.getArea().subscribe(data =>{
+      this.Area=[];
+      data.forEach((element:any) =>{
+        /*console.log(element.payload.doc.data());*/
+        this.Area.push({
+          id:element.payload.doc.id,
+          ...element.payload.doc.data()
+        })
+      })
+      console.log(this.Area);
+    })
+  }
+
+   /*ELIMINAR*/
+   eliminaConcepto(id:string){
+    this._MquimicaService.eliminaConcepto(id).then(()=>{
+      console.log('REGISTRO ELIMINADO');
+    }).catch(error =>{
+      console.log(error);
+    })
+  }
+
+  eliminaObjetivo(id:string){
+    this._MquimicaService.eliminaObjetivo(id).then(()=>{
+      console.log('REGISTRO ELIMINADO');
+    }).catch(error =>{
+      console.log(error);
+    })
+  }
+
+  eliminaPerfil(id:string){
+    this._MquimicaService.eliminaPerfil(id).then(()=>{
+      console.log('REGISTRO ELIMINADO');
+    }).catch(error =>{
+      console.log(error);
+    })
+  }
+
+  eliminaMateriaB(id:string){
+    this._MquimicaService.eliminaMateriaB(id).then(()=>{
+      console.log('REGISTRO ELIMINADO');
+    }).catch(error =>{
+      console.log(error);
+    })
+  }
+
+  eliminaMateriaO(id:string){
+    this._MquimicaService.eliminaMateriaO(id).then(()=>{
+      console.log('REGISTRO ELIMINADO');
+    }).catch(error =>{
+      console.log(error);
+    })
+  }
+
+  eliminaArea(id:string){
+    this._MquimicaService.eliminaArea(id).then(()=>{
+      console.log('REGISTRO ELIMINADO');
+    }).catch(error =>{
+      console.log(error);
+    })
+  }
+
+  editarArea(id : string) {
+    var area = {
+      id : id,
+      AreaMquimicaOpc : this.inputAddressArea.value
+    };
+    this._MquimicaService.editarArea(area).then(() => {
+
+    console.log('OK');
+    });
+  }
+
+
+
 }
+

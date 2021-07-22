@@ -1,0 +1,153 @@
+<div class="">
+  <mat-drawer-container class="side-container">
+
+  <!-- Inicio de la SIDE NAV BAR; Si se desea eliminar se borrara este bloque de codigo y el final mat drawer  -->
+    <mat-drawer mode="side" class="sidebar" id="side" #drawer opened>
+        <mat-selection-list role="list container" [multiple]="false">
+          <a routerLink="/ControlVinculacion">
+            <mat-list-option style="margin-top: 10%;">
+              VINCULACION EMPRESARIAL E INCUBADORA DE EMPRESAS
+            </mat-list-option>
+          </a>
+            <br>
+            <br>
+          <a routerLink="/ControlActividades">
+            <mat-list-option>
+             ACTIVIDADES Y CREDENCIALES EGRESADOS
+            </mat-list-option>
+          </a>
+            <br>
+            <br>
+          <a routerLink="/ControlCursos">
+            <mat-list-option>
+             CURSOS Y DIPLOMADOS
+            </mat-list-option>
+          </a>
+            <br>
+            <br>
+          <a routerLink="/ControlHistorial">
+            <mat-list-option>
+             HISTORIAL ACADEMICO
+            </mat-list-option>
+          </a>
+            <br>
+            <br>
+          <a routerLink="/ControlServicio">
+            <mat-list-option>
+             SERVICIO A LA COMUNIDAD
+            </mat-list-option>
+          </a>
+            <br>
+            <br>
+            <br>
+        </mat-selection-list>
+    </mat-drawer>
+
+    <mat-drawer-content class="side-content">
+        <button id="arrow" type="button" mat-button (click)="drawer.toggle()" (click)="open()">
+            <mat-icon id="right" class="open">arrow_forward</mat-icon>
+            <mat-icon id="left">arrow_back</mat-icon>
+        </button>
+
+        <mat-divider class="divider"></mat-divider>
+
+        <!-- Empieza el area para ingresar contenido en el panel lateral -->
+        <div class="text-side" >
+          <div class="box-shadow= 50px 50px;">
+          </div>
+        </div>
+
+        <h1 class="titulo">CONTROL EGRESADOS</h1>
+
+        <h1 class="Titulo2">POSGRADOS</h1>
+
+        <div class="row row-cols-1 row-cols-md-3 g-">
+
+          <div class="col">
+
+            <a routerLink="/ControlMquimica">
+            <div class="card">
+              <img src="https://firebasestorage.googleapis.com/v0/b/app-tese.appspot.com/o/EgresadosYExalumnos%2FBannerEgresados%2FPOSGRADOS%2FING_QUIMICA1.jpg?alt=media&token=d3386360-bed9-47c0-a9de-b6b5623085da" class="card-img-top">
+              <div class="card-img-overlay">
+                <h1 class="tcard" style="margin-top:5vh;">
+                  QUIMICA
+                </h1>
+              </div>
+
+            </div>
+          </a>
+
+          </div>
+
+          <div class="col">
+            <a routerLink="/ControlMbioquimica">
+            <div class="card">
+
+              <img src="https://firebasestorage.googleapis.com/v0/b/app-tese.appspot.com/o/EgresadosYExalumnos%2FBannerEgresados%2FPOSGRADOS%2FING_BIOQUIMICA1.jpg?alt=media&token=d6819f93-abd5-4f19-adf9-406dd3206528" class="card-img-top">
+              <div class="card-img-overlay">
+                <h1 class="tcard" style="margin-top:5vh;">
+                  BIOQUIMICA
+                </h1>
+              </div>
+            </div>
+          </a>
+          </div>
+
+          <div class="col">
+            <a routerLink="/ControlMsistemas">
+            <div class="card">
+              <img src="https://firebasestorage.googleapis.com/v0/b/app-tese.appspot.com/o/EgresadosYExalumnos%2FBannerEgresados%2FPOSGRADOS%2FING_SISTEMAS1.jpg?alt=media&token=eed529d0-cf2b-4a5a-8fd5-5cce9bc1de93" class="card-img-top">
+              <div class="card-img-overlay">
+                <h1 class="tcard" style="margin-top:5vh;">
+                  SISTEMAS
+                </h1>
+              </div>
+            </div>
+            </a>
+          </div>
+
+          <div class="col">
+            <a routerLink="/ControlMeficiencia">
+            <div class="card">
+              <img src="https://firebasestorage.googleapis.com/v0/b/app-tese.appspot.com/o/EgresadosYExalumnos%2FBannerEgresados%2FPOSGRADOS%2FING_ER1.jpg?alt=media&token=1f8ebd78-4310-43f6-8455-3d395c02641a" class="card-img-top">
+              <div class="card-img-overlay">
+                <h1 class="tcard" style="margin-top:5vh;">
+                  ENERGIA
+                </h1>
+              </div>
+            </div>
+            </a>
+          </div>
+
+          <div class="col">
+            <a routerLink="/Mmecatronica">
+            <div class="card">
+              <img src="https://firebasestorage.googleapis.com/v0/b/app-tese.appspot.com/o/EgresadosYExalumnos%2FBannerEgresados%2FPOSGRADOS%2FING_MECATRONICA1.jpg?alt=media&token=66b7e1a9-9ba2-44b4-8c31-0268f162d3fa" class="card-img-top">
+              <div class="card-img-overlay">
+                <h1 class="tcard" style="margin-top:5vh;">
+                  MECATRONICA
+                </h1>
+              </div>
+            </div>
+            </a>
+          </div>
+
+          <div class="col">
+            <a routerLink="/Mgestion">
+            <div class="card">
+              <img src="https://firebasestorage.googleapis.com/v0/b/app-tese.appspot.com/o/EgresadosYExalumnos%2FBannerEgresados%2FPOSGRADOS%2FING_GESTION1.jpg?alt=media&token=7b2258b8-162c-464e-a014-7f4322814b28" class="card-img-top">
+              <div class="card-img-overlay">
+
+                <h1 class="tcard" style="margin-top:5vh;">
+                  Gestion
+                </h1>
+              </div>
+            </div>
+            </a>
+          </div>
+        </div>
+
+    </mat-drawer-content>
+  </mat-drawer-container>
+</div>
+

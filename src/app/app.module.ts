@@ -5,7 +5,6 @@ import { routing, appRoutingProviders } from './app.routing'
 import { Router, RouterModule, Routes } from '@angular/router';
 
 
-
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './components/material/material.module';

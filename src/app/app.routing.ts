@@ -28,8 +28,12 @@ import { PaginaMsistemasComponent } from './components/sections/EGRESADOS-EXALUM
 import { PaginaMeficienciaComponent } from './components/sections/EGRESADOS-EXALUMNOS/Meficiencia/pagina-meficiencia/pagina-meficiencia.component';
 import { PaginaMmecatronicaComponent } from './components/sections/EGRESADOS-EXALUMNOS/Mmecatronica/pagina-mmecatronica/pagina-mmecatronica.component';
 import { PaginaMgestionComponent } from './components/sections/EGRESADOS-EXALUMNOS/Mgestion/pagina-mgestion/pagina-mgestion.component';
-import { PanelEgresadosComponent } from './components/sections/EGRESADOS-EXALUMNOS/panel-egresados/panel-egresados.component';
+import { ControlEgresadosComponent } from './components/sections/EGRESADOS-EXALUMNOS/ControlEgresados/control-egresados/control-egresados.component';
 import { ControlMquimicaComponent } from './components/sections/EGRESADOS-EXALUMNOS/ControlEgresados/control-mquimica/control-mquimica.component';
+import { ControlMbioquimicaComponent } from './components/sections/EGRESADOS-EXALUMNOS/ControlEgresados/control-mbioquimica/control-mbioquimica.component';
+import { ControlMsistemasComponent } from './components/sections/EGRESADOS-EXALUMNOS/ControlEgresados/control-msistemas/control-msistemas.component';
+import { ControlMeficienciaComponent } from './components/sections/EGRESADOS-EXALUMNOS/ControlEgresados/control-meficiencia/control-meficiencia.component';
+
 
 //import carreras
 import { CuerpoComponent } from './components/sections/carrera/cuerpo/cuerpo.component';
@@ -72,8 +76,11 @@ const appRoutes: Routes = [
     { path: 'Meficienciaenergetica', component: PaginaMeficienciaComponent},
     { path: 'Mmecatronica', component: PaginaMmecatronicaComponent},
     { path: 'Mgestion', component:PaginaMgestionComponent},
-    { path: 'PanelEgresados', component:PanelEgresadosComponent},
+    { path: 'ControlEgresados', component:ControlEgresadosComponent},
     { path: 'ControlMquimica', component:ControlMquimicaComponent},
+    { path: 'ControlMbioquimica', component:ControlMbioquimicaComponent},
+    { path: 'ControlMsistemas', component:ControlMsistemasComponent},
+    { path: 'ControlMeficiencia', component:ControlMeficienciaComponent},
 
 
     { path: 'Carreras', component: CuerpoComponent},

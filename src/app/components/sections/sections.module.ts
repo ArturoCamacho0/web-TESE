@@ -60,9 +60,11 @@ import { CuerpoMecatronicaComponent } from './carrera/profesion/IngenieriaMecatr
 import { CarouselMecatronicaComponent } from './carrera/profesion/IngenieriaMecatronica/carousel-mecatronica/carousel-mecatronica.component';
 import { CarouselQuimicaComponent } from './carrera/profesion/IngenieriaQuimica/carousel-quimica/carousel-quimica.component';
 import { CuerpoQuimicaComponent } from './carrera/profesion/IngenieriaQuimica/cuerpo-quimica/cuerpo-quimica.component';
-import { PanelEgresadosComponent } from './EGRESADOS-EXALUMNOS/panel-egresados/panel-egresados.component';
 import { ControlMquimicaComponent } from './EGRESADOS-EXALUMNOS/ControlEgresados/control-mquimica/control-mquimica.component';
 import { ControlMbioquimicaComponent } from './EGRESADOS-EXALUMNOS/ControlEgresados/control-mbioquimica/control-mbioquimica.component';
+import { ControlEgresadosComponent } from './EGRESADOS-EXALUMNOS/ControlEgresados/control-egresados/control-egresados.component';
+import { ControlMsistemasComponent } from './EGRESADOS-EXALUMNOS/ControlEgresados/control-msistemas/control-msistemas.component';
+import { ControlMeficienciaComponent } from './EGRESADOS-EXALUMNOS/ControlEgresados/control-meficiencia/control-meficiencia.component';
 
 
 
@@ -126,9 +128,11 @@ import { ControlMbioquimicaComponent } from './EGRESADOS-EXALUMNOS/ControlEgresa
     CarouselMecatronicaComponent,
     CarouselQuimicaComponent,
     CuerpoQuimicaComponent,
-    PanelEgresadosComponent,
     ControlMquimicaComponent,
-    ControlMbioquimicaComponent
+    ControlMbioquimicaComponent,
+    ControlEgresadosComponent,
+    ControlMsistemasComponent,
+    ControlMeficienciaComponent
   ],
   imports: [
     CommonModule,
