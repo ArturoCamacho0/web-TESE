@@ -41,7 +41,6 @@ export class BioquimicaComponent implements OnInit {
       titulo_Doc:['',Validators.required]
     })
     this.ingresarCampo = this.fbm.group({
-      contenido_Campo:['',Validators.required],
       titulo_Campo:['',Validators.required]
     })
   }
@@ -103,7 +102,7 @@ export class BioquimicaComponent implements OnInit {
       return;
     }
     const Egreso :any={
-      campo:this.ingresarEgreso.value.titulo_Egreso,
+      contenido:this.ingresarEgreso.value.titulo_Egreso,
       fechacreacion: new Date(),
       fechaactualizacion: new Date()
     }
@@ -137,8 +136,7 @@ export class BioquimicaComponent implements OnInit {
       return;
     }
     const Campo :any={
-      titulo:this.ingresarCampo.value.titulo_Campo,
-      contenido:this.ingresarCampo.value.contenido_Campo,
+      contenido:this.ingresarCampo.value.titulo_Campo,
       fechacreacion: new Date(),
       fechaactualizacion: new Date()
     }

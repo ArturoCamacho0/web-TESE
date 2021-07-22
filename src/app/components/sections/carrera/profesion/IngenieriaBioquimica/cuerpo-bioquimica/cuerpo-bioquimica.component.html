@@ -1,3 +1,4 @@
+<div>
 <app-carousel-bioquimica></app-carousel-bioquimica>
 <body>
 
@@ -79,7 +80,7 @@
         </button>
       </h2>
       <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-        <div class="accordion-body" *ngFor="let CamLab of CamLab | async">{{CamLab.campo}}</div>
+        <div class="accordion-body" *ngFor="let CamLab of CamLab | async">{{CamLab.contenido}}</div>
       </div>
     </div>
    </div>
@@ -97,22 +98,19 @@
    <div>
  Documentos Anexos
 
- <div class="accordion" id="accordionPanelsStayOpenExample">
   <div class="accordion" id="accordionPanelsStayOpenExample">
     <div class="accordion-item" *ngFor="let Bot of Bot | async">
      <h2 class="accordion-header" id="flush-headingFour">
-       <button class="accordion-button collapsed" type="button" [attr.data-bs-target]="'#flush-collapse'+Bot.id_doc" data-bs-toggle="collapse"  aria-expanded="false">
+       <button class="accordion-button collapsed" type="button" [attr.data-bs-target]="'#flush-collapse'+Bot.id_Doc" data-bs-toggle="collapse"  aria-expanded="false">
          <div >
            {{Bot.titulo}}
        </div>
        </button>
      </h2>
-     <div [attr.id]="'flush-collapse'+Bot.id_doc" class="accordion-collapse collapse">
+     <div [attr.id]="'flush-collapse'+Bot.id_Doc" class="accordion-collapse collapse">
        <a href="{{Bot.contenido}}">Detalles</a>
      </div>
    </div>
-
-  </div>
  </div>
    </div>
  </div>
@@ -148,3 +146,4 @@
 
  </div>
     </body>
+</div>
