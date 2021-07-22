@@ -4,41 +4,33 @@
   <!-- Inicio de la SIDE NAV BAR; Si se desea eliminar se borrara este bloque de codigo y el final mat drawer  -->
     <mat-drawer mode="side" class="sidebar" id="side" #drawer opened>
         <mat-selection-list role="list container" [multiple]="false">
-          <mat-list-option role="listitem" (click)="getId(1)" style="margin-top: 5%;">
+          <mat-list-option>
             VINCULACION EMPRESARIAL E INCUBADORA DE EMPRESAS
           </mat-list-option>
             <br>
             <br>
-            <mat-list-option role="listitem" (click)="getId(2)" style="margin-top: 5%;">
+            <mat-list-option>
              
             </mat-list-option>
             <br>
             <br>
-            <mat-list-option role="listitem" (click)="getId(3)">
-             <div *ngFor="let item of items | async">
-               {{item.CTitle1}}
-             </div>
+            <mat-list-option>
+             
             </mat-list-option>
             <br>
             <br>
-            <mat-list-option role="listitem">
-            <div *ngFor="let item of items | async">
-             <a href={{item.BLink}} class=option>{{item.BTitle}}</a>
-            </div>
+            <mat-list-option >
+            
            </mat-list-option>
             <br>
             <br>
-            <mat-list-option role="listitem" (click)="getId(4)">
-             <div *ngFor="let item of items | async">
-               {{item.HTitle1}}
-             </div>
+            <mat-list-option>
+             
             </mat-list-option>
             <br>
             <br>
-            <mat-list-option role="listitem" (click)="getId(5)">
-             <div *ngFor="let item of items | async">
-               {{item.STitle1}}
-             </div>
+            <mat-list-option>
+             
             </mat-list-option>
             <br>
             <br>
@@ -67,6 +59,7 @@
           <div class="box-shadow= 50px 50px;">
           </div>
         </div>
-    </div>
-  </div>
+        
+    </mat-drawer-content>
+  </mat-drawer-container>
 </div>
