@@ -18,10 +18,14 @@ export class AdministracionInscripcionComponent implements OnInit {
 
   ingresarContend_I: FormGroup;
   ingresarContend_P: FormGroup;
+  ingresarContend_F: FormGroup;
 
   submited_contenido_I = false;
 
   submited_contenido_P = false;
+
+
+  submited_contenido_F = false;
 
   titles: any [] = [];
 
@@ -44,6 +48,11 @@ export class AdministracionInscripcionComponent implements OnInit {
             id_precio: ['', Validators.required]
               })
 
+              this.ingresarContend_F = this.fbc.group({
+                contenidofecha:['', Validators.required],
+                id_fecha: ['', Validators.required]
+                  })
+
 
 
      }
@@ -53,6 +62,7 @@ export class AdministracionInscripcionComponent implements OnInit {
     this.getContenido_I()
     this.getTitulos()
     this.getContenido_P()
+    this.getContenido_F()
   }
   onClick(){
     let full = document.getElementById('side');
@@ -177,7 +187,7 @@ eliminarContenido_P(id: string){
   })
 }
 
-
+/* fechas */
 
 getContenido_F(){
   this._inscripcionService.getContenido_F().subscribe(data =>{
@@ -194,9 +204,32 @@ getContenido_F(){
   });
 }
 
+agregarContenido_F(){
+  this.submited_contenido_F = true;
+
+  if(this.ingresarContend_F.invalid){
+    return;
+  }
+  const contenido_F: any ={
+    id_fecha: this.ingresarContend_F.value.id_fecha,
+    contenidofecha: this.ingresarContend_F.value.contenidofecha
+  }
+  this._inscripcionService.agregarContenido_F(contenido_F).then(()=>{
+    console.log('Contenido Precio agregado con exito');
+  }).catch(error=>{
+    console.log(error);
+  })
+}
 
 
-
+eliminarContenido_F(id: string){
+  this._inscripcionService.eliminarContenido_F(id).then(()=>{
+    console.log('CONTENIO Contenido ELIMINADO');
+  }).catch(error =>{
+    console.log(error
+     )
+  })
+}
 
 
 

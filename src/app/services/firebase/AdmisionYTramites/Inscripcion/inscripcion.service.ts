@@ -57,6 +57,24 @@ getContenido_F(): Observable<any>{
   return this.firestore.collection('/AdmisionYTramites/Inscripcion/Contenidos-Fechas/', ref => ref.orderBy('id_fecha','asc')).snapshotChanges();
 }
 
+
+agregarContenido_F(contenido_F:any): Promise<any>{
+  return this.firestore.collection('/AdmisionYTramites/Inscripcion/Contenidos-Fechas/').add(contenido_F);
+ }
+
+ eliminarContenido_F(id: string): Promise<any>{
+  return this.firestore.collection('/AdmisionYTramites/Inscripcion/Contenidos-Fechas/').doc(id).delete();
+}
+
+
+
+
+
+
+
+
+
+
 }
 
 

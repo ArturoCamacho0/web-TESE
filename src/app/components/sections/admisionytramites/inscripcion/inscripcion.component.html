@@ -102,7 +102,12 @@ eliminado sin ningun problema: Para la implementacion en tu componente tendras q
               <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
                 data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body"><ul class="list-group">
-                  <li class="list-group-item">1. Acta de nacimiento en original y dos copias.</li>
+                  <li class="list-group-item">
+                    <div *ngFor="let contend of content_inscripcion " class=" ">
+
+                        {{contend.contenido}}
+
+                </div></li>
                   <li class="list-group-item">2. Certificado de bachillerato en original y dos copias o constancia de estudios donde indique que el certificado está en trámite.</li>
                   <li class="list-group-item">
                     3. Copia de la CURP.</li>
@@ -213,10 +218,9 @@ eliminado sin ningun problema: Para la implementacion en tu componente tendras q
                 <span STYLE="text-align: center;font-size:x-large;color:#414141;">
 
                   <span STYLE="font-weight: bold;">Duración:</span>
-                   El tiempo de atención para este trámite es de aproximadamente 30 minutos. El periodo establecido en el calendario de la institución.
-
-
-                   xDDDDDDDDD
+                  <div *ngFor="let contend of content_fecha " class=" ">
+                    {{contend.contenidofecha}}
+</div>
                 </span>
 
               </span>

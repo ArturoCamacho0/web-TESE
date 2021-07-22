@@ -69,7 +69,7 @@
       </form>
       <hr>
 
-      <label for="inputAddress" class="form-label fw-bold" >Agregaciones</label>
+      <label for="inputAddress" class="form-label fw-bold" >Activar</label>
 
       <div class="accordion" id="accordionExample">
         <div class="accordion-item">
@@ -148,7 +148,7 @@ Informacion Importante            </button>
 
 
               <form>
-                <label for="inputAddress" class="form-label fw-bold" >Informacion Principal</label>
+                <label for="inputAddress" class="form-label fw-bold" >Seccion de Pagos</label>
                 <div class="row g-3" *ngFor="let precio_contents of content_precio">
 
                   <label for="inputAddress" class="form-label" >Posicion en Pagina</label>
@@ -216,41 +216,41 @@ Informacion Importante            </button>
             <div class="accordion-body">
 
               <form>
-                <label for="inputAddress" class="form-label fw-bold" >Informacion Principal</label>
-                <div class="row g-3" *ngFor="let precio_contents of content_precio">
+                <label for="inputAddress" class="form-label fw-bold" >Fechas y tiempos</label>
+                <div class="row g-3" *ngFor="let precio_contents of content_fecha">
 
                   <label for="inputAddress" class="form-label" >Posicion en Pagina</label>
                   <div class="col-2">
-                    <input class="form-control" value="{{precio_contents.id_precio}}" row="3" type="number">
+                    <input class="form-control" value="{{precio_contents.id_fecha}}" row="3" type="number">
                   </div>
 
                   <label for="inputAddress" class="form-label" >Contenido de Parrafo</label>
                   <div class="col-11" >
-                    <textarea class="form-control" id="exampleFormControlTextarea1" value="{{precio_contents.contenidoprecio}}" rows="3"></textarea>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" value="{{precio_contents.contenidofecha}}" rows="3"></textarea>
                   </div>
 
                   <div class="col">
-                    <button type="button" (click)="eliminarContenido_P(precio_contents.id)" class="btn btn-danger">Eliminar</button>
+                    <button type="button" (click)="eliminarContenido_F(precio_contents.id)" class="btn btn-danger">Eliminar</button>
                   </div>
 
                 </div>
 
               </form>
 
-              <form [formGroup]="ingresarContend_P" (ngSubmit)="agregarContenido_P()">
+              <form [formGroup]="ingresarContend_F" (ngSubmit)="agregarContenido_F()">
                 <div class="row g-3">
                      <label for="inputAddress" class="form-label fw-bold; center-align" >Agregar Contenido</label>
-                     <span *ngIf="submited_contenido_P && ingresarContend_P.invalid" class="alert alert-danger">El campo debe tener datos para Agregar</span>
+                     <span *ngIf="submited_contenido_F && ingresarContend_F.invalid" class="alert alert-danger">El campo debe tener datos para Agregar</span>
 
                 <label for="inputAddress" class="form-label fw-bold" >Posicion en pagina</label>
                 <div class="col-2" >
-                 <input type="number" class="form-control" id="exampleFormControlTextarea1" value="" rows="3" placeholder="Contenido" formControlName="id_precio">
+                 <input type="number" class="form-control" id="exampleFormControlTextarea1" value="" rows="3" placeholder="Contenido" formControlName="id_fecha">
                 </div>
 
 
                 <label for="inputAddress" class="form-label fw-bold" >Contenido</label>
                 <div class="col-11" >
-                  <textarea class="form-control" id="exampleFormControlTextarea1" value="" rows="3" placeholder="Contenido" formControlName="contenidoprecio"></textarea>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" value="" rows="3" placeholder="Contenido" formControlName="contenidofecha"></textarea>
                 </div>
 
 
@@ -272,6 +272,48 @@ Informacion Importante            </button>
         </div>
       </div>
 
+<hr>
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFour">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+             Documentos necesarios
+            </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse show" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFive">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+              Accordion Item #2
+            </button>
+          </h2>
+          <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingSix">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+              Accordion Item #3
+            </button>
+          </h2>
+          <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
 
 
 

@@ -18,6 +18,8 @@ export class InscripcionComponent implements OnInit {
   content_inscripcion: any [] = [];
   content_precio: any [] = [];
 
+  content_fecha: any [] = [];
+
 
   public carouselData: ICarouselItem[]=CAROUSEL_DATA_ITEMS_BANNERP;
   constructor(firestore: AngularFirestore,private _inscripcionService:InscripcionService ) { }
@@ -26,6 +28,7 @@ export class InscripcionComponent implements OnInit {
   ngOnInit(): void {
     this.getContenido_I()
     this.getContenido_P()
+    this.getContenido_F()
   }
 
   onClick(){
@@ -70,6 +73,22 @@ export class InscripcionComponent implements OnInit {
        console.log(this.content_precio);
     });
   }
+
+
+getContenido_F(){
+  this._inscripcionService.getContenido_F().subscribe(data =>{
+    this.content_fecha = [];
+     data.forEach((element:any) => {
+
+       this.content_fecha.push({
+         id:element.payload.doc.id,
+         ...element.payload.doc.data()
+       })
+
+     });
+     console.log(this.content_fecha);
+  });
+}
 
 
 
