@@ -95,16 +95,26 @@ body {
 #acordeon > div{
   width: 100%;
   color: white;
+  border-color: tomato;
+  background-color: tomato;
 
 }
+.accordion-color-collapse{
+  background-color: white;
+  color: black;
 
+}
 #acordeon > div div a{
   width: 100%;
   color:black;
+  border-color: tomato;
+  background-color: tomato;
 }
 
 .accordion-item:hover h2 button{
   background-color: #eb2a31da;
+  color: white;
+  border-color:  #eb2a31da;
 
 }
 
@@ -115,7 +125,7 @@ a {
 }
 
 .side-container {
-  height:unset;
+  height: initial;
 }
 
 .sidebar {
@@ -177,17 +187,7 @@ a {
   filter: blur(1px);
 }
 
-.informatica:hover > mat-card {
-  background-image: url("../../../../../assets/images/informatica.jpg");
-}
 
-.quimica:hover > mat-card {
-  background-image: url("../../../../../assets/images/quimica.jpg");
-}
-
-.contador:hover > mat-card {
-  background-image: url("../../../../../assets/images/contador.jpg");
-}
 
 .act {
   background-color: white;
@@ -248,17 +248,9 @@ a {
   background-color: #eb2a31da;
   color:white;
   border-color: #eb2a31da;
+
 }
 .ubicacion-pag{
   color: #eb2a31da;
 }
 
-.img-icon{
-  width: 8ch;
-  height: 10ch;
-
-}
-
-.margen{
-  margin:5vh;
-}

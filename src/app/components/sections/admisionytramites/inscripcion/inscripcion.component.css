@@ -1,22 +1,3 @@
-
-
-/* CSS Personalizado para la seccion */
-.list-group-item{
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  color: #EA5455;
-
-  font-weight: bold;
-}
-.card-img-top {
-  width: 100%;
-  height: 15vw;
-  object-fit: cover;
-}
-
-
-
-
-
 /* Configuracion de estilos para la plantilla contenido. */
 
 /* Elementos css para el titulo, y subtitulos se configura el color del titulo y se le agrega un borde  por debajo */
@@ -81,7 +62,7 @@
   ); */
 
   background-color: #eb2a31da;
-
+  background-size: inherit;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
@@ -113,14 +94,28 @@ body {
 
 #acordeon > div{
   width: 100%;
-}
+  color: white;
+  border-color: tomato;
+  background-color: tomato;
 
+}
+.accordion-color-collapse{
+  background-color: white;
+  color: black;
+
+}
 #acordeon > div div a{
   width: 100%;
+  color:black;
+  border-color: tomato;
+  background-color: tomato;
 }
 
 .accordion-item:hover h2 button{
-  background-color: rgb(181, 215, 255);
+  background-color: #eb2a31da;
+  color: white;
+  border-color:  #eb2a31da;
+
 }
 
 /* Configuracion de estilos globales */
@@ -130,7 +125,7 @@ a {
 }
 
 .side-container {
-  height: 100vh;
+  height: initial;
 }
 
 .sidebar {
@@ -253,9 +248,22 @@ a {
   margin-top: 37px;
   height: 100%;
   width: 875px;
-  -moz-box-shadow: 0 30 30px 5px #999;
+  box-shadow: 0 30 30px 5px #999;
   -webkit-box-shadow: 30 0 30px 5px #999;
   -o-box-shadow: 0 30 30px 5px #999;
   border: 1px solid black;
   border-top-style: none;
 }
+.accordion-color{
+  background-color: #eb2a31da;
+  color:white;
+  border-color: #eb2a31da;
+
+}
+.ubicacion-pag{
+  color: #eb2a31da;
+}
+.margen{
+  margin:5vh;
+}
+

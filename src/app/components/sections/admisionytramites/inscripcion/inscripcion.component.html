@@ -65,14 +65,19 @@ eliminado sin ningun problema: Para la implementacion en tu componente tendras q
           <div class="card">
             <div class="card-body">
               <h4 class="card-title">
-                <div class="Titulo2">Proceso de Inscripcion;</div>
+                <div class="Titulo2">Informacion;</div>
               </h4>
-              <br class="card-text" font-weight="bold"> <span STYLE="font-size:large;color:#414141; text-align: justify;">
+              <br class="card-text" font-weight="bold"> <span STYLE="font-size:large;color:#414141; text-align: justify; font-family: Arial, Helvetica, sans-serif; font-size: x-large; color:#414141;">
+
+                <div *ngFor="let contend of content_inscripcion " class=" ">
+                  <P>
+                    {{contend.contenido}}
+                <br>
+              </P></div>
 
 
 
-              Es el acto que realizan los alumnos que fueron aceptados en el proceso de admisión y que cumplan con los requisitos establecidos por el TESE.<br><br>
-                El estudiante aceptado se presenta en la fecha indicada para su inscripción con la documentación establecida en los requisitos, una vez verificada por parte del personal de la Unidad de Registro y Certificación procede a entregarle Tira de materias, Credencial de alumno, Carta de bienvenida, Reglamentos, Trípticos de servicios. El estudiante deberá presentarse el día que indica el Calendario Escolar de inicio de semestre en el horario indicado en su tira de materias.</span>
+              </span>
                 <br>
                 <br>
 
@@ -81,38 +86,7 @@ eliminado sin ningun problema: Para la implementacion en tu componente tendras q
             </div>
           </div>
     <!-- Seccion de "carrousel", donde se puede enlazar a otras cosas que quiza no consideren poner una sidebar -->
-    <div class="cards">
-      <mat-card class="careers">
-        <div class="Titulo2">Conoce nuestras carreras:</div>
 
-        <div class="row">
-          <a href="#" class="card-career informatica col">
-            <mat-card>
-              <span class="h1">Ingeniería informática</span>
-            </mat-card>
-          </a>
-
-          <a href="#" class="card-career quimica col">
-            <mat-card>
-              <span class="h1">Ingeniería química</span>
-            </mat-card>
-          </a>
-
-          <a href="#" class="card-career contador col">
-            <mat-card>
-              <span class="h1">Licenciatura contaduría</span>
-            </mat-card>
-          </a>
-
-          <a href="#" class="card-career informatica col">
-            <mat-card>
-              <span class="h1">Ingeniería informática</span>
-            </mat-card>
-          </a>
-        </div>
-      </mat-card>
-
-    </div>
 
     <mat-divider></mat-divider>
           <mat-divider></mat-divider>
@@ -166,7 +140,47 @@ eliminado sin ningun problema: Para la implementacion en tu componente tendras q
 
         </div>
 
+
+
+
+
+
+
           <mat-divider></mat-divider>
+
+          <div class="cards">
+            <mat-card class="careers">
+              <div class="Titulo2">Conoce nuestras carreras:</div>
+
+              <div class="row">
+                <a href="#" class="card-career informatica col">
+                  <mat-card>
+                    <span class="h1">Ingeniería informática</span>
+                  </mat-card>
+                </a>
+
+                <a href="#" class="card-career quimica col">
+                  <mat-card>
+                    <span class="h1">Ingeniería química</span>
+                  </mat-card>
+                </a>
+
+                <a href="#" class="card-career contador col">
+                  <mat-card>
+                    <span class="h1">Licenciatura contaduría</span>
+                  </mat-card>
+                </a>
+
+                <a href="#" class="card-career informatica col">
+                  <mat-card>
+                    <span class="h1">Ingeniería informática</span>
+                  </mat-card>
+                </a>
+              </div>
+            </mat-card>
+
+          </div>
+          <hr>
 
           <div class="card">
             <div class="card-body">
@@ -175,14 +189,16 @@ eliminado sin ningun problema: Para la implementacion en tu componente tendras q
                 <div class="subtitulo">Costos</div>
 
                 <span STYLE="text-align: center;font-size:x-large;color:#414141;">
-                  <span STYLE="font-weight: bold;">Semestral:</span>
-                   <span STYLE="font-weight: bold;;color:#da4b4b;">    3,457.00 </span><br> (Incluye: Colegiatura, Inscripción, Seguro, Examen Médico).
+                  <span STYLE="font-weight: bold;">Precios:</span>
+                   <span STYLE="font-weight: bold;;color:#da4b4b; text-align: left;">   <div *ngFor="let contend of content_precio " class=" ">
+                    {{contend.contenidoprecio}}
+</div>
+</span>
                 </span>
 
               </span>
             </div>
           </div>
-
 
           <mat-divider></mat-divider>
 
@@ -198,12 +214,17 @@ eliminado sin ningun problema: Para la implementacion en tu componente tendras q
 
                   <span STYLE="font-weight: bold;">Duración:</span>
                    El tiempo de atención para este trámite es de aproximadamente 30 minutos. El periodo establecido en el calendario de la institución.
+
+
+                   xDDDDDDDDD
                 </span>
 
               </span>
             </div>
           </div>
           <mat-divider></mat-divider>
+
+          <hr>
 
           <div class="card mb-3">
             <img src="../../../../../assets/images/admisionytramitesimg/thumbnail (9).jpg" class="card-img-top" alt="...">
