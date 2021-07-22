@@ -81,7 +81,7 @@
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/">Admin</a></li>
-            <li class="breadcrumb-item"><a href="/Admin-Carrera-Principal">Carreras</a></li>
+            <li class="breadcrumb-item"><a href="/Admin-Carrera">Carreras</a></li>
             <li class="breadcrumb-item"><a href="/Admin-Carrera/Aeronautica">Aeronautica</a></li>
           </ol>
         </nav>
@@ -211,6 +211,46 @@
     </section>
 
 
+
+
+    <section  class="lh-sm fs-4 shadow p-3 mb-5 bg-body rounded">
+
+      <label for="inputAddress" class="form-label fw-bold" >Campo Laboral</label>
+
+      <form [formGroup]="ingresarCampo" (ngSubmit)="agregarCampo()">
+        <div class="row ">
+          <span *ngIf="submitedCampo && ingresarCampo.invalid" class="alert alert-danger">Los campos deben tener datos para ingresar</span>
+          <label for="inputAddress" class="form-label fw-bold" >Agregar</label>
+
+          <div class="col-10">
+            <input type="text" class="form-control" id="inputAddress" value="" formControlName="titulo_Campo" placeholder="Campo Laboral">
+          </div>
+
+          <div class="col">
+            <button type="submit" class="btn btn-success">Agregar</button>
+          </div>
+
+        </div>
+      </form>
+      <br>
+      <h1 class="fw-bold lh-sm fs-4 shadow p-3 mb-5 bg-body rounded" *ngIf="Campo.length==0">No hay datos en Campo Laboral para mostrar</h1>
+      <form *ngIf="Campo.length>0">
+        <label for="inputAddress" class="form-label fw-bold" >Eliminar y Editar</label>
+        <div *ngFor="let Campo of Campo " class="row" >
+          <div class="col-8">
+            <input type="text" class="form-control" id="inputAddressCampo" value="{{Campo.contenido}}">
+
+          </div>
+          <div class="col float-rigth">
+            <button type="button" (click)="eliminaCampo(Campo.id)"  class="btn btn-danger">Eliminar</button>
+          </div>
+          <div class="col float-rigth" >
+            <button type="button" (click)="editaCampo(Campo.id)"  class="btn btn-success">Editar</button>
+          </div>
+        </div>
+        <hr>
+      </form>
+    </section>
 
 
 
