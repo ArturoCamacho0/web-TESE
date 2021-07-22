@@ -15,6 +15,7 @@ import { ContactoComponent } from './components/layout/contacto/contacto.compone
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 const router: Routes =[
   {
@@ -29,6 +30,7 @@ const router: Routes =[
     AppComponent
   ],
   imports: [
+    NgbModule,
     BrowserModule,
     routing,
     appRoutingProviders,
@@ -48,3 +50,5 @@ const router: Routes =[
   bootstrap: [AppComponent]
 })
 export class AppModule {}
+
+

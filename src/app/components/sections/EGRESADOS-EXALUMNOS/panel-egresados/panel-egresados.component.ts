@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-panel-egresados',
@@ -8,11 +9,20 @@ import { Component, OnInit } from '@angular/core';
 export class PanelEgresadosComponent implements OnInit {
 
   config: any;
-  collection = { count: 60, data:[] }
+  collection = { count: 6, data:[] }
 
-  constructor() { }
+  closeResult = '';
+  dato:FormGroup;
+
+  constructor(public fb: FormBuilder) {}
 
   ngOnInit(): void {
+
+    this.dato = this.fb.group({
+      id: ['', Validators.required],
+      nombre: ['', Validators.required],
+      apellido: ['', Validators.required]
+    })
 
     for(var i=0; i < this.collection.count; i++){
       this.collection.data.push({
@@ -29,3 +39,4 @@ export class PanelEgresadosComponent implements OnInit {
   }//falta el item en pop
 
 }
+
