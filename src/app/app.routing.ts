@@ -1,11 +1,22 @@
+
+/**IDENTIDAD INSTITUCIONAL */
+
+import { MisionVisionComponent } from './components/sections/Identidad-institucional/mision-vision/mision-vision.component';
+import { HistoriaComponent } from './components/sections/Identidad-institucional/historia/historia.component';
+import { LogoComponent } from './components/sections/Identidad-institucional/logo/logo.component';
+import { AdministracionHistoriaComponent } from './components/sections/Identidad-institucional/Administracion/administracion-historia/administracion-historia.component';
+import { EditDocumentoComponent } from './components/sections/Identidad-institucional/Administracion/administracion-mision/Edit/edit-documento/edit-documento.component';
+import { EditOrgranigramaComponent } from './components/sections/Identidad-institucional/Administracion/administracion-organigrama/Edit/edit-orgranigrama/edit-orgranigrama.component';
+import { EditPosgradoComponent } from './components/sections/Identidad-institucional/Administracion/administracion-historia/Edit/edit-posgrado/edit-posgrado.component';
+import { EditCarreraComponent } from './components/sections/Identidad-institucional/Administracion/administracion-historia/Edit/edit-carrera/edit-carrera.component';
 import { ImgLogoComponent } from './components/sections/Identidad-institucional/Administracion/administracion-logo/Edit/img-logo/img-logo.component';
 import { AdministracionOrganigramaComponent } from './components/sections/Identidad-institucional/Administracion/administracion-organigrama/administracion-organigrama.component';
 import { AdministracionMisionComponent } from './components/sections/Identidad-institucional/Administracion/administracion-mision/administracion-mision.component';
 import { AdministracionLogoComponent } from './components/sections/Identidad-institucional/Administracion/administracion-logo/administracion-logo.component';
 
-import { MisionVisionComponent } from './components/sections/Identidad-institucional/mision-vision/mision-vision.component';
-import { HistoriaComponent } from './components/sections/Identidad-institucional/historia/historia.component';
-import { LogoComponent } from './components/sections/Identidad-institucional/logo/logo.component';
+
+
+
 import { ModuleWithProviders, Component } from '@angular/core';
 import {Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/sections/home/home.component';
@@ -41,8 +52,6 @@ import { CuerpoMecanicaComponent } from './components/sections/carrera/profesion
 import { CuerpoMecatronicaComponent } from './components/sections/carrera/profesion/IngenieriaMecatronica/cuerpo-mecatronica/cuerpo-mecatronica.component';
 import { CuerpoQuimicaComponent } from './components/sections/carrera/profesion/IngenieriaQuimica/cuerpo-quimica/cuerpo-quimica.component';
 import { ContactoComponent } from './components/layout/contacto/contacto.component';
-import { AdministracionHistoriaComponent } from './components/sections/Identidad-institucional/Administracion/administracion-historia/administracion-historia.component';
-
 
 
 // Rutas
@@ -71,27 +80,34 @@ const appRoutes: Routes = [
     { path:'Carreras/Mecatronica',component: CuerpoMecatronicaComponent},
     { path:'Carreras/Quimica',component: CuerpoQuimicaComponent},
 
-    {path: 'inscripcion', component:InscripcionComponent },
-    {path:'admisionytramites',component:AdmisionytramitesComponent},
+  /**IDENTIDAD INTITUCIONAL */
+
     { path: 'Logo', component:LogoComponent},
     { path: 'Historia', component:HistoriaComponent},
     { path: 'Mision', component:MisionVisionComponent},
-
-    { path: 'normatividad', component: NormatividadComponent},
-    { path: 'calendario', component: CalendarioEscolarComponent},
-    {path: 'compromiso', component: CompromisoSocialComponent},
-    {path: 'politica', component: PoliticaIntegralComponent},
-    {path: 'contraloria', component: ContraloriaSocialComponent},
-    {path: 'informe', component: InformeActividadesComponent},
-
-
-    { path: 'plantillacontenido', component:PlantillaContenidoComponent },
-    { path: 'contact', component: ContactoComponent },
     { path: 'admin-logo', component: AdministracionLogoComponent},
     { path: 'admin-historia', component: AdministracionHistoriaComponent},
     { path: 'admin-mision', component: AdministracionMisionComponent},
     { path: 'admin-organigrama', component: AdministracionOrganigramaComponent},
-    { path: 'edit-img-logo/:id', component: ImgLogoComponent}
+    { path: 'edit-img-logo/:id', component: ImgLogoComponent},
+    { path: 'edit-carrera-historia/:id', component: EditCarreraComponent},
+    { path: 'edit-posgrado-historia/:id', component: EditPosgradoComponent},
+    { path: 'edit-documento/:id', component:EditDocumentoComponent},
+    { path: 'edit-organigrama/:id', component: EditOrgranigramaComponent},
+
+    {path: 'inscripcion', component:InscripcionComponent },
+    {path:'admisionytramites',component:AdmisionytramitesComponent},
+
+    { path: 'normatividad', component: NormatividadComponent},
+    { path: 'calendario', component: CalendarioEscolarComponent},
+    { path: 'compromiso', component: CompromisoSocialComponent},
+    { path: 'politica', component: PoliticaIntegralComponent},
+    { path: 'contraloria', component: ContraloriaSocialComponent},
+    { path: 'informe', component: InformeActividadesComponent},
+
+
+    { path: 'plantillacontenido', component:PlantillaContenidoComponent },
+    { path: 'contact', component: ContactoComponent }
 
 
 

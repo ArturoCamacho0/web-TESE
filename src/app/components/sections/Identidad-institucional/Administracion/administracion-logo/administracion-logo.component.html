@@ -55,14 +55,15 @@
       <form>
       <div *ngFor="let logo_contend of contenido_logo" class="row g-3">
 
-        <label for="inputAddress" class="form-label" >Posicion en Pagina</label>
-        <div class="col-2">
-         <input class="form-control" value="{{logo_contend.id_logo}}" row="3" type="number">
+
+        <div class="col-10">
+          <label for="inputAddress" class="form-label" >Posicion en Pagina : {{logo_contend.id_logo}}</label>
         </div>
 
         <label for="inputAddress" class="form-label" >Contenido</label>
-        <div class="col-11" >
-          <textarea class="form-control" id="exampleFormControlTextarea1" value="{{logo_contend.contenido}}" rows="3"></textarea>
+        <div class="col-10" >
+          <p class="fs-6">{{logo_contend.contenido}}</p>
+
         </div>
 
         <div class="col">
@@ -87,13 +88,13 @@
     </span>
 
       <label for="exampleFormControlTextarea1" class="form-label ">POSICION EN PAGINA</label>
-      <div class="col-11">
+      <div class="col-2">
         <input class="form-control" placeholder="Posicion de Parrafo" id="exampleFormControlTextarea1" rows="3" type="number"
         formControlName="id_logo">
       </div>
 
       <label for="exampleFormControlTextarea1" class="form-label ">CONTENIDO</label>
-      <div class="col-11">
+      <div class="col-10">
         <textarea class="form-control" placeholder="Contenido" id="exampleFormControlTextarea1" rows="3"
         formControlName="contenido_logo"></textarea>
       </div>

@@ -54,27 +54,25 @@
 
     <br>
 
-    <mat-card >
-      <mat-card-header>
 
-        <mat-card-title style="font-size: 3ch;">Documentos Relacionados
-        </mat-card-title>
-        <mat-card-subtitle style="font-size: 2ch;">PDF</mat-card-subtitle>
-      </mat-card-header>
+    <section class="lh-sm p-3 mb-5 ">
+      <h1 class="fw-bold lh-sm ">Documentos Relacionados</h1>
+      <div class="row">
+        <div class="col" *ngFor="let document of documents_mision">
+          <div class="card">
+            <img src="../../../../../assets/images/PDF-ICON.png" class="card-img-top img-icon mt-2">
+            <div class="card-body">
 
-      <div *ngFor="let document of documents_mision">
-        <mat-card-content>
-        <p>
-         <img  class="img-icon" src="../../../../../assets/images/PDF-ICON.png">
-        </p>
-      </mat-card-content>
-      <mat-card-actions style="margin-right: auto;">
-       <a href="{{document.Dir_Documento}}" class="enlace-pdf" mat-button>MOSTRAR</a>
-      </mat-card-actions>
-    </div>
+              <a class="font-color-red" href="{{document.Dir_Documento}}">MOSTRAR</a>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
 
 
-    </mat-card>
 
 
 

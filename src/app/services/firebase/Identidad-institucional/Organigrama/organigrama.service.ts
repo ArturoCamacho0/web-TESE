@@ -13,5 +13,13 @@ export class OrganigramaService {
   getOrganigrama(): Observable<any>{
       return this.firestore.collection('/Identidad/Organigrama/DatosOrganigrama').snapshotChanges();
     }
+
+  getOrganigramaEdit(id: string): Observable<any>{
+    return this.firestore.collection('/Identidad/Organigrama/DatosOrganigrama').doc(id).snapshotChanges();
+  }
+
+  actualizarOrganigrama(id: string, data: any): Promise<any>{
+    return this.firestore.collection('/Identidad/Organigrama/DatosOrganigrama').doc(id).update(data);
+  }
 }
 

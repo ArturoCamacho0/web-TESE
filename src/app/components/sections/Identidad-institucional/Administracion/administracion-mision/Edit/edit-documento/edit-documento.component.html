@@ -7,15 +7,15 @@
             Historia
           </mat-list-option>
         </a>
-        <a href="admin-mision">
-          <mat-list-option role="/Logo">
-            Mision Vision
-          </mat-list-option>
-        </a>
-
         <a href="admin-logo">
           <mat-list-option role="/Logo">
             Logo
+          </mat-list-option>
+        </a>
+
+        <a href="admin-organigrama">
+          <mat-list-option role="/Logo">
+            Organigrama
           </mat-list-option>
         </a>
       </mat-selection-list>
@@ -34,30 +34,35 @@
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a class="ubicacion-pag" href="#">Administracion</a></li>
             <li class="breadcrumb-item"><a class="ubicacion-pag" href="#">Identidad Institucional</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Organigrama</li>
+            <li class="breadcrumb-item active" aria-current="page">Mision Vision</li>
           </ol>
         </nav>
       </div>
     </div>
 
-    <h1 class="fw-bold lh-sm fs-4 shadow p-3 mb-5 bg-body rounded">Panel Administracion Organigrama</h1>
+    <h1 class="fw-bold lh-sm fs-4 shadow p-3 mb-5 bg-body rounded">Panel Edicion Documento</h1>
 
     <section class="lh-sm fs-4 shadow p-3 mb-5 bg-body rounded">
-      <form>
 
-        <div *ngFor="let organigrama_contends of organigrama" class="row g-3">
-          <label for="inputAddress" class="form-label fw-bold" >Ruta de Organigrama</label>
-        <div class="col-10">
-          <input type="text" class="form-control" id="inputAddress" value="{{organigrama_contends.Dir}}">
-        </div>
+      <h1 class="fw-bold">{{titulo}}</h1>
+      <form [formGroup]="FormularioEditar" (ngSubmit)="editarDocumento()">
+            <div class="row g-3" >
+              <label for="inputAddress" class="form-label fw-bold" >Ruta de Documento</label>
 
-        <div class="col">
-          <button type="button" [routerLink]="['/edit-organigrama/',organigrama_contends.id]" class="btn btn-success">Editar</button>
-        </div>
-      </div>
+              <div class="col-10">
+                <input type="text" class="form-control" id="inputAddress"  placeholder="Titulo" formControlName="ruta">
+              </div>
 
-      </form>
+              <div class="col">
+                <button type="submit" class="btn btn-success">Actualizar</button>
+              </div>
+
+            </div>
+          </form>
+
+
     </section>
+
 
 
     </mat-drawer-content>

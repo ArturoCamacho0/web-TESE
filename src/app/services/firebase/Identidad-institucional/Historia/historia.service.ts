@@ -40,6 +40,14 @@ export class HistoriaService {
     return this.firestore.collection('/Identidad/Historia/Dropdowns-historia/1001/Contenido-dropdown').doc(id).delete();
   }
 
+  getCarreraEdit(id: string): Observable<any>{
+    return this.firestore.collection('/Identidad/Historia/Dropdowns-historia/1001/Contenido-dropdown').doc(id).snapshotChanges();
+  }
+
+  actualizarCarrera(id: string, data : any): Promise<any>{
+    return this.firestore.collection('/Identidad/Historia/Dropdowns-historia/1001/Contenido-dropdown').doc(id).update(data);
+  }
+
    agregarPosgrado(posgrado: any): Promise<any>{
      return this.firestore.collection('/Identidad/Historia/Dropdowns-historia/1000/Contenido-dropdownA').add(posgrado);
    }
@@ -50,6 +58,14 @@ export class HistoriaService {
 
   eliminarPosgrado(id: string): Promise<any>{
     return this.firestore.collection('/Identidad/Historia/Dropdowns-historia/1000/Contenido-dropdownA').doc(id).delete();
+  }
+
+  getPosgradoEdit(id: string): Observable<any>{
+    return this.firestore.collection('/Identidad/Historia/Dropdowns-historia/1000/Contenido-dropdownA').doc(id).snapshotChanges();
+  }
+
+  actualizarPosgrado(id: string, data : any): Promise<any>{
+    return this.firestore.collection('/Identidad/Historia/Dropdowns-historia/1000/Contenido-dropdownA').doc(id).update(data);
   }
 
    agregarPrograma(programa: any): Promise<any>{
@@ -115,7 +131,4 @@ export class HistoriaService {
   getOrganigrama(): Observable<any>{
     return this.firestore.collection('/Identidad/Organigrama/DatosOrganigrama').snapshotChanges();
   }
-
-
-
 }
