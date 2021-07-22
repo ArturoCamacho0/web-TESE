@@ -194,48 +194,31 @@
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
          <li class="breadcrumb-item"><a href="#" class="Link">Home</a></li>
-         <li class="breadcrumb-item active" aria-current="page">Egresados y Exalumnos</li>
+         <li class="breadcrumb-item active" aria-current="page">EgresadosExalumnos</li>
          <li class="breadcrumb-item"><a href="/egresadosyexalumnos" class="Link">Posgrados</a></li>
+         <li class="breadcrumb-item active" aria-current="page">VinculacionEmpresarialEIncubadoraDeEmpresas</li>
         </ol>
       </nav>
 
       <div class="cards">
         <div class="card-body">
           <h4 class="card-title"><div class="Titulo2">
-            <div *ngFor="let item of items | async">
-              {{item.VTitle1}}
-            </div>
+              VINCULACIÓN EMPRESARIAL E INCUBADORA DE EMPRESAS
           </div></h4>
 
           <p class="card-text">
-            <div *ngFor="let item of items | async">
-              {{item.VDescripcion1}}
+            <div *ngFor="let DatoVinculacion of DatosVinculacion | async">
+              {{DatoVinculacion.VinculacionDesc}}
             </div>
           <br>
           <br>
           <h4 class="card-title"><div class="Titulo2">
-            <div *ngFor="let item of items | async ">
-              {{item.VTitle2}}
-            </div>
+            OBJETIVO
           </div></h4>
-          <ul>
+          <ul *ngFor="let DatoObjetivo of DatosObjetivo | async">
             <li>
-              <div *ngFor="let item of items | async">
-                {{item.VDescripcion2op1}}
-            </div>
-          </li>
-
-          <li>
-            <div *ngFor="let item of items | async">
-              {{item.VDescripcion2op2}}
-          </div>
-          </li>
-
-          <li>
-            <div *ngFor="let item of items | async">
-              {{item.VDescripcion2op3}}
-          </div>
-          </li>
+                {{DatoObjetivo.ObjetivoDesc}}
+            </li>
           </ul>
           <BR>
           <BR>
@@ -245,12 +228,11 @@
                 <div class="cards">
                   <div class="card-body">
                     <h4 class="card-title"><div class="Titulo2">
-                      <div *ngFor="let item of items | async">
-                        {{item.VTitle3}}
-                      </div></div></h4>
+                      EGRESADOS Y ALUMNOS
+                      </div></h4>
                     <p class="card-text">
-                      <div *ngFor="let item of items | async">
-                        {{item.VDescripcion3}}
+                      <div *ngFor="let DatoEgresado of DatosEgresados | async">
+                        {{DatoEgresado.EgresadosDesc}}
                       </div>
                       <BR>
                         <BR>
@@ -262,13 +244,11 @@
                   <div class="cards">
                     <div class="card-body">
                       <h4 class="card-title"><div class="Titulo2">
-                        <div *ngFor="let item of items | async">
-                          {{item.VTitle4}}
-                        </div>
+                        EMPRESAS
                       </div></h4>
                       <p class="card-text">
-                        <div *ngFor="let item of items | async">
-                          {{item.VDescripcion4}}
+                        <div *ngFor="let DatoEmpresa of DatosEmpresas | async">
+                          {{DatoEmpresa.EmpresasDesc}}
                         </div>
                       <BR>
                         <BR>
@@ -279,27 +259,12 @@
 
 
           <h4 class="card-title"><div class="Titulo2">
-            <div *ngFor="let item of items | async">
-              {{item.VTitle5}}
-            </div>
+            INCUBADORA DE EMPRESAS
           </div></h4>
-            <div *ngFor="let item of items | async">
-              {{item.VDescripcion5}}
-            </div>
-
-              <ul>
+              <ul style="list-style-type : none" *ngFor="let DatoIncubadora of DatosIncubadora | async">
                 <li>
-                  <div *ngFor="let item of items | async">
-                    {{item.VDescripcion5op1}}
-                  </div>
+                    {{DatoIncubadora.IncubadoraOpc}}
                 </li>
-
-                <li>
-                  <div *ngFor="let item of items | async">
-                    {{item.VDescripcion5op2}}
-                  </div>
-                </li>
-
             </ul>
           <BR>
           <BR>
@@ -315,90 +280,43 @@
           <li class="breadcrumb-item"><a href="#" class="Link">Home</a></li>
          <li class="breadcrumb-item active" aria-current="page">Egresados y Exalumnos</li>
          <li class="breadcrumb-item"><a href="/egresadosyexalumnos" class="Link">Posgrados</a></li>
+         <li class="breadcrumb-item active" aria-current="page">ActividadesYCredenciales</li>
         </ol>
       </nav>
 
       <div class="cards">
         <div class="card-body">
           <h4 class="card-title"><div class="Titulo2">
-            <div *ngFor="let item of items | async">
-              {{item.ATitle1}}
-            </div>
+            ACTIVIDADES DE EGRESADO
           </div></h4>
-          <ul>
+          <ul *ngFor="let DatoActividades of DatosActividades | async">
             <li>
-              <div *ngFor="let item of items | async">
-                {{item.ADescripcion1op1}}
-              </div>
+                {{DatoActividades.ActividadesOpc}}
             </li>
-            <li>
-              <div *ngFor="let item of items | async">
-                {{item.ADescripcion1op2}}
-              </div>
-            </li>
-            <li>
-              <div *ngFor="let item of items | async">
-                {{item.ADescripcion1op3}}
-              </div>
-            </li>
-            </ul>
+          </ul>
 
           <BR>
           <BR>
 
           <h4 class="card-title"><div class="Titulo2">
-            <div *ngFor="let item of items | async">
-              {{item.ATitle2}}
-            </div>
+            BENEFICIOS DE LA INSTITUCIÓN
           </div></h4>
-          <ul>
+          <ul *ngFor="let DatoBeneficio of DatosBeneficios | async">
             <li>
-              <div *ngFor="let item of items | async">
-                {{item.ADescripcion2op1}}
-              </div>
+                {{DatoBeneficio.BeneficiosOpc}}
             </li>
-            <li>
-              <div *ngFor="let item of items | async">
-                {{item.ADescripcion2op2}}
-              </div>
-            </li>
+
           </ul>
           <BR>
           <BR>
 
             <h4 class="card-title"><div class="Titulo2">
-              <div *ngFor="let item of items | async">
-                {{item.ATitle3}}
-              </div>
+              CREDENCIAL DE EGRESADOS
             </div></h4>
               <p class="card-text">
-                <div *ngFor="let item of items | async">
-                  {{item.ADescripcion3}}
-                </div>
-                <br>
-                <ol>
+                <ol style="list-style-type: none;"*ngFor="let DatoCredencial of DatosCredencial | async">
                   <li>
-                    <div *ngFor="let item of items | async">
-                      {{item.ADescripcion3op1}}<a href={{item.ADescripcion3op1Link}}>{{item.ADescripcion3op1Link}}</a>
-                    </div>
-                  </li>
-
-                  <li>
-                    <div *ngFor="let item of items | async">
-                      {{item.ADescripcion3op2}}
-                    </div>
-                  </li>
-
-                  <li>
-                    <div *ngFor="let item of items | async">
-                      {{item.ADescripcion3op3}}
-                    </div>
-                  </li>
-
-                  <li>
-                    <div *ngFor="let item of items | async">
-                      {{item.ADescripcion3op4}}
-                    </div>
+                      {{DatoCredencial.CredencialOpc}}
                   </li>
                 </ol>
           <BR>
@@ -415,6 +333,7 @@
           <li class="breadcrumb-item"><a href="#" class="Link">Home</a></li>
          <li class="breadcrumb-item active" aria-current="page">Egresados y Exalumnos</li>
          <li class="breadcrumb-item"><a href="/egresadosyexalumnos" class="Link">Posgrados</a></li>
+         <li class="breadcrumb-item active" aria-current="page">CursosYDiplomados</li>
         </ol>
       </nav>
 
@@ -422,69 +341,42 @@
         <div class="card-body">
           <h4 class="card-title">
             <div class="Titulo2">
-              <div *ngFor="let item of items | async">
-                {{item.CTitle1}}
-              </div>
+              CURSOS Y DIPLOMADOS
             </div></h4>
           <p class="card-text">
-              <div *ngFor="let item of items | async">
-                {{item.CDescripcion1}}
+              <div *ngFor="let DatoCurso of DatosCursos | async">
+                {{DatoCurso.CursosDesc}}
               </div>
           <BR>
           <BR>
 
           <h4 class="card-title"><div class="Titulo2">
-                <div *ngFor="let item of items | async">
-                  {{item.CTitle2}}
-                </div>
+            PERFIL DEL EGRESADO
           </div></h4>
           <p class="card-text">
-                <div *ngFor="let item of items | async">
-                  {{item.CDescripcion2}}
+                <div *ngFor="let DatoPerfil of DatosPerfil | async">
+                  {{DatoPerfil.PerfilDesc}}
                 </div>
           <BR>
           <BR>
 
             <h1 class="Titulo2">
-                  <div *ngFor="let item of items | async">
-                    {{item.CTitle3}}
-                  </div>
+              CAMPO LABORAL
             </h1>
               <p class="card-text">
-                    <div *ngFor="let item of items | async">
-                      {{item.CDescripcion3}}
+                    <div *ngFor="let DatoCampo of DatosCampo | async">
+                      {{DatoCampo.CampoDesc}}
                     </div>
           <BR>
           <BR>
             <h1 class="Titulo2">
-                  <div *ngFor="let item of items | async">
-                    {{item.CTitle4}}
-                  </div>
+              CURSOS DEL CENTRO DE IDIOMAS
             </h1>
               <p class="card-text">
-                    <div *ngFor="let item of items | async">
-                      {{item.CDescripcion4}}
+                    <div *ngFor="let DatoCC of DatosCC | async">
+                      {{DatoCC.CCOpc}}
                     </div>
                     <br>
-                <ul>
-                  <li>
-                    <div *ngFor="let item of items | async">
-                      {{item.CDescripcion4op1}}
-                    </div>
-                  </li>
-
-                  <li>
-                    <div *ngFor="let item of items | async">
-                      {{item.CDescripcion4op2}}
-                    </div>
-                  </li>
-
-                  <li>
-                    <div *ngFor="let item of items | async">
-                      {{item.CDescripcion4op3}}
-                    </div>
-                  </li>
-                </ul>
               <br>
               <br>
         </div>
@@ -499,19 +391,18 @@
           <li class="breadcrumb-item"><a href="#" class="Link">Home</a></li>
          <li class="breadcrumb-item active" aria-current="page">Egresados y Exalumnos</li>
          <li class="breadcrumb-item"><a href="/egresadosyexalumnos" class="Link">Posgrados</a></li>
+         <li class="breadcrumb-item active" aria-current="page">HistorialAcadémico</li>
         </ol>
       </nav>
 
       <div class="cards">
         <div class="card-body">
           <h4 class="card-title"><div class="Titulo2">
-            <div *ngFor="let item of items | async">
-              {{item.HTitle1}}
-            </div>
+            HISTORIAL ACADÉMICO
           </div></h4>
           <p class="card-text">
-            <div *ngFor="let item of items | async">
-              {{item.HDescripcion1}}
+            <div *ngFor="let DatoHistorial of DatosHistorial | async">
+              {{DatoHistorial.HistorialDesc}}
             </div>
           <br>
           <br>
@@ -519,26 +410,22 @@
           <div class="row row-cols-1 row-cols-md-2 g-2">
             <div class="col">
             <h4 class="card-title"><div class="Titulo2">
-              <div *ngFor="let item of items | async">
-                {{item.HTitle2}}
-              </div>
+              DOCUMENTO ELECTRÓNICO
               </div></h4>
               <p class="card-text">
-                <div *ngFor="let item of items | async">
-                  {{item.HDescripcion2}}
+                <div *ngFor="let DatoDocE of DatosDocE | async">
+                  {{DatoDocE.DocEDesc}}
                 </div>
                 <br>
                 <br>
             </div>
             <div class="col">
               <h4 class="card-title"><div class="Titulo2">
-                <div *ngFor="let item of items | async">
-                  {{item.HTitle3}}
-                </div>
+                DOCUMENTO OFICIAL
               </div></h4>
               <p class="card-text">
-                <div *ngFor="let item of items | async">
-                  {{item.HDescripcion3}}
+                <div *ngFor="let DatoDocO of DatosDocO | async">
+                  {{DatoDocO.DocODesc}}
                 </div>
           <br>
           <br>
@@ -546,31 +433,12 @@
           </div>
 
             <h1 class="Titulo2">
-              <div *ngFor="let item of items | async">
-                {{item.HTitle4}}
-              </div>
+              HORARIO Y LUGAR
             </h1>
-              <p class="card-text">
-                <div *ngFor="let item of items | async">
-                  {{item.HDescripcion4}}
-                </div>
-                <ul>
-                  <li>
-                    <div *ngFor="let item of items | async">
-                      {{item.HDescripcion4op1}}
-                    </div>
-                  </li>
-
-                  <li>
-                    <div *ngFor="let item of items | async">
-                      {{item.HDescripcion4op2}}
-                    </div>
-                  </li>
-
-                  <li>
-                    <div *ngFor="let item of items | async">
-                      {{item.HDescripcion4op3}}
-                    </div>
+              <p class="card-text" >
+                <ul style="list-style-type: none;" *ngFor="let DatoHorario of DatosHorario | async">
+                  <li style="text-align: center;">
+                      {{DatoHorario.HorarioOpc}}
                   </li>
                 </ul>
                 <br>
@@ -585,117 +453,39 @@
           <li class="breadcrumb-item"><a href="#" class="Link">Home</a></li>
          <li class="breadcrumb-item active" aria-current="page">Egresados y Exalumnos</li>
          <li class="breadcrumb-item"><a href="/egresadosyexalumnos" class="Link">Posgrados</a></li>
+         <li class="breadcrumb-item active" aria-current="page">CompromisoSocial</li>
         </ol>
       </nav>
 
       <div class="cards">
         <p class="card-body">
           <h4 class="card-title"><div class="Titulo2">
-            <div *ngFor="let item of items | async">
-              {{item.STitle1}}
-            </div>
+            COMPROMISO SOCIAL
           </div></h4>
           <p class="card-text">
-            <div *ngFor="let item of items | async">
-              {{item.SDescripcion1}}
-            </div>
+            <div *ngFor="let DatoCompromiso of DatosCompromiso | async">
             <ul>
               <li>
-                <div *ngFor="let item of items | async">
-                  {{item.SDescripcion1op1}}
-                </div>
+                  {{DatoCompromiso.CompromisoOpc}}
               </li>
-
-              <li>
-                <div *ngFor="let item of items | async">
-                  {{item.SDescripcion1op2}}
-                </div>
-              </li>
-
-              <li>
-                <div *ngFor="let item of items | async">
-                  {{item.SDescripcion1op3}}
-                </div>
-              </li>
-            </ul>
+              </ul>
+            </div>
           <BR>
           <BR>
 
           <h4 class="card-title"><div class="Titulo2">
-              <div *ngFor="let item of items | async">
-                {{item.STitle2}}
-              </div>
+            INEA
           </div></h4>
+          <div *ngFor="let DatoInea of DatosInea | async">
           <ul>
             <li>
-              <div *ngFor="let item of items | async">
-              {{item.SDescripcion2op1}}
-            </div>
+              {{DatoInea.IneaOpc}}
           </li>
-          <li>
-            <div *ngFor="let item of items | async">
-            {{item.SDescripcion2op2}}
+          </ul>
           </div>
-        </li>
-        <li>
-          <div *ngFor="let item of items | async">
-          {{item.SDescripcion2op3}}
+          </div>
+          </div>
         </div>
-      </li>
-    </ul>
-
-          <p class="card-text">
-            <div *ngFor="let item of items | async">
-              {{item.SDescripcion2}}
-            </div>
-            <ol>
-              <li>
-                <div *ngFor="let item of items | async">
-                  {{item.SDescripcion2op4a}}
-                </div>
-              </li>
-                <ul>
-                  <li>
-                    <div *ngFor="let item of items | async">
-                      {{item.SDescripcion2op5a}}
-                    </div>
-                  </li>
-                  <li>
-                    <div *ngFor="let item of items | async">
-                      {{item.SDescripcion2op5b}}
-                    </div>
-                  </li>
-                </ul>
-                <li>
-                  <div *ngFor="let item of items | async">
-                    {{item.SDescripcion2op4b}}
-                  </div>
-                </li>
-                <ul>
-                  <li>
-                    <div *ngFor="let item of items | async">
-                      {{item.SDescripcion2op6a}}
-                    </div>
-                  </li>
-                </ul>
-                <LI>
-                  <div *ngFor="let item of items | async">
-                    {{item.SDescripcion2op4c}}
-                  </div>
-                </LI>
-                <ul>
-                  <li>
-                    <div *ngFor="let item of items | async">
-                      {{item.SDescripcion2op7a}}
-                    </div>
-                  </li>
-                </ul>
-            </ol>
-            <br>
-            <br>
-        </div>
-      </div>
     </div>
-  </div>
   </mat-drawer-content>
 </mat-drawer-container>

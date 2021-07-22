@@ -35,6 +35,10 @@ import { ControlMsistemasComponent } from './components/sections/EGRESADOS-EXALU
 import { ControlMeficienciaComponent } from './components/sections/EGRESADOS-EXALUMNOS/ControlEgresados/control-meficiencia/control-meficiencia.component';
 import { ControlMmecatronicaComponent } from './components/sections/EGRESADOS-EXALUMNOS/ControlEgresados/control-mmecatronica/control-mmecatronica.component';
 import { ControlGestionComponent } from './components/sections/EGRESADOS-EXALUMNOS/ControlEgresados/control-gestion/control-gestion.component';
+import { ControlVinculacionComponent } from './components/sections/EGRESADOS-EXALUMNOS/ControlEgresados/control-vinculacion/control-vinculacion.component';
+import { ControlActividadesComponent } from './components/sections/EGRESADOS-EXALUMNOS/ControlEgresados/control-actividades/control-actividades.component';
+import { ControlCursosComponent } from './components/sections/EGRESADOS-EXALUMNOS/ControlEgresados/control-cursos/control-cursos.component';
+import { ControlCompromisoComponent } from './components/sections/EGRESADOS-EXALUMNOS/ControlEgresados/control-compromiso/control-compromiso.component';
 
 
 //import carreras
@@ -85,6 +89,10 @@ const appRoutes: Routes = [
     { path: 'ControlMeficiencia', component:ControlMeficienciaComponent},
     { path: 'ControlMmecatronica', component:ControlMmecatronicaComponent},
     { path: 'ControlMgestion', component:ControlGestionComponent},
+    { path: 'ControlVinculacion', component:ControlVinculacionComponent},
+    { path: 'ControlActividades', component:ControlActividadesComponent},
+    { path: 'ControlCursos', component:ControlCursosComponent},
+    { path: 'ControlServicio', component:ControlCompromisoComponent},
 
 
     { path: 'Carreras', component: CuerpoComponent},

@@ -69,6 +69,10 @@ import { ControlMeficienciaComponent } from './EGRESADOS-EXALUMNOS/ControlEgresa
 import { ContadorPublicoComponent } from './carrera/Administracion-Carreras/contador-publico/contador-publico.component';
 import { ControlMmecatronicaComponent } from './EGRESADOS-EXALUMNOS/ControlEgresados/control-mmecatronica/control-mmecatronica.component';
 import { ControlGestionComponent } from './EGRESADOS-EXALUMNOS/ControlEgresados/control-gestion/control-gestion.component';
+import { ControlVinculacionComponent } from './EGRESADOS-EXALUMNOS/ControlEgresados/control-vinculacion/control-vinculacion.component';
+import { ControlActividadesComponent } from './EGRESADOS-EXALUMNOS/ControlEgresados/control-actividades/control-actividades.component';
+import { ControlCursosComponent } from './EGRESADOS-EXALUMNOS/ControlEgresados/control-cursos/control-cursos.component';
+import { ControlCompromisoComponent } from './EGRESADOS-EXALUMNOS/ControlEgresados/control-compromiso/control-compromiso.component';
 
 
 
@@ -139,6 +143,10 @@ import { ControlGestionComponent } from './EGRESADOS-EXALUMNOS/ControlEgresados/
     ContadorPublicoComponent,
     ControlMmecatronicaComponent,
     ControlGestionComponent,
+    ControlVinculacionComponent,
+    ControlActividadesComponent,
+    ControlCursosComponent,
+    ControlCompromisoComponent,
   ],
   imports: [
     CommonModule,

@@ -1,0 +1,165 @@
+<div class="">
+  <mat-drawer-container class="side-container">
+    <mat-drawer mode="side"class="sidebar" id="side" #drawer opened>
+      <mat-selection-list role="list-container" [multiple]="false">
+        <a routerLink="/ControlVinculacion">
+          <mat-list-option style="margin-top: 10%;">
+            VINCULACION EMPRESARIAL E INCUBADORA DE EMPRESAS
+          </mat-list-option>
+        </a>
+          <br>
+          <br>
+        <a routerLink="/ControlActividades">
+          <mat-list-option>
+           ACTIVIDADES Y CREDENCIALES EGRESADOS
+          </mat-list-option>
+        </a>
+          <br>
+          <br>
+        <a routerLink="/ControlCursos">
+          <mat-list-option>
+           CURSOS Y DIPLOMADOS
+          </mat-list-option>
+        </a>
+          <br>
+          <br>
+        <a routerLink="/ControlHistorial">
+          <mat-list-option>
+           HISTORIAL ACADEMICO
+          </mat-list-option>
+        </a>
+          <br>
+          <br>
+        <a routerLink="/ControlServicio">
+          <mat-list-option>
+           SERVICIO A LA COMUNIDAD
+          </mat-list-option>
+        </a>
+      </mat-selection-list>
+    </mat-drawer>
+
+    <mat-drawer-content class="side-content">
+      <button id="arrow" type="button" mat-button (click)="drawer.toggle()" (click)="open()">
+        <mat-icon id="right" class="open">arrow_forward</mat-icon>
+        <mat-icon id="left">arrow_back</mat-icon>
+      </button>
+      <mat-divider class="divider"></mat-divider>
+
+     <!--ENLACE-->
+     <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#" class="Link">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">ControlEgresados</li>
+        <li class="breadcrumb-item"><a routerLink="/ControlEgresados" class="Link">Posgrados</a></li>
+        <li class="breadcrumb-item active" aria-current="page">ActividadesYCredenciales</li>
+      </ol>
+    </nav>
+
+    <h1 class="fw-bold lh-sm fs-4 shadow p-3 mb-5 bg-body rounded titulo">ACTIVIDADES Y CREDENCIALES</h1>
+
+    <section  class="lh-sm fs-4 shadow p-3 mb-5 bg-body rounded">
+
+      <label for="inputAddress" class="form-label fw-bold subtitulo">ACTIVIDADES DEL EGRESADO</label>
+
+      <form [formGroup]="ingresarActividad" (ngSubmit)="agregarActividad()">
+        <div class="row ">
+          <span *ngIf="submitedActividad && ingresarActividad.invalid" class="alert alert-danger">DEBE LLENAR LOS CAMPOS...</span>
+          <label for="inputAddress" class="form-label fw-bold" >Agregar</label>
+
+          <div class="col-10">
+            <input type="text" class="form-control" id="inputAddress" value="" formControlName="Actividad" placeholder="ACTIVIDAD EGRESADO*">
+          </div>
+
+          <div class="col">
+            <button type="submit" class="btn btn-success">Agregar</button>
+          </div>
+
+        </div>
+      </form>
+      <br>
+      <h1 class="fw-bold lh-sm fs-4 shadow p-3 mb-5 bg-body rounded" *ngIf="Actividad.length==0">AUN NO HAY DATOS</h1>
+      <form *ngIf="Actividad.length>0">
+        <label for="inputAddress" class="form-label fw-bold" >Eliminar/Editar</label>
+        <div *ngFor="let Actividad of Actividad " class="row" >
+          <div class="col-8">
+            <input type="text" class="form-control mb-2" id="inputAddressActividad" value="{{Actividad.ActividadesOpc}}">
+          </div>
+
+          <div class="col float-rigth">
+            <button type="button" (click)="eliminaActividad(Actividad.id)"  class="btn btn-danger">Eliminar</button>
+          </div>
+
+
+        </div>
+        </form>
+        </section>
+
+        <section  class="lh-sm fs-4 shadow p-3 mb-5 bg-body rounded">
+        <label for="inputAddress" class="form-label fw-bold subtitulo" >BENEFICIOS DE LA INSTITUCIÓN</label>
+
+      <form [formGroup]="ingresarBeneficio" (ngSubmit)="agregarBeneficio()">
+        <div class="row ">
+          <span *ngIf="submitedBeneficio && ingresarBeneficio.invalid" class="alert alert-danger">DEBE LLENAR LOS CAMPOS...</span>
+          <label for="inputAddress" class="form-label fw-bold" >Agregar</label>
+
+          <div class="col-10">
+            <input type="text" class="form-control" id="inputAddress" value="" formControlName="Beneficio" placeholder="BENEFIO DE INSTITUCIÓN*">
+          </div>
+
+          <div class="col">
+            <button type="submit" class="btn btn-success">Agregar</button>
+          </div>
+
+        </div>
+      </form>
+      <br>
+      <h1 class="fw-bold lh-sm fs-4 shadow p-3 mb-5 bg-body rounded" *ngIf="Beneficio.length==0">AUN NO HAY DATOS</h1>
+      <form *ngIf="Beneficio.length>0">
+        <label for="inputAddress" class="form-label fw-bold" >Eliminar/Editar</label>
+        <div *ngFor="let Beneficio of Beneficio" class="row">
+          <div class="col-8">
+            <input type="text" class="form-control mb-2" id="inputAddressBeneficio" value="{{Beneficio.BeneficiosOpc}}">
+          </div>
+          <div class="col float-rigth">
+            <button type="button" (click)="eliminaBeneficio(Beneficio.id)"  class="btn btn-danger">Eliminar</button>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <section  class="lh-sm fs-4 shadow p-3 mb-5 bg-body rounded">
+      <label for="inputAddress" class="form-label fw-bold subtitulo" >CREDENCIAL DE EGRESADOS</label>
+
+    <form [formGroup]="ingresarCredencial" (ngSubmit)="agregarCredencial()">
+      <div class="row ">
+        <span *ngIf="submitedCredencial && ingresarCredencial.invalid" class="alert alert-danger">DEBE LLENAR LOS CAMPOS...</span>
+        <label for="inputAddress" class="form-label fw-bold" >Agregar</label>
+
+        <div class="col-10">
+          <input type="text" class="form-control" id="inputAddress" value="" formControlName="Credencial" placeholder="CREDENCIAL*">
+        </div>
+
+        <div class="col">
+          <button type="submit" class="btn btn-success">Agregar</button>
+        </div>
+
+      </div>
+    </form>
+    <br>
+    <h1 class="fw-bold lh-sm fs-4 shadow p-3 mb-5 bg-body rounded" *ngIf="Credencial.length==0">AUN NO HAY DATOS</h1>
+    <form *ngIf="Credencial.length>0">
+      <label for="inputAddress" class="form-label fw-bold" >Eliminar/Editar</label>
+      <div *ngFor="let Credencial of Credencial" class="row">
+        <div class="col-8">
+          <input type="text" class="form-control mb-2" id="inputAddressCredencial" value="{{Credencial.CredencialOpc}}">
+        </div>
+        <div class="col float-rigth">
+          <button type="button" (click)="eliminaCredencial(Credencial.id)"  class="btn btn-danger">Eliminar</button>
+        </div>
+      </div>
+    </form>
+  </section>
+    </mat-drawer-content>
+  </mat-drawer-container>
+</div>
+
