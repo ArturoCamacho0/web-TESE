@@ -70,10 +70,11 @@ eliminado sin ningun problema: Para la implementacion en tu componente tendras q
                 <div class="Titulo2">Proceso de Reinscripcion;</div>
               </h4>
               <br class="card-text" font-weight="bold"> <span STYLE="font-size:large;color:#414141; text-align: justify;">
-
-
-
-                Es el proceso a través del cual los alumnos se reinscriben a estudios de Licenciatura y Maestrías y que cumplan con los requisitos marcados en el Reglamento de Alumnos y de Evaluación del Aprendizaje.<br><br>
+                <div *ngFor="let contend of content_reinscripcion " class=" ">
+                  <P>
+                    {{contend.contenido}}
+                <br>
+              </P></div>
 
                 <span STYLE="font-weight: bold;"> Usuarios:</span>  Alumnos inscritos a Licenciaturas o Maestrías
                 <br>

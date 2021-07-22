@@ -66,7 +66,10 @@ import { AdministracionMisionComponent } from './Identidad-institucional/Adminis
 import { AdministracionOrganigramaComponent } from './Identidad-institucional/Administracion/administracion-organigrama/administracion-organigrama.component';
 import { ImgLogoComponent } from './Identidad-institucional/Administracion/administracion-logo/Edit/img-logo/img-logo.component';
 import { AdministracionInscripcionComponent } from './admisionytramites/admin/administracion-inscripcion/administracion-inscripcion.component';
+import { AdministracionReinscripcionComponent } from './admisionytramites/admin/administracion-reinscripcion/administracion-reinscripcion/administracion-reinscripcion.component';
 
+
+import { ReinscripcionComponent } from './admisionytramites/reinscripcion/reinscripcion.component';
 
 
 
@@ -136,7 +139,8 @@ import { AdministracionInscripcionComponent } from './admisionytramites/admin/ad
     AdministracionOrganigramaComponent,
     ImgLogoComponent,
     AdministracionInscripcionComponent,
-
+    AdministracionReinscripcionComponent,
+ReinscripcionComponent
 
 
 

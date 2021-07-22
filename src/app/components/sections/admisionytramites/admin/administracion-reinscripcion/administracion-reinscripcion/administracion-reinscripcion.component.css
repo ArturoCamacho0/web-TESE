@@ -187,17 +187,6 @@ a {
   filter: blur(1px);
 }
 
-.informatica:hover > mat-card {
-  background-image: url("../../../../../assets/images/informatica.jpg");
-}
-
-.quimica:hover > mat-card {
-  background-image: url("../../../../../assets/images/quimica.jpg");
-}
-
-.contador:hover > mat-card {
-  background-image: url("../../../../../assets/images/contador.jpg");
-}
 
 .act {
   background-color: white;
@@ -262,8 +251,5 @@ a {
 }
 .ubicacion-pag{
   color: #eb2a31da;
-}
-.margen{
-  margin:5vh;
 }
 

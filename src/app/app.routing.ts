@@ -52,6 +52,9 @@ import { AdministracionHistoriaComponent } from './components/sections/Identidad
 
 import { AdministracionInscripcionComponent } from './components/sections/admisionytramites/admin/administracion-inscripcion/administracion-inscripcion.component';
 
+import {ReinscripcionComponent} from './components/sections/admisionytramites/reinscripcion/reinscripcion.component'
+import { AdministracionReinscripcionComponent } from './components/sections/admisionytramites/admin/administracion-reinscripcion/administracion-reinscripcion/administracion-reinscripcion.component';
+
 
 
 // Rutas
@@ -107,6 +110,8 @@ const appRoutes: Routes = [
     //Luis admin
 
     { path: 'admin-inscripcion', component: AdministracionInscripcionComponent},
+   { path: 'admin-reinscripcion', component: AdministracionReinscripcionComponent},
+   { path: 'reinscripcion', component: ReinscripcionComponent}
 
 
 
