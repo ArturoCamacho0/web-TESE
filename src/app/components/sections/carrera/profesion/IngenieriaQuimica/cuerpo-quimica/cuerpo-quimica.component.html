@@ -40,10 +40,7 @@
    <div class="card">
      <div class="card-body">
        <h4 class="card-title"><div class="Titulo2">Objetivo de la carrera: </div></h4>
-       <p class="card-text"> <p>Formar  profesionales  capaces  de  aportar  sus   conocimientos   para   el   diseño   de   procesos  que  cambien  las  propiedades  químicas  y/o  físicas  de  los  materiales  y  se  generen productos y/o servicios útiles.
-         <br>
-         <br>
-       </p>
+       <p class="card-text"><div *ngFor="let Obj of Obj | async">{{Obj.campo}}</div>
      </div>
    </div>
 
@@ -58,7 +55,7 @@
          </button>
        </h2>
        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-         <div class="accordion-body">Formar profesionistas en Ingeniería Química competentes para investigar, generar y aplicar el conocimiento científico y tecnológico, que les permita identificar y resolver problemas de diseño, operación, adaptación, optimización y administración en industrias químicas y de servicios, con calidad, seguridad, economía, teniendo en consideracipon el uso racional y eficientemente de los recursos naturales, conservación el medio ambiente, cumpliendo el código ético de la profesión y la participación en el bienestar del país.</div>
+        <div *ngFor="let Obj of Obj | async">{{Obj.campo1}}</div>
        </div>
      </div>
      <div class="accordion-item">
@@ -70,17 +67,7 @@
        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
          <div class="accordion-body">
            <ol start="1">
-            <LI >Diseñar, seleccionar, operar, optimizar y controlar procesos en industrias químicas y de servicios con base en el desarrollo tecnológico de acuerdo a las normas de higiene y seguridad, de manera sustentable.
-            <LI> Colaborar en equipos interdisciplinarios y multiculturales en su ámbito laboral, con actitud innovadora, espíritu crítico, disposición al cambio y apego a la ética profesional.
-            <LI>Planear e implementar sistemas de gestión de calidad, ambiental e higiene y seguridad en los diferentes sectores, conforme a las normas nacionales e internacionales.
-            <LI> Utilizar las tecnologías de la información y comunicación como herramientas en la construcción de soluciones a problemas de ingeniería y difundir el conocimiento científico y tecnológico.
-            <LI>Realizar innovación y adaptación de tecnología en procesos, aplicando la metodología científica; con respeto a la propiedad intelectual.
-            <LI>Utilizar un segundo idioma en su ámbito laboral según los requerimientos del entorno.
-            <LI>Comunicarse en forma oral y escrita en el ámbito laboral de manera expedita y concisa.
-            <LI>Poseer actitud creativa, emprendedora y de liderazgo para impulsar y generar empresas que contribuyan al progreso nacional.
-            <LI>Administrar recursos humanos, materiales y financieros para los sectores público y privado, acorde a modelos administrativos vigentes.
-            <LI>Poseer actitudes de superación continua para lograr metas personales y profesionales con pertinencia y competitividad.
-            <LI>Dar seguimiento a programas de mantenimiento a equipos e instalaciones, control de producción y productividad.
+            <div *ngFor="let PerEgre of PerEgre | async"><LI >{{PerEgre.campo}}</LI></div>
           </ol>
         </div>
        </div>
@@ -93,8 +80,7 @@
       </h2>
       <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
         <div class="accordion-body">
-          <p>El  campo  de  acción  no  se  reduce  a  la  industria  química  y  petroquímica,  también  se  integra por las industrias alimentaria, farmacéutica, agroquímica, vitivinícola, y otras que requieren de especialistas en el diseño de procesos, investigación básica y tecnológica, adaptación de tecnología, planeación, administración de proyectos, control de procesos, operación de plantas, selección y diseño de equipos, etcétera.
-          <p>Además,  el  cambio  en  la  industria  nacional  hacia  procesos  más  limpios,  seguros,  eficientesydeundeterioroambientalmenor,haampliadoaúnmáselcampodeaccióndelingenieroquímico,yaquesedesempeñaconeficienciaeneláreadeprevencióndela contaminación y/o tratamiento de agua, aire o desechos contaminantes.
+          <div *ngFor="let CamLab of CamLab | async"><p>{{CamLab.campo}}</div>
 
         </div>
       </div>
@@ -116,24 +102,24 @@
   <div class="accordion-item">
     <h2 class="accordion-header" id="panelsStayOpen-headingThree">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-        Triptico
+        <div *ngFor="let Tit of Tit | async">{{Tit.campo}}</div>
       </button>
     </h2>
     <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
-      <div class="accordion-body">
-       <a href="http://tese.edu.mx/documentos2004/2100_YGCYWWD.pdf">Ver</a>
+      <div class="accordion-body" *ngFor="let Cit of Cit | async">
+        <a href="{{Cit.campo}}">Ver</a>
       </div>
     </div>
   </div>
    <div class="accordion-item">
      <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-         Oferta Educativa
+        <div *ngFor="let Tit of Tit | async">{{Tit.campo1}}</div>
        </button>
      </h2>
      <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
-       <div class="accordion-body">
-        <a href="http://www.tese.edu.mx/documentos2004/8998_AMUUIEJ.pdf">Detalles</a>
+      <div class="accordion-body" *ngFor="let Cit of Cit | async">
+        <a href="{{Cit.campo1}}">Detalles</a>
        </div>
      </div>
    </div>

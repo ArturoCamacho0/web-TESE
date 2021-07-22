@@ -5,8 +5,13 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class MquimicaService {
+export class OrganigramaService {
 
   constructor(private firestore: AngularFirestore) {
+
   }
+  getOrganigrama(): Observable<any>{
+      return this.firestore.collection('/Identidad/Organigrama/DatosOrganigrama').snapshotChanges();
+    }
 }
+

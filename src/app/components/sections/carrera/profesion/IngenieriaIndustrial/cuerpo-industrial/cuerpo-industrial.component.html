@@ -40,16 +40,7 @@
    <div class="card">
      <div class="card-body">
        <h4 class="card-title"><div class="Titulo2">Objetivo de la carrera: </div></h4>
-       <p class="card-text"> <p>
-        Formar profesionales que contribuyan al
-        desarrollo sustentable, con una visión
-        sistémica, para responder a los retos
-        que presentan los constantes cambios en los
-        sistemas de producción de bienes y servicios
-        en el entorno global.
-        <br>
-         <br>
-       </p>
+       <p class="card-text"><div *ngFor="let Obj of Obj | async">{{Obj.campo1}}</div>
      </div>
    </div>
 
@@ -64,11 +55,8 @@
          </button>
        </h2>
        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-         <div class="accordion-body">Formar profesionistas, en el campo de la ingenieria industrial, lideres,
-           creativos y emprededores con vision sistemica, capacidad analitica y competitiva que les permita
-           diseñar, implementar, mejorar, innnovar, optimizar y administrar sistemas de produccion de bienes y servicios
-           en un entorno global, con enfoque sustentable, etico y comprometido con la sociedad.
-         </div>
+        <div *ngFor="let Obj of Obj | async">{{Obj.campo}}</div>
+        <br>
        </div>
      </div>
      <div class="accordion-item">
@@ -80,35 +68,7 @@
        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
          <div class="accordion-body">
            <ol start="1">
-            <LI >Analizar, diseñar y gestionar sistemas productivos desde la provisión de insumos hasta
-              la entrega de bienes y servicios, integrándolos con eficacia y eficiencia.
-            <LI>Conocer, seleccionar y aplicar tecnologías para optimizar procesos productivos.
-            <LI>Diseñar, implementar y administrar sistemas
-              de mantenimiento para eficientar la operación de las instalaciones y equipos.
-            <LI>Implementar sistemas de gestión de calidad para satisfacer los requerimientos del cliente y partes interesadas.
-            <LI>Utilizar los instrumentos de medición requeridos en la certificación y/o acreditación con las normas vigentes.
-            <LI>Interpretar e implementar estrategias y
-              métodos estadísticos en los procesos organizacionales para la mejora continua.
-            <LI> Seleccionar y adecuar modelos de
-              calidad y diseño de experimentos en procesos organizacionales para su optimización.
-            <LI>Gestionar sistemas de seguridad, salud ocupacional y protección
-              al medio ambiente, en industrias de producción y de servicios.
-            <LI>Identificar necesidades de su entorno y desarrollar
-              investigación aplicada para crear e innovar bienes y servicios.
-            <LI>Crear y mejorar productos de alto valor agregado bajo los principios de
-              solución de problemas productividad y competitividad.
-            <LI>Crear y mejorar productos de alto valor agregado bajo los principios de
-                solución de problemas productividad y competitividad.
-           <LI>Seleccionar e implementar tecnologías de información y comunicación dentro de la empresa.
-           <LI>Participar en proyectos de transferencia, desarrolo y adaptación de tecnologías en los sistemas productivos.
-           <LI>Diseñar, implementar y mejorar sistemas y estaciones de trabajo considerando factores ergonómicos para optimizar la producción.
-           <LI>Participar en la estandarización de operaciones para la transferencia y adaptación de los sistemas productivos.
-           <LI> Manejar y aplicar las normas y estándares en el análisis de operaciones de los sistemas de producción.
-           <LI> Emprender e incubar empresas con base tecnológica, que promueva el desarrollo socioeconómico de una región, así como su constitución legal.
-           <LI>Formular, evaluar y gestionar proyectos de inversión, que le permita emprender la creación de unidades productivas de bienes y servicios
-             bajo criterios de competitividad y sustentabilidad.
-           <LI>Tomar decisiones para la mejora de sistemas productivos y de servicios, fundamentadas en planteamientos y modelos analíticos.
-
+            <div *ngFor="let PerEgre of PerEgre | async"><LI >{{PerEgre.campo}}</LI></div>
           </ol>
         </div>
        </div>
@@ -120,14 +80,8 @@
         </button>
       </h2>
       <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-        <div class="accordion-body">
-          <p>En el campo laboral, el Ingeniero Industrial desarrolla los conocimientos adquiridos durante su formación académica
-            en el Tecnológico. Coordina su desempeño con todo tipo de profesionales, como ingenieros de otras especialidades,
-            economistas, administradores, técnicos, proveedores, clientes, entre otros.
-            Puede fungir como enlace entre la administración y el personal técnico de la empresa, así como ejercer en el sector
-            público o privado, ya sea en la micro, pequeña, mediana o en grandes empresas.
-            Con base en su formación profesional, tiene la capacidad y la creatividad para convertirse en empresario
-        </div>
+        <div *ngFor="let CamLab of CamLab | async">{{CamLab.campo}}</div>
+        <br>
       </div>
     </div>
    </div>
@@ -147,24 +101,24 @@
   <div class="accordion-item">
     <h2 class="accordion-header" id="panelsStayOpen-headingThree">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-        Triptico
+        <div *ngFor="let Tit of Tit | async">{{Tit.campo}}</div>
       </button>
     </h2>
     <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
-      <div class="accordion-body">
-       <a href="http://www.tese.edu.mx/documentos2004/2097_AYNAMOO.pdf">Ver</a>
+      <div class="accordion-body" *ngFor="let Cit of Cit | async">
+        <a href="{{Cit.campo}}">Ver</a>
       </div>
     </div>
   </div>
    <div class="accordion-item">
      <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-         Oferta Educativa
+        <div *ngFor="let Tit of Tit | async">{{Tit.campo1}}</div>
        </button>
      </h2>
      <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
-       <div class="accordion-body">
-        <a href="http://www.tese.edu.mx/documentos2004/8997_UVBPLUQ.pdf">Detalles</a>
+      <div class="accordion-body" *ngFor="let Cit of Cit | async">
+        <a href="{{Cit.campo1}}">Detalles</a>
        </div>
      </div>
    </div>

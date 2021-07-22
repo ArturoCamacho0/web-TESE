@@ -1,4 +1,3 @@
-<p>cuerpo-bioquimica works!</p>
 <app-carousel-bioquimica></app-carousel-bioquimica>
 <body>
 
@@ -30,7 +29,7 @@
      <ol class="breadcrumb">
        <li class="breadcrumb-item"><a href="/">Home</a></li>
        <li class="breadcrumb-item"><a href="/Carreras">Carreras</a></li>
-       <li class="breadcrumb-item"><a href="/Carreras/Sistemas">Bioquimica</a></li>
+       <li class="breadcrumb-item"><a href="/Carreras/Bioquimica">Bioquimica</a></li>
      </ol>
    </nav>
 
@@ -41,11 +40,7 @@
    <div class="card">
      <div class="card-body">
        <h4 class="card-title"><div class="Titulo2">Objetivo de la carrera: </div></h4>
-       <p class="card-text"> <p>La Ingeniería Bioquímica se encarga de transformar los materiales biológicos para la generación de productos con valor social y comercial. Por ello, analiza los procesos biotecnológicos para el diseño,
-              organización, control y operación de equipos y procesos aplicables en la transformación de materiales de origen orgánico (animal, vegetal y microbiano), con el propósito de satisfacer necesidades en sectores como alimentario, farmacéutico, agroindustrial, energético y medio ambiente. La biotecnología completa la producción de los materiales biológicos mediante la bioconversión, utilizando sistemas biológicos tales como: Microorganismos (bacterias, hongos, levaduras y algas), Enzimas (proteasas, lipasas, ligasas) y Anticuerpos. La actividad industrial que se realiza por medio de la biotecnología, constituye uno de los campos de desarrollo más importantes de esta carrera.
-         <br>
-         <br>
-       </p>
+       <p class="card-text"><div *ngFor="let Obj of Obj | async">{{Obj.contenido}}</div>
      </div>
    </div>
 
@@ -60,7 +55,7 @@
          </button>
        </h2>
        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-         <div class="accordion-body">Formar profesionistas líderes, analíticos, críticos y creativos, con visión estratégica y amplio sentido ético, capaces de diseñar, implementar y administrar infraestructura computacional para aportar soluciones innovadoras en beneficio de la sociedad, en un contexto global, multidisciplinario y sustentable.</div>
+        <div class="accordion-body" *ngFor="let ObjGen of ObjGen | async">{{ObjGen.contenido}}</div>
        </div>
      </div>
      <div class="accordion-item">
@@ -72,11 +67,7 @@
        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
          <div class="accordion-body">
            <ol start="1">
-            <LI >Diseña, adapta, controla, selecciona y optimiza equipos y procesos industriales químico-biológicos.
-            <LI>Participa en la planeación, organización y administración de proyectos de la industria bioquímica, así como en el diseño de normas y programas de control de calidad.
-            <LI>Proporciona asesoría técnica para la transformación y conservación de recursos biólogicos
-            <LI> Mantiene una actitud crítica y emprendedora para la creación de empresas de origen biotecnológico.
-            <LI> Realiza investigación tecnológica de Ingeniería Bioquímica y en sus áreas de aplicación.
+            <div *ngFor="let PerEgre of PerEgre | async"><LI>{{PerEgre.campo}}</LI></div>
           </ol>
         </div>
        </div>
@@ -88,9 +79,7 @@
         </button>
       </h2>
       <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-        <div class="accordion-body">
-          <p> Se busca que los egresados se integren en el sector industrial: empresas procesadoras de alimentos (empacadoras de lácteos, enlatadoras, congeladoras, etcétera), de fermentación (productores de vino, cerveza, antibióticos, aminoácidos, enzimas, ácidos orgánicos, levaduras, etcétera), farmacéuticas (vacunas, hemoderivados, etcétera), industria de la transformación (tratamiento biológico de e?uentes industriales). En el sector académico y de investigación, sus potenciales de desarrollo son los campos tradicionales: ciencia y tecnología de alimentos, tecnología microbiana y tecnología de enzimas. Sin embargo, los campos emergentes, tales como la ingeniería genética, la biotecnología vegetal y ambiental, así como el cultivo de células y tejidos animales, amplían su ámbito de acción.
-        </div>
+        <div class="accordion-body" *ngFor="let CamLab of CamLab | async">{{CamLab.campo}}</div>
       </div>
     </div>
    </div>
@@ -109,30 +98,21 @@
  Documentos Anexos
 
  <div class="accordion" id="accordionPanelsStayOpenExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="panelsStayOpen-headingThree">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-       Mapa curricular
-      </button>
-    </h2>
-    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
-      <div class="accordion-body">
-       <a href="http://www.tese.edu.mx/documentos2004/2105_PIHGWTQ.pdf">Ver</a>
-      </div>
-    </div>
-  </div>
-   <div class="accordion-item">
-     <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-         		Tríptico Informativo (Incluye plan de estudios)
+  <div class="accordion" id="accordionPanelsStayOpenExample">
+    <div class="accordion-item" *ngFor="let Bot of Bot | async">
+     <h2 class="accordion-header" id="flush-headingFour">
+       <button class="accordion-button collapsed" type="button" [attr.data-bs-target]="'#flush-collapse'+Bot.id_doc" data-bs-toggle="collapse"  aria-expanded="false">
+         <div >
+           {{Bot.titulo}}
+       </div>
        </button>
      </h2>
-     <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
-       <div class="accordion-body">
-        <a href="http://www.tese.edu.mx/documentos2004/2106_ZSLFYPN.pdf">Detalles</a>
-       </div>
+     <div [attr.id]="'flush-collapse'+Bot.id_doc" class="accordion-collapse collapse">
+       <a href="{{Bot.contenido}}">Detalles</a>
      </div>
    </div>
+
+  </div>
  </div>
    </div>
  </div>

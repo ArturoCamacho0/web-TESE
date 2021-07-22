@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { AngularFirestore } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-cuerpo',
@@ -8,8 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class CuerpoComponent implements OnInit {
+  mision: Observable<any[]>
+  vision: Observable<any[]>
+  mac: Observable<any[]>
+  vac: Observable<any[]>
+  Tit: Observable<any[]>
+  Bot: Observable<any[]>
+  Cit: Observable<any[]>
 
-  constructor() { }
+  constructor(firestore: AngularFirestore) {
+       this.mision = firestore.collectionGroup('Mision-Carrera').valueChanges();
+       this.vision = firestore.collectionGroup('Vision-Carrera').valueChanges();
+       this.mac = firestore.collectionGroup('MisionDivAcad-Carrera').valueChanges();
+       this.vac = firestore.collectionGroup('VisionDivAcad-Carrera').valueChanges();
+       this.Tit = firestore.collectionGroup('TituloBoton-Carrera').valueChanges();
+       this.Cit = firestore.collectionGroup('DireccionBoton-Carrera').valueChanges();
+       this.Bot = firestore.collectionGroup('Boton-Carrera').valueChanges();
+  }
 
   ngOnInit(): void {
   }

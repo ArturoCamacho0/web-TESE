@@ -38,13 +38,9 @@
 
 
    <div class="card">
-     <div class="card-body">
+     <div class="card-body" >
        <h4 class="card-title"><div class="Titulo2">Objetivo de la carrera: </div></h4>
-       <p class="card-text"> <p>Formar profesionales competitivos, capaces de diseñar, establecer, aplicar, controlar y evaluar sistemas
-        de información financiera, administrativa y fiscal, dentro del marco legal vigente para la toma de
-        decisiones de las entidades económicas nacionales e internacionales, con una actitud ética, crítica,
-        emprendedora y de liderazgo, a través de la investigación y el uso de la tecnología de la información y
-        comunicaciones, fomentando el desarrollo sustentable
+       <p class="card-text"><div *ngFor="let Obj of Obj | async">{{Obj.contenido}}</div>
      </div>
    </div>
 
@@ -61,40 +57,7 @@
        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
          <div class="accordion-body">
            <ol start="1">
-            <LI >Diseña, implanta, controla, evalúa, asesorara e innova sistemas de información financiera, administrativa, fiscal y de auditoría en entidades económicas para la generación, análisis de
-              información financiera con apego a las Normas de Información financiera, nacionales e
-              internacionales y la toma de decisiones.
-
-            <LI >Audita sistemas financieros, fiscales y administrativos de las entidades económicas con apego a las
-              Normas Internacionales de Auditoria vigentes para la emisión de un dictamen.
-
-            <LI >Aplica el marco legal y pertinente a las características y necesidades de la entidad económica
-              dentro del campo profesional para el cumplimiento de las disposiciones vigentes.
-
-            <LI >Administra estratégicamente los recursos de las entidades económicas para el cumplimiento de sus
-              objetivos.
-
-            <LI >Aplica en el ejercicio profesional el código de ética del contador público vigente para enaltecer a la
-              profesión.
-
-            <LI >Utiliza las tecnologías de información y comunicación para eficientizar los procesos y la toma de
-              decisiones.
-
-            <LI >Desarrolla investigación asumiendo una actitud de liderazgo, compromiso y servicio con su entorno
-              social, para su difusión.
-
-            <LI >Elabora y evalúa proyectos de inversión de acuerdo a las características y necesidades del entorno
-              para la generación de entidades económicas con actitud de liderazgo y compromiso con el medio
-              ambiente.
-
-            <LI >Trabaja en equipos multidisciplinarios para el logro de los resultados de las entidades con un
-              sentido de responsabilidad social y visión integradora.
-
-            <LI >Propone estrategias de mercadotecnia que permitan alcanzar los objetivos de las entidades
-              económicas.
-
-            <LI >Aplica métodos de análisis de información financiera para determinar las mejores alternativas de
-              inversión y financiamiento.
+            <div *ngFor="let PerEgre of PerEgre | async"><LI >{{PerEgre.campo}}</LI></div>
           </ol>
         </div>
        </div>
@@ -114,18 +77,19 @@
  Documentos Anexos
 
  <div class="accordion" id="accordionPanelsStayOpenExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="panelsStayOpen-headingThree">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-        Oferta Educativa. Contador Público
+   <div class="accordion-item" *ngFor="let Bot of Bot | async">
+    <h2 class="accordion-header" id="flush-headingFour">
+      <button class="accordion-button collapsed" type="button" [attr.data-bs-target]="'#flush-collapse'+Bot.id" data-bs-toggle="collapse"  aria-expanded="false">
+        <div >
+          {{Bot.titulo}}
+      </div>
       </button>
     </h2>
-    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
-      <div class="accordion-body">
-       <a href="http://www.tese.edu.mx/documentos2004/9002_OHBVFJN.pdf">Ver</a>
-      </div>
+    <div [attr.id]="'flush-collapse'+Bot.id" class="accordion-collapse collapse">
+      <a href="{{Bot.contenido}}">Detalles</a>
     </div>
   </div>
+
  </div>
    </div>
  </div>

@@ -40,17 +40,7 @@
    <div class="card">
      <div class="card-body">
        <h4 class="card-title"><div class="Titulo2">Objetivo de la carrera: </div></h4>
-       <p class="card-text"> <p>Formar profesionales de la ingeniería
-        Mecatrónica con una base científica,
-        tecnológica y humanística, capaces de
-        desarrollar, mantener e innovar sistemas,
-        procesos y productos industriales y de
-        servicios, con un enfoque mecatrónico,
-        observando un sentido de responsabilidad con
-        su entorno sociocultural y ecológico.
-        <br>
-         <br>
-       </p>
+       <p class="card-text"><div *ngFor="let Obj of Obj | async">{{Obj.campo}}</div>
      </div>
    </div>
 
@@ -65,15 +55,9 @@
          </button>
        </h2>
        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-         <div class="accordion-body">Formar profesionistas en la ingeniería
-            mecatrónica con capacidad analítica, crítica y
-            creativa que le permita diseñar, proyectar,
-            construir, innovar y administrar equipos y
-            sistemas mecatrónicos en el sector social y
-            productivo; así como integrar, operar y
-            mantenerlos, con un compromiso ético y de
-            calidad en un marco de desarrollo sustentable.</div>
-       </div>
+        <div *ngFor="let Obj of Obj | async">{{Obj.campo1}}</div>
+        </div>
+
      </div>
      <div class="accordion-item">
        <h2 class="accordion-header" id="flush-headingTwo">
@@ -84,55 +68,7 @@
        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
          <div class="accordion-body">
            <ol start="1">
-            <LI >Ejercer su profesión, dentro de un
-                marco legal, teniendo un sentido de
-                responsabilidad social, con apego a las
-                normas nacionales e internacionales.
-            <LI>Analizar, sintetizar, diseñar, simular,
-                construir e innovar productos,
-                procesos, equipos y sistemas
-                mecatrónicos, con una actitud
-                investigadora, de acuerdo a las
-                necesidades tecnológicas y sociales
-                actuales y emergentes, impactando
-                positivamente en el entorno global
-            <LI>Integrar, instalar, construir, optimizar,
-                operar, controlar, mantener, administrar
-                y/o automatizar sistemas mecánicos
-                utilizando tecnologías eléctricas,
-                electrónicas y herramientas
-                computacionales.
-            <LI>Evaluar y generar proyectos
-                industriales y de carácter social
-            <LI>Coordinar y dirigir grupos
-                multidisciplinarios fomentando el
-                trabajo en equipo para la
-                implementación de proyectos mecatrónicos, asegurando su calidad,
-                eficiencia, productividad y rentabilidad
-                con sentido de responsabilidad de su
-                entorno social y cultural para un
-                desarrollo sustentable.
-            <LI>Desarrollar capacidades de liderazgo,
-                comunicación e interrelaciones
-                personales para transmitir ideas,
-                facilitar conocimientos, trabajar en
-                equipos multidisciplinarios y
-                multiculturales con responsabilidad
-                colectiva para la solución de problemas
-                y desarrollo de proyectos con un
-                sentido crítico y autocrítico.
-            <LI>Ser creativo, emprendedor y
-                comprometido con su actualización
-                profesional continua y autónoma, para
-                estar a la vanguardia en los cambios
-                científicos y tecnológicos que se dan
-                en el ejercicio de su profesión.
-            <LI>Interpretar información técnica de las
-                áreas que componen la Ingeniería
-                Mecatrónica para la transferencia,
-                adaptación, asimilación e innovación
-                de tecnologías de vanguardia.
-
+            <div *ngFor="let PerEgre of PerEgre | async"><LI >{{PerEgre.campo}}</LI></div>
             </ol>
         </div>
        </div>
@@ -144,12 +80,7 @@
         </button>
       </h2>
       <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-        <div class="accordion-body">
-          <p>El profesional de esta carrera puede laborar en el sector industrial, efectuando diseño y simulación de dispositivos, donde aplica sus
-            conocimientos de mecánica, electrónica, sistemas computacionales y metodologías adecuadas a los procesos industriales en forma innovadora,
-            a la vez que automatiza los procesos industriales, con el consiguiente ahorro de recursos. Puede fungir como coordinador de proyectos,
-            facilitando la comunicación entre especialistas de diferentes áreas, tanto en el sector público como en el privado
-        </div>
+        <div *ngFor="let CamLab of CamLab | async">{{CamLab.campo}}</div>
       </div>
     </div>
    </div>
@@ -169,24 +100,24 @@
   <div class="accordion-item">
     <h2 class="accordion-header" id="panelsStayOpen-headingThree">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-        Triptico
+        <div *ngFor="let Tit of Tit | async">{{Tit.campo}}</div>
       </button>
     </h2>
     <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
-      <div class="accordion-body">
-       <a href="http://www.tese.edu.mx/documentos2004/2108_itrmejc.pdf">Ver</a>
+      <div class="accordion-body" *ngFor="let Cit of Cit | async">
+        <a href="{{Cit.campo}}">Ver</a>
       </div>
     </div>
   </div>
    <div class="accordion-item">
      <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-         Oferta Educativa
+        <div *ngFor="let Tit of Tit | async">{{Tit.campo1}}</div>
        </button>
      </h2>
      <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
-       <div class="accordion-body">
-        <a href="http://www.tese.edu.mx/documentos2004/9001_UBOWPXC.pdf">Detalles</a>
+      <div class="accordion-body" *ngFor="let Cit of Cit | async">
+        <a href="{{Cit.campo1}}">Detalles</a>
        </div>
      </div>
    </div>

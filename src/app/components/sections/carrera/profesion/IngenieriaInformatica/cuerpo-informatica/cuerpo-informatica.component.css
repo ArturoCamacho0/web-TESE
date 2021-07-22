@@ -1,12 +1,8 @@
-
-
-
 /* Configuracion de estilos para la plantilla contenido. */
 
 /* Elementos css para el titulo, y subtitulos se configura el color del titulo y se le agrega un borde  por debajo */
-.titulo{
+.titulo {
   text-align: center;
-
 
   font-family: sans-serif;
 
@@ -15,27 +11,26 @@
   color: #2c5234;
   line-height: 1.5ch;
   padding: 10px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 13px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 13px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 
 /* Se utiliza para el primer subtitulo */
-.Titulo2{
+.Titulo2 {
   color: #2c5234;
   font-weight: bold;
-text-align: justify;
+  text-align: justify;
   border-bottom: 2px solid #9c8412;
   padding: 5px;
   font-size: 4ch;
 }
 
-
 /* Subtitulo central o ideas */
-.subtitulo{
+.subtitulo {
   color: #2c5234;
   font-weight: bold;
-text-align: center;
-border-bottom: 1px solid #fd5c63;
+  text-align: center;
+  border-bottom: 1px solid #fd5c63;
   padding: 5px;
   font-size: 3ch;
 }
@@ -43,57 +38,94 @@ border-bottom: 1px solid #fd5c63;
 /*  */
 
 /* Cuerpo de la seccion SUBTITULO */
-.card-body{
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 13px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-
+.card-body {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 13px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
-
 
 /* Se agrega un efecto de sombra al rededor del contenido */
-.container{
-  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
-
-
+.container {
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
+    rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
 }
 
-
-
+.container-fluid {
+  padding: 0;
+}
 /* Elementos CSS de la Sidebar */
 
-
 .sidebar {
-  background-image: radial-gradient( circle farthest-corner at 47.4% 55%,  rgba(218,61,61,1) 0%, rgba(170,13,71,0.81) 90% );
+  /* background-image: radial-gradient(
+    circle farthest-corner at 47.4% 55%,
+    rgba(218, 61, 61, 1) 0%,
+    rgba(170, 13, 71, 0.81) 90%
+  ); */
 
-
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  background-color: #eb2a31da;
+  background-size: inherit;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
+.mat-list-option{
+  color: #fff;
+  text-align: center;
+  font-size: 1.2rem;
+}
 
+.text-side h1{
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.subtitulo, .Titulo2{
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
 
 body {
   background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
-
-  margin-bottom: 20px;
 }
 
+#acordeon > div{
+  width: 100%;
+  color: white;
+  border-color: tomato;
+  background-color: tomato;
 
+}
+.accordion-color-collapse{
+  background-color: white;
+  color: black;
 
+}
+#acordeon > div div a{
+  width: 100%;
+  color:black;
+  border-color: tomato;
+  background-color: tomato;
+}
 
+.accordion-item:hover h2 button{
+  background-color: #eb2a31da;
+  color: white;
+  border-color:  #eb2a31da;
 
-
-
-
+}
 
 /* Configuracion de estilos globales */
 
-
-
-a{
+a {
   text-decoration: none;
 }
 
-.side-container{
-  height: 100vh;
+.side-container {
+  height: initial;
 }
 
 .sidebar {
@@ -101,18 +133,18 @@ a{
   width: 20%;
 }
 
-.side-content{
+.side-content {
   padding: 15px;
 }
 
-.cards{
+.cards {
   display: flex;
   flex-flow: column;
-  justify-content:center;
+  justify-content: center;
   background-color: #fff;
 }
 
-.careers{
+.careers {
   width: 98%;
   margin-right: 0;
   margin-left: 0;
@@ -120,16 +152,16 @@ a{
   margin: 10px;
 }
 
-.row{
+.row {
   gap: 10px;
   margin-top: 40px;
 }
 
-.card-career{
+.card-career {
   height: 100px;
 }
 
-.card-career > mat-card{
+.card-career > mat-card {
   width: 100%;
   height: 100%;
   background-position: center;
@@ -142,74 +174,84 @@ a{
   color: black;
 }
 
-.card-career > mat-card > span{
+.card-career > mat-card > span {
   font-size: 1.3rem;
   text-align: center;
 }
 
-.card-career:hover > mat-card > span{
+.card-career:hover > mat-card > span {
   display: none;
 }
 
-.card-career:hover > mat-card{
+.card-career:hover > mat-card {
   filter: blur(1px);
 }
 
-
-.act{
+.act {
   background-color: white;
   color: black;
   text-align: center;
 }
 
-.open{
+.open {
   display: none;
 }
 
-@media screen and (max-width: 860px){
-  .card-career > mat-card > span{
-      font-size: 1rem;
+@media screen and (max-width: 860px) {
+  .card-career > mat-card > span {
+    font-size: 1rem;
   }
 
-  #side{
-      width: 70vw;
+  #side {
+    width: 70vw;
   }
 
-  #arrow{
-      margin-bottom: 20px;
-      font-weight: bold;
-      font-size: 2rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+  #arrow {
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  .text-side{
-      margin-top: 20px;
-  }
-}
-
-@media screen and (min-width: 860px){
-  #arrow{
-      display: none;
-  }
-
-  .divider{
-      display: none;
+  .text-side {
+    margin-top: 20px;
   }
 }
 
+@media screen and (min-width: 860px) {
+  #arrow {
+    display: none;
+  }
+
+  .divider {
+    display: none;
+  }
+}
 
 #container {
-  overflow:hidden; /* change to hidden */
+  overflow: hidden; /* change to hidden */
   margin: 0 auto;
-  margin-top:37px;
+  margin-top: 37px;
   height: 100%;
-  width:875px;
-  border:1px solid black;
-  border-top-style:none;
+  width: 875px;
+  box-shadow: 0 30 30px 5px #999;
+  -webkit-box-shadow: 30 0 30px 5px #999;
+  -o-box-shadow: 0 30 30px 5px #999;
+  border: 1px solid black;
+  border-top-style: none;
 }
-.imagen1 {
-  height: 10px;
-  width: 10px;
+.accordion-color{
+  background-color: #eb2a31da;
+  color:white;
+  border-color: #eb2a31da;
+
 }
+.ubicacion-pag{
+  color: #eb2a31da;
+}
+.margen{
+  margin:5vh;
+}
+

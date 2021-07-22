@@ -40,7 +40,7 @@
    <div class="card">
      <div class="card-body">
        <h4 class="card-title"><div class="Titulo2">Objetivo de la carrera: </div></h4>
-       <p class="card-text"> <p>Formar profesionistas líderes, analíticos, críticos y emprendedores, comprometidos con su entorno social, capaces de identificar problemas y oportunidades en las organizaciones, para ofrecer soluciones basadas en tecnologías de información.
+       <p class="card-text"><div *ngFor="let Obj of Obj | async">{{Obj.campo}}</div>
      </div>
    </div>
 
@@ -57,23 +57,7 @@
        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
          <div class="accordion-body">
            <ol start="1">
-            <LI >Aplicar conocimientos científicos y tecnológicos en la solución de problemas en el área de informática con un enfoque interdisciplinario.
-            <LI >Administrar las tecnologías de la información, para estructurar proyectos estratégicos.
-            <LI >Formular, gestionar y evaluar el desarrollo de proyectos informáticos en las organizaciones.
-            <LI >Analizar, modelar, desarrollar, implementar y administrar sistemas de información para aumentar la productividad y competitividad de las organizaciones.
-            <LI >Aplicar normas, marcos de referencia, estándares de calidad y seguridad vigentes en el ámbito del desarrollo y gestión de tecnologías y sistemas de información.
-            <LI >Integrar las soluciones de tecnologías de información a los procesos de organizacionales para fortalecer objetivos estratégicos.
-            <LI >Seleccionar y utilizar de manera óptima técnicas y herramientas computacionales actuales y emergentes.
-            <LI >Realizar actividades de auditoría y consultoría relacionadas con la función informática.
-            <LI >Identificar, diseñar, desarrollar los mecanismos de almacenamiento, distribución, visualización y manipulación de la información.
-            <LI >Identificar y aplicar modelos pertinentes en el diseño e implementación de base de datos para la gestión de la información en las organizaciones.
-            <LI >Comunicarse de manera efectiva, en su propio idioma y al menos en un idioma extranjero, para integrarse a un contexto globalizado, en su desarrollo personal y profesional.
-            <LI >Crear y administrar redes de comunicación, que contemplen el diseño, selección, instalación y mantenimiento para la operación de equipos de cómputo aprovechando los avances tecnológicos a su alcance.
-            <LI >Desempeñarse profesionalmente con ética en un contexto multicultural, comprometidos con la sociedad y conservación del medio ambiente.
-            <LI >Observar y fomentar el cumplimiento de las disposiciones de carácter legal, relacionadas con la función informática.
-            <LI >Analizar, desarrollar y programar modelos matemáticos, estadísticos y de simulación.
-            <LI >Liderar y participar en grupos de trabajo profesional multi e interdisciplinario, para el desarrollo de proyectos que requieran soluciones basadas en tecnologías y sistemas de información.
-            <LI >Lograr un nivel de competencia internacional, con espíritu innovador, creativo y emprendedor, para generar nuevas oportunidades y desarrollar proyectos aplicando las tecnologías de información.
+            <div *ngFor="let PerEgre of PerEgre | async"><LI >{{PerEgre.campo}}</LI></div>
           </ol>
         </div>
        </div>
@@ -87,25 +71,7 @@
       <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
         <div class="accordion-body">
           <ul>
-            <LI >Cuenta con habilidades y actitudes que le permiten identificar problemas y oportunidades donde se aplique el tratamiento de información, para proponer soluciones por medio de modelos y facilitar con ello la toma de decisiones.
-            <LI >Desarrolla y administra sistemas de información para aumentar la productividad y competitividad de las organizaciones.
-            <LI >Selecciona y utiliza de manera óptima las herramientas computacionales actuales y emergentes.
-            <LI >Participa en la administración de los procesos organizacionales, considerando los recursos disponibles en el área de su competencia.
-            <LI >Dirige y participa en grupos de trabajo interdisciplinarios para proponer soluciones integrales en su entorno.
-            <LI >Observa y fomenta el cumplimiento de las disposiciones de carácter legal vinculadas con la función informática.
-            <LI >Realiza actividades de auditoría y consultoría relacionadas con la función informática.
-            <LI >Fomenta y coordina actividades encaminadas a fortalecer la cultura informática.
-            <LI >Realiza estudios de factibilidad para la selección de productos de software y hardware.
-            <LI >Formula y evalúa proyectos en el ámbito de su competencia.
-            <LI >Realiza proyectos de investigación científica y tecnológica.
-            <LI >Es un líder comprometido con la sociedad y la conservación del medio ambiente.
-            <LI >Administra tecnologías de redes para satisfacer las necesidades de información de las organizaciones.
-            <LI >Aplica normas y estándares de calidad en el ejercicio de la función informática.
-            <LI >Conforma, adapta y administra eficientemente las estructuras y bases de datos, que respondan a los requerimientos operativos de información.
-            <LI >Logra un nivel de competencia internacional con espíritu creativo y emprendedor, para generar nuevas oportunidades y desarrollar proyectos aplicando las tecnologías de la información.
-            <LI >Integra conocimientos para especializarse en el desarrollo de software de aplicación y tecnología de vanguardia en diversas áreas.
-            <LI >Es un profesional que se desempeña con ética.
-            <LI >Mantiene una actitud de aprendizaje continuo.
+            <div *ngFor="let CamLab of CamLab | async"><LI >{{CamLab.campo}}</LI></div>
           </ul>
         </div>
       </div>
@@ -121,54 +87,53 @@
 
  <div class="alert alert-primary d-flex align-items-center" role="alert">
    <div>
- Documentos Anexos
-
+    <div *ngFor="let Tit of Tit | async">{{Tit.campo1}}</div>
  <div class="accordion" id="accordionPanelsStayOpenExample">
   <div class="accordion-item">
     <h2 class="accordion-header" id="panelsStayOpen-headingThree">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-        Triptico
+        <div *ngFor="let Tit of Tit | async">{{Tit.campo2}}</div>
       </button>
     </h2>
     <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
-      <div class="accordion-body">
-       <a href="http://tese.edu.mx/documentos2004/2109_HHZDVKZ.pdf">Ver</a>
+      <div class="accordion-body" *ngFor="let Cit of Cit | async">
+        <a href="{{Cit.campo}}">Ver</a>
       </div>
     </div>
   </div>
    <div class="accordion-item">
      <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-         Oferta Educativa
+        <div *ngFor="let Tit of Tit | async">{{Tit.campo3}}</div>
        </button>
      </h2>
      <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
-       <div class="accordion-body">
-        <a href="http://www.tese.edu.mx/documentos2004/9005_OFEYWPP.pdf">Detalles</a>
+      <div class="accordion-body" *ngFor="let Cit of Cit | async">
+        <a href="{{Cit.campo1}}">Detalles</a>
        </div>
      </div>
    </div>
    <div class="accordion-item">
     <h2 class="accordion-header" id="panelsStayOpen-headinguno">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseuno" aria-expanded="false" aria-controls="panelsStayOpen-collapseuno">
-        Relación de proyectos de investigación
+        <div *ngFor="let Tit of Tit | async">{{Tit.campo4}}</div>
       </button>
     </h2>
     <div id="panelsStayOpen-collapseuno" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headinguno">
-      <div class="accordion-body">
-       <a href="http://www.tese.edu.mx/documentos2004/3131_RRVVQZQ.pdf">Detalles</a>
+      <div class="accordion-body" *ngFor="let Cit of Cit | async">
+        <a href="{{Cit.campo2}}">Detalles</a>
       </div>
     </div>
   </div>
   <div class="accordion-item">
     <h2 class="accordion-header" id="panelsStayOpen-headingdos">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsedos" aria-expanded="false" aria-controls="panelsStayOpen-collapsedos">
-        Reticula Ingeniería Informática IINF-2010-220
+        <div *ngFor="let Tit of Tit | async">{{Tit.campo5}}</div>
       </button>
     </h2>
     <div id="panelsStayOpen-collapsedos" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingdos">
-      <div class="accordion-body">
-       <a href="http://www.tese.edu.mx/documentos2004/3132_LAEIETW.pdf">Detalles</a>
+      <div class="accordion-body" *ngFor="let Cit of Cit | async">
+        <a href="{{Cit.campo3}}">Detalles</a>
       </div>
     </div>
   </div>

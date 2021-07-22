@@ -40,13 +40,7 @@
    <div class="card">
      <div class="card-body">
        <h4 class="card-title"><div class="Titulo2">Objetivo de la carrera: </div></h4>
-       <p class="card-text"> <p>Formar profesionales de manera integral con capacidad analítica, crítica, creativa y de liderazgo, que aporten soluciones computacionales en las organizaciones,
-        aplicando las tecnologías de la información y de las comunicaciones, comprometidos con su entorno.
-        <p>El egresado de esta carrera contará con habilidades técnicas y metodológicas de investigación, que le permitirán integrarse con facilidad en grupos interdisciplinarios de desarrollo tecnológico y empresarial. Poseerá
-        una sólida formación profesional, que de manera visionaria, ética e innovadora, ayude al fortalecimiento de la tecnología nacional, desarrollando un compromiso con la sociedad y la ecología.
-         <br>
-         <br>
-       </p>
+       <p class="card-text"><div *ngFor="let Obj of Obj | async">{{Obj.campo1}}</div>
      </div>
    </div>
 
@@ -60,9 +54,10 @@
           Objetivo General
          </button>
        </h2>
-       <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-         <div class="accordion-body">Formar profesionistas líderes, analíticos, críticos y creativos, con visión estratégica y amplio sentido ético, capaces de diseñar, implementar y administrar infraestructura computacional para aportar soluciones innovadoras en beneficio de la sociedad, en un contexto global, multidisciplinario y sustentable.</div>
-       </div>
+        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+          <div *ngFor="let Obj of Obj | async">{{Obj.campo}}</div>
+          <br>
+        </div>
      </div>
      <div class="accordion-item">
        <h2 class="accordion-header" id="flush-headingTwo">
@@ -73,17 +68,7 @@
        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
          <div class="accordion-body">
            <ol start="1">
-            <LI >Diseñar, configurar y administrar redes computacionales aplicando las normas y estándares vigentes.
-            <LI>Desarrollar, implementar y administrar software de sistemas o de aplicación que cumpla con los estándares de calidad con el fin de apoyar la productividad y competitividad de las organizaciones.
-            <LI>Coordinar y participar en proyectos interdisciplinarios.
-            <LI>Diseñar e implementar interfaces hombre-máquina y máquina-máquina para la automatización de sistemas.
-            <LI>Identificar y comprender las tecnologías de hardware para proponer, desarrollar y mantener aplicaciones eficientes.
-            <LI>Diseñar, desarrollar y administrar bases de datos conforme a requerimientos definidos, normas organizacionales de manejo y seguridad de la información, utilizando tecnologías emergentes.
-            <LI>Integrar soluciones computacionales con diferentes tecnologías, plataformas o dispositivos.
-            <LI>Desarrollar una visión empresarial para detectar áreas de oportunidad que le permitan emprender y desarrollar proyectos aplicando las tecnologías de la información y comunicación.
-            <LI>Desempeñar sus actividades profesionales considerando los aspectos legales, éticos, sociales y de desarrollo sustentable.
-            <LI>Poseer habilidades metodológicas de investigación que fortalezcan el desarrollo cultural, científico y tecnológico en el ámbito de sistemas computacionales y disciplinas afines.
-            <LI>Seleccionar y aplicar herramientas matemáticas para el modelado, diseño y desarrollo de tecnología computacional.
+            <div *ngFor="let PerEgre of PerEgre | async"><LI >{{PerEgre.campo}}</LI></div>
           </ol>
         </div>
        </div>
@@ -95,10 +80,8 @@
         </button>
       </h2>
       <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-        <div class="accordion-body">
-          <p>El Ingeniero en Sistemas Computacionales egresado del TESE, no sólo desempeña actividades donde el uso de las computadoras es indispensable, sino además puede participar en grupos de investigación y desarrollo en diversas disciplinas. Estará capacitado para ejercer su profesión en cualquier organización productiva de bienes y servicios, tanto del sector privado o público, o en forma independiente.
-          <p>Dada su especialidad, el Ingeniero en Sistemas Computacionales estará en condiciones de ejercer en las áreas de administración, desarrollo y mantenimiento de sistemas, ocupar puestos directivos o ejecutivos en centros de cómputo, docencia e investigación
-        </div>
+        <div *ngFor="let CamLab of CamLab | async"><p>{{CamLab.campo}}</div>
+          <br>
       </div>
     </div>
    </div>
@@ -118,24 +101,24 @@
   <div class="accordion-item">
     <h2 class="accordion-header" id="panelsStayOpen-headingThree">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-        Triptico
+        <div *ngFor="let Tit of Tit | async">{{Tit.campo}}</div>
       </button>
     </h2>
     <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
-      <div class="accordion-body">
-       <a href="http://tese.edu.mx/documentos2004/2096_IRGOSUS.pdf">Ver</a>
+      <div class="accordion-body" *ngFor="let Cit of Cit | async">
+        <a href="{{Cit.campo}}">Ver</a>
       </div>
     </div>
   </div>
    <div class="accordion-item">
      <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-         Oferta Educativa
+        <div *ngFor="let Tit of Tit | async">{{Tit.campo1}}</div>
        </button>
      </h2>
      <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
-       <div class="accordion-body">
-        <a href="http://www.tese.edu.mx/documentos2004/8996_NVKIVQN.pdf">Detalles</a>
+      <div class="accordion-body" *ngFor="let Cit of Cit | async">
+        <a href="{{Cit.campo1}}">Detalles</a>
        </div>
      </div>
    </div>

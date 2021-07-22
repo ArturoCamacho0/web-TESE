@@ -13,11 +13,13 @@
           </mat-list-option>
         </a>
 
-        <a href="http://www.tese.edu.mx/documentos2004/7285_BGNZNIQ.pdf">
-          <mat-list-option role="/Logo">
+        <div *ngFor="let dir_organigrama of organigrama">
+          <a href="{{dir_organigrama.Dir}}">
+          <mat-list-option >
             Organigrama
           </mat-list-option>
         </a>
+      </div>
       </mat-selection-list>
     </mat-drawer>
 
@@ -32,37 +34,40 @@
       <div class="box-shadow= 50px 50px;">
         <nav arial-label="breadcrumb">
           <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item"><a href="#">Identidad Institucional</a></li>
+            <li class="breadcrumb-item"><a class="ubicacion-pag" href="#">Home</a></li>
+            <li class="breadcrumb-item"><a class="ubicacion-pag" href="#">Identidad Institucional</a></li>
             <li class="breadcrumb-item active" aria-current="page">Logo</li>
           </ol>
         </nav>
       </div>
     </div>
 
-    <app-carousel [items]="carouselData"></app-carousel>
-    <h1 class="text-center fs-4 fw-bold shadow p-3 mb-5 bg-body rounded">LOGO</h1>
-    <div class="lh-sm fs-4 shadow p-3 mb-5 bg-body rounded">
-      <p>
-      El diseño de la imagen que identifica al TESE,
-      reviste un triple significado: retoma, en primera instancia el topónimo de Ecatepec,
-      que en náhuatl significa Cerro del Viento.
-    </p>
-    <br>
-    <p>
-      Expresa también el carácter industrial del municipio, al quedar representado el Centro de evaporación "El Caracol".
-      Perteneciente a la empresa más antigua de la zona, Sosa Texcoco. Su configuración geométrica,
-      formada por círculos, triángulos y el cuadrado, simboliza el carácter tecnológico de la institución.
+    <app-carousel class="mb-5" [items]="carouselData"></app-carousel>
 
-    </p>
+
+    <div class="lh-sm fs-4 shadow p-3 mb-5 bg-body rounded">
+      <div  *ngFor="let title of titles_logo " >
+        <h1 class="text-center fs-4 fw-bold">{{title.Titulo}}</h1>
+      </div>
+
+      <div *ngFor="let contend of contenido_logo">
+        <p class="margen">
+ {{contend.contenido}}
+        <br>
+    </p></div>
+
+
+
     </div>
 
-     <div class="shadow text-center p-3 mb-5 bg-body rounded">
+
+
+     <div class="shadow text-center p-3 mb-5 bg-body rounded" *ngFor="let picture of imgs_logo">
        <p>
-         <img src="../../../../../assets/images/Logo-Wallpaper.png" class="img-fluid rounded" alt="...">
+         <img src="{{picture.Dir}}" class="img-fluid rounded" alt="...">
        </p>
       <br>
-      <h1 class="text-center fs-4 fw-bold mb-3">TECNOLÓGICO DE ESTUDIOS SUPERIORES DE ECATEPEC</h1>
+      <h1 class="text-center fs-4 fw-bold mb-3">{{picture.Titulo}} </h1>
     </div>
 
 

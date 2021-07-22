@@ -8,7 +8,7 @@ export const CAROUSEL_DATA_ITEMS_QUIMICA: ICarouselItemCarreras[]=[
     },
     subtitle: '',
     link: '',
-    image: "assets/images/Carreras/tese-quimica.png"
+    image: "https://firebasestorage.googleapis.com/v0/b/app-tese.appspot.com/o/web-tese%2Fcomponentes%2FCarreras%2FQuimica1.jpg?alt=media&token=253ca31b-4f2f-4f6a-a22b-d94e49e4c680"
   },{
     id:2,
     title:{
@@ -17,6 +17,6 @@ export const CAROUSEL_DATA_ITEMS_QUIMICA: ICarouselItemCarreras[]=[
     },
     subtitle: '',
     link: '',
-    image: "assets/images/Carreras/tese-quimica1.jpg"
+    image: "https://firebasestorage.googleapis.com/v0/b/app-tese.appspot.com/o/web-tese%2Fcomponentes%2FCarreras%2FQuimica.jpg?alt=media&token=b080f94f-cc94-4f22-94f4-2117d7b436a4"
   }
 ]

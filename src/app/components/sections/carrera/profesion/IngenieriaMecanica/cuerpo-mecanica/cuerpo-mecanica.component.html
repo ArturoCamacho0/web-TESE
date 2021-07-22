@@ -40,10 +40,7 @@
    <div class="card">
      <div class="card-body">
        <h4 class="card-title"><div class="Titulo2">Objetivo de la carrera: </div></h4>
-       <p class="card-text"> <p>Formar    profesionales    de    la    Ingeniería    Mecánica,conunabasecientífica,tecnológica  y  humanística,  aptos  para  la  aplicación  y  generación  de  conocimientos  y  la  solución  creativa  de  los  problemas,  con  un  sentido  de  innovación  en  la  incorporación  de  losavancescientíficosytecnológicosquelespermite mantener e innovar sistemas mecánicos, observando un sentido de responsabilidad con su entorno sociocultural.
-         <br>
-         <br>
-       </p>
+       <p class="card-text"><div *ngFor="let Obj of Obj | async">{{Obj.campo1}}</div>
      </div>
    </div>
 
@@ -58,7 +55,8 @@
          </button>
        </h2>
        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-         <div class="accordion-body">Formar profesionales con actitud y capacidad para desarrollar, investigar y aplicar conocimientos científicos y tecnológicos en áreas de la ingeniería mecánica, como: energía, fluidos, diseño, manufactura, automatización, control, materiales, montaje y mantenimiento de equipo, entre otras; apto para asignar, utilizar y administrar los recursos humanos y materiales en forma segura, racional, eficiente y sustentable; con disposición creativa y emprendedora; con fundamentos éticos y comprometido, en todo momento, con el bienestar de la sociedad.</div>
+        <p class="card-text"><div *ngFor="let Obj of Obj | async">{{Obj.campo}}</div>
+        <br>
        </div>
      </div>
      <div class="accordion-item">
@@ -70,21 +68,7 @@
        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
          <div class="accordion-body">
            <ol start="1">
-            <LI >Aplicar herramientas matemáticas, computacionales y métodos experimentales en la solución de problemas para formular modelos, analizar procesos y elaborar prototipos mecánicos.
-            <LI>Seleccionar y emplear los materiales adecuados para: el diseño y fabricación de elementos mecánicos; o para su uso en instalaciones industriales con base en el conocimiento de sus propiedades.
-            <LI>Gestionar proyectos de diseño, manufactura, diagnóstico, instalación, operación, control y mantenimiento, tanto de sistemas mecánicos como de sistemas de aprovechamiento de fuentes de energía convencionales y no convencionales.
-            <LI>Participar en servicios de asesoría, peritaje, certificación, capacitación, compra y venta de equipo y maquinaria afines a su profesión.
-            <LI>Elaborar, interpretar y comunicar, de manera profesional, en forma oral, escrita y gráfica: informes, propuestas, análisis y resultados de ingeniería.
-            <LI>Poseer capacidad directiva para administrar eficientemente los recursos humanos, materiales y económicos a su disposición en el ejercicio de su profesión.
-            <LI>Desarrollar una actitud emprendedora para la creación de nuevas empresas, con espíritu creativo, liderazgo y compromiso social.
-            <LI>Utilizar el pensamiento creativo y crítico en el análisis de situaciones relacionadas con la ingeniería mecánica, para la toma de decisiones.
-            <LI>Crear, innovar, transferir y adaptar tecnologías en el campo de la ingeniería mecánica, con actitud emprendedora y de liderazgo, respetando los principios éticos y valores universales, ejerciendo su profesión de manera responsable en un marco legal.
-            <LI> Formar parte de grupos multidisciplinarios en proyectos integrales con una actitud que fortalezca el trabajo de equipo, ejerciendo diversos roles contribuyendo con su capacidad profesional al logro conjunto.
-            <LI>Observar y aplicar las normas y especificaciones nacionales e internacionales relacionadas con el tratamiento adecuado de las materias primas, los productos terminados, así como los materiales residuales, generados en los procesos industriales.
-            <LI> Participar en proyectos tecnológicos y de investigación científica con el objetivo de restituir y conservar el medio ambiente para propiciar un desarrollo sustentable.
-            <LI>Implementar sistemas de control automático de procesos industriales, así como gestionar sistemas de calidad para mejorar los estándares de producción.
-            <LI>Aplicar sus conocimientos, habilidades y aptitudes para cursar estudios de posgrado.
-            <LI>Reflexionar acerca del contexto histórico, geográfico y socioeconómico de su región, para proponer soluciones congruentes con la realidad del país en un entorno globalizado.
+            <div *ngFor="let PerEgre of PerEgre | async"><LI >{{PerEgre.campo}}</LI></div>
           </ol>
         </div>
        </div>
@@ -97,7 +81,8 @@
       </h2>
       <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
         <div class="accordion-body">
-          <p>El profesional de esta carrera puede laborar en los sectores público y privado, en empresas dedicadas a la fabricación, diseño, operación, mantenimiento e instalación de maquinaria y equipo, investigación, educación y comercialización.  La actividad industrial  del  Ingeniero  Mecánico  puede  ser  en  un  principio  como  supervisor,  diseñador y/o laboratorista, hasta alcanzar cargos gerenciales y directivos.
+          <div *ngFor="let CamLab of CamLab | async">{{CamLab.campo}}</div>
+          <br>
         </div>
       </div>
     </div>
@@ -118,24 +103,24 @@
   <div class="accordion-item">
     <h2 class="accordion-header" id="panelsStayOpen-headingThree">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-        Triptico
+        <div *ngFor="let Tit of Tit | async">{{Tit.campo}}</div>
       </button>
     </h2>
     <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
-      <div class="accordion-body">
-       <a href="http://tese.edu.mx/documentos2004/2115_HIPIFJG.pdf">Ver</a>
+      <div class="accordion-body" *ngFor="let Cit of Cit | async">
+        <a href="{{Cit.campo}}">Ver</a>
       </div>
     </div>
   </div>
    <div class="accordion-item">
      <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-         Oferta Educativa
+        <div *ngFor="let Tit of Tit | async">{{Tit.campo1}}</div>
        </button>
      </h2>
      <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
-       <div class="accordion-body">
-        <a href="http://www.tese.edu.mx/documentos2004/9003_TWDFNQC.pdf">Detalles</a>
+      <div class="accordion-body" *ngFor="let Cit of Cit | async">
+        <a href="{{Cit.campo1}}">Detalles</a>
        </div>
      </div>
    </div>

@@ -143,7 +143,6 @@ import { ControlMbioquimicaComponent } from './EGRESADOS-EXALUMNOS/ControlEgresa
   exports: [
     HomeComponent,
     CarouselComponent,
-
   ]
 })
 export class SectionsModule { }
