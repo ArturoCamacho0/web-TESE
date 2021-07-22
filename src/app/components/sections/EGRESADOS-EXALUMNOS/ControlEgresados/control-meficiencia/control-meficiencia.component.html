@@ -45,20 +45,17 @@
       </button>
       <mat-divider class="divider"></mat-divider>
 
-      <!--ENLACE-->
-    <div class="text-side">
-      <div class="box-shadow= 50px 50px;">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="/">Control</a></li>
-            <li class="breadcrumb-item"><a href="/Admin-Carrera">Carreras</a></li>
-            <li class="breadcrumb-item"><a href="/Admin-Carrera/Bioquimica">Quimica</a></li>
-          </ol>
-        </nav>
-      </div>
-    </div>
+     <!--ENLACE-->
+     <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#" class="Link">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">ControlEgresados</li>
+        <li class="breadcrumb-item"><a routerLink="/ControlEgresados" class="Link">Posgrados</a></li>
+        <li class="breadcrumb-item active" aria-current="page">MaestríaEficienciaEnergetica</li>
+      </ol>
+    </nav>
 
-    <h1 class="fw-bold lh-sm fs-4 shadow p-3 mb-5 bg-body rounded">CONTROL MAESTRÍA EN EFICIENCÍA ENERGÉTICA Y ENERGÍAS RENOVABLES</h1>
+    <h1 class="fw-bold lh-sm fs-4 shadow p-3 mb-5 bg-body rounded titulo">CONTROL MAESTRÍA EN EFICIENCÍA ENERGÉTICA Y ENERGÍAS RENOVABLES</h1>
 
     <section  class="lh-sm fs-4 shadow p-3 mb-5 bg-body rounded">
 
@@ -252,7 +249,7 @@
 <h1 class="fw-bold lh-sm fs-4 shadow p-3 mb-5 bg-body rounded" *ngIf="Campo.length==0">AUN NO HAY DATOS</h1>
 <form *ngIf="Campo.length>0">
   <label for="inputAddress" class="form-label fw-bold" >Eliminar/Editar</label>
-  <div *ngFor="let Area of Area" class="row">
+  <div *ngFor="let Campo of Campo" class="row">
     <div class="col-8">
       <input type="text" class="form-control mb-2" id="inputAddressCampo" value="{{Campo.CampoMeficienciaOpc}}">
     </div>

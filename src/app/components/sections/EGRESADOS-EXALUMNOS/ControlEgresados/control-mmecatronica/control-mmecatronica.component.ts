@@ -1,54 +1,48 @@
+import { MmecatronicaService } from './../../../../../services/firebase/Egresado/MMecatronica/mmecatronica.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
-import { MeficienciaService } from './../../../../../services/firebase/Egresado/MEficiencia/meficiencia.service';
 
 @Component({
-  selector: 'app-control-meficiencia',
-  templateUrl: './control-meficiencia.component.html',
-  styleUrls: ['./control-meficiencia.component.css']
+  selector: 'app-control-mmecatronica',
+  templateUrl: './control-mmecatronica.component.html',
+  styleUrls: ['./control-mmecatronica.component.css']
 })
-export class ControlMeficienciaComponent implements OnInit {
+export class ControlMmecatronicaComponent implements OnInit {
 
   submitedConcepto = false;
   submitedObjetivo = false;
   submitedPerfil = false;
-  submitedMateriaB = false;
-  submitedMateriaO = false;
-  submitedCampo = false;
+  submitedEstructura = false;
+  submitedArea = false;
 
   Concepto: any[]=[];
   Objetivo: any[]=[];
   Perfil: any[]=[];
-  MateriaB: any[]=[];
-  MateriaO: any[]=[];
-  Campo: any[]=[];
+  Estructura: any[]=[];
+  Area: any[]=[];
 
   ingresarConcepto: FormGroup;
   ingresarObjetivo: FormGroup;
   ingresarPerfil: FormGroup;
-  ingresarMateriaB: FormGroup;
-  ingresarMateriaO: FormGroup;
-  ingresarCampo: FormGroup;
+  ingresarEstructura: FormGroup;
+  ingresarArea: FormGroup;
 
-  constructor(private fbq: FormBuilder, private _MeficienciaService: MeficienciaService) {
+  constructor(private fbq: FormBuilder, private _MmecatronicaService: MmecatronicaService) {
     this.ingresarConcepto=this.fbq.group({
-      ConceptoEficiencia:['', Validators.required]
+      ConceptoMecatronica:['', Validators.required]
     })
     this.ingresarObjetivo=this.fbq.group({
-      ObjetivoEficiencia:['', Validators.required]
+      ObjetivoMecatronica:['', Validators.required]
     })
     this.ingresarPerfil=this.fbq.group({
-      PerfilEficiencia:['', Validators.required]
+      PerfilMecatronica:['', Validators.required]
     })
-    this.ingresarMateriaB=this.fbq.group({
-      MateriaBEficiencia:['', Validators.required]
+    this.ingresarEstructura=this.fbq.group({
+      EstructuraMecatronica:['', Validators.required]
     })
-    this.ingresarMateriaO=this.fbq.group({
-      MateriaOEficiencia:['', Validators.required]
-    })
-    this.ingresarCampo=this.fbq.group({
-      CampoEficiencia:['', Validators.required]
+    this.ingresarArea=this.fbq.group({
+      AreaMecatronica:['', Validators.required]
     })
   }
 
@@ -56,9 +50,8 @@ export class ControlMeficienciaComponent implements OnInit {
     this.getConcepto(),
     this.getObjetivo(),
     this.getPerfil(),
-    this.getMateriaB(),
-    this.getMateriaO(),
-    this.getCampo()
+    this.getEstructura(),
+    this.getArea()
   }
 
   /*AGREGAR REGISTROS*/
@@ -68,9 +61,9 @@ export class ControlMeficienciaComponent implements OnInit {
       return;
     }
     const Concepto : any={
-      ConceptosMeficienciaDesc: this.ingresarConcepto.value.ConceptoEficiencia
+      ConceptosMmecatronicaDesc: this.ingresarConcepto.value.ConceptoMecatronica
     }
-    this._MeficienciaService.crearConcepto(Concepto).then(()=>{
+    this._MmecatronicaService.crearConcepto(Concepto).then(()=>{
       console.log('REGISTRO AGREGADO...');
     }).catch(error =>{
       console.log(error);
@@ -83,9 +76,9 @@ export class ControlMeficienciaComponent implements OnInit {
       return;
     }
     const Objetivo : any={
-      ObjetivoMeficienciaDesc: this.ingresarObjetivo.value.ObjetivoEficiencia
+      ObjetivoMmecatronicaDesc: this.ingresarObjetivo.value.ObjetivoMecatronica
     }
-    this._MeficienciaService.crearObjetivo(Objetivo).then(()=>{
+    this._MmecatronicaService.crearObjetivo(Objetivo).then(()=>{
       console.log('REGISTRO AGREGADO...');
     }).catch(error =>{
       console.log(error);
@@ -98,54 +91,39 @@ export class ControlMeficienciaComponent implements OnInit {
       return;
     }
     const Perfil : any={
-      PerfilMeficienciaDesc: this.ingresarPerfil.value.PerfilEficiencia
+      PerfilMmecatronicaOpc: this.ingresarPerfil.value.PerfilMecatronica
     }
-    this._MeficienciaService.crearPerfil(Perfil).then(()=>{
+    this._MmecatronicaService.crearPerfil(Perfil).then(()=>{
       console.log('REGISTRO AGREGADO...');
     }).catch(error =>{
       console.log(error);
     })
   }
 
-  agregarMateriaB(){
-    this.submitedMateriaB=true;
-    if(this.ingresarMateriaB.invalid){
+  agregarEstructura(){
+    this.submitedEstructura=true;
+    if(this.ingresarEstructura.invalid){
       return;
     }
-    const MateriaB : any={
-      EficienciaMateriaBasica: this.ingresarMateriaB.value.MateriaBEficiencia
+    const Estructura : any={
+      EstructuraMmecatronicaopc: this.ingresarEstructura.value.EstructuraMecatronica
     }
-    this._MeficienciaService.crearMateriaB(MateriaB).then(()=>{
+    this._MmecatronicaService.crearEstructura(Estructura).then(()=>{
       console.log('REGISTRO AGREGADO...');
     }).catch(error =>{
       console.log(error);
     })
   }
 
-  agregarMateriaO(){
-    this.submitedMateriaO=true;
-    if(this.ingresarMateriaO.invalid){
+  agregarArea(){
+    this.submitedArea=true;
+    if(this.ingresarArea.invalid){
       return;
     }
-    const MateriaO : any={
-      EficienciaMateriaOptativa: this.ingresarMateriaO.value.MateriaOEficiencia
+    const Area : any={
+      AreasMmecatronicaOpc: this.ingresarArea.value.AreaMecatronica
     }
-    this._MeficienciaService.crearMateriaO(MateriaO).then(()=>{
-      console.log('REGISTRO AGREGADO...');
-    }).catch(error =>{
-      console.log(error);
-    })
-  }
-
-  agregarCampo(){
-    this.submitedCampo=true;
-    if(this.ingresarCampo.invalid){
-      return;
-    }
-    const Campo : any={
-      CampoMeficienciaOpc: this.ingresarCampo.value.CampoEficiencia
-    }
-    this._MeficienciaService.crearCampo(Campo).then(()=>{
+    this._MmecatronicaService.crearArea(Area).then(()=>{
       console.log('REGISTRO AGREGADO...');
     }).catch(error =>{
       console.log(error);
@@ -170,7 +148,7 @@ export class ControlMeficienciaComponent implements OnInit {
 
   /*OBTENER DATOS*/
   getConcepto(){
-    this._MeficienciaService.getConcepto().subscribe(data =>{
+    this._MmecatronicaService.getConcepto().subscribe(data =>{
       this.Concepto=[];
       data.forEach((element:any) =>{
         /*console.log(element.payload.doc.data());*/
@@ -184,7 +162,7 @@ export class ControlMeficienciaComponent implements OnInit {
   }
 
   getObjetivo(){
-    this._MeficienciaService.getObjetivo().subscribe(data =>{
+    this._MmecatronicaService.getObjetivo().subscribe(data =>{
       this.Objetivo=[];
       data.forEach((element:any) =>{
         /*console.log(element.payload.doc.data());*/
@@ -198,7 +176,7 @@ export class ControlMeficienciaComponent implements OnInit {
   }
 
   getPerfil(){
-    this._MeficienciaService.getPerfil().subscribe(data =>{
+    this._MmecatronicaService.getPerfil().subscribe(data =>{
       this.Perfil=[];
       data.forEach((element:any) =>{
         /*console.log(element.payload.doc.data());*/
@@ -211,51 +189,37 @@ export class ControlMeficienciaComponent implements OnInit {
     })
   }
 
-  getMateriaB(){
-    this._MeficienciaService.getMateriaB().subscribe(data =>{
-      this.MateriaB=[];
+  getEstructura(){
+    this._MmecatronicaService.getEstructura().subscribe(data =>{
+      this.Estructura=[];
       data.forEach((element:any) =>{
         /*console.log(element.payload.doc.data());*/
-        this.MateriaB.push({
+        this.Estructura.push({
           id:element.payload.doc.id,
           ...element.payload.doc.data()
         })
       })
-      console.log(this.MateriaB);
+      console.log(this.Estructura);
     })
   }
 
-  getMateriaO(){
-    this._MeficienciaService.getMateriaO().subscribe(data =>{
-      this.MateriaO=[];
+  getArea(){
+    this._MmecatronicaService.getArea().subscribe(data =>{
+      this.Area=[];
       data.forEach((element:any) =>{
         /*console.log(element.payload.doc.data());*/
-        this.MateriaO.push({
+        this.Area.push({
           id:element.payload.doc.id,
           ...element.payload.doc.data()
         })
       })
-      console.log(this.MateriaO);
-    })
-  }
-
-  getCampo(){
-    this._MeficienciaService.getCampo().subscribe(data =>{
-      this.Campo=[];
-      data.forEach((element:any) =>{
-        /*console.log(element.payload.doc.data());*/
-        this.Campo.push({
-          id:element.payload.doc.id,
-          ...element.payload.doc.data()
-        })
-      })
-      console.log(this.Campo);
+      console.log(this.Area);
     })
   }
 
    /*ELIMINAR*/
    eliminaConcepto(id:string){
-    this._MeficienciaService.eliminaConcepto(id).then(()=>{
+    this._MmecatronicaService.eliminaConcepto(id).then(()=>{
       console.log('REGISTRO ELIMINADO');
     }).catch(error =>{
       console.log(error);
@@ -263,7 +227,7 @@ export class ControlMeficienciaComponent implements OnInit {
   }
 
   eliminaObjetivo(id:string){
-    this._MeficienciaService.eliminaObjetivo(id).then(()=>{
+    this._MmecatronicaService.eliminaObjetivo(id).then(()=>{
       console.log('REGISTRO ELIMINADO');
     }).catch(error =>{
       console.log(error);
@@ -271,31 +235,23 @@ export class ControlMeficienciaComponent implements OnInit {
   }
 
   eliminaPerfil(id:string){
-    this._MeficienciaService.eliminaPerfil(id).then(()=>{
+    this._MmecatronicaService.eliminaPerfil(id).then(()=>{
       console.log('REGISTRO ELIMINADO');
     }).catch(error =>{
       console.log(error);
     })
   }
 
-  eliminaMateriaB(id:string){
-    this._MeficienciaService.eliminaMateriaB(id).then(()=>{
+  eliminaEstructura(id:string){
+    this._MmecatronicaService.eliminaEstructura(id).then(()=>{
       console.log('REGISTRO ELIMINADO');
     }).catch(error =>{
       console.log(error);
     })
   }
 
-  eliminaMateriaO(id:string){
-    this._MeficienciaService.eliminaMateriaO(id).then(()=>{
-      console.log('REGISTRO ELIMINADO');
-    }).catch(error =>{
-      console.log(error);
-    })
-  }
-
-  eliminaCampo(id:string){
-    this._MeficienciaService.eliminaCampo(id).then(()=>{
+  eliminaArea(id:string){
+    this._MmecatronicaService.eliminaArea(id).then(()=>{
       console.log('REGISTRO ELIMINADO');
     }).catch(error =>{
       console.log(error);

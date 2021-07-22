@@ -33,6 +33,8 @@ import { ControlMquimicaComponent } from './components/sections/EGRESADOS-EXALUM
 import { ControlMbioquimicaComponent } from './components/sections/EGRESADOS-EXALUMNOS/ControlEgresados/control-mbioquimica/control-mbioquimica.component';
 import { ControlMsistemasComponent } from './components/sections/EGRESADOS-EXALUMNOS/ControlEgresados/control-msistemas/control-msistemas.component';
 import { ControlMeficienciaComponent } from './components/sections/EGRESADOS-EXALUMNOS/ControlEgresados/control-meficiencia/control-meficiencia.component';
+import { ControlMmecatronicaComponent } from './components/sections/EGRESADOS-EXALUMNOS/ControlEgresados/control-mmecatronica/control-mmecatronica.component';
+import { ControlGestionComponent } from './components/sections/EGRESADOS-EXALUMNOS/ControlEgresados/control-gestion/control-gestion.component';
 
 
 //import carreras
@@ -81,6 +83,8 @@ const appRoutes: Routes = [
     { path: 'ControlMbioquimica', component:ControlMbioquimicaComponent},
     { path: 'ControlMsistemas', component:ControlMsistemasComponent},
     { path: 'ControlMeficiencia', component:ControlMeficienciaComponent},
+    { path: 'ControlMmecatronica', component:ControlMmecatronicaComponent},
+    { path: 'ControlMgestion', component:ControlGestionComponent},
 
 
     { path: 'Carreras', component: CuerpoComponent},

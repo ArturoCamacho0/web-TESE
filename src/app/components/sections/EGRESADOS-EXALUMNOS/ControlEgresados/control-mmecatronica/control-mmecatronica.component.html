@@ -45,17 +45,17 @@
       </button>
       <mat-divider class="divider"></mat-divider>
 
-      <!--ENLACE-->
-      <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="#" class="Link">Home</a></li>
-          <li class="breadcrumb-item active" aria-current="page">ControlEgresados</li>
-          <li class="breadcrumb-item"><a routerLink="/ControlEgresados" class="Link">Posgrados</a></li>
-          <li class="breadcrumb-item active" aria-current="page">MaestríaIngenieríaQuímica</li>
-        </ol>
-      </nav>
+     <!--ENLACE-->
+     <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#" class="Link">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">ControlEgresados</li>
+        <li class="breadcrumb-item"><a routerLink="/ControlEgresados" class="Link">Posgrados</a></li>
+        <li class="breadcrumb-item active" aria-current="page">MaestríaIngenieríaMecatrónica</li>
+      </ol>
+    </nav>
 
-    <h1 class="fw-bold lh-sm fs-4 shadow p-3 mb-5 bg-body rounded titulo">CONTROL MAESTRÍA EN CIENCIAS INGENIERÍA QUÍMICA</h1>
+    <h1 class="fw-bold lh-sm fs-4 shadow p-3 mb-5 bg-body rounded titulo">CONTROL MAESTRÍA EN CIENCIAS INGENIERÍA MECATRÓNICA</h1>
 
     <section  class="lh-sm fs-4 shadow p-3 mb-5 bg-body rounded">
 
@@ -67,7 +67,7 @@
           <label for="inputAddress" class="form-label fw-bold" >Agregar</label>
 
           <div class="col-10">
-            <input type="text" class="form-control" id="inputAddress" value="" formControlName="ConceptoQuimica" placeholder="CONCEPTO*">
+            <input type="text" class="form-control" id="inputAddress" value="" formControlName="ConceptoMecatronica" placeholder="CONCEPTO*">
           </div>
 
           <div class="col">
@@ -82,7 +82,7 @@
         <label for="inputAddress" class="form-label fw-bold" >Eliminar/Editar</label>
         <div *ngFor="let Concepto of Concepto " class="row" >
           <div class="col-8">
-            <input type="text" class="form-control mb-2" id="inputAddressConcepto" value="{{Concepto.ConceptosMQuimicaDesc}}">
+            <input type="text" class="form-control mb-2" id="inputAddressConcepto" value="{{Concepto.ConceptosMmecatronicaDesc}}">
           </div>
 
           <div class="col float-rigth">
@@ -103,7 +103,7 @@
           <label for="inputAddress" class="form-label fw-bold" >Agregar</label>
 
           <div class="col-10">
-            <input type="text" class="form-control" id="inputAddress" value="" formControlName="ObjetivoQuimica" placeholder="OBJETIVO*">
+            <input type="text" class="form-control" id="inputAddress" value="" formControlName="ObjetivoMecatronica" placeholder="OBJETIVO*">
           </div>
 
           <div class="col">
@@ -118,7 +118,7 @@
         <label for="inputAddress" class="form-label fw-bold" >Eliminar/Editar</label>
         <div *ngFor="let Objetivo of Objetivo" class="row">
           <div class="col-8">
-            <input type="text" class="form-control mb-2" id="inputAddressObjetivo" value="{{Objetivo.ObjetivoMquimicaDesc}}">
+            <input type="text" class="form-control mb-2" id="inputAddressObjetivo" value="{{Objetivo.ObjetivoMmecatronicaDesc}}">
           </div>
           <div class="col float-rigth">
             <button type="button" (click)="eliminaObjetivo(Objetivo.id)"  class="btn btn-danger">Eliminar</button>
@@ -136,7 +136,7 @@
         <label for="inputAddress" class="form-label fw-bold" >Agregar</label>
 
         <div class="col-10">
-          <input type="text" class="form-control" id="inputAddress" value="" formControlName="PerfilQuimica" placeholder="PERFIL*">
+          <input type="text" class="form-control" id="inputAddress" value="" formControlName="PerfilMecatronica" placeholder="PERFIL*">
         </div>
 
         <div class="col">
@@ -151,7 +151,7 @@
       <label for="inputAddress" class="form-label fw-bold" >Eliminar/Editar</label>
       <div *ngFor="let Perfil of Perfil" class="row">
         <div class="col-8">
-          <input type="text" class="form-control mb-2" id="inputAddressPerfil" value="{{Perfil.PerfilMQuimicaDesc}}">
+          <input type="text" class="form-control mb-2" id="inputAddressPerfil" value="{{Perfil.PerfilMmecatronicaOpc}}">
         </div>
         <div class="col float-rigth">
           <button type="button" (click)="eliminaPerfil(Perfil.id)"  class="btn btn-danger">Eliminar</button>
@@ -162,15 +162,15 @@
 
 
   <section  class="lh-sm fs-4 shadow p-3 mb-5 bg-body rounded">
-    <label for="inputAddress" class="form-label fw-bold subtitulo" >MATERIAS BÁSICAS</label>
+    <label for="inputAddress" class="form-label fw-bold subtitulo" >ESTRUCTURA DEL PLAN DE ESTUDIO</label>
 
-  <form [formGroup]="ingresarMateriaB" (ngSubmit)="agregarMateriaB()">
+  <form [formGroup]="ingresarEstructura" (ngSubmit)="agregarEstructura()">
     <div class="row ">
-      <span *ngIf="submitedMateriaB && ingresarMateriaB.invalid" class="alert alert-danger">DEBE LLENAR LOS CAMPOS...</span>
+      <span *ngIf="submitedEstructura && ingresarEstructura.invalid" class="alert alert-danger">DEBE LLENAR LOS CAMPOS...</span>
       <label for="inputAddress" class="form-label fw-bold" >Agregar</label>
 
       <div class="col-10">
-        <input type="text" class="form-control" id="inputAddress" value="" formControlName="MateriaBQuimica" placeholder="MATERIA BASICA*">
+        <input type="text" class="form-control" id="inputAddress" value="" formControlName="EstructuraMecatronica" placeholder="ESTRUCTURA DEL PLAN DE ESTUDIO*">
       </div>
 
       <div class="col">
@@ -180,51 +180,18 @@
     </div>
   </form>
   <br>
-  <h1 class="fw-bold lh-sm fs-4 shadow p-3 mb-5 bg-body rounded" *ngIf="MateriaB.length==0">AUN NO HAY DATOS</h1>
-  <form *ngIf="MateriaB.length>0">
+  <h1 class="fw-bold lh-sm fs-4 shadow p-3 mb-5 bg-body rounded" *ngIf="Estructura.length==0">AUN NO HAY DATOS</h1>
+  <form *ngIf="Estructura.length>0">
     <label for="inputAddress" class="form-label fw-bold" >Eliminar/Editar</label>
-    <div *ngFor="let MateriaB of MateriaB" class="row">
+    <div *ngFor="let Estructura of Estructura" class="row">
       <div class="col-8">
-        <input type="text" class="form-control mb-2" id="inputAddressMateriaB" value="{{MateriaB.QuimicaMateriaBasica}}">
+        <input type="text" class="form-control mb-2" id="inputAddressEstructura" value="{{Estructura.EstructuraMmecatronicaopc}}">
       </div>
       <div class="col float-rigth">
-        <button type="button" (click)="eliminaMateriaB(MateriaB.id)" class="btn btn-danger">Eliminar</button>
+        <button type="button" (click)="eliminaEstructura(Estructura.id)" class="btn btn-danger">Eliminar</button>
       </div>
     </div>
   </form>
-</section>
-
-<section  class="lh-sm fs-4 shadow p-3 mb-5 bg-body rounded">
-  <label for="inputAddress" class="form-label fw-bold subtitulo" >MATERIAS OPTATIVAS</label>
-
-<form [formGroup]="ingresarMateriaO" (ngSubmit)="agregarMateriaO()">
-  <div class="row ">
-    <span *ngIf="submitedMateriaO && ingresarMateriaO.invalid" class="alert alert-danger">DEBE LLENAR LOS CAMPOS...</span>
-    <label for="inputAddress" class="form-label fw-bold" >Agregar</label>
-
-    <div class="col-10">
-      <input type="text" class="form-control" id="inputAddress" value="" formControlName="MateriaOQuimica" placeholder="MATERIA OPTATIVA*">
-    </div>
-
-    <div class="col">
-      <button type="submit" class="btn btn-success">Agregar</button>
-    </div>
-
-  </div>
-</form>
-<br>
-<h1 class="fw-bold lh-sm fs-4 shadow p-3 mb-5 bg-body rounded" *ngIf="MateriaO.length==0">AUN NO HAY DATOS</h1>
-<form *ngIf="MateriaO.length>0">
-  <label for="inputAddress" class="form-label fw-bold" >Eliminar/Editar</label>
-  <div *ngFor="let MateriaO of MateriaO" class="row">
-    <div class="col-8">
-      <input type="text" class="form-control mb-2" id="inputAddressMateriaO" value="{{MateriaO.QuimicaMateriaOptativa}}">
-    </div>
-    <div class="col float-rigth">
-      <button type="button" (click)="eliminaMateriaO(MateriaO.id)" class="btn btn-danger">Eliminar</button>
-    </div>
-  </div>
-</form>
 </section>
 
 <section  class="lh-sm fs-4 shadow p-3 mb-5 bg-body rounded">
@@ -236,7 +203,7 @@
     <label for="inputAddress" class="form-label fw-bold" >Agregar</label>
 
     <div class="col-10">
-      <input type="text" class="form-control" id="inputAddress" value="" formControlName="AreaQuimica" placeholder="AREA DE INVESTIGACIÓN*">
+      <input type="text" class="form-control" id="inputAddress" value="" formControlName="AreaMecatronica" placeholder="AREAS DE INVESTIGACIÓN*">
     </div>
 
     <div class="col">
@@ -251,13 +218,10 @@
   <label for="inputAddress" class="form-label fw-bold" >Eliminar/Editar</label>
   <div *ngFor="let Area of Area" class="row">
     <div class="col-8">
-      <input type="text" class="form-control mb-2" [formControl]="inputAddressArea" id="inputAddressArea" value="{{Area.AreaMquimicaOpc}}">
+      <input type="text" class="form-control mb-2" id="inputAddressArea" value="{{Area.AreasMmecatronicaOpc}}">
     </div>
     <div class="col float-rigth">
       <button type="button" (click)="eliminaArea(Area.id)" class="btn btn-danger">Eliminar</button>
-    </div>
-    <div class="col float-rigth">
-      <button type="button" (click)="editarArea(Area.id)" class="btn btn-danger">Editar</button>
     </div>
   </div>
 </form>

@@ -1,54 +1,54 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
-import { MeficienciaService } from './../../../../../services/firebase/Egresado/MEficiencia/meficiencia.service';
+import { MgestionService } from 'src/app/services/firebase/Egresado/MGestion/mgestion.service';
 
 @Component({
-  selector: 'app-control-meficiencia',
-  templateUrl: './control-meficiencia.component.html',
-  styleUrls: ['./control-meficiencia.component.css']
+  selector: 'app-control-gestion',
+  templateUrl: './control-gestion.component.html',
+  styleUrls: ['./control-gestion.component.css']
 })
-export class ControlMeficienciaComponent implements OnInit {
+export class ControlGestionComponent implements OnInit {
 
   submitedConcepto = false;
   submitedObjetivo = false;
   submitedPerfil = false;
-  submitedMateriaB = false;
-  submitedMateriaO = false;
-  submitedCampo = false;
+  submitedEstructura = false;
+  submitedDuracion = false;
+  submitedCarrera = false;
 
   Concepto: any[]=[];
   Objetivo: any[]=[];
   Perfil: any[]=[];
-  MateriaB: any[]=[];
-  MateriaO: any[]=[];
-  Campo: any[]=[];
+  Estructura: any[]=[];
+  Duracion: any[]=[];
+  Carrera: any[]=[];
 
   ingresarConcepto: FormGroup;
   ingresarObjetivo: FormGroup;
   ingresarPerfil: FormGroup;
-  ingresarMateriaB: FormGroup;
-  ingresarMateriaO: FormGroup;
-  ingresarCampo: FormGroup;
+  ingresarEstructura: FormGroup;
+  ingresarDuracion: FormGroup;
+  ingresarCarrera: FormGroup;
 
-  constructor(private fbq: FormBuilder, private _MeficienciaService: MeficienciaService) {
+  constructor(private fbq: FormBuilder, private _MgestionService: MgestionService) {
     this.ingresarConcepto=this.fbq.group({
-      ConceptoEficiencia:['', Validators.required]
+      ConceptoGestion:['', Validators.required]
     })
     this.ingresarObjetivo=this.fbq.group({
-      ObjetivoEficiencia:['', Validators.required]
+      ObjetivoGestion:['', Validators.required]
     })
     this.ingresarPerfil=this.fbq.group({
-      PerfilEficiencia:['', Validators.required]
+      PerfilGestion:['', Validators.required]
     })
-    this.ingresarMateriaB=this.fbq.group({
-      MateriaBEficiencia:['', Validators.required]
+    this.ingresarEstructura=this.fbq.group({
+      EstructuraGestion:['', Validators.required]
     })
-    this.ingresarMateriaO=this.fbq.group({
-      MateriaOEficiencia:['', Validators.required]
+    this.ingresarDuracion=this.fbq.group({
+      DuracionGestion:['', Validators.required]
     })
-    this.ingresarCampo=this.fbq.group({
-      CampoEficiencia:['', Validators.required]
+    this.ingresarCarrera=this.fbq.group({
+      CarreraGestion:['', Validators.required]
     })
   }
 
@@ -56,9 +56,9 @@ export class ControlMeficienciaComponent implements OnInit {
     this.getConcepto(),
     this.getObjetivo(),
     this.getPerfil(),
-    this.getMateriaB(),
-    this.getMateriaO(),
-    this.getCampo()
+    this.getEstructura(),
+    this.getDuracion(),
+    this.getCarrera()
   }
 
   /*AGREGAR REGISTROS*/
@@ -68,9 +68,9 @@ export class ControlMeficienciaComponent implements OnInit {
       return;
     }
     const Concepto : any={
-      ConceptosMeficienciaDesc: this.ingresarConcepto.value.ConceptoEficiencia
+      ConceptosGestionDesc: this.ingresarConcepto.value.ConceptoGestion
     }
-    this._MeficienciaService.crearConcepto(Concepto).then(()=>{
+    this._MgestionService.crearConcepto(Concepto).then(()=>{
       console.log('REGISTRO AGREGADO...');
     }).catch(error =>{
       console.log(error);
@@ -83,9 +83,9 @@ export class ControlMeficienciaComponent implements OnInit {
       return;
     }
     const Objetivo : any={
-      ObjetivoMeficienciaDesc: this.ingresarObjetivo.value.ObjetivoEficiencia
+      ObjetivoGestionDesc: this.ingresarObjetivo.value.ObjetivoGestion
     }
-    this._MeficienciaService.crearObjetivo(Objetivo).then(()=>{
+    this._MgestionService.crearObjetivo(Objetivo).then(()=>{
       console.log('REGISTRO AGREGADO...');
     }).catch(error =>{
       console.log(error);
@@ -98,54 +98,54 @@ export class ControlMeficienciaComponent implements OnInit {
       return;
     }
     const Perfil : any={
-      PerfilMeficienciaDesc: this.ingresarPerfil.value.PerfilEficiencia
+      PerfilGestionOpc: this.ingresarPerfil.value.PerfilGestion
     }
-    this._MeficienciaService.crearPerfil(Perfil).then(()=>{
+    this._MgestionService.crearPerfil(Perfil).then(()=>{
       console.log('REGISTRO AGREGADO...');
     }).catch(error =>{
       console.log(error);
     })
   }
 
-  agregarMateriaB(){
-    this.submitedMateriaB=true;
-    if(this.ingresarMateriaB.invalid){
+  agregarEstructura(){
+    this.submitedEstructura=true;
+    if(this.ingresarEstructura.invalid){
       return;
     }
-    const MateriaB : any={
-      EficienciaMateriaBasica: this.ingresarMateriaB.value.MateriaBEficiencia
+    const Estructura : any={
+      EstructuraGestionOpc: this.ingresarEstructura.value.EstructuraGestion
     }
-    this._MeficienciaService.crearMateriaB(MateriaB).then(()=>{
+    this._MgestionService.crearEstructura(Estructura).then(()=>{
       console.log('REGISTRO AGREGADO...');
     }).catch(error =>{
       console.log(error);
     })
   }
 
-  agregarMateriaO(){
-    this.submitedMateriaO=true;
-    if(this.ingresarMateriaO.invalid){
+  agregarDuracion(){
+    this.submitedDuracion=true;
+    if(this.ingresarDuracion.invalid){
       return;
     }
-    const MateriaO : any={
-      EficienciaMateriaOptativa: this.ingresarMateriaO.value.MateriaOEficiencia
+    const Duracion : any={
+      DuracionGestionDesc: this.ingresarDuracion.value.DuracionGestion
     }
-    this._MeficienciaService.crearMateriaO(MateriaO).then(()=>{
+    this._MgestionService.crearDuracion(Duracion).then(()=>{
       console.log('REGISTRO AGREGADO...');
     }).catch(error =>{
       console.log(error);
     })
   }
 
-  agregarCampo(){
-    this.submitedCampo=true;
-    if(this.ingresarCampo.invalid){
+  agregarCarrera(){
+    this.submitedCarrera=true;
+    if(this.ingresarCarrera.invalid){
       return;
     }
-    const Campo : any={
-      CampoMeficienciaOpc: this.ingresarCampo.value.CampoEficiencia
+    const Carrera : any={
+      CarrerasGestionOpc: this.ingresarCarrera.value.CarreraGestion
     }
-    this._MeficienciaService.crearCampo(Campo).then(()=>{
+    this._MgestionService.crearCarrera(Carrera).then(()=>{
       console.log('REGISTRO AGREGADO...');
     }).catch(error =>{
       console.log(error);
@@ -170,7 +170,7 @@ export class ControlMeficienciaComponent implements OnInit {
 
   /*OBTENER DATOS*/
   getConcepto(){
-    this._MeficienciaService.getConcepto().subscribe(data =>{
+    this._MgestionService.getConcepto().subscribe(data =>{
       this.Concepto=[];
       data.forEach((element:any) =>{
         /*console.log(element.payload.doc.data());*/
@@ -184,7 +184,7 @@ export class ControlMeficienciaComponent implements OnInit {
   }
 
   getObjetivo(){
-    this._MeficienciaService.getObjetivo().subscribe(data =>{
+    this._MgestionService.getObjetivo().subscribe(data =>{
       this.Objetivo=[];
       data.forEach((element:any) =>{
         /*console.log(element.payload.doc.data());*/
@@ -198,7 +198,7 @@ export class ControlMeficienciaComponent implements OnInit {
   }
 
   getPerfil(){
-    this._MeficienciaService.getPerfil().subscribe(data =>{
+    this._MgestionService.getPerfil().subscribe(data =>{
       this.Perfil=[];
       data.forEach((element:any) =>{
         /*console.log(element.payload.doc.data());*/
@@ -211,51 +211,51 @@ export class ControlMeficienciaComponent implements OnInit {
     })
   }
 
-  getMateriaB(){
-    this._MeficienciaService.getMateriaB().subscribe(data =>{
-      this.MateriaB=[];
+  getEstructura(){
+    this._MgestionService.getEstructura().subscribe(data =>{
+      this.Estructura=[];
       data.forEach((element:any) =>{
         /*console.log(element.payload.doc.data());*/
-        this.MateriaB.push({
+        this.Estructura.push({
           id:element.payload.doc.id,
           ...element.payload.doc.data()
         })
       })
-      console.log(this.MateriaB);
+      console.log(this.Estructura);
     })
   }
 
-  getMateriaO(){
-    this._MeficienciaService.getMateriaO().subscribe(data =>{
-      this.MateriaO=[];
+  getDuracion(){
+    this._MgestionService.getDuracion().subscribe(data =>{
+      this.Duracion=[];
       data.forEach((element:any) =>{
         /*console.log(element.payload.doc.data());*/
-        this.MateriaO.push({
+        this.Duracion.push({
           id:element.payload.doc.id,
           ...element.payload.doc.data()
         })
       })
-      console.log(this.MateriaO);
+      console.log(this.Duracion);
     })
   }
 
-  getCampo(){
-    this._MeficienciaService.getCampo().subscribe(data =>{
-      this.Campo=[];
+  getCarrera(){
+    this._MgestionService.getCarrera().subscribe(data =>{
+      this.Carrera=[];
       data.forEach((element:any) =>{
         /*console.log(element.payload.doc.data());*/
-        this.Campo.push({
+        this.Carrera.push({
           id:element.payload.doc.id,
           ...element.payload.doc.data()
         })
       })
-      console.log(this.Campo);
+      console.log(this.Carrera);
     })
   }
 
    /*ELIMINAR*/
    eliminaConcepto(id:string){
-    this._MeficienciaService.eliminaConcepto(id).then(()=>{
+    this._MgestionService.eliminaConcepto(id).then(()=>{
       console.log('REGISTRO ELIMINADO');
     }).catch(error =>{
       console.log(error);
@@ -263,7 +263,7 @@ export class ControlMeficienciaComponent implements OnInit {
   }
 
   eliminaObjetivo(id:string){
-    this._MeficienciaService.eliminaObjetivo(id).then(()=>{
+    this._MgestionService.eliminaObjetivo(id).then(()=>{
       console.log('REGISTRO ELIMINADO');
     }).catch(error =>{
       console.log(error);
@@ -271,31 +271,31 @@ export class ControlMeficienciaComponent implements OnInit {
   }
 
   eliminaPerfil(id:string){
-    this._MeficienciaService.eliminaPerfil(id).then(()=>{
+    this._MgestionService.eliminaPerfil(id).then(()=>{
       console.log('REGISTRO ELIMINADO');
     }).catch(error =>{
       console.log(error);
     })
   }
 
-  eliminaMateriaB(id:string){
-    this._MeficienciaService.eliminaMateriaB(id).then(()=>{
+  eliminaEstructura(id:string){
+    this._MgestionService.eliminaEstructura(id).then(()=>{
       console.log('REGISTRO ELIMINADO');
     }).catch(error =>{
       console.log(error);
     })
   }
 
-  eliminaMateriaO(id:string){
-    this._MeficienciaService.eliminaMateriaO(id).then(()=>{
+  eliminaDuracion(id:string){
+    this._MgestionService.eliminaDuracion(id).then(()=>{
       console.log('REGISTRO ELIMINADO');
     }).catch(error =>{
       console.log(error);
     })
   }
 
-  eliminaCampo(id:string){
-    this._MeficienciaService.eliminaCampo(id).then(()=>{
+  eliminaCarrera(id:string){
+    this._MgestionService.eliminaCarrera(id).then(()=>{
       console.log('REGISTRO ELIMINADO');
     }).catch(error =>{
       console.log(error);
@@ -303,3 +303,4 @@ export class ControlMeficienciaComponent implements OnInit {
   }
 
 }
+
