@@ -20,12 +20,14 @@ export class CarreraPrincipalComponent implements OnInit {
   ingresarVisionDiv: FormGroup;
   ingresarDoc: FormGroup;
   ingresarImg: FormGroup;
+  actMision: FormGroup;
   submitedMision = false;
   submitedVision = false;
   submitedMisionDiv = false;
   submitedVisionDiv = false;
   submitedDoc = false;
   submitedImg = false;
+  subMision = false;
 
   constructor(private fbm: FormBuilder, private _PrincipalService: PrincipalService) {
     this.ingresarMision = this.fbm.group({
@@ -46,6 +48,9 @@ export class CarreraPrincipalComponent implements OnInit {
     })
     this.ingresarImg = this.fbm.group({
       contenido_Img:['',Validators.required]
+    })
+    this.actMision = this.fbm.group({
+      mision_contenido:['',Validators.required]
     })
   }
 
@@ -258,19 +263,5 @@ export class CarreraPrincipalComponent implements OnInit {
   }
 
 
-  editaMision(id:string,cont:string){
-    if(id!==null){
-      const mision:any={
-        contenido: cont,
-        fechaactualizacion: new Date()
-      }
-      this._PrincipalService.actMision(id,mision).then(()=>{
 
-      })
-    }
-  }
-  dato:string;
-  act(dat:string){
-    this.dato=dat;
-  }
 }

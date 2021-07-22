@@ -2,7 +2,7 @@
   <mat-drawer-container class="side-container">
     <mat-drawer mode="side"class="sidebar" id="side" #drawer opened>
       <mat-selection-list role="list-container" [multiple]="false">
-        <a href="Admin-Carrera/ContadorPublico">
+        <a href="Admin-Carrera/Contador">
           <mat-list-option>
             Contador Publico
           </mat-list-option>
@@ -112,17 +112,14 @@
       <br>
       <h1 class="fw-bold lh-sm fs-4 shadow p-3 mb-5 bg-body rounded" *ngIf="Objetivo.length==0">No hay datos en Objetivo para mostrar</h1>
       <form *ngIf="Objetivo.length>0">
-        <label for="inputAddress" class="form-label fw-bold" >Eliminar y Editar</label>
+        <label for="inputAddress" class="form-label fw-bold" >Eliminar</label>
         <div *ngFor="let Objetivo of Objetivo " class="row" >
-          <div class="col-8">
-            <input type="text" class="form-control" id="inputAddressObjetivo" value="{{Objetivo.contenido}}">
+          <div class="col-10">
+            <input type="text" class="form-control" id="inputAddressObjetivo" value="{{Objetivo.contenido}}" disabled>
 
           </div>
           <div class="col float-rigth">
             <button type="button" (click)="eliminaObjetivo(Objetivo.id)"  class="btn btn-danger">Eliminar</button>
-          </div>
-          <div class="col float-rigth" >
-            <button type="button" (click)="editaObjetivo(Objetivo.id)"  class="btn btn-success">Editar</button>
           </div>
         </div>
         <hr>
@@ -152,17 +149,14 @@
       <br>
       <h1 class="fw-bold lh-sm fs-4 shadow p-3 mb-5 bg-body rounded" *ngIf="Perfil.length==0">No hay datos en Objetivo para mostrar</h1>
       <form *ngIf="Perfil.length>0">
-        <label for="inputAddress" class="form-label fw-bold" >Eliminar y Editar</label>
+        <label for="inputAddress" class="form-label fw-bold" >Eliminar</label>
         <div *ngFor="let Perfil of Perfil " class="row" >
-          <div class="col-8">
-            <input type="text" class="form-control" id="inputAddressObjetivo" value="{{Perfil.contenido}}">
+          <div class="col-10">
+            <input type="text" class="form-control" id="inputAddressObjetivo" value="{{Perfil.contenido}}" disabled>
 
           </div>
           <div class="col float-rigth">
             <button type="button" (click)="eliminaPerfil(Perfil.id)"  class="btn btn-danger">Eliminar</button>
-          </div>
-          <div class="col float-rigth" >
-            <button type="button" (click)="editaPerfil(Perfil.id)"  class="btn btn-success">Editar</button>
           </div>
         </div>
         <hr>
@@ -192,17 +186,14 @@
       <br>
       <h1 class="fw-bold lh-sm fs-4 shadow p-3 mb-5 bg-body rounded" *ngIf="Egreso.length==0">No hay datos en Perfil de egreso para mostrar</h1>
       <form *ngIf="Egreso.length>0">
-        <label for="inputAddress" class="form-label fw-bold" >Eliminar y Editar</label>
+        <label for="inputAddress" class="form-label fw-bold" >Eliminar</label>
         <div *ngFor="let Egreso of Egreso " class="row" >
-          <div class="col-8">
-            <input type="text" class="form-control" id="inputAddressEgreso" value="{{Egreso.contenido}}">
+          <div class="col-10">
+            <input type="text" class="form-control" id="inputAddressEgreso" value="{{Egreso.contenido}}" disabled>
 
           </div>
           <div class="col float-rigth">
             <button type="button" (click)="eliminaEgreso(Egreso.id)"  class="btn btn-danger">Eliminar</button>
-          </div>
-          <div class="col float-rigth" >
-            <button type="button" (click)="editaEgreso(Egreso.id)"  class="btn btn-success">Editar</button>
           </div>
         </div>
         <hr>
@@ -232,17 +223,14 @@
       <br>
       <h1 class="fw-bold lh-sm fs-4 shadow p-3 mb-5 bg-body rounded" *ngIf="Funcion.length==0">No hay datos en Campo Laboral para mostrar</h1>
       <form *ngIf="Funcion.length>0">
-        <label for="inputAddress" class="form-label fw-bold" >Eliminar y Editar</label>
+        <label for="inputAddress" class="form-label fw-bold" >Eliminar</label>
         <div *ngFor="let Funcion of Funcion " class="row" >
-          <div class="col-8">
-            <input type="text" class="form-control" id="inputAddressCampo" value="{{Funcion.contenido}}">
+          <div class="col-10">
+            <input type="text" class="form-control" id="inputAddressCampo" value="{{Funcion.contenido}}" disabled>
 
           </div>
           <div class="col float-rigth">
             <button type="button" (click)="eliminaFuncion(Funcion.id)"  class="btn btn-danger">Eliminar</button>
-          </div>
-          <div class="col float-rigth" >
-            <button type="button" (click)="editaFuncion(Funcion.id)"  class="btn btn-success">Editar</button>
           </div>
         </div>
         <hr>
@@ -273,17 +261,13 @@
       <br>
       <h1 class="fw-bold lh-sm fs-4 shadow p-3 mb-5 bg-body rounded" *ngIf="Vision.length==0">No hay datos en Vision para mostrar</h1>
       <form *ngIf="Vision.length>0">
-        <label for="inputAddress" class="form-label fw-bold" >Eliminar y Editar</label>
+        <label for="inputAddress" class="form-label fw-bold" >Eliminar</label>
         <div *ngFor="let Vision of Vision " class="row" >
-          <div class="col-8">
-            <input type="text" class="form-control" id="inputAddressVision" value="{{Vision.contenido}}">
-
+          <div class="col-10">
+            <input type="text" class="form-control" id="inputAddressVision" value="{{Vision.contenido}}" disabled>
           </div>
           <div class="col float-rigth">
             <button type="button" (click)="eliminaVision(Vision.id)"  class="btn btn-danger">Eliminar</button>
-          </div>
-          <div class="col float-rigth" >
-            <button type="button" (click)="editaVision(Vision.id)"  class="btn btn-success">Editar</button>
           </div>
         </div>
         <hr>
@@ -317,21 +301,18 @@
       <br>
       <h1 class="fw-bold lh-sm fs-4 shadow p-3 mb-5 bg-body rounded" *ngIf="Doc.length==0">No hay datos en Documentos para mostrar</h1>
       <form *ngIf="Doc.length>0">
-        <label for="inputAddress" class="form-label fw-bold" >Eliminar y Editar</label>
+        <label for="inputAddress" class="form-label fw-bold" >Eliminar</label>
         <div *ngFor="let Doc of Doc " class="row" >
-          <div class="col-8">
+          <div class="col-10">
             Id
-            <input type="text" class="form-control" id="inputAddressDoc" value="{{Doc.id_Doc}}">
+            <input type="text" class="form-control" id="inputAddressDoc" value="{{Doc.id_Doc}}" disabled>
             Titulo-Boton
-            <input type="text" class="form-control" id="inputAddressDoc1" value="{{Doc.titulo}}">
+            <input type="text" class="form-control" id="inputAddressDoc1" value="{{Doc.titulo}}" disabled>
             Contenido-Boton
-            <input type="text" class="form-control" id="inputAddressDoc2" value="{{Doc.contenido}}">
+            <input type="text" class="form-control" id="inputAddressDoc2" value="{{Doc.contenido}}" disabled>
           </div>
           <div class="col float-rigth">
             <button type="button" (click)="eliminaDoc(Doc.id)"  class="btn btn-danger">Eliminar</button>
-          </div>
-          <div class="col float-rigth" >
-            <button type="button" (click)="editaDoc(Doc.id)"  class="btn btn-success">Editar</button>
           </div>
         </div>
         <hr>

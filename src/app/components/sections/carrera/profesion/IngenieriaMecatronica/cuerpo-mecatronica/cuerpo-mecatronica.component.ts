@@ -11,16 +11,16 @@ export class CuerpoMecatronicaComponent implements OnInit {
 
   CamLab: Observable<any[]>
   Obj: Observable<any[]>
+  ObjG: Observable<any[]>
   PerEgre: Observable<any[]>
-  Tit: Observable<any[]>
-  Cit: Observable<any[]>
+  Bot: Observable<any[]>
 
   constructor(firestore: AngularFirestore) {
     this.CamLab = firestore.collectionGroup('CampoLaboral-Mecatronica').valueChanges();
     this.Obj = firestore.collectionGroup('Objetivo-Mecatronica').valueChanges();
+    this.ObjG = firestore.collectionGroup('ObjetivoGeneral-Mecatronica').valueChanges();
     this.PerEgre = firestore.collectionGroup('PerfilEgreso-Mecatronica').valueChanges();
-    this.Tit = firestore.collectionGroup('TituloBoton-Mecatronica').valueChanges();
-    this.Cit = firestore.collectionGroup('ContenidoBoton-Mecatronica').valueChanges();
+    this.Bot = firestore.collectionGroup('Boton-Mecatronica').valueChanges();
   }
 
   ngOnInit(): void {

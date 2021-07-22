@@ -11,16 +11,16 @@ export class CuerpoQuimicaComponent implements OnInit {
 
   CamLab: Observable<any[]>
   Obj: Observable<any[]>
+  ObjG: Observable<any[]>
   PerEgre: Observable<any[]>
-  Tit: Observable<any[]>
-  Cit: Observable<any[]>
+  Bot: Observable<any[]>
 
   constructor(firestore: AngularFirestore) {
     this.CamLab = firestore.collectionGroup('CampoLaboral-Quimica').valueChanges();
     this.Obj = firestore.collectionGroup('Objetivo-Quimica').valueChanges();
+    this.ObjG = firestore.collectionGroup('ObjetivoGeneral-Quimica').valueChanges();
     this.PerEgre = firestore.collectionGroup('PerfilEgreso-Quimica').valueChanges();
-    this.Tit = firestore.collectionGroup('TituloBoton-Quimica').valueChanges();
-    this.Cit = firestore.collectionGroup('ContenidoBoton-Quimica').valueChanges();
+    this.Bot = firestore.collectionGroup('Boton-Quimica').valueChanges();
   }
 
   ngOnInit(): void {
