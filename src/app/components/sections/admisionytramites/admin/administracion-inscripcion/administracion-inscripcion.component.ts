@@ -13,7 +13,7 @@ export class AdministracionInscripcionComponent implements OnInit {
   content_precio: any [] = [];
   content_inscripcion: any [] = [];
   content_fecha: any [] = [];
-
+content_dn: any [] = [];
 
 
   ingresarContend_I: FormGroup;
@@ -63,6 +63,7 @@ export class AdministracionInscripcionComponent implements OnInit {
     this.getTitulos()
     this.getContenido_P()
     this.getContenido_F()
+    this.getContenido_DN()
   }
   onClick(){
     let full = document.getElementById('side');
@@ -230,6 +231,30 @@ eliminarContenido_F(id: string){
      )
   })
 }
+
+
+
+
+
+/* doc necesarios */
+getContenido_DN(){
+  this._inscripcionService.getContenido_DN().subscribe(data =>{
+    this.content_dn = [];
+     data.forEach((element:any) => {
+
+       this.content_dn.push({
+         id:element.payload.doc.id,
+         ...element.payload.doc.data()
+       })
+
+     });
+     console.log(this.content_dn);
+  });
+}
+
+
+
+
 
 
 

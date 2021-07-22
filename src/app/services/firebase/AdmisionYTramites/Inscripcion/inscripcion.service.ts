@@ -67,6 +67,12 @@ agregarContenido_F(contenido_F:any): Promise<any>{
 }
 
 
+/* Doc necesaria */
+
+getContenido_DN(): Observable<any>{
+  return this.firestore.collection('/AdmisionYTramites/Inscripcion/Contenido-Documentacion', ref => ref.orderBy('id','asc')).snapshotChanges();
+}
+
 
 
 

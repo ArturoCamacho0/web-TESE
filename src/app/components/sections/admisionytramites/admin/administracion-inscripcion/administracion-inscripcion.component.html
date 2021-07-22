@@ -283,6 +283,57 @@ Informacion Importante            </button>
           <div id="collapseFour" class="accordion-collapse collapse show" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
             <div class="accordion-body">
 
+              <form>
+                <label for="inputAddress" class="form-label fw-bold" >Seccion de Pagos</label>
+                <div class="row g-3" *ngFor="let precio_contents of content_dn">
+
+                  <label for="inputAddress" class="form-label" >Posicion en Pagina</label>
+                  <div class="col-2">
+                    <input class="form-control" value="{{precio_contents.id}}" row="3" type="number">
+                  </div>
+
+                  <label for="inputAddress" class="form-label" >Contenido de Parrafo</label>
+                  <div class="col-11" >
+                    <textarea class="form-control" id="exampleFormControlTextarea1" value="{{precio_contents.contenido}}" rows="3"></textarea>
+                  </div>
+
+                  <div class="col">
+                    <button type="button" (click)="eliminarContenido_P(precio_contents.id)" class="btn btn-danger">Eliminar</button>
+                  </div>
+
+                </div>
+
+              </form>
+
+              <form [formGroup]="ingresarContend_P" (ngSubmit)="agregarContenido_P()">
+                <div class="row g-3">
+                     <label for="inputAddress" class="form-label fw-bold; center-align" >Agregar Contenido</label>
+                     <span *ngIf="submited_contenido_P && ingresarContend_P.invalid" class="alert alert-danger">El campo debe tener datos para Agregar</span>
+
+                <label for="inputAddress" class="form-label fw-bold" >Posicion en pagina</label>
+                <div class="col-2" >
+                 <input type="number" class="form-control" id="exampleFormControlTextarea1" value="" rows="3" placeholder="Contenido" formControlName="id_precio">
+                </div>
+
+
+                <label for="inputAddress" class="form-label fw-bold" >Contenido</label>
+                <div class="col-11" >
+                  <textarea class="form-control" id="exampleFormControlTextarea1" value="" rows="3" placeholder="Contenido" formControlName="contenidoprecio"></textarea>
+                </div>
+
+
+
+                <div class="col">
+                  <button type="submit" class="btn btn-success">Agregar</button>
+                </div>
+
+                </div>
+
+              </form>
+
+
+
+
             </div>
           </div>
         </div>
