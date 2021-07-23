@@ -1,0 +1,232 @@
+<div class="">
+<mat-drawer-container class="side-container">
+  <mat-drawer mode="side"class="sidebar" id="side" #drawer opened>
+    <mat-selection-list role="list-container" [multiple]="false">
+
+
+
+      <a href="Mision">
+        <mat-list-option>
+          Mision Vision
+        </mat-list-option>
+      </a>
+      <a href="Logo">
+        <mat-list-option >
+          Logo
+        </mat-list-option>
+      </a>
+      <div *ngFor="let dir_organigrama of organigrama">
+        <a href="{{dir_organigrama.Dir}}">
+        <mat-list-option >
+          Organigrama
+        </mat-list-option>
+      </a>
+    </div>
+
+    </mat-selection-list>
+  </mat-drawer>
+
+  <mat-drawer-content class="side-content">
+    <button id="arrow" type="button" mat-button (click)="drawer.toggle()" (click)="open()">
+      <mat-icon id="right" class="open">arrow_forward</mat-icon>
+      <mat-icon id="left">arrow_back</mat-icon>
+    </button>
+    <mat-divider class="divider"></mat-divider>
+
+  <div class="text-side">
+    <div class="box-shadow= 50px 50px;">
+      <nav arial-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a class="ubicacion-pag" href="#">Home</a></li>
+          <li class="breadcrumb-item"><a class="ubicacion-pag" href="#">Identidad Institucional</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Historia</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <app-carousel [items]="carouselData" ></app-carousel>
+  <div class="lh-sm fs-4 shadow p-3 mb-5 bg-body rounded">
+    <div *ngFor="let title of titles" >
+    <h1 class="titulo-item text-center fs-4 fw-bold  mb-5">{{title.Titulo}}</h1>
+    </div>
+    <div *ngFor="let contend of contends_historia " class=" margen">
+      <P>
+        {{contend.contenido}}
+    <br>
+  </P></div>
+
+
+</div>
+
+
+
+  <div class="lh-sm fs-4 accordion accordion-flush shadow p-3 mb-5 bg-body rounded" id="accordionFlushExample">
+
+      <p class="fw-bold">Proporciona enseñanza superior en 11 carreras y seis posgrados, siendo estos:</p>
+
+
+    <div class="accordion-item " >
+      <h2 class="accordion-header" id="flush-headingOne">
+        <button class="accordion-button accordion-color-collapse collapsed lh-sm fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+          Carreras
+        </button>
+      </h2>
+      <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body lh-sm fs-4">
+
+          <div class="row">
+
+            <div class="col-sm-3 mb-3" *ngFor="let dropdowns_title of dropdown_carreras " >
+
+              <div class="card">
+                <img src="{{dropdowns_title.Dir_subdrop}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h3 class="card-title"> {{dropdowns_title.Titulo_subdrop}}</h3>
+
+                  <a href="#" class="btn btn-danger">Mas Info..</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingTwo">
+        <button class="accordion-button accordion-color-collapse collapsed lh-sm fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+          Posgrados
+        </button>
+      </h2>
+      <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+
+          <div class="row g-3">
+
+            <div class="col-3 mb-3 center" *ngFor="let A_dropdowns_titles of dropdown_posgrados">
+              <div class="card">
+                <img src="{{A_dropdowns_titles.Dir_subdrop}}" class="card-img-top" alt="..." >
+                <div class="card-body">
+                  <h3 class="card-title">{{A_dropdowns_titles.Titulo_subdrop}}</h3>
+                  <a href="#" class="btn btn-danger">Mas Info..</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="accordion accordion-flush lh-sm fs-4 shadow p-3 mb-5  bg-body rounded" id="accordionFlushExample">
+    <p class="fw-bold">Actividades TESE</p>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingTree">
+        <button class="accordion-button accordion-color-collapse collapsed lh-sm fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTree" aria-expanded="false" aria-controls="flush-collapseTree">
+          Programas educativos del TESE
+        </button>
+      </h2>
+      <div id="flush-collapseTree" class="accordion-collapse collapse" aria-labelledby="flush-headingTree" data-bs-parent="#accordionFlushExample">
+
+
+        <div class="accordion-body" *ngFor="let B_dropdowns_titles of dropdown_programas">
+          <P>
+            {{B_dropdowns_titles.contenido}}
+          </P>
+          <br>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingFour">
+        <button class="accordion-button accordion-color-collapse collapsed lh-sm fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+          Ambito académico
+        </button>
+      </h2>
+      <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body"  *ngFor="let C_dropdowns_titles of dropdown_ambito">
+          <p>
+            {{C_dropdowns_titles.contenido}}
+          </p>
+          <br>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingFive">
+        <button class="accordion-button accordion-color-collapse collapsed lh-sm fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+          Programas de investigación tecnológica
+        </button>
+      </h2>
+      <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body" *ngFor="let D_dropdowns_titles of dropdown_investigacion">
+          <p>
+            {{D_dropdowns_titles.contenido}}
+          </p>
+          <br>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="accordion accordion-flush lh-sm fs-4 shadow p-3 bg-body rounded" id="accordionFlushExample">
+    <p class="fw-bold">Extra</p>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingSix">
+        <button class="accordion-button accordion-color-collapse collapsed lh-sm fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+        2014 Norma ISO: 14000
+        </button>
+      </h2>
+      <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body" *ngFor="let E_dropdowns_titles of dropdown_normas">
+          <p>
+            {{E_dropdowns_titles.contenido}}
+          </p>
+          <br>
+
+
+
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingSeven">
+        <button class="accordion-button accordion-color-collapse collapsed lh-sm fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+        Cursos TESE
+        </button>
+      </h2>
+      <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body" *ngFor="let F_dropdowns_titles of dropdown_cursos ">
+          <p>
+            {{F_dropdowns_titles.contenido}}
+          </p>
+          <br>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  </mat-drawer-content>
+</mat-drawer-container>
+</div>

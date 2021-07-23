@@ -1,0 +1,685 @@
+
+
+
+
+
+
+<div class="">
+  <mat-drawer-container class="side-container">
+    <mat-drawer mode="side"class="sidebar" id="side" #drawer opened>
+      <mat-selection-list role="list-container" [multiple]="false">
+        <a href="admin-logo">
+          <mat-list-option>
+            Logo
+          </mat-list-option>
+        </a>
+        <a href="admin-mision">
+          <mat-list-option role="/Logo">
+            Mision Vision
+          </mat-list-option>
+        </a>
+
+        <a href="admin-organigrama">
+          <mat-list-option role="/Logo">
+            Organigrama
+          </mat-list-option>
+        </a>
+      </mat-selection-list>
+    </mat-drawer>
+
+    <mat-drawer-content class="side-content">
+      <button id="arrow" type="button" mat-button (click)="drawer.toggle()" (click)="open()">
+        <mat-icon id="right" class="open">arrow_forward</mat-icon>
+        <mat-icon id="left">arrow_back</mat-icon>
+      </button>
+      <mat-divider class="divider"></mat-divider>
+
+    <div class="text-side">
+      <div class="box-shadow= 50px 50px;">
+        <nav arial-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a class="ubicacion-pag" href="#">Administracion</a></li>
+            <li class="breadcrumb-item"><a class="ubicacion-pag" href="#">Identidad Institucional</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Historia</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
+    <h1 class="fw-bold lh-sm fs-4 shadow p-3 mb-5 bg-body rounded">Panel Administracion Historia</h1>
+
+    <section class="lh-sm fs-4 shadow p-3 mb-5 bg-body rounded">
+      <h1 class="fw-bold lh-sm fs-4 ">Contenido Principal</h1>
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingHome">
+            <button class="accordion-button accordion-color-collapse" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseHome" aria-expanded="false" aria-controls="flush-collapseHome">
+              Contenido
+            </button>
+          </h2>
+          <div id="flush-collapseHome" class="accordion-collapse collapse" aria-labelledby="flush-headingHome" data-bs-parent="#accordionFlushExample">
+
+
+              <form>
+                <div *ngFor="let historia_titles of titles" class="row g-3">
+
+                  <hr>
+                  <div class="col-10">
+                   <p class="fw-bold">{{historia_titles.Titulo}}</p>
+                  </div>
+
+                </div>
+              </form>
+              <br>
+              <form>
+                <label for="inputAddress" class="form-label " >CONTENIDO</label>
+                <div class="row g-3" *ngFor="let historia_contends of contends_historia">
+
+
+                  <div class="col-10">
+                    <label for="inputAddress" class="form-label" >Posicion en Pagina : {{historia_contends.id_contenido}}</label>
+
+
+                  </div>
+
+                  <label for="inputAddress" class="form-label" >Contenido de Parrafo.</label>
+                  <div class="col-10" >
+                    <p class="fs-6">{{historia_contends.contenido}}</p>
+
+                  </div>
+
+                  <div class="col">
+                    <button type="button" (click)="eliminarContenido_H(historia_contends.id)" class="btn btn-danger">Eliminar</button>
+                  </div>
+                <hr>
+                </div>
+
+              </form>
+              <hr>
+
+
+              <form [formGroup]="ingresarContend_H" (ngSubmit)="agregarContenido_H()">
+                <div class="row g-3">
+                     <label for="inputAddress" class="form-label fw-bold" >Agregar Contenido</label>
+                     <span *ngIf="submited_contenido_H && ingresarContend_H.invalid" class="alert alert-danger">El campo debe tener datos para Agregar</span>
+
+                <label for="inputAddress" class="form-label fw-bold" >Posicion en pagina</label>
+                <div class="col-2" >
+                 <input type="number" class="form-control" id="exampleFormControlTextarea1" value="" rows="3" placeholder="Contenido" formControlName="id_contenido">
+                </div>
+
+
+                <label for="inputAddress" class="form-label fw-bold" >Contenido</label>
+                <div class="col-10" >
+                  <textarea class="form-control" id="exampleFormControlTextarea1" value="" rows="3" placeholder="Contenido" formControlName="contenido_h"></textarea>
+                </div>
+
+
+
+                <div class="col">
+                  <button type="submit" class="btn btn-success">Agregar</button>
+                </div>
+
+                </div>
+
+              </form>
+
+
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+
+
+
+
+
+    <section class="lh-sm fs-4 shadow p-3 mb-5 bg-body rounded">
+      <label for="inputAddress" class="form-label fw-bold" >Seccion Despegable Carreras y Posgrados</label>
+      <hr>
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button accordion-color-collapse collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+             Administrar Carreras
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+            <form>
+              <div>
+
+              <hr>
+              <label for="inputAddress" class="form-label" >CARRERAS</label>
+
+              <div class="row g-3">
+
+                <div class="col-3">
+
+                  <h3 class="fw-bold">Ruta Imagen.</h3>
+                </div>
+
+                <div class="col-3">
+                  <h3 class="fw-bold">Nombre.</h3>
+                </div>
+
+                <div class="col-3">
+                  <h3 class="fw-bold">Enlace.</h3>
+                </div>
+
+
+              </div>
+
+              <div class="row g-3" *ngFor="let carreras_dropdown of dropdown_carreras">
+
+                <div class="col-3">
+                  <p class="fs-6">{{carreras_dropdown.Dir_subdrop}}</p>
+
+                </div>
+
+                <div class="col-3">
+                  <p class="fs-6">{{carreras_dropdown.Titulo_subdrop}}</p>
+
+                </div>
+
+                <div class="col-3">
+                  <p class="fs-6">{{carreras_dropdown.ruta}}</p>
+
+                </div>
+
+                <div class="col">
+                  <button type="button"  (click)="eliminarCarrera(carreras_dropdown.id)" class="btn btn-danger">Eliminar</button>
+                </div>
+
+                <div class="col">
+                  <button type="button" [routerLink]="['/edit-carrera-historia/',carreras_dropdown.id]" class="btn btn-success">Editar</button>
+                </div>
+
+                <hr>
+              </div>
+
+
+            </div>
+          </form>
+          <br>
+          <label for="inputAddress" class="form-label" >Agregar Carrera</label>
+    <hr>
+    <form [formGroup]="ingresarCarreras" (ngSubmit)="agregarCarrera()">
+      <div class="row g-3">
+        <span *ngIf="submited_carreras && ingresarCarreras.invalid" class="alert alert-danger">Los campos deben tener datos para Agregar</span>
+
+
+        <div class="col-4">
+          <h3 class="fw-bold">Ruta Imagen</h3>
+        </div>
+
+        <div class="col-3">
+          <h3 class="fw-bold">Nombre</h3>
+        </div>
+
+        <div class="col-3">
+          <h3 class="fw-bold">Enlace</h3>
+        </div>
+
+      </div>
+      <div class="row g-3">
+
+        <div class="col-4">
+          <input type="text" class="form-control" id="inputAddress" value="" placeholder="Ruta Imagen" formControlName="Dir_imagen">
+        </div>
+
+        <div class="col-3">
+          <input type="text" class="form-control" id="inputAddress" value="" placeholder="Nombre de carrera" formControlName="Nombre_Carrera">
+        </div>
+
+        <div class="col-3">
+          <input type="text" class="form-control" id="inputAddress" value="" placeholder="Enlace a carrera" formControlName="ruta" >
+        </div>
+
+        <div class="col">
+          <button type="submit" class="btn btn-success">Agregar</button>
+        </div>
+
+      </div>
+
+    </form>
+    <br>
+    <hr>
+           </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingTwo">
+            <button class="accordion-button accordion-color-collapse collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+             Administrar Posgrados
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+            <form>
+              <div>
+                <hr>
+              <label for="inputAddress" class="form-label" >POSGRADOS</label>
+
+              <div class="row g-3">
+
+                <div class="col-3">
+                  <h3 class="fw-bold">Ruta Imagen</h3>
+                </div>
+
+                <div class="col-3">
+                  <h3 class="fw-bold">Nombre</h3>
+                </div>
+
+                <div class="col-3">
+                  <h3 class="fw-bold">Enlace</h3>
+                </div>
+
+              </div>
+
+              <div class="row g-3" *ngFor="let posgrados_dropdown of dropdown_posgrados ">
+
+                <div class="col-3">
+                  <p class="fs-6">{{posgrados_dropdown.Dir_subdrop}}</p>
+
+                </div>
+
+                <div class="col-3">
+                  <p class="fs-6">{{posgrados_dropdown.Titulo_subdrop}}</p>
+
+                </div>
+
+                <div class="col-3">
+                  <p class="fs-6">{{posgrados_dropdown.ruta}}</p>
+
+                </div>
+
+                <div class="col">
+                  <button type="button" (click)="eliminarPosgrado(posgrados_dropdown.id)" class="btn btn-danger">Eliminar</button>
+                </div>
+
+                <div class="col">
+                  <button type="button" [routerLink]="['/edit-posgrado-historia/',posgrados_dropdown.id]" class="btn btn-success">Editar</button>
+                </div>
+                <hr>
+              </div>
+
+            </div>
+          </form>
+          <hr>
+          <label for="inputAddress" class="form-label">Agregar Posgrado</label>
+            <hr>
+            <form [formGroup]="ingresarPosgrados" (ngSubmit)="agregarPosgrado()">
+              <div class="row g-3">
+                <span *ngIf="submited_posgrado && ingresarPosgrados.invalid" class="alert alert-danger">Los campos deben tener datos para Agregar</span>
+
+                <div class="col-4">
+                  <h3 class="fw-bold">Ruta Imagen</h3>
+                </div>
+
+                <div class="col-3">
+                  <h3 class="fw-bold">Nombre</h3>
+                </div>
+
+                <div class="col-3">
+                  <h3 class="fw-bold">Enlace</h3>
+                </div>
+
+              </div>
+              <div class="row g-3">
+
+                <div class="col-4">
+                  <input type="text" class="form-control" id="inputAddress" value="" placeholder="Ruta Imagen" formControlName="Dir_imagen">
+                </div>
+
+                <div class="col-3">
+                  <input type="text" class="form-control" id="inputAddress" value="" placeholder="Nombre de carrera" formControlName="Nombre_Posgrado">
+                </div>
+
+                <div class="col-3">
+                  <input type="text" class="form-control" id="inputAddress" value="" placeholder="Enlace a posgrado" formControlName="ruta">
+                </div>
+
+                <div class="col">
+                  <button type="submit" class="btn btn-success">Agregar</button>
+                </div>
+
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lh-sm fs-4 shadow p-3 mb-5 bg-body rounded">
+      <label for="inputAddress" class="form-label fw-bold" >Seccion Despegable Actividades TESE</label>
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingTree">
+            <button class="accordion-button accordion-color-collapse" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTree" aria-expanded="false" aria-controls="flush-collapseTree">
+              Administrar Programas Educativos TESE.
+            </button>
+          </h2>
+          <div id="flush-collapseTree" class="accordion-collapse collapse" aria-labelledby="flush-headingTree" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+
+              <form>
+                <div>
+                <hr>
+                <label for="inputAddress" class="form-label" >PROGRAMAS EDUCATIVOS</label>
+
+                <div class="row g-3" *ngFor="let programas_dropdown of dropdown_programas ">
+
+
+                  <div class="col-10">
+                    <label for="inputAddress" class="form-label" >Posicion en Pagina: {{programas_dropdown.id_programa}}</label>
+                  </div>
+
+                  <label for="inputAddress" class="form-label" >Contenido de Parrafo</label>
+                  <div class="col-10" >
+                    <p class="fs-6">{{programas_dropdown.contenido}}</p>
+
+                  </div>
+
+                  <div class="col">
+                    <button type="button" (click)="eliminarPrograma(programas_dropdown.id)" class="btn btn-danger">Eliminar</button>
+                  </div>
+
+
+
+                </div>
+
+                </div>
+              </form>
+              <hr>
+              <label for="inputAddress" class="form-label" >Agregar Contenido</label>
+              <form [formGroup]="ingresarPrograma" (ngSubmit)="agregarPrograma()">
+                <div class="row g-3">
+                  <span *ngIf="submited_programa && ingresarPrograma.invalid" class="alert alert-danger">El campo debe tener datos para Agregar</span>
+
+                  <label for="inputAddress" class="form-label" >Posicion en Pagina</label>
+                  <div class="col-2" >
+                    <input class="form-control" id="exampleFormControlTextarea1" value="" rows="3" placeholder="Posicion del parrafo" formControlName="id_programa" type="number">
+                  </div>
+
+                  <label for="inputAddress" class="form-label" >Contenido</label>
+                  <div class="col-10" >
+                    <textarea class="form-control" id="exampleFormControlTextarea1" value="" rows="3" placeholder="Contenido" formControlName="contenido_pro"></textarea>
+                  </div>
+
+                  <div class="col">
+                    <button type="submit" class="btn btn-success">Agregar</button>
+                  </div>
+
+                </div>
+              </form>
+
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingFour">
+            <button class="accordion-button accordion-color-collapse collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+              Administrar Ambito Academico.
+            </button>
+          </h2>
+          <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+
+              <form>
+                <div>
+                <hr>
+                <label for="inputAddress" class="form-label" >AMBITO ACADEMICO</label>
+
+                <div class="row g-3" *ngFor="let ambito_dropdown of dropdown_ambito">
+
+
+                  <div class="col-10">
+                    <label for="inputAddress" class="form-label" >Posicion en Pagina : {{ambito_dropdown.id_ambito}}</label>
+                  </div>
+
+                  <label for="inputAddress" class="form-label" >Contenido</label>
+                  <div class="col-10" >
+                    <p class="fs-6"> {{ambito_dropdown.contenido}}</p>
+
+                  </div>
+
+                  <div class="col">
+                    <button type="button" (click)="eliminarAmbito(ambito_dropdown.id)" class="btn btn-danger">Eliminar</button>
+                  </div>
+
+                </div>
+
+                </div>
+              </form>
+
+              <hr>
+              <label for="inputAddress" class="form-label" >Agregar Contenido</label>
+              <form [formGroup]="ingresarAmbito" (ngSubmit)="agregarAmbito()">
+                <div class="row g-3">
+                  <span *ngIf="submited_ambito && ingresarAmbito.invalid" class="alert alert-danger">El campo debe tener datos para Agregar</span>
+
+                  <label for="inputAddress" class="form-label" >Posicion en Pagina </label>
+                  <div class="col-2" >
+                    <input class="form-control" id="exampleFormControlTextarea1" value="" rows="3" placeholder="Posicion del parrafo" formControlName="id_ambito" type="number">
+                  </div>
+
+                  <label for="inputAddress" class="form-label" >Contenido</label>
+                  <div class="col-10" >
+                    <textarea class="form-control" id="exampleFormControlTextarea1" value="" rows="3" placeholder="Contenido" formControlName="contenido_amb"></textarea>
+                  </div>
+
+                  <div class="col">
+                    <button type="submit" class="btn btn-success">Agregar</button>
+                  </div>
+
+                </div>
+              </form>
+
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingFive">
+            <button class="accordion-button accordion-color-collapse collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+              Administrar Programas de Investigacion.
+            </button>
+          </h2>
+          <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+
+              <form>
+                <div>
+                <hr>
+                <label for="inputAddress" class="form-label" >PROGRAMAS DE INVESTIGACION TECNOLOGICA</label>
+
+                <div class="row g-3" *ngFor="let investigacion_dropdown of dropdown_investigacion">
+
+
+                  <div class="col-10">
+                     <label for="inputAddress" class="form-label" >Posicion en Pagina : {{investigacion_dropdown.id_programa}}</label>
+                  </div>
+
+                  <div class="col-10" >
+                    <p class="fs-6">{{investigacion_dropdown.contenido}}</p>
+
+                  </div>
+
+                  <div class="col">
+                    <button type="button" (click)="eliminarInvestigacion(investigacion_dropdown.id)" class="btn btn-danger">Eliminar</button>
+                  </div>
+
+                </div>
+
+                </div>
+              </form>
+              <hr>
+              <label for="inputAddress" class="form-label" >Agregar Contenido</label>
+              <form [formGroup]="ingresarInvestigacion" (ngSubmit)="agregarInvestigacion()">
+                <div class="row g-3">
+                  <span *ngIf="submited_investigacion && ingresarInvestigacion.invalid" class="alert alert-danger">El campo debe tener datos para Agregar</span>
+
+                  <label for="inputAddress" class="form-label" >Posicion en Pagina</label>
+                  <div class="col-2" >
+                    <input class="form-control" id="exampleFormControlTextarea1" value="" rows="3" placeholder="Posicion del parrafo" formControlName="id_programa" type="number">
+                  </div>
+
+
+                  <label for="inputAddress" class="form-label" >Contenido</label>
+                  <div class="col-10" >
+                    <textarea class="form-control" id="exampleFormControlTextarea1" value="" rows="3" placeholder="Contenido" formControlName="contenido_inv"></textarea>
+                  </div>
+
+                  <div class="col">
+                    <button type="submit" class="btn btn-success">Agregar</button>
+                  </div>
+
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="lh-sm fs-4 shadow p-3 mb-5 bg-body rounded">
+      <label for="inputAddress" class="form-label fw-bold" >Seccion Despegable Extra</label>
+
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingSix">
+            <button class="accordion-button accordion-color-collapse collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+              Administrar 2014 NORMA ISO: 14000
+            </button>
+          </h2>
+          <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+
+              <form>
+                <div>
+
+                  <hr>
+                  <label for="inputAddress" class="form-label" >2014 Norma ISO:14000</label>
+
+                  <div class="row g-3" *ngFor="let normas_dropdown of dropdown_normas ">
+
+
+                  <div class="col-10">
+                    <label for="inputAddress" class="form-label" >Posicion en Pagina : {{normas_dropdown.id_norma}}</label>
+                  </div>
+
+                  <label for="inputAddress" class="form-label" >Contenido</label>
+                    <div class="col-10" >
+                      <p class="fs-6">{{normas_dropdown.contenido}}</p>
+
+                    </div>
+
+                    <div class="col">
+                      <button type="button" (click)="eliminarNorma(normas_dropdown.id)" class="btn btn-danger">Eliminar</button>
+                    </div>
+
+                  </div>
+                </div>
+              </form>
+
+              <hr>
+              <label for="inputAddress" class="form-label" >Agregar Contenido</label>
+              <form [formGroup]="ingresarNorma" (ngSubmit)="agregarNorma()">
+                <div class="row g-3">
+                  <span *ngIf="submited_norma && ingresarNorma.invalid" class="alert alert-danger">El campo debe tener datos para Agregar</span>
+
+                  <label for="inputAddress" class="form-label" >Posicion en Pagina</label>
+                  <div class="col-2" >
+                    <input class="form-control" id="exampleFormControlTextarea1" value="" rows="3" placeholder="Posicion del parrafo" formControlName="id_norma" type="number">
+                  </div>
+
+                  <label for="inputAddress" class="form-label" >Contenido</label>
+                  <div class="col-10" >
+                    <textarea class="form-control" id="exampleFormControlTextarea1" value="" rows="3" placeholder="Contenido" formControlName="contenido_nor"></textarea>
+                  </div>
+
+                  <div class="col">
+                    <button type="submit" class="btn btn-success">Agregar</button>
+                  </div>
+
+                </div>
+              </form>
+
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingSeven">
+            <button class="accordion-button accordion-color-collapse collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+              Adminsitrar Cursos Tese
+            </button>
+          </h2>
+          <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+
+              <form>
+                <hr>
+                  <label for="inputAddress" class="form-label" >CURSOS</label>
+
+                  <div class="row g-3" *ngFor="let cursos_dropdown of dropdown_cursos ">
+
+
+                  <div class="col-10">
+                    <label for="inputAddress" class="form-label" >Posicion en Pagina : {{cursos_dropdown.id_curso}}</label>
+                  </div>
+
+                    <label for="inputAddress" class="form-label" >Contenido</label>
+                    <div class="col-10" >
+                      <p class="fs-6">{{cursos_dropdown.contenido}}</p>
+
+                    </div>
+
+
+                    <div class="col">
+                      <button type="button" (click)="eliminarCurso(cursos_dropdown.id)" class="btn btn-danger">Eliminar</button>
+                    </div>
+
+                  </div>
+              </form>
+
+              <hr>
+              <label for="inputAddress" class="form-label" >Agregar Contenido</label>
+              <form [formGroup]="ingresarCurso" (ngSubmit)="agregarCurso()">
+                <div class="row g-3">
+                  <span *ngIf="submited_curso && ingresarCurso.invalid" class="alert alert-danger">El campo debe tener datos para Agregar</span>
+
+                  <label for="inputAddress" class="form-label" >Posicion en Pagina</label>
+                  <div class="col-2" >
+                    <input class="form-control" id="exampleFormControlTextarea1" value="" rows="3" placeholder="Posicion del parrafo" formControlName="id_curso" type="number">
+                  </div>
+
+                  <label for="inputAddress" class="form-label" >Contenido</label>
+                  <div class="col-10" >
+                    <textarea class="form-control" id="exampleFormControlTextarea1" value="" rows="3" placeholder="Contenido" formControlName="contenido_cur"></textarea>
+                  </div>
+
+                  <div class="col">
+                    <button type="submit" class="btn btn-success">Agregar</button>
+                  </div>
+
+                </div>
+              </form>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+    </section>
+
+
+
+
+
+
+    </mat-drawer-content>
+  </mat-drawer-container>
+  </div>

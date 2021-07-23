@@ -1,0 +1,291 @@
+
+
+/* CSS Personalizado para la seccion */
+.list-group-item{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    color: #EA5455;
+  
+    font-weight: bold;
+  }
+  
+  
+  .btn-grad {background-image: linear-gradient(to right, #EB3349 0%, #F45C43  51%, #EB3349  100%)}
+  .btn-grad {
+     margin: 10px;
+     padding: 15px 45px;
+     text-align: center;
+     text-transform: uppercase;
+     transition: 0.5s;
+     background-size: 200% auto;
+     color: white;
+     box-shadow: 0 0 20px #eee;
+     border-radius: 10px;
+     display: block;
+   }
+  
+   .btn-grad:hover {
+     background-position: right center; /* change the direction of the change here */
+     color: #fff;
+     text-decoration: none;
+   }
+  
+  
+  /* Configuracion de estilos para la plantilla contenido. */
+  
+  /* Elementos css para el titulo, y subtitulos se configura el color del titulo y se le agrega un borde  por debajo */
+  .titulo {
+    text-align: center;
+  
+    font-family: sans-serif;
+  
+    font-size: 6ch;
+    font-weight: bold;
+    color: #eb2a31da;
+    line-height: 1.5ch;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 13px 6px -1px,
+      rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  }
+  
+  /* Se utiliza para el primer subtitulo */
+  .Titulo2 {
+    color: #eb2a31da;
+    font-weight: bold;
+    text-align: justify;
+    border-bottom: 3px solid #eb2a31da;
+    padding: 5px;
+    font-size: 4ch;
+  }
+  
+  
+  /* Subtitulo central o ideas */
+  .subtitulo {
+    color: #2c5234;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 1px solid #fd5c63;
+    padding: 5px;
+    font-size: 3ch;
+  }
+  
+  /*  */
+  
+  /* Cuerpo de la seccion SUBTITULO */
+  .card-body {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 13px 6px -1px,
+      rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  }
+  
+  /* Se agrega un efecto de sombra al rededor del contenido */
+  .container {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
+      rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+  }
+  
+  .container-fluid {
+    padding: 0;
+  }
+  /* Elementos CSS de la Sidebar */
+  
+  .sidebar {
+    /* background-image: radial-gradient(
+      circle farthest-corner at 47.4% 55%,
+      rgba(218, 61, 61, 1) 0%,
+      rgba(170, 13, 71, 0.81) 90%
+    ); */
+  
+    background-color: #eb2a31da;
+  
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
+  
+  .mat-list-option{
+    color: #fff;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  
+  .text-side h1{
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .subtitulo, .Titulo2{
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+  }
+  
+  body::-webkit-scrollbar {
+    display: none;
+  }
+  
+  body {
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  }
+
+  #acordeon{
+    background-color:#ffffff;
+    color:black;
+  }
+  
+  #acordeon > div{
+    width: 100%;
+    
+  }
+  
+  #acordeon > div div a{
+    width: 100%;
+    color: black;
+
+
+  }
+  
+
+  
+  .accordion-item:hover h2 button{
+    background-color: rgb(243, 71, 71);
+    color:white
+  }
+  
+  /* Configuracion de estilos globales */
+  
+  a {
+    text-decoration: none;
+  }
+  
+  .side-container {
+    height: 100vh;
+  }
+  
+  .sidebar {
+    padding: 10px;
+    width: 20%;
+  }
+  
+  .side-content {
+    padding: 15px;
+  }
+  
+  .cards {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    background-color: #fff;
+  }
+  
+  .careers {
+    width: 98%;
+    margin-right: 0;
+    margin-left: 0;
+    padding-top: 30px;
+    margin: 10px;
+  }
+  
+  .row {
+    gap: 10px;
+    margin-top: 40px;
+  }
+  
+  .card-career {
+    height: 100px;
+  }
+  
+  .card-career > mat-card {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: black;
+  }
+  
+  .card-career > mat-card > span {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  
+  .card-career:hover > mat-card > span {
+    display: none;
+  }
+  
+  .card-career:hover > mat-card {
+    filter: blur(1px);
+  }
+  
+  .informatica:hover > mat-card {
+    background-image: url("../../../../../assets/images/informatica.jpg");
+  }
+  
+  .quimica:hover > mat-card {
+    background-image: url("../../../../../assets/images/quimica.jpg");
+  }
+  
+  .contador:hover > mat-card {
+    background-image: url("../../../../../assets/images/contador.jpg");
+  }
+  
+  .act {
+    background-color: white;
+    color: black;
+    text-align: center;
+  }
+  
+  .open {
+    display: none;
+  }
+  
+  @media screen and (max-width: 860px) {
+    .card-career > mat-card > span {
+      font-size: 1rem;
+    }
+  
+    #side {
+      width: 70vw;
+    }
+  
+    #arrow {
+      margin-bottom: 20px;
+      font-weight: bold;
+      font-size: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .text-side {
+      margin-top: 20px;
+    }
+  }
+  
+  @media screen and (min-width: 860px) {
+    #arrow {
+      display: none;
+    }
+  
+    .divider {
+      display: none;
+    }
+  }
+  
+  #container {
+    overflow: hidden; /* change to hidden */
+    margin: 0 auto;
+    margin-top: 37px;
+    height: 100%;
+    width: 875px;
+    -moz-box-shadow: 0 30 30px 5px #999;
+    -webkit-box-shadow: 30 0 30px 5px #999;
+    -o-box-shadow: 0 30 30px 5px #999;
+    border: 1px solid black;
+    border-top-style: none;
+  }
+  .accordion-color{
+    color:#ffffff;
+    background-color: #eb2a31da;
+  }

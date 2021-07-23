@@ -1,0 +1,289 @@
+<div class="container-fluid">
+  <mat-drawer-container class="side-container">
+    <!-- Inicio de la SIDE NAV BAR; Si se desea eliminar se borrara este bloque de codigo y el final mat drawer  -->
+    <mat-drawer mode="side" class="sidebar" id="side" #drawer opened>
+      <mat-selection-list role="list container" [multiple]="false">
+        <a href="#">
+          <mat-list-option>
+            Inscripcion
+          </mat-list-option>
+        </a>
+
+        <mat-list-option role="listitem">
+          Reinscripcion
+        </mat-list-option>
+
+        <mat-list-option role="listitem">
+          Becas
+        </mat-list-option>
+
+
+        <mat-list-option role="listitem">
+          Cursos
+        </mat-list-option>
+        <mat-list-option role="listitem">
+          Titulacion
+        </mat-list-option>
+
+        <mat-list-option role="listitem">
+          Servicio Social
+        </mat-list-option>
+
+        <mat-list-option role="listitem">
+          Practicas
+        </mat-list-option>
+      </mat-selection-list>
+    </mat-drawer>
+
+    <mat-drawer-content class="side-content">
+      <button id="arrow" type="button" mat-button (click)="drawer.toggle()" (click)="open()">
+        <mat-icon id="right" class="open">arrow_forward</mat-icon>
+        <mat-icon id="left">arrow_back</mat-icon>
+      </button>
+
+      <mat-divider class="divider"></mat-divider>
+
+      <!-- Empieza el area para ingresar contenido en el panel lateral -->
+      <div class="text-side">
+        <div class="box-shadow= 50px 50px;">
+
+          <!-- Breadcrumb, ayuda a que el sitio sea mas agil y el usuario sepa en donde esta localizado, hacia donde puede ir y que paginas le anteceden -->
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item"><a href="#">Admision y Tramites</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Inscripcion</li>
+            </ol>
+          </nav>
+
+          <!-- Carrousel dentro de la pagina; de no ser necesario puede ser
+eliminado sin ningun problema: Para la implementacion en tu componente tendras que realizar las importaciones necesarias en el ts; ir al archivo para mas informacion -->
+          <app-carousel [items]="carouselData"></app-carousel>
+
+          <h1 class="titulo">Inscripcion</h1>
+
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">
+                <div class="Titulo2">Informacion;</div>
+              </h4>
+              <br class="card-text" font-weight="bold"> <span STYLE="font-size:large;color:#414141; text-align: justify; font-family: Arial, Helvetica, sans-serif; font-size: x-large; color:#414141;">
+
+                <div *ngFor="let contend of content_inscripcion " class=" ">
+                  <P>
+                    {{contend.contenido}}
+                <br>
+              </P></div>
+
+
+
+              </span>
+                <br>
+                <br>
+
+
+
+            </div>
+          </div>
+    <!-- Seccion de "carrousel", donde se puede enlazar a otras cosas que quiza no consideren poner una sidebar -->
+
+
+    <mat-divider></mat-divider>
+          <mat-divider></mat-divider>
+          <mat-divider></mat-divider>
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                 Documentacion Necesaria
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body"><ul class="list-group">
+                  <li class="list-group-item">
+                    <div *ngFor="let contend of content_inscripcion " class=" ">
+
+                        {{contend.contenido}}
+
+                </div></li>
+                  <li class="list-group-item">2. Certificado de bachillerato en original y dos copias o constancia de estudios donde indique que el certificado está en trámite.</li>
+                  <li class="list-group-item">
+                    3. Copia de la CURP.</li>
+                  <li class="list-group-item">4. Número de Seguridad Social ante el IMSS</li>
+                  <li class="list-group-item">5. Protesta institucional, FO-TESE-URC-09</li>
+                  <li class="list-group-item">6. Ficha de Depósito FO-TESE-URC-09</li>
+                </ul></div>
+              </div>
+            </div>
+            <mat-divider></mat-divider>
+
+
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                Documentos que se obtienen:
+              </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+              data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body"> <li class="list-group-item">Tira de Materias</li>
+                <li class="list-group-item">Credencial de Alumno
+                </li>
+                <li class="list-group-item">
+                  Carta de Bienvenida
+                </li>
+                <li class="list-group-item">Reglamentos</li>
+                <li class="list-group-item">Tríptico de Servicios de la Unidad de Registro y Certificación
+                </li>
+                </div>
+            </div>
+          </div>
+
+        </div>
+
+
+
+
+
+
+
+          <mat-divider></mat-divider>
+
+          <div class="cards">
+            <mat-card class="careers">
+              <div class="Titulo2">Conoce nuestras carreras:</div>
+
+              <div class="row">
+                <a href="#" class="card-career informatica col">
+                  <mat-card>
+                    <span class="h1">Ingeniería informática</span>
+                  </mat-card>
+                </a>
+
+                <a href="#" class="card-career quimica col">
+                  <mat-card>
+                    <span class="h1">Ingeniería química</span>
+                  </mat-card>
+                </a>
+
+                <a href="#" class="card-career contador col">
+                  <mat-card>
+                    <span class="h1">Licenciatura contaduría</span>
+                  </mat-card>
+                </a>
+
+                <a href="#" class="card-career informatica col">
+                  <mat-card>
+                    <span class="h1">Ingeniería informática</span>
+                  </mat-card>
+                </a>
+              </div>
+            </mat-card>
+
+          </div>
+          <hr>
+
+          <div class="card">
+            <div class="card-body">
+
+              <span class="text-center">
+                <div class="subtitulo">Costos</div>
+
+                <span STYLE="text-align: center;font-size:x-large;color:#414141;">
+                  <span STYLE="font-weight: bold;">Precios:</span>
+                   <span STYLE="font-weight: bold;;color:#da4b4b; text-align: left;">   <div *ngFor="let contend of content_precio " class=" ">
+                    {{contend.contenidoprecio}}
+</div>
+</span>
+                </span>
+
+              </span>
+            </div>
+          </div>
+
+          <mat-divider></mat-divider>
+
+
+          <br>
+          <div class="card">
+            <div class="card-body">
+
+              <span class="text-center">
+                <div class="subtitulo">Duración y fechas para realizarlo</div>
+
+                <span STYLE="text-align: center;font-size:x-large;color:#414141;">
+
+                  <span STYLE="font-weight: bold;">Duración:</span>
+                  <div *ngFor="let contend of content_fecha " class=" ">
+                    {{contend.contenidofecha}}
+</div>
+                </span>
+
+              </span>
+            </div>
+          </div>
+          <mat-divider></mat-divider>
+
+          <hr>
+
+          <div class="card mb-3">
+            <img src="../../../../../assets/images/admisionytramitesimg/thumbnail (9).jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="Titulo2">Lugares y horarios</h5>
+              <p class="card-text">
+
+                <span STYLE="font-weight: bold;">Organismo Responsable:
+
+                </span>
+                 TESE Oficinas: Av. Tecnológico S/N, Col. Valle de Anáhuac, C.P. 55210, Ecatepec de Morelos, Estado de México, Edificio D, en Ventanillas, Teléfono: 01 (55) 50 00 23 42
+
+                 <br>   <mat-divider></mat-divider>
+
+                 <span STYLE="font-weight: bold;">
+                  Horario de Atención:
+                 </span>
+
+
+                 De Lunes a Viernes
+
+              </p>
+
+            </div>
+          </div>
+
+
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  Calendario de Inscripciones
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  <img src="../../../../../assets/images/admisionytramitesimg/inscripcion/BOLETAINSCRIPCIO.jpg" width="102%" height="80%">
+                  </div>
+              </div>
+            </div>
+          </div>
+          <mat-divider></mat-divider>
+
+
+
+
+
+
+
+          </div>
+        </div>
+
+      <!-- Etiqueda de cerrado de la side nav bar, se elimina para retirar la barra de navegacion lateral -->
+    </mat-drawer-content>
+  </mat-drawer-container>
+</div>

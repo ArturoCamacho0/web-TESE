@@ -1,0 +1,82 @@
+<div class="">
+  <mat-drawer-container class="side-container">
+    <mat-drawer mode="side"class="sidebar" id="side" #drawer opened>
+      <mat-selection-list role="list-container" [multiple]="false">
+        <a href="Historia">
+          <mat-list-option role="/Logo">
+            Historia
+          </mat-list-option>
+        </a>
+
+        <a href="Logo">
+          <mat-list-option role="/Logo">
+            Logo
+          </mat-list-option>
+        </a>
+        <div *ngFor="let dir_organigrama of organigrama">
+          <a href="{{dir_organigrama.Dir}}">
+          <mat-list-option >
+            Organigrama
+          </mat-list-option>
+        </a>
+      </div>
+      </mat-selection-list>
+    </mat-drawer>
+
+    <mat-drawer-content class="side-content">
+      <button id="arrow" type="button" mat-button (click)="drawer.toggle()" (click)="open()">
+        <mat-icon id="right" class="open">arrow_forward</mat-icon>
+        <mat-icon id="left">arrow_back</mat-icon>
+      </button>
+      <mat-divider class="divider"></mat-divider>
+
+    <div class="text-side">
+      <div class="box-shadow= 50px 50px;">
+        <nav arial-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a class="ubicacion-pag" href="#">Home</a></li>
+            <li class="breadcrumb-item"><a class="ubicacion-pag" href="#">Identidad Institucional</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Mision y Vision</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
+    <app-carousel [items]="carouselData"></app-carousel>
+    <div class="lh-sm fs-4 shadow p-3 bg-body rounded" *ngFor="let contend of contends_mision" >
+      <h1 class="text-center fs-4 fw-bold ">{{contend.Titulo}}</h1>
+      <p class="margen">
+        {{contend.contenido}}
+      </p>
+
+  </div>
+
+
+    <br>
+
+
+    <section class="lh-sm p-3 mb-5 ">
+      <h1 class="fw-bold lh-sm ">Documentos Relacionados</h1>
+      <div class="row">
+        <div class="col" *ngFor="let document of documents_mision">
+          <div class="card">
+            <img src="../../../../../assets/images/PDF-ICON.png" class="card-img-top img-icon mt-2">
+            <div class="card-body">
+
+              <a class="font-color-red" href="{{document.Dir_Documento}}">MOSTRAR</a>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+    </mat-drawer-content>
+  </mat-drawer-container>
+  </div>

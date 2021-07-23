@@ -1,0 +1,200 @@
+<div class="">
+  <mat-drawer-container class="side-container">
+    <mat-drawer mode="side"class="sidebar" id="side" #drawer opened>
+      <mat-selection-list role="list-container" [multiple]="false">
+        <a routerLink="/ControlVinculacion">
+          <mat-list-option style="margin-top: 10%;">
+            VINCULACION EMPRESARIAL E INCUBADORA DE EMPRESAS
+          </mat-list-option>
+        </a>
+          <br>
+          <br>
+        <a routerLink="/ControlActividades">
+          <mat-list-option>
+           ACTIVIDADES Y CREDENCIALES EGRESADOS
+          </mat-list-option>
+        </a>
+          <br>
+          <br>
+        <a routerLink="/ControlCursos">
+          <mat-list-option>
+           CURSOS Y DIPLOMADOS
+          </mat-list-option>
+        </a>
+          <br>
+          <br>
+        <a routerLink="/ControlHistorial">
+          <mat-list-option>
+           HISTORIAL ACADEMICO
+          </mat-list-option>
+        </a>
+          <br>
+          <br>
+        <a routerLink="/ControlServicio">
+          <mat-list-option>
+           SERVICIO A LA COMUNIDAD
+          </mat-list-option>
+        </a>
+      </mat-selection-list>
+    </mat-drawer>
+
+    <mat-drawer-content class="side-content">
+      <button id="arrow" type="button" mat-button (click)="drawer.toggle()" (click)="open()">
+        <mat-icon id="right" class="open">arrow_forward</mat-icon>
+        <mat-icon id="left">arrow_back</mat-icon>
+      </button>
+      <mat-divider class="divider"></mat-divider>
+
+     <!--ENLACE-->
+     <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#" class="Link">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">ControlEgresados</li>
+        <li class="breadcrumb-item"><a routerLink="/ControlEgresados" class="Link">Posgrados</a></li>
+        <li class="breadcrumb-item active" aria-current="page">CursosYDiplomados</li>
+      </ol>
+    </nav>
+
+    <h1 class="fw-bold lh-sm fs-4 shadow p-3 mb-5 bg-body rounded titulo">CURSOS Y DIPLOMADOS</h1>
+
+    <section  class="lh-sm fs-4 shadow p-3 mb-5 bg-body rounded">
+
+      <label for="inputAddress" class="form-label fw-bold subtitulo">CURSO Y DIPLOMADO</label>
+
+      <form [formGroup]="ingresarCurso" (ngSubmit)="agregarCurso()">
+        <div class="row ">
+          <span *ngIf="submitedCurso && ingresarCurso.invalid" class="alert alert-danger">DEBE LLENAR LOS CAMPOS...</span>
+          <label for="inputAddress" class="form-label fw-bold" >Agregar</label>
+
+          <div class="col-10">
+            <input type="text" class="form-control" id="inputAddress" value="" formControlName="Curso" placeholder="CURSO-DIPLOMADO*">
+          </div>
+
+          <div class="col">
+            <button type="submit" class="btn btn-success">Agregar</button>
+          </div>
+
+        </div>
+      </form>
+      <br>
+      <h1 class="fw-bold lh-sm fs-4 shadow p-3 mb-5 bg-body rounded" *ngIf="Curso.length==0">AUN NO HAY DATOS</h1>
+      <form *ngIf="Curso.length>0">
+        <label for="inputAddress" class="form-label fw-bold" >Eliminar/Editar</label>
+        <div *ngFor="let Curso of Curso " class="row" >
+          <div class="col-8">
+            <input type="text" class="form-control mb-2" id="inputAddressCurso" value="{{Curso.CursosDesc}}">
+          </div>
+
+          <div class="col float-rigth">
+            <button type="button" (click)="eliminaCurso(Curso.id)"  class="btn btn-danger">Eliminar</button>
+          </div>
+
+
+        </div>
+        </form>
+        </section>
+
+        <section  class="lh-sm fs-4 shadow p-3 mb-5 bg-body rounded">
+        <label for="inputAddress" class="form-label fw-bold subtitulo" >PERFIL DEL EGRESADO</label>
+
+      <form [formGroup]="ingresarPerfil" (ngSubmit)="agregarPerfil()">
+        <div class="row ">
+          <span *ngIf="submitedPerfil && ingresarPerfil.invalid" class="alert alert-danger">DEBE LLENAR LOS CAMPOS...</span>
+          <label for="inputAddress" class="form-label fw-bold" >Agregar</label>
+
+          <div class="col-10">
+            <input type="text" class="form-control" id="inputAddress" value="" formControlName="Perfil" placeholder="PERFIL EGRESADO*">
+          </div>
+
+          <div class="col">
+            <button type="submit" class="btn btn-success">Agregar</button>
+          </div>
+
+        </div>
+      </form>
+      <br>
+      <h1 class="fw-bold lh-sm fs-4 shadow p-3 mb-5 bg-body rounded" *ngIf="Perfil.length==0">AUN NO HAY DATOS</h1>
+      <form *ngIf="Perfil.length>0">
+        <label for="inputAddress" class="form-label fw-bold" >Eliminar/Editar</label>
+        <div *ngFor="let Perfil of Perfil" class="row">
+          <div class="col-8">
+            <input type="text" class="form-control mb-2" id="inputAddressPerfil" value="{{Perfil.PerfilDesc}}">
+          </div>
+          <div class="col float-rigth">
+            <button type="button" (click)="eliminaPerfil(Perfil.id)"  class="btn btn-danger">Eliminar</button>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <section  class="lh-sm fs-4 shadow p-3 mb-5 bg-body rounded">
+      <label for="inputAddress" class="form-label fw-bold subtitulo" >CAMPO LABORAL</label>
+
+    <form [formGroup]="ingresarCampo" (ngSubmit)="agregarCampo()">
+      <div class="row ">
+        <span *ngIf="submitedCampo && ingresarCampo.invalid" class="alert alert-danger">DEBE LLENAR LOS CAMPOS...</span>
+        <label for="inputAddress" class="form-label fw-bold" >Agregar</label>
+
+        <div class="col-10">
+          <input type="text" class="form-control" id="inputAddress" value="" formControlName="Campo" placeholder="CAMPO LABORAL*">
+        </div>
+
+        <div class="col">
+          <button type="submit" class="btn btn-success">Agregar</button>
+        </div>
+
+      </div>
+    </form>
+    <br>
+    <h1 class="fw-bold lh-sm fs-4 shadow p-3 mb-5 bg-body rounded" *ngIf="Campo.length==0">AUN NO HAY DATOS</h1>
+    <form *ngIf="Campo.length>0">
+      <label for="inputAddress" class="form-label fw-bold" >Eliminar/Editar</label>
+      <div *ngFor="let Campo of Campo" class="row">
+        <div class="col-8">
+          <input type="text" class="form-control mb-2" id="inputAddressCampo" value="{{Campo.CampoDesc}}">
+        </div>
+        <div class="col float-rigth">
+          <button type="button" (click)="eliminaCampo(Campo.id)"  class="btn btn-danger">Eliminar</button>
+        </div>
+      </div>
+    </form>
+  </section>
+
+  <section  class="lh-sm fs-4 shadow p-3 mb-5 bg-body rounded">
+    <label for="inputAddress" class="form-label fw-bold subtitulo" >CURSOS DEL CENTRO DE IDIOMAS</label>
+
+  <form [formGroup]="ingresarCCs" (ngSubmit)="agregarCCs()">
+    <div class="row ">
+      <span *ngIf="submitedCCs && ingresarCCs.invalid" class="alert alert-danger">DEBE LLENAR LOS CAMPOS...</span>
+      <label for="inputAddress" class="form-label fw-bold" >Agregar</label>
+
+      <div class="col-10">
+        <input type="text" class="form-control" id="inputAddress" value="" formControlName="CCs" placeholder="CURSO*">
+      </div>
+
+      <div class="col">
+        <button type="submit" class="btn btn-success">Agregar</button>
+      </div>
+
+    </div>
+  </form>
+  <br>
+  <h1 class="fw-bold lh-sm fs-4 shadow p-3 mb-5 bg-body rounded" *ngIf="CCs.length==0">AUN NO HAY DATOS</h1>
+  <form *ngIf="CCs.length>0">
+    <label for="inputAddress" class="form-label fw-bold" >Eliminar/Editar</label>
+    <div *ngFor="let CCs of CCs" class="row">
+      <div class="col-8">
+        <input type="text" class="form-control mb-2" id="inputAddressCCs" value="{{CCs.CCOpc}}">
+      </div>
+      <div class="col float-rigth">
+        <button type="button" (click)="eliminaCCs(CCs.id)"  class="btn btn-danger">Eliminar</button>
+      </div>
+    </div>
+  </form>
+</section>
+
+
+    </mat-drawer-content>
+  </mat-drawer-container>
+</div>
+

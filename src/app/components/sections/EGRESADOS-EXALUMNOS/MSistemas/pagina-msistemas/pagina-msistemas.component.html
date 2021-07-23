@@ -1,0 +1,359 @@
+<!-- Empieza el area para ingresar contenido en el panel lateral -->
+  <div class="text-side" >
+    <div class="box-shadow= 50px 50px;">
+
+      <!-- BANNER -->
+      <div class="container-fluid px-0">
+        <div class="row bg-dark h-100">
+          <div class="col-12 px-0">
+            <app-carousel-carreras [items]="carouselData"></app-carousel-carreras>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- Breadcrumb, ayuda a que el sitio sea mas agil y el usuario sepa en donde esta localizado, hacia donde puede ir y que paginas le anteceden -->
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#" class="Link">Home</a></li>
+       <li class="breadcrumb-item active" aria-current="page">Egresados y Exalumnos</li>
+       <li class="breadcrumb-item"><a routerLink="/egresadosyexalumnos" class="Link">Posgrados</a></li>
+       <li class="breadcrumb-item active" aria-current="page">MaestríaSistemasComputacionales</li>
+      </ol>
+    </nav>
+
+    <h1 class="titulo">
+      <div *ngFor="let item of items | async">
+        {{item.SistemasTitulo}}
+      </div>
+    </h1>
+
+    <div class="cards">
+      <div class="card-body" style="background-color:#E3E3E3; text-align: center;">
+        <h4 class="card-title"><div class="Titulo2">
+          <div *ngFor="let item of items | async">
+            {{item.ConceptosGenerales}}
+          </div>
+          </div>
+        </h4>
+        <p class="card-text">
+        <div *ngFor="let item of items | async">
+          {{item.SistemasGenerales}}
+        </div>
+        <br>
+       </div>
+     </div>
+
+     <div class="cards">
+      <div class="card-body" style="text-align: center;">
+       <h4 class="card-title"><div class="Titulo2">
+        <div *ngFor="let item of items | async">
+          {{item.Dirigido}}
+        </div>
+       </div></h4>
+        <p class="card-text">
+          <div *ngFor="let item of items | async">
+            {{item.SistemasDirigido}}
+          </div>
+        <br>
+      </div>
+    </div>
+
+
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              <h4 class="card-title"><div class="subtitulo">
+                <div *ngFor="let item of items | async">
+                  {{item.PerfilIE}}
+                </div>
+              </div></h4>
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <div class="row row-cols-1 row-cols-md-2 g-1">
+                <div class="col">
+                  <div class="cards">
+                    <div class="card-body">
+                      <h4 class="card-title"><div class="Titulo2">
+                        <div *ngFor="let item of items | async">
+                          {{item.PerfilI}}
+                        </div>
+                      </div></h4>
+                      <p class="card-text">
+                        <div *ngFor="let item of items | async">
+                          {{item.SistemasPerfilI}}
+                        </div>
+                        <br>
+                        <ul>
+                          <li>
+                            <div *ngFor="let item of items | async">
+                              {{item.SistemasPerfilIop1}}
+                            </div>
+                          </li>
+                          <li>
+                            <div *ngFor="let item of items | async">
+                              {{item.SistemasPerfilIop2}}
+                            </div>
+                          </li>
+                          <li>
+                            <div *ngFor="let item of items | async">
+                              {{item.SistemasPerfilIop3}}
+                            </div>
+                          </li>
+                          <li>
+                            <div *ngFor="let item of items | async">
+                              {{item.SistemasPerfilIop4}}
+                            </div>
+                          </li>
+                          <li>
+                            <div *ngFor="let item of items | async">
+                              {{item.SistemasPerfilIop5}}
+                            </div>
+                          </li>
+                        </ul>
+                      <BR>
+
+                    </div>
+                  </div>
+                  </div>
+
+                  <div class="col">
+                    <div class="cards">
+                      <div class="card-body">
+                        <h4 class="card-title"><div class="Titulo2">
+                          <div *ngFor="let item of items | async">
+                            {{item.PerfilE}}
+                          </div>
+                        </div></h4>
+                        <p class="card-text">
+                          <div *ngFor="let item of items | async">
+                            {{item.SistemasPerfilE}}
+                          </div>
+                          <br>
+                          <br>
+                          <br>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <br>
+                <br>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+              <h4 class="card-title"><div class="subtitulo">
+                <div *ngFor="let item of items | async">
+                  {{item.Requisitos}}
+                </div>
+              </div></h4>
+            </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body" style="text-align:justify;">
+              <ul>
+                <li>
+                  <div *ngFor="let item of items | async">
+                    {{item.SistemasReqop1}}
+                  </div>
+                </li>
+                <li>
+                  <div *ngFor="let item of items | async">
+                    {{item.SistemasReqop2}}
+                  </div>
+                </li>
+                <li>
+                  <div *ngFor="let item of items | async">
+                    {{item.SistemasReqop3}}
+                  </div>
+                </li>
+                <li>
+                  <div *ngFor="let item of items | async">
+                    {{item.SistemasReqop4}}
+                  </div>
+                </li>
+                <li>
+                  <div *ngFor="let item of items | async">
+                    {{item.SistemasReqop5}}
+                  </div>
+                </li>
+                <li>
+                  <div *ngFor="let item of items | async">
+                    {{item.SistemasReqop6}}
+                  </div>
+                </li>
+               </ul>
+              <br>
+              <br>
+          </div>
+        </div>
+        </div>
+
+        <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingFour">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+            <h4 class="card-title"><div class="subtitulo">
+                <div *ngFor="let item of items | async">
+                  {{item.Documentos}}
+                </div>
+            </div></h4>
+          </button>
+        </h2>
+        <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
+          data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body" style="text-align:justify;">
+            <ul>
+              <li>
+                <div *ngFor="let item of items | async">
+                  {{item.SistemasDocop1}}
+                </div>
+              </li>
+              <li>
+                <div *ngFor="let item of items | async">
+                  {{item.SistemasDocop2}}
+                </div>
+              </li>
+              <li>
+                <div *ngFor="let item of items | async">
+                  {{item.SistemasDocop3}}
+                </div>
+              </li>
+              <li>
+                <div *ngFor="let item of items | async">
+                  {{item.SistemasDocop4}}
+                </div>
+              </li>
+              <li>
+                <div *ngFor="let item of items | async">
+                  {{item.SistemasDocop5}}
+                </div>
+              </li>
+              <li>
+                <div *ngFor="let item of items | async">
+                  {{item.SistemasDocop6}}
+                </div>
+              </li>
+              <li>
+                <div *ngFor="let item of items | async">
+                  {{item.SistemasDocop7}}
+                </div>
+              </li>
+              <li>
+                <div *ngFor="let item of items | async">
+                  {{item.SistemasDocop8}}
+                </div>
+              </li>
+              <li>
+                <div *ngFor="let item of items | async">
+                  {{item.SistemasDocop9}}
+                </div>
+              </li>
+              <li>
+                <div *ngFor="let item of items | async">
+                  {{item.SistemasDocop10}}
+                </div>
+              </li>
+              <br>
+              <br>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              <h4 class="card-title"><div class="subtitulo">
+                  <div *ngFor="let item of items | async">
+                    {{item.MisionVision}}
+                  </div>
+              </div></h4>
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+
+              <div class="row row-cols-1 row-cols-md-2 g-2">
+                <div class="col">
+                  <div class="cards">
+                    <div class="card-body">
+                      <h4 class="card-title"><div class="Titulo2">
+                          <div *ngFor="let item of items | async">
+                            {{item.Mision}}
+                          </div>
+                      </div></h4>
+                      <p class="card-text">
+                          <div *ngFor="let item of items | async">
+                            {{item.SistemasMision}}
+                          </div>
+                    </div>
+                  </div>
+                  <BR>
+                  <BR>
+                </div>
+
+                  <div class="col">
+                    <div class="cards">
+                      <div class="card-body">
+                        <h4 class="card-title"><div class="Titulo2">
+                            <div *ngFor="let item of items | async">
+                              {{item.Vision}}
+                            </div>
+                        </div></h4>
+                        <p class="card-text">
+                          <div *ngFor="let item of items | async">
+                            {{item.SistemasVision}}
+                          </div>
+                          <br>
+                          <br>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingFive">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+          <h4 class="card-title"><div class="subtitulo">
+              <div *ngFor="let item of items | async">
+                {{item.Desarrollo}}
+              </div>
+          </div></h4>
+        </button>
+      </h2>
+      <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive"
+        data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body" style="text-align: center;">
+          <p class="card-text">
+              <div *ngFor="let item of items | async">
+                {{item.SistemasDesarrollo}}
+              </div>
+              <br>
+              <br>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

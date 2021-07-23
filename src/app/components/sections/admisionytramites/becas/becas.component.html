@@ -1,0 +1,151 @@
+<div class="container-fluid">
+    <mat-drawer-container class="side-container">
+
+
+        <mat-divider class="divider"></mat-divider>
+
+        <!-- Empieza el area para ingresar contenido en el panel lateral -->
+        <div class="text-side">
+          <div class="box-shadow= 50px 50px;">
+
+            <!-- Breadcrumb, ayuda a que el sitio sea mas agil y el usuario sepa en donde esta localizado, hacia donde puede ir y que paginas le anteceden -->
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Segundo Menu</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Plantilla de Ejemplo</li>
+              </ol>
+            </nav>
+
+            <!-- Carrousel dentro de la pagina; de no ser necesario puede ser
+  eliminado sin ningun problema: Para la implementacion en tu componente tendras que realizar las importaciones necesarias en el ts; ir al archivo para mas informacion -->
+            <app-carousel [items]="carouselData"></app-carousel>
+
+
+
+            <h1 class="titulo">BECAS</h1>
+
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">
+                  <div class="Titulo2">Acerca de:</div>
+                </h4>
+                <div *ngFor="let item of items | async">
+                <p class="card-text">
+
+                  {{item.Areas}}
+                  <br>
+                  <br>
+                </p>
+                </div>
+              </div>
+            </div>
+
+            <mat-divider></mat-divider>
+
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  Informacion
+                  </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                  data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body"><b>Características:</b></div>
+                  <div class="accordion-body"></div>
+                    <ul>
+                      <li>Apoyo semestral de $1,000.00 pesos</li>
+                      <li>Vigencia de 6 meses</li>
+                    </ul>
+                  </div>
+                  <div class="accordion-body"><b>Requisitos:</b></div>
+                  <div class="accordion-body">
+                    <ul>
+                      <li>Promedio mínimo de 7.0</li>
+                      <li>Promedio mínimo de 7.0</li>
+                      <li>Máximo de 2 materias reprobadas</li>
+                      <li>Tener una condición económica desfavorable</li>
+                      <li>Que el tiempo de traslado entre el hogar y el plantel sea superior a 30 minutos.</li>
+                    </ul>
+                  </div>
+                  <div class="accordion-body"><b>Publicación de la convocatoria:</b></div>
+                  <div class="accordion-body">
+                    <ul>
+                    <li> Marzo</li>
+                    <li>Octubre</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    Becas para la Educación Superior
+                  </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                  data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">Estos link son para becas que puedes encontrara en las paginas del gobierno y del estado de Mexico, por si las quieres visitar.</div>
+                  <div class="accordion-body">
+                  <button onclick="'http://seduc.edomex.gob.mx/becas'" type="button" class="btn btn-outline-danger">Estado de Mexico</button>
+                  <br><br>
+                  <button onclick="'http://www.cnbes.sep.gob.mx/'" type="button" class="btn btn-outline-danger">Secretaria de Educacion</button>
+                  </div>
+                  <div class="accordion-body">Atención de la Oficina de Becas: T. S. Ma. Concepción Ramos Sánchez
+                    <br>
+                    Horario: De lunes a viernes de 7:00 a 15:00 horas</div>
+
+                </div>
+              </div>
+            </div>
+            <mat-divider></mat-divider>
+
+
+            <div class="card">
+              <div class="card-body">
+
+                <span class="text-center">
+                  <div class="subtitulo">Aviso Importante</div>
+
+                  <div *ngFor="let item of items | async">
+                    {{item.TextoCentral}}
+                    </div>
+                </span>
+              </div>
+            </div>
+
+            <!-- Seccion de "carrousel", donde se puede enlazar a otras cosas que quiza no consideren poner una sidebar -->
+            <div class="cards">
+              <mat-card class="careers">
+                <div class="Titulo2">Becas Relacionadas:</div>
+
+                <div class="row">
+                  <a href="https://www.daad.de/en/study-and-research-in-germany/scholarships/dlr-daad-research-fellowships/" class="card-career DDRL col">
+                    <mat-card>
+                      <span class="h1">DLR-DAAD Research Fellowships</span>
+                    </mat-card>
+                  </a>
+
+                  <a href="https://research.fb.com/fellowship/" class="card-career facebook col">
+                    <mat-card>
+                      <span class="h1">Facebook research</span>
+                    </mat-card>
+                  </a>
+
+                  <a href="http://www.unesco.org/new/en/fellowships/programmes/unesco-poland-co-sponsored-fellowships-programme-engineering/" class="card-career unesco col">
+                    <mat-card>
+                      <span class="h1">Unesco</span>
+                    </mat-card>
+                  </a>
+                </div>
+              </mat-card>
+
+            </div>
+
+            <mat-divider></mat-divider>
+
+
+  </div>

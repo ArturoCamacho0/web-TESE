@@ -1,0 +1,251 @@
+<div class="container-fluid">
+  <mat-drawer-container class="side-container">
+    <!-- Inicio de la SIDE NAV BAR; Si se desea eliminar se borrara este bloque de codigo y el final mat drawer  -->
+    <mat-drawer mode="side" class="sidebar" id="side" #drawer opened>
+      <mat-selection-list role="list container" [multiple]="false">
+        <a href="inscripcion">
+          <mat-list-option>
+            Inscripcion
+          </mat-list-option>
+        </a>
+<a href="reinscripcion">
+        <mat-list-option role="listitem">
+          Reinscripcion
+        </mat-list-option>
+        </a>
+<a href="becas">
+        <mat-list-option role="listitem">
+          Becas
+        </mat-list-option>
+         </a>
+<a href="cursos">
+        <mat-list-option role="listitem">
+          Cursos
+
+        </mat-list-option>
+      </a>
+<a href="titulacion">
+        <mat-list-option role="listitem">
+          Titulacion
+        </mat-list-option>
+      </a>
+<a href="serviciosocial">
+        <mat-list-option role="listitem">
+          Servicio Social
+        </mat-list-option>
+      </a>
+      </mat-selection-list>
+    </mat-drawer>
+
+    <mat-drawer-content class="side-content">
+      <button id="arrow" type="button" mat-button (click)="drawer.toggle()" (click)="open()">
+        <mat-icon id="right" class="open">arrow_forward</mat-icon>
+        <mat-icon id="left">arrow_back</mat-icon>
+      </button>
+
+      <mat-divider class="divider"></mat-divider>
+
+      <!-- Empieza el area para ingresar contenido en el panel lateral -->
+      <div class="text-side">
+        <div class="box-shadow= 50px 50px;">
+
+          <!-- Breadcrumb, ayuda a que el sitio sea mas agil y el usuario sepa en donde esta localizado, hacia donde puede ir y que paginas le anteceden -->
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="home">Home</a></li>
+              <li class="breadcrumb-item"><a href="admisionytramites">Admision y Tramites</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Titulacion</li>
+            </ol>
+          </nav>
+
+          <!-- Carrousel dentro de la pagina; de no ser necesario puede ser
+eliminado sin ningun problema: Para la implementacion en tu componente tendras que realizar las importaciones necesarias en el ts; ir al archivo para mas informacion -->
+          <app-carousel [items]="carouselData"></app-carousel>
+
+          <h1 class="titulo">Titulacion</h1>
+
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">
+                <div class="Titulo2">Proceso de Reinscripcion;</div>
+              </h4>
+              <br class="card-text" font-weight="bold"> <span STYLE="font-size:large;color:#414141; text-align: justify;">
+                Es el trámite que realizan los y las egresados(as) de esta Institución para la obtención de su Título y Cédula Profesional, para ello deberán llevar a cabo en la jefatura de su división correspondiente la acreditación de alguna de las opciones de Titulación establecidas en el Reglamento respetivo y posteriormente presentar la documentación solicitada en la Oficina de Titulación.<br><br>
+
+                <span STYLE="font-weight: bold;"> Usuarios:</span> Los y Las egresados(as) de esta Institución
+                <br>
+                <span STYLE="font-weight: bold;">Documentos que se obtienen:</span>
+
+                Título y Cédula Profesional
+                 <br>
+               </span>
+                <br>
+                <br>
+
+
+
+            </div>
+          </div>
+    <!-- Seccion de "carrousel", donde se puede enlazar a otras cosas que quiza no consideren poner una sidebar -->
+
+
+
+
+    <mat-divider></mat-divider>
+          <mat-divider></mat-divider>
+          <mat-divider></mat-divider>
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+               Opciones de Titulaciones
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body"><ul class="list-group">
+                  <li class="list-group-item"><ul class="list-group">
+                    <li class="list-group-item"> 1.Tesis Profesional
+
+                    </li>
+                    <li class="list-group-item">2. Proyecto de Investigación</li>
+                    <li class="list-group-item">3. Seminario de Titulación</li>
+                    <li class="list-group-item">4. Posgrado</li>
+                    <li class="list-group-item">5. Promedio General Sobresaliente</li>
+                    <li class="list-group-item">7. Experiencia Profesional</li>
+                    <li class="list-group-item">6. Créditos Adicionales de Especialidad</li>
+                    <li class="list-group-item">8. Examen de Conocimientos por áreas</li>
+                    <li class="list-group-item">9. Examen General de Egreso de Licenciatura (EGEL)</li>
+                    <li class="list-group-item">10. Memoria de Residencia</li>
+
+                  </ul>
+
+
+                </ul></div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+               Requisitos y Pasos
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body"><ul class="list-group">
+                  <li class="list-group-item">1. Requisitos para el trámite de titulación (FO-TESE-URC-19).
+                   </li>
+                  <li class="list-group-item">2. Características de fotografías para el trámite de titulación (FO-TESE-URC-22).</li>
+
+
+                </ul></div>
+              </div>
+            </div>
+            <mat-divider></mat-divider>
+
+        </div>
+
+          <mat-divider></mat-divider>
+
+
+          <div class="card">
+            <div class="card-body">
+
+              <span class="text-center">
+                <div class="subtitulo">Pasos:
+
+                </div>
+
+                <span STYLE="text-align: center;font-size:x-large;color:#414141;">
+                 Para realizar tu trámite deberás ingresar al vínculo de Generación de Fichas de Pago (SICI) para generar tu referencia de pago y consultar el instructivo para realizar el pago de derechos de titulación, posteriormente deberás presentar el pago junto con el resto de los requisitos en la oficina detitulación.
+                </span>
+
+              </span>
+            </div>
+          </div>
+          <mat-divider></mat-divider>
+          <div class="card12">
+            <img src= "../../../../../assets/images/admisionytramitesimg/titulacion/pexels-photo-2293027.jpeg" class="card-img-bottom" alt="...">
+          </div>
+
+
+
+
+
+
+          <mat-divider></mat-divider>
+
+
+          <br>
+          <div class="card">
+            <div class="card-body">
+
+              <span class="text-center">
+                <div class="subtitulo">Lugares y horarios</div>
+
+                <span STYLE="text-align: center;font-size:x-large;color:#414141;">
+
+                  <span STYLE="font-weight: bold;">Organismo Responsable:</span> <br>
+
+                  Tecnológico de Estudios Superiores de Ecatepec <br>
+                  <span STYLE="font-weight: bold;">Oficinas:</span>
+                  <br>Av. Tecnológico S/N C.P. 55210 Col. Valle de Anáhuac, Ecatepec de Morelos, Estado de México Edificio D en Ventanillas
+                <br>  <span STYLE="font-weight: bold;">Telefono:</span> <br>
+                  01 (55) 50 00 23 42
+
+
+
+Horario de Atención:  de Lunes a Viernes de 8:00 A 18:00 horas
+                </span>
+
+              </span>
+            </div>
+          </div>
+          <mat-divider></mat-divider>
+
+
+
+          <mat-divider></mat-divider>
+
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  Documentos Relacionados
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+
+
+                  <img src="../../../../../assets/images/admisionytramitesimg/reinscripcion/edomex_icono_pdf.gif" id="ctl00_ContentPlaceHolder2_Seccion_docs1_imagen_doc_0" width="21" height="21">
+
+                  <a id="ctl00_ContentPlaceHolder2_Seccion_docs1_liga0" href="http://www.tese.edu.mx/documentos2004/5886_SHFFYLY.doc">Características de Fotografías para Trámite de Titulación FO-TESE-URC-22</a>
+
+
+<br>
+                  <img src="../../../../../assets/images/admisionytramitesimg/reinscripcion/edomex_icono_pdf.gif" id="ctl00_ContentPlaceHolder2_Seccion_docs1_imagen_doc_0" width="21" height="21">
+
+                  <a id="ctl00_ContentPlaceHolder2_Seccion_docs1_liga0" href="http://www.tese.edu.mx/documentos2004/5885_XYRYAYS.doc">	Requisitos de trámite de Titulación FO-TESE-URC-19</a>
+
+
+                  </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+          </div>
+        </div>
+
+      <!-- Etiqueda de cerrado de la side nav bar, se elimina para retirar la barra de navegacion lateral -->
+    </mat-drawer-content>
+  </mat-drawer-container>
+</div>

@@ -1,0 +1,491 @@
+<mat-drawer-container class="side-container">
+
+   <!-- Inicio de la SIDE NAV BAR; Si se desea eliminar se borrara este bloque de codigo y el final mat drawer  -->
+     <mat-drawer mode="side" class="sidebar" id="side" #drawer opened>
+         <mat-selection-list role="list container" [multiple]="false">
+             <mat-list-option role="listitem" (click)="getId(1)" style="margin-top: 10%;">
+              <div *ngFor="let item of items | async">
+                {{item.VTitle1}}
+              </div>
+             </mat-list-option>
+             <br>
+             <br>
+             <mat-list-option role="listitem" (click)="getId(2)" style="margin-top: 5%;">
+              <div *ngFor="let item of items | async">
+                {{item.ATitle}}
+              </div>
+             </mat-list-option>
+             <br>
+             <br>
+             <mat-list-option role="listitem" (click)="getId(3)">
+              <div *ngFor="let item of items | async">
+                {{item.CTitle1}}
+              </div>
+             </mat-list-option>
+             <br>
+             <br>
+             <mat-list-option role="listitem">
+             <div *ngFor="let item of items | async">
+              <a href={{item.BLink}} class=option>{{item.BTitle}}</a>
+             </div>
+            </mat-list-option>
+             <br>
+             <br>
+             <mat-list-option role="listitem" (click)="getId(4)">
+              <div *ngFor="let item of items | async">
+                {{item.HTitle1}}
+              </div>
+             </mat-list-option>
+             <br>
+             <br>
+             <mat-list-option role="listitem" (click)="getId(5)">
+              <div *ngFor="let item of items | async">
+                {{item.STitle1}}
+              </div>
+             </mat-list-option>
+             <br>
+             <br>
+             <br>
+             <p class="bane">Redes sociales Egresados</p>
+             <div class="social">
+              <a href="https://www.facebook.com/teseegresadosac/?ref=br_rs"><img src="../../../../assets/images/facebook.svg" width="40px" alt="facebook"/></a>
+              <a href="https://www.instagram.com/egresadostese/?utm_source=ig_profile_share&igshid=91yhwzw12htb"><img src="../../../../assets/images/instagram.svg" width="40px" alt="instagram"/></a>
+              <a href="https://twitter.com/EgresadosTese"><img src="https://img.icons8.com/fluent/48/000000/twitter.png" width="40px" alt="twitter"/></a>
+            </div>
+             <br>
+             <br>
+         </mat-selection-list>
+     </mat-drawer>
+
+     <mat-drawer-content class="side-content">
+         <button id="arrow" type="button" mat-button (click)="drawer.toggle()" (click)="open()">
+             <mat-icon id="right" class="open">arrow_forward</mat-icon>
+             <mat-icon id="left">arrow_back</mat-icon>
+         </button>
+
+         <mat-divider class="divider"></mat-divider>
+
+         <!-- Empieza el area para ingresar contenido en el panel lateral -->
+         <div class="text-side" >
+        <div class="box-shadow= 50px 50px;">
+
+
+          <!-- BANNER -->
+          <div class="container-fluid px-0">
+            <div class="row bg-dark h-100">
+              <div class="col-12 px-0">
+                <app-carousel-carreras [items]="carouselData"></app-carousel-carreras>
+              </div>
+            </div>
+          </div>
+
+
+    <h1 class="titulo">EGRESADOS Y EXALUMNOS</h1>
+
+    <div *ngIf = "op">
+      <!-- Breadcrumb, ayuda a que el sitio sea mas agil y el usuario sepa en donde esta localizado, hacia donde puede ir y que paginas le anteceden -->
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#" class="Link">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Egresados y Exalumnos</li>
+          <li class="breadcrumb-item active" aria-current="page">Posgrados</li>
+        </ol>
+      </nav>
+
+    <h1 class="Titulo2">POSGRADOS</h1>
+
+    <div class="row row-cols-1 row-cols-md-2 g-3">
+
+      <div class="col">
+
+        <a routerLink="/Mquimica">
+        <div class="card">
+          <img src="https://firebasestorage.googleapis.com/v0/b/app-tese.appspot.com/o/EgresadosYExalumnos%2FBannerEgresados%2FPOSGRADOS%2FING_QUIMICA1.jpg?alt=media&token=d3386360-bed9-47c0-a9de-b6b5623085da" class="card-img-top">
+          <div class="card-img-overlay">
+            <h1 class="tcard" style="margin-top:5vh;">
+              <div *ngFor="let item of items | async">
+                {{item.QuimicaTitulo}}
+              </div></h1>
+          </div>
+
+        </div>
+      </a>
+
+      </div>
+
+      <div class="col">
+        <a routerLink="/Mbioquimica">
+        <div class="card">
+
+          <img src="https://firebasestorage.googleapis.com/v0/b/app-tese.appspot.com/o/EgresadosYExalumnos%2FBannerEgresados%2FPOSGRADOS%2FING_BIOQUIMICA1.jpg?alt=media&token=d6819f93-abd5-4f19-adf9-406dd3206528" class="card-img-top">
+          <div class="card-img-overlay">
+            <h1 class="tcard" style="margin-top:5vh;">
+              <div *ngFor="let item of items | async">
+                {{item.BioquimicaTitulo}}
+              </div>
+            </h1>
+          </div>
+        </div>
+      </a>
+      </div>
+
+      <div class="col">
+        <a routerLink="/Msistemas">
+        <div class="card">
+          <img src="https://firebasestorage.googleapis.com/v0/b/app-tese.appspot.com/o/EgresadosYExalumnos%2FBannerEgresados%2FPOSGRADOS%2FING_SISTEMAS1.jpg?alt=media&token=eed529d0-cf2b-4a5a-8fd5-5cce9bc1de93" class="card-img-top">
+          <div class="card-img-overlay">
+            <h1 class="tcard" style="margin-top:5vh;">
+              <div *ngFor="let item of items | async">
+                {{item.SistemasTitulo}}
+              </div></h1>
+          </div>
+        </div>
+        </a>
+      </div>
+
+      <div class="col">
+        <a routerLink="/Meficienciaenergetica">
+        <div class="card">
+          <img src="https://firebasestorage.googleapis.com/v0/b/app-tese.appspot.com/o/EgresadosYExalumnos%2FBannerEgresados%2FPOSGRADOS%2FING_ER1.jpg?alt=media&token=1f8ebd78-4310-43f6-8455-3d395c02641a" class="card-img-top">
+          <div class="card-img-overlay">
+            <h1 class="tcard" style="margin-top:5vh;">
+              <div *ngFor="let item of items | async">
+                {{item.EficienciaTitulo}}
+              </div>
+            </h1>
+          </div>
+        </div>
+        </a>
+      </div>
+
+      <div class="col">
+        <a routerLink="/Mmecatronica">
+        <div class="card">
+          <img src="https://firebasestorage.googleapis.com/v0/b/app-tese.appspot.com/o/EgresadosYExalumnos%2FBannerEgresados%2FPOSGRADOS%2FING_MECATRONICA1.jpg?alt=media&token=66b7e1a9-9ba2-44b4-8c31-0268f162d3fa" class="card-img-top">
+          <div class="card-img-overlay">
+            <h1 class="tcard" style="margin-top:5vh;">
+              <div *ngFor="let item of items | async">
+                {{item.MecatronicaTitulo}}
+              </div>
+            </h1>
+          </div>
+        </div>
+        </a>
+      </div>
+
+      <div class="col">
+        <a routerLink="/Mgestion">
+        <div class="card">
+          <img src="https://firebasestorage.googleapis.com/v0/b/app-tese.appspot.com/o/EgresadosYExalumnos%2FBannerEgresados%2FPOSGRADOS%2FING_GESTION1.jpg?alt=media&token=7b2258b8-162c-464e-a014-7f4322814b28" class="card-img-top">
+          <div class="card-img-overlay">
+            <h1 class="tcard" style="margin-top:5vh;">
+              <div *ngFor="let item of items | async">
+                {{item.GestionTitulo}}
+              </div></h1>
+          </div>
+        </div>
+        </a>
+      </div>
+    </div>
+    </div>
+
+    <div *ngIf = "op2">
+      <!-- Breadcrumb, ayuda a que el sitio sea mas agil y el usuario sepa en donde esta localizado, hacia donde puede ir y que paginas le anteceden -->
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+         <li class="breadcrumb-item"><a href="#" class="Link">Home</a></li>
+         <li class="breadcrumb-item active" aria-current="page">EgresadosExalumnos</li>
+         <li class="breadcrumb-item"><a href="/egresadosyexalumnos" class="Link">Posgrados</a></li>
+         <li class="breadcrumb-item active" aria-current="page">VinculacionEmpresarialEIncubadoraDeEmpresas</li>
+        </ol>
+      </nav>
+
+      <div class="cards">
+        <div class="card-body">
+          <h4 class="card-title"><div class="Titulo2">
+              VINCULACIÓN EMPRESARIAL E INCUBADORA DE EMPRESAS
+          </div></h4>
+
+          <p class="card-text">
+            <div *ngFor="let DatoVinculacion of DatosVinculacion | async">
+              {{DatoVinculacion.VinculacionDesc}}
+            </div>
+          <br>
+          <br>
+          <h4 class="card-title"><div class="Titulo2">
+            OBJETIVO
+          </div></h4>
+          <ul *ngFor="let DatoObjetivo of DatosObjetivo | async">
+            <li>
+                {{DatoObjetivo.ObjetivoDesc}}
+            </li>
+          </ul>
+          <BR>
+          <BR>
+
+            <div class="row row-cols-1 row-cols-md-2 g-2">
+              <div class="col">
+                <div class="cards">
+                  <div class="card-body">
+                    <h4 class="card-title"><div class="Titulo2">
+                      EGRESADOS Y ALUMNOS
+                      </div></h4>
+                    <p class="card-text">
+                      <div *ngFor="let DatoEgresado of DatosEgresados | async">
+                        {{DatoEgresado.EgresadosDesc}}
+                      </div>
+                      <BR>
+                        <BR>
+                  </div>
+                </div>
+              </div>
+
+                <div class="col">
+                  <div class="cards">
+                    <div class="card-body">
+                      <h4 class="card-title"><div class="Titulo2">
+                        EMPRESAS
+                      </div></h4>
+                      <p class="card-text">
+                        <div *ngFor="let DatoEmpresa of DatosEmpresas | async">
+                          {{DatoEmpresa.EmpresasDesc}}
+                        </div>
+                      <BR>
+                        <BR>
+                    </div>
+                  </div>
+                  </div>
+              </div>
+
+
+          <h4 class="card-title"><div class="Titulo2">
+            INCUBADORA DE EMPRESAS
+          </div></h4>
+              <ul style="list-style-type : none" *ngFor="let DatoIncubadora of DatosIncubadora | async">
+                <li>
+                    {{DatoIncubadora.IncubadoraOpc}}
+                </li>
+            </ul>
+          <BR>
+          <BR>
+        </div>
+      </div>
+      </div>
+
+
+    <div *ngIf = "op3">
+       <!-- Breadcrumb, ayuda a que el sitio sea mas agil y el usuario sepa en donde esta localizado, hacia donde puede ir y que paginas le anteceden -->
+       <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#" class="Link">Home</a></li>
+         <li class="breadcrumb-item active" aria-current="page">Egresados y Exalumnos</li>
+         <li class="breadcrumb-item"><a href="/egresadosyexalumnos" class="Link">Posgrados</a></li>
+         <li class="breadcrumb-item active" aria-current="page">ActividadesYCredenciales</li>
+        </ol>
+      </nav>
+
+      <div class="cards">
+        <div class="card-body">
+          <h4 class="card-title"><div class="Titulo2">
+            ACTIVIDADES DE EGRESADO
+          </div></h4>
+          <ul *ngFor="let DatoActividades of DatosActividades | async">
+            <li>
+                {{DatoActividades.ActividadesOpc}}
+            </li>
+          </ul>
+
+          <BR>
+          <BR>
+
+          <h4 class="card-title"><div class="Titulo2">
+            BENEFICIOS DE LA INSTITUCIÓN
+          </div></h4>
+          <ul *ngFor="let DatoBeneficio of DatosBeneficios | async">
+            <li>
+                {{DatoBeneficio.BeneficiosOpc}}
+            </li>
+
+          </ul>
+          <BR>
+          <BR>
+
+            <h4 class="card-title"><div class="Titulo2">
+              CREDENCIAL DE EGRESADOS
+            </div></h4>
+              <p class="card-text">
+                <ol style="list-style-type: none;"*ngFor="let DatoCredencial of DatosCredencial | async">
+                  <li>
+                      {{DatoCredencial.CredencialOpc}}
+                  </li>
+                </ol>
+          <BR>
+          <BR>
+        </div>
+        </div>
+    </div>
+
+
+    <div *ngIf = "op4">
+      <!-- Breadcrumb, ayuda a que el sitio sea mas agil y el usuario sepa en donde esta localizado, hacia donde puede ir y que paginas le anteceden -->
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#" class="Link">Home</a></li>
+         <li class="breadcrumb-item active" aria-current="page">Egresados y Exalumnos</li>
+         <li class="breadcrumb-item"><a href="/egresadosyexalumnos" class="Link">Posgrados</a></li>
+         <li class="breadcrumb-item active" aria-current="page">CursosYDiplomados</li>
+        </ol>
+      </nav>
+
+      <div class="cards">
+        <div class="card-body">
+          <h4 class="card-title">
+            <div class="Titulo2">
+              CURSOS Y DIPLOMADOS
+            </div></h4>
+          <p class="card-text">
+              <div *ngFor="let DatoCurso of DatosCursos | async">
+                {{DatoCurso.CursosDesc}}
+              </div>
+          <BR>
+          <BR>
+
+          <h4 class="card-title"><div class="Titulo2">
+            PERFIL DEL EGRESADO
+          </div></h4>
+          <p class="card-text">
+                <div *ngFor="let DatoPerfil of DatosPerfil | async">
+                  {{DatoPerfil.PerfilDesc}}
+                </div>
+          <BR>
+          <BR>
+
+            <h1 class="Titulo2">
+              CAMPO LABORAL
+            </h1>
+              <p class="card-text">
+                    <div *ngFor="let DatoCampo of DatosCampo | async">
+                      {{DatoCampo.CampoDesc}}
+                    </div>
+          <BR>
+          <BR>
+            <h1 class="Titulo2">
+              CURSOS DEL CENTRO DE IDIOMAS
+            </h1>
+              <p class="card-text">
+                    <div *ngFor="let DatoCC of DatosCC | async">
+                      {{DatoCC.CCOpc}}
+                    </div>
+                    <br>
+              <br>
+              <br>
+        </div>
+      </div>
+    </div>
+
+
+    <div *ngIf = "op5">
+      <!-- Breadcrumb, ayuda a que el sitio sea mas agil y el usuario sepa en donde esta localizado, hacia donde puede ir y que paginas le anteceden -->
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#" class="Link">Home</a></li>
+         <li class="breadcrumb-item active" aria-current="page">Egresados y Exalumnos</li>
+         <li class="breadcrumb-item"><a href="/egresadosyexalumnos" class="Link">Posgrados</a></li>
+         <li class="breadcrumb-item active" aria-current="page">HistorialAcadémico</li>
+        </ol>
+      </nav>
+
+      <div class="cards">
+        <div class="card-body">
+          <h4 class="card-title"><div class="Titulo2">
+            HISTORIAL ACADÉMICO
+          </div></h4>
+          <p class="card-text">
+            <div *ngFor="let DatoHistorial of DatosHistorial | async">
+              {{DatoHistorial.HistorialDesc}}
+            </div>
+          <br>
+          <br>
+
+          <div class="row row-cols-1 row-cols-md-2 g-2">
+            <div class="col">
+            <h4 class="card-title"><div class="Titulo2">
+              DOCUMENTO ELECTRÓNICO
+              </div></h4>
+              <p class="card-text">
+                <div *ngFor="let DatoDocE of DatosDocE | async">
+                  {{DatoDocE.DocEDesc}}
+                </div>
+                <br>
+                <br>
+            </div>
+            <div class="col">
+              <h4 class="card-title"><div class="Titulo2">
+                DOCUMENTO OFICIAL
+              </div></h4>
+              <p class="card-text">
+                <div *ngFor="let DatoDocO of DatosDocO | async">
+                  {{DatoDocO.DocODesc}}
+                </div>
+          <br>
+          <br>
+          </div>
+          </div>
+
+            <h1 class="Titulo2">
+              HORARIO Y LUGAR
+            </h1>
+              <p class="card-text" >
+                <ul style="list-style-type: none;" *ngFor="let DatoHorario of DatosHorario | async">
+                  <li style="text-align: center;">
+                      {{DatoHorario.HorarioOpc}}
+                  </li>
+                </ul>
+                <br>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf = "op6">
+      <!-- Breadcrumb, ayuda a que el sitio sea mas agil y el usuario sepa en donde esta localizado, hacia donde puede ir y que paginas le anteceden -->
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#" class="Link">Home</a></li>
+         <li class="breadcrumb-item active" aria-current="page">Egresados y Exalumnos</li>
+         <li class="breadcrumb-item"><a href="/egresadosyexalumnos" class="Link">Posgrados</a></li>
+         <li class="breadcrumb-item active" aria-current="page">CompromisoSocial</li>
+        </ol>
+      </nav>
+
+      <div class="cards">
+        <p class="card-body">
+          <h4 class="card-title"><div class="Titulo2">
+            COMPROMISO SOCIAL
+          </div></h4>
+          <p class="card-text">
+            <div *ngFor="let DatoCompromiso of DatosCompromiso | async">
+            <ul>
+              <li>
+                  {{DatoCompromiso.CompromisoOpc}}
+              </li>
+              </ul>
+            </div>
+          <BR>
+          <BR>
+
+          <h4 class="card-title"><div class="Titulo2">
+            INEA
+          </div></h4>
+          <div *ngFor="let DatoInea of DatosInea | async">
+          <ul>
+            <li>
+              {{DatoInea.IneaOpc}}
+          </li>
+          </ul>
+          </div>
+          </div>
+          </div>
+        </div>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>

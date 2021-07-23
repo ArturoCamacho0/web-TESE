@@ -1,0 +1,103 @@
+
+<div class="">
+  <mat-drawer-container class="side-container">
+    <mat-drawer mode="side"class="sidebar" id="side" #drawer opened>
+      <mat-selection-list role="list-container" [multiple]="false">
+
+
+
+
+        <a href="admin-historia">
+          <mat-list-option>
+            Historia
+          </mat-list-option>
+        </a>
+        <a href="admin-mision">
+          <mat-list-option role="/Logo">
+            Mision Vision
+          </mat-list-option>
+        </a>
+
+        <a href="admin-organigrama">
+          <mat-list-option role="/Logo">
+            Organigrama
+          </mat-list-option>
+        </a>
+      </mat-selection-list>
+    </mat-drawer>
+
+    <mat-drawer-content class="side-content">
+      <button id="arrow" type="button" mat-button (click)="drawer.toggle()" (click)="open()">
+        <mat-icon id="right" class="open">arrow_forward</mat-icon>
+        <mat-icon id="left">arrow_back</mat-icon>
+      </button>
+      <mat-divider class="divider"></mat-divider>
+
+    <div class="text-side">
+      <div class="box-shadow= 50px 50px;">
+        <nav arial-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a class="ubicacion-pag" href="#">Administracion</a></li>
+            <li class="breadcrumb-item"><a class="ubicacion-pag" href="#">Identidad Institucional</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Logo</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
+    <h1 class="fw-bold lh-sm fs-4 shadow p-3 mb-5 bg-body rounded">Panel Edicion Carrera</h1>
+
+    <section class="lh-sm fs-4 shadow p-3 mb-5 bg-body rounded">
+      <hr>
+      <h1 class="fw-bold">{{titulo}}</h1>
+      <form [formGroup]="FormularioEditar" (ngSubmit)="editarCarrera()">
+        <div>
+
+        <label for="inputAddress" class="form-label" >CARRERA</label>
+
+        <div class="row g-3">
+
+          <div class="col-4">
+            <h3 class="fw-bold">Ruta Imagen</h3>
+          </div>
+
+          <div class="col-3">
+            <h3 class="fw-bold">Nombre</h3>
+          </div>
+
+          <div class="col-3">
+            <h3 class="fw-bold">Enlace</h3>
+          </div>
+
+        </div>
+
+        <div class="row g-3">
+
+          <div class="col-4">
+            <input type="text" class="form-control" id="inputAddress" formControlName="imagen">
+          </div>
+
+          <div class="col-3">
+            <input type="text" class="form-control" id="inputAddress" formControlName="nombre">
+          </div>
+
+          <div class="col-3">
+            <input type="text" class="form-control" id="inputAddress" formControlName="ruta">
+          </div>
+
+          <div class="col">
+            <button type="submit" class="btn btn-success">Actualizar</button>
+          </div>
+
+        </div>
+
+      </div>
+
+      </form>
+    </section>
+
+    </mat-drawer-content>
+  </mat-drawer-container>
+  </div>
+
+

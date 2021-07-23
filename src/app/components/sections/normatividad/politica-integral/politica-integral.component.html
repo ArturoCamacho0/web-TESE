@@ -1,0 +1,210 @@
+<div class="container-fluid">
+    <mat-drawer-container class="side-container">
+      <!-- Inicio de la SIDE NAV BAR; Si se desea eliminar se borrara este bloque de codigo y el final mat drawer  -->
+      <mat-drawer mode="side" class="sidebar" id="side" #drawer opened>
+        <mat-selection-list role="list container" [multiple]="false">
+            <a href="normatividad">
+                <mat-list-option>
+                  Normatividad
+                </mat-list-option>
+              </a>
+              <a href="informe">
+                <mat-list-option role="listitem">
+                  Informe de Actividades
+                </mat-list-option>
+                </a>
+                <a href="compromiso">
+                <mat-list-option role="listitem">
+                  Compromiso Social
+                </mat-list-option>
+                </a>
+        
+                <a href="politica">
+                  <mat-list-option>
+                    Politica del Sistema de Gestión Integral
+                  </mat-list-option>
+                </a>
+                <a href="calendario">
+                <mat-list-option role="listitem">
+                   Calendario Escolar
+                </mat-list-option>
+                </a>
+                <a href="contraloria">
+                <mat-list-option role="listitem">
+                  Contraloria Social
+                </mat-list-option>
+                </a>
+                <a href="admin-compromiso">
+                  <mat-list-option>
+                    Admin
+                  </mat-list-option>
+                </a>
+      
+        </mat-selection-list>
+      </mat-drawer>
+  
+      <mat-drawer-content class="side-content">
+        <button id="arrow" type="button" mat-button (click)="drawer.toggle()" (click)="open()">
+          <mat-icon id="right" class="open">arrow_forward</mat-icon>
+          <mat-icon id="left">arrow_back</mat-icon>
+        </button>
+  
+        <mat-divider class="divider"></mat-divider>
+  
+        <!-- Empieza el area para ingresar contenido en el panel lateral -->
+        <div class="text-side">
+          <div class="box-shadow= 50px 50px;">
+  
+            <!-- Breadcrumb, ayuda a que el sitio sea mas agil y el usuario sepa en donde esta localizado, hacia donde puede ir y que paginas le anteceden -->
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="normatividad">Normatividad</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Politica Integral</li>
+              </ol>
+            </nav>
+  
+            <!-- Carrousel dentro de la pagina; de no ser necesario puede ser
+  eliminado sin ningun problema: Para la implementacion en tu componente tendras que realizar las importaciones necesarias en el ts; ir al archivo para mas informacion -->
+  
+            <h1 class="titulo">
+                Política del Sistema de Gestión Integral</h1>
+  
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">
+            <div class="Titulo2">Acerca de:</div>
+                </h4>
+                <p class="card-text"> <b>Es compromiso del personal del Tecnológico de Estudios Superiores de Ecatepec ejecutar los procesos declarados en nuestro 
+                    Sistema de Gestión Integral, cumpliendo con los requisitos legales y reglamentarios, así como la satisfacción de nuestros usuarios a través de la mejora continua,
+                     enfocados en la calidad de nuestros servicios y con el cuidado y protección del medio ambiente.</b>
+                    <br>
+                    <br>
+                  </p>
+              </div>
+            </div>
+  
+            <mat-divider></mat-divider>
+  
+            
+  
+            
+  
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    Alcance: /Scope of registration:
+                  </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                  data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    El Sistema de Gestión Integral aplica al Servicio de Educación Superior considerando los procesos de 
+                    Admisión, Académico, Vinculación, Servicios Estudiantiles y Gestión Académica, así mismo en los 
+                    procesos de apoyo Infraestructura, Administración de Recursos Humanos y Financieros para las carreras 
+                    de Ingeniería en Sistemas Computacionales, Ingeniería Industrial, Ingeniería Mecánica, Ingeniería
+                     Mecatrónica, Ingeniería en Gestión Empresarial, Ingeniería Aeronáutica, Ingeniería Química, 
+                     Ingeniería Bioquímica, Ingeniería Electrónica, Ingeniería en Informática, Contador Público, 
+                     Maestría en Ingeniería en Sistemas Computacionales, Maestría en Ciencias en Ingeniería Química, 
+                     Maestría en Ciencias en Ingeniería Bioquímica, Maestría en Ciencias en Ingeniería Mecatrónica, 
+                     Maestría en Gestión Administrativa, Maestría en Eficiencia Energética y Energías Renovables, en las 
+                     áreas de: laboratorios, mantenimiento, cafetería, pasillos, salones, oficinas, sanitarios, consultorio, estacionamiento, almacén de residuos peligrosos, gimnasio y auditorio
+                    </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                      Tecnológico de Estudios Superiores de Ecatepec
+                    </button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                  data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                        Con  base a la norma NMX-CC-9001-IMNC-2015  (ISO 9001:2015) y  NMX-SAA-14001-
+                        IMNC-2015 (ISO 14001:2015) con números de Certificados 2453 y 2454 respectivamente,
+                         con  caducidad de Certificación al 23 de octubre del 2021.
+                      </div>
+                  </div>
+                </div>
+              
+            <mat-divider></mat-divider>
+            <!-- Seccion de documentos; Algunas paginas contienen documentos o enlaces a los que el usuario puede acceder/descargar, si lo necesitas puedes implementarlo en cada uno de los "accordion body" cada uno de estos representa a una opcion o documento -->
+          <div class="alert alert-primary d-flex align-items-center" id="acordeon" role="alert">
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+              class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img"
+              aria-label="Warning:">
+              <path
+                d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+            </svg> -->
+            <div>
+              <h2>Documentos Anexos</h2>
+              <div class="accordion" id="accordionPanelsStayOpenExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                    <button class="accordion-button accordion-color" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                      aria-controls="panelsStayOpen-collapseOne">
+                     Certificado de Calidad
+                    </button>
+                  </h2>
+                  <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                    aria-labelledby="panelsStayOpen-headingOne">
+                    <div class="accordion-body">
+                      <mat-card-content>
+                      </mat-card-content>
+                      <mat-card-actions style="margin-right: auto; font-size: 8pt;">
+                        <a href="http://www.tese.edu.mx/imagenes2004/5120_EGNRYCX.jpg" target="_blank" class="enlace-pdf"
+                          mat-button><img src="../../../../assets/images/pdf.jpg" width="8%" height="8%"><br>Multimedia</a>
+
+                      </mat-card-actions>
+                    </div>
+                  </div>
+                </div>
+               
+               
+              
+  
+           
+         
+               
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                    <button class="accordion-button accordion-color" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="true"
+                      aria-controls="panelsStayOpen-collapseTwo">
+                     Certificado Ambiental
+                    </button>
+                  </h2>
+                  <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse show"
+                    aria-labelledby="panelsStayOpen-headingtwo">
+                    <div class="accordion-body">
+                      <mat-card-content>
+                      </mat-card-content>
+                      <mat-card-actions style="margin-right: auto; font-size: 8pt;">
+                        <a href="http://www.tese.edu.mx/imagenes2004/5121_SUDJZHP.jpg" target="_blank" class="enlace-pdf"
+                          mat-button><img src="../../../../assets/images/pdf.jpg" width="8%" height="8%"><br>Multimedia</a>
+
+                      </mat-card-actions>
+                    </div>
+                  </div>
+                </div>
+
+                
+              </div>
+  
+           </div>
+            
+            </div>
+          </div>
+        </div>
+  
+        <!-- Etiqueda de cerrado de la side nav bar, se elimina para retirar la barra de navegacion lateral -->
+      </mat-drawer-content>
+    </mat-drawer-container>
+  </div>

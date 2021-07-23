@@ -1,0 +1,36 @@
+<mat-toolbar class="header">
+    <div class="logo">
+        <img src="../../../../assets/images/Logo_tese.jpg" alt="Logo TESE"/>
+        <h1 class="title">T E S E</h1>
+    </div>
+
+    <nav class="menu-items">
+        <a [routerLink]="['/']">Inicio</a>
+        <a>Oferta educativa</a>
+        <a>Con&oacute;cenos</a>
+        <a href="/contacto">Contacto</a>
+
+        <a href="/login">Iniciar sesi&oacute;n</a>
+        <a href="/registro">Registrarte</a>
+
+        
+                
+    </nav>
+
+    <button mat-icon-button class="burguer-menu">
+        <mat-icon (click)="menu()">menu</mat-icon>
+    </button>
+</mat-toolbar>
+
+<div id="menu-full">
+    <button mat-icon-button id="close" class="burguer-menu">
+        <mat-icon (click)="menu()">close</mat-icon>
+    </button>
+    <a id="sesion-full">Iniciar sesi&oacute;n</a>
+    <a [routerLink]="['/']" (click)="menu()">Inicio</a>
+    <a>Oferta educativa</a>
+    <a>Con&oacute;cenos</a>
+    <a>Contacto</a>
+</div>
+
+<div class="separator"></div>
