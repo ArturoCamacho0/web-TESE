@@ -32,14 +32,14 @@
     <div class="cards">
       <div class="card-body" style="background-color:#E3E3E3; text-align: center;">
         <h4 class="card-title"><div class="Titulo2">
-          <div *ngFor="let item of items | async">
-            {{item.ConceptosGenerales}}
+         <div *ngFor="let item of items | async">
+           {{item.ConceptosGenerales}}
           </div>
           </div>
         </h4>
         <p class="card-text">
-        <div *ngFor="let item of items | async">
-          {{item.SistemasGenerales}}
+        <div *ngFor="let Concepto of Conceptos | async"><
+          {{Concepto.ConceptosMsistemasDesc}}
         </div>
         <br>
        </div>
@@ -53,8 +53,8 @@
         </div>
        </div></h4>
         <p class="card-text">
-          <div *ngFor="let item of items | async">
-            {{item.SistemasDirigido}}
+          <div *ngFor="let Dirigido of Dirigidos | async">
+            {{Dirigido.DirigidoMSistemasDesc}}
           </div>
         <br>
       </div>
@@ -87,35 +87,9 @@
                         </div>
                       </div></h4>
                       <p class="card-text">
-                        <div *ngFor="let item of items | async">
-                          {{item.SistemasPerfilI}}
-                        </div>
-                        <br>
-                        <ul>
+                      <ul *ngFor="let PerfilI of PerfilesI | async" style="list-style-type: none;">
                           <li>
-                            <div *ngFor="let item of items | async">
-                              {{item.SistemasPerfilIop1}}
-                            </div>
-                          </li>
-                          <li>
-                            <div *ngFor="let item of items | async">
-                              {{item.SistemasPerfilIop2}}
-                            </div>
-                          </li>
-                          <li>
-                            <div *ngFor="let item of items | async">
-                              {{item.SistemasPerfilIop3}}
-                            </div>
-                          </li>
-                          <li>
-                            <div *ngFor="let item of items | async">
-                              {{item.SistemasPerfilIop4}}
-                            </div>
-                          </li>
-                          <li>
-                            <div *ngFor="let item of items | async">
-                              {{item.SistemasPerfilIop5}}
-                            </div>
+                              {{PerfilI.PerfilIMsistemasOpc}}
                           </li>
                         </ul>
                       <BR>
@@ -133,8 +107,8 @@
                           </div>
                         </div></h4>
                         <p class="card-text">
-                          <div *ngFor="let item of items | async">
-                            {{item.SistemasPerfilE}}
+                          <div *ngFor="let PerfilE of PerfilesE | async">
+                            {{PerfilE.PerfilEMsistemasDesc}}
                           </div>
                           <br>
                           <br>
@@ -163,43 +137,16 @@
           <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
             data-bs-parent="#accordionFlushExample">
             <div class="accordion-body" style="text-align:justify;">
-              <ul>
+              <ul *ngFor="let Requisito of Requisitos | async">
                 <li>
-                  <div *ngFor="let item of items | async">
-                    {{item.SistemasReqop1}}
-                  </div>
-                </li>
-                <li>
-                  <div *ngFor="let item of items | async">
-                    {{item.SistemasReqop2}}
-                  </div>
-                </li>
-                <li>
-                  <div *ngFor="let item of items | async">
-                    {{item.SistemasReqop3}}
-                  </div>
-                </li>
-                <li>
-                  <div *ngFor="let item of items | async">
-                    {{item.SistemasReqop4}}
-                  </div>
-                </li>
-                <li>
-                  <div *ngFor="let item of items | async">
-                    {{item.SistemasReqop5}}
-                  </div>
-                </li>
-                <li>
-                  <div *ngFor="let item of items | async">
-                    {{item.SistemasReqop6}}
-                  </div>
+                    {{Requisito.RequisitosMsistemasOpc}}
                 </li>
                </ul>
               <br>
               <br>
           </div>
         </div>
-        </div>
+      </div>
 
         <div class="accordion-item">
         <h2 class="accordion-header" id="flush-headingFour">
@@ -215,59 +162,10 @@
         <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
           data-bs-parent="#accordionFlushExample">
           <div class="accordion-body" style="text-align:justify;">
-            <ul>
+            <ul *ngFor="let Documento of Documentos | async">
               <li>
-                <div *ngFor="let item of items | async">
-                  {{item.SistemasDocop1}}
-                </div>
+                  {{Documento.DocumentosMsistemasopc}}
               </li>
-              <li>
-                <div *ngFor="let item of items | async">
-                  {{item.SistemasDocop2}}
-                </div>
-              </li>
-              <li>
-                <div *ngFor="let item of items | async">
-                  {{item.SistemasDocop3}}
-                </div>
-              </li>
-              <li>
-                <div *ngFor="let item of items | async">
-                  {{item.SistemasDocop4}}
-                </div>
-              </li>
-              <li>
-                <div *ngFor="let item of items | async">
-                  {{item.SistemasDocop5}}
-                </div>
-              </li>
-              <li>
-                <div *ngFor="let item of items | async">
-                  {{item.SistemasDocop6}}
-                </div>
-              </li>
-              <li>
-                <div *ngFor="let item of items | async">
-                  {{item.SistemasDocop7}}
-                </div>
-              </li>
-              <li>
-                <div *ngFor="let item of items | async">
-                  {{item.SistemasDocop8}}
-                </div>
-              </li>
-              <li>
-                <div *ngFor="let item of items | async">
-                  {{item.SistemasDocop9}}
-                </div>
-              </li>
-              <li>
-                <div *ngFor="let item of items | async">
-                  {{item.SistemasDocop10}}
-                </div>
-              </li>
-              <br>
-              <br>
             </ul>
           </div>
         </div>
@@ -299,8 +197,8 @@
                           </div>
                       </div></h4>
                       <p class="card-text">
-                          <div *ngFor="let item of items | async">
-                            {{item.SistemasMision}}
+                          <div *ngFor="let Mision of Misiones | async">
+                            {{Mision.MisionMsistemasDesc}}
                           </div>
                     </div>
                   </div>
@@ -317,8 +215,8 @@
                             </div>
                         </div></h4>
                         <p class="card-text">
-                          <div *ngFor="let item of items | async">
-                            {{item.SistemasVision}}
+                          <div *ngFor="let Vision of Visiones | async">
+                            {{Vision.VisionMsistemasDesc}}
                           </div>
                           <br>
                           <br>
@@ -346,8 +244,8 @@
         data-bs-parent="#accordionFlushExample">
         <div class="accordion-body" style="text-align: center;">
           <p class="card-text">
-              <div *ngFor="let item of items | async">
-                {{item.SistemasDesarrollo}}
+              <div *ngFor="let Linea of Lineas | async">
+                {{Linea.LineasMsistemasDesc}}
               </div>
               <br>
               <br>

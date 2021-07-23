@@ -35,8 +35,8 @@
           </div>
         </div></h4>
          <p class="card-text">
-          <div *ngFor="let item of items | async">
-            {{item.EficienciaGenerales}}
+          <div *ngFor="let Concepto of Conceptos | async">
+            {{Concepto.ConceptosMeficienciaDesc}}
           </div>
         <br>
        </div>
@@ -50,8 +50,8 @@
         </div>
        </div></h4>
         <p class="card-text">
-          <div *ngFor="let item of items | async">
-            {{item.EficienciaObjetivo}}
+          <div *ngFor="let Objetivo of Objetivos | async">
+            {{Objetivo.ObjetivoMeficienciaDesc}}
           </div>
         <br>
       </div>
@@ -80,8 +80,8 @@
                   <div class="cardS">
                     <div class="card-body" style="text-align: justify;">
                     <p class="card-text">
-                      <div *ngFor="let item of items | async">
-                        {{item.EficienciaPerfil}}
+                      <div *ngFor="let Perfil of Perfiles | async">
+                        {{Perfil.PerfilMeficienciaDesc}}
                       </div>
                <BR>
                <BR>
@@ -174,29 +174,9 @@
             data-bs-parent="#accordionFlushExample">
             <div class="accordion-body">
               <p class="card-text">
-                <div *ngFor="let item of items | async">
-                  {{item.EficienciaCampo}}
-                </div>
-                <ul>
+                <ul *ngFor="let Campo of Campos | async">
                 <li>
-                  <div *ngFor="let item of items | async">
-                    {{item.EficienciaCampoop1}}
-                  </div>
-                </li>
-                <li>
-                  <div *ngFor="let item of items | async">
-                    {{item.EficienciaCampoop2}}
-                  </div>
-                </li>
-                <li>
-                  <div *ngFor="let item of items | async">
-                    {{item.EficienciaCampoop3}}
-                  </div>
-                </li>
-                <li>
-                  <div *ngFor="let item of items | async">
-                    {{item.EficienciaCampoop4}}
-                  </div>
+                    {{Campo.CampoMeficienciaOpc}}
                 </li>
               </ul>
               <br>

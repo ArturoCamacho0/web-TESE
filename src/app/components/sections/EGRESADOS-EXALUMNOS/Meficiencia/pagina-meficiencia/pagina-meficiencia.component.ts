@@ -16,6 +16,11 @@ export class PaginaMeficienciaComponent implements OnInit {
   items: Observable<any[]>
   materiasB: Observable<any[]>
   materiasO: Observable<any[]>
+  Conceptos: Observable<any[]>
+  Objetivos: Observable<any[]>
+  Perfiles: Observable<any[]>
+  Campos: Observable<any[]>
+
 
   public carouselData: ICarouselItem[]=CAROUSEL_DATA_ITEMS_MEFICIENCIA;
 
@@ -23,6 +28,10 @@ export class PaginaMeficienciaComponent implements OnInit {
     this.items = firestore.collection('EgresadosYExalumnos').valueChanges();
     this.materiasB = firestore.collection('/EgresadosYExalumnos/MEficienciaEnergetica/EficienciaMateriasBasicas').valueChanges();
     this.materiasO = firestore.collection('/EgresadosYExalumnos/MEficienciaEnergetica/EficienciaMateriasOptativas').valueChanges();
+    this.Conceptos = firestore.collection('/EgresadosYExalumnos/MEficienciaEnergetica/ConceptosMeficiencia').valueChanges();
+    this.Objetivos = firestore.collection('/EgresadosYExalumnos/MEficienciaEnergetica/ObjetivoMeficiencia').valueChanges();
+    this.Perfiles = firestore.collection('/EgresadosYExalumnos/MEficienciaEnergetica/PerfilMeficiencia').valueChanges();
+    this.Campos = firestore.collection('/EgresadosYExalumnos/MEficienciaEnergetica/CampoMeficiencia').valueChanges();
   }
 
   ngOnInit(): void {

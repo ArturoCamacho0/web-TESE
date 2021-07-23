@@ -36,8 +36,8 @@
             </div>
           </div></h4>
          <p class="card-text">
-           <div *ngFor="let item of items | async">
-          {{item.BioquimicaGenerales}}
+           <div *ngFor="let Concepto of Conceptos | async">
+          {{Concepto.ConceptosMbioquimicaDesc}}
         </div>
         <br>
        </div>
@@ -49,8 +49,8 @@
         {{item.Objetivo}}
       </div></div></h4>
         <p class="card-text">
-          <div *ngFor="let item of items | async">
-            {{item.BioquimicaObjetivo}}
+          <div *ngFor="let Objetivo of Objetivos | async">
+            {{Objetivo.ObjetivoMbioquimicaDesc}}
           </div>
         <br>
       </div>
@@ -62,8 +62,8 @@
         {{item.CampoAccion}}
       </div></div></h4>
         <p class="card-text">
-          <div *ngFor="let item of items | async">
-            {{item.BioquimicaCampo}}
+          <div *ngFor="let Campo of Campos | async">
+            {{Campo.CampoMbioquimicaDesc}}
           </div>
         <br>
       </div>
@@ -88,40 +88,9 @@
               <div class="row row-cols-1 row-cols-md-2 g-1">
                 <div class="col">
                   <p class="card-text">
-                    <div *ngFor="let item of items | async">
-                      {{item.BioquimicaPerfil}}
-                    </div>
-                    <BR>
-                 <ul>
+                 <ul *ngFor="let Perfil of Perfiles | async" style="list-style-type: none;">
                    <li>
-                    <div *ngFor="let item of items | async">
-                      {{item.BioquimicaPerfilop1}}
-                    </div>
-                   </li>
-                   <li>
-                      <div *ngFor="let item of items | async">
-                      {{item.BioquimicaPerfilop2}}
-                    </div>
-                   </li>
-                   <li>
-                      <div *ngFor="let item of items | async">
-                      {{item.BioquimicaPerfilop3}}
-                    </div>
-                   </li>
-                   <li>
-                      <div *ngFor="let item of items | async">
-                      {{item.BioquimicaPerfilop4}}
-                    </div>
-                   </li>
-                   <li>
-                      <div *ngFor="let item of items | async">
-                      {{item.BioquimicaPerfilop5}}
-                    </div>
-                   </li>
-                   <li>
-                      <div *ngFor="let item of items | async">
-                      {{item.BioquimicaPerfilop6}}
-                    </div>
+                      {{Perfil.PerfilMbioquimicaOpc}}
                    </li>
                  </ul>
                 </div>
@@ -208,21 +177,9 @@
           <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
             data-bs-parent="#accordionFlushExample">
             <div class="accordion-body" style="text-align: center;">
-              <ul style="list-style-type: none;">
+              <ul style="list-style-type: none;" *ngFor="let Area of Areas | async">
               <li>
-                <div *ngFor="let item of items | async">
-                  {{item.BioquimicaAreasop1}}
-                </div>
-              </li>
-              <li>
-                <div *ngFor="let item of items | async">
-                  {{item.BioquimicaAreasop2}}
-                </div>
-              </li>
-              <li>
-                <div *ngFor="let item of items | async">
-                  {{item.BioquimicaAreasop3}}
-                </div>
+                  {{Area.AreaMbioquimicaOpc}}
               </li>
             </ul>
             <br>

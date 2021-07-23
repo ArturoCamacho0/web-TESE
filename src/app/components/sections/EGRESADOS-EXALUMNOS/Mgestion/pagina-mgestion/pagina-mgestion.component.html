@@ -34,8 +34,8 @@
             </div>
         </div></h4>
          <p class="card-text">
-            <div *ngFor="let item of items | async">
-              {{item.GestionGenerales}}
+            <div *ngFor="let Concepto of Conceptos | async">
+              {{Concepto.ConceptosGestionDesc}}
             </div>
         <br>
        </div>
@@ -49,8 +49,8 @@
           </div>
        </div></h4>
         <p class="card-text">
-            <div *ngFor="let item of items | async">
-              {{item.GestionObjetivo}}
+            <div *ngFor="let Objetivo of Objetivos | async">
+              {{Objetivo.ObjetivoGestionDesc}}
             </div>
         <br>
       </div>
@@ -75,39 +75,9 @@
                 <div class="row row-cols-1 row-cols-md-2 g-2">
                   <div class="col">
                     <p class="card-text">
-                      <div *ngFor="let item of items | async">
-                        {{item.GestionPerfil}}
-                      </div>
-                      <ul>
+                      <ul *ngFor="let Perfil of Perfiles | async" style="list-style-type: none;">
                       <li>
-                        <div *ngFor="let item of items | async">
-                          {{item.GestionPerfilop1}}
-                        </div>
-                      </li>
-                      <li>
-                        <div *ngFor="let item of items | async">
-                          {{item.GestionPerfilop2}}
-                        </div>
-                      </li>
-                      <li>
-                        <div *ngFor="let item of items | async">
-                          {{item.GestionPerfilop3}}
-                        </div>
-                      </li>
-                      <li>
-                        <div *ngFor="let item of items | async">
-                          {{item.GestionPerfilop4}}
-                        </div>
-                      </li>
-                      <li>
-                        <div *ngFor="let item of items | async">
-                          {{item.GestionPerfilop5}}
-                        </div>
-                      </li>
-                      <li>
-                        <div *ngFor="let item of items | async">
-                          {{item.GestionPerfilop6}}
-                        </div>
+                          {{Perfil.PerfilGestionOpc}}
                       </li>
                   </ul>
                   </div>
@@ -137,33 +107,13 @@
             <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
               data-bs-parent="#accordionFlushExample">
               <div class="accordion-body">
-                <ul>
-                    <li>
-                      <div *ngFor="let item of items | async">
-                        {{item.GestionPlanop1}}
-                      </div>
-                    </li>
-                    <li>
-                      <div *ngFor="let item of items | async">
-                        {{item.GestionPlanop2}}
-                      </div>
-                    </li>
-                    <li>
-                      <div *ngFor="let item of items | async">
-                        {{item.GestionPlanop3}}
-                      </div>
-                    </li>
-                    <li>
-                      <div *ngFor="let item of items | async">
-                        {{item.GestionPlanop4}}
-                      </div>
-                    </li>
-                  </ul>
-                    <div *ngFor="let item of items | async">
-                      {{item.GestionPlan}}
-                    </div>
-              </div>
+                <ul *ngFor="let Estructura of Estructuras | async">
+                  <li>
+                      {{Estructura.EstructuraGestionOpc}}
+                  </li>
+                </ul>
             </div>
+          </div>
           </div>
 
         <div class="accordion-item">
@@ -171,9 +121,7 @@
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
               data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
               <h4 class="card-title"><div class="subtitulo">
-                <div *ngFor="let item of items | async">
-                  {{item.DuracionYCreditos}}
-                </div>
+                DURACIÓN
               </div></h4>
             </button>
           </h2>
@@ -181,13 +129,8 @@
             data-bs-parent="#accordionFlushExample">
             <div class="accordion-body" style="text-align: center;">
               <p class="card-text">
-                <div *ngFor="let item of items | async">
-                  {{item.GestionDuracion}}
-                </div>
-                <br>
-              <p class="card-text">
-                <div *ngFor="let item of items | async">
-                  {{item.GestionCreditos}}
+                <div *ngFor="let Duracion of Duraciones | async">
+                  {{Duracion.DuracionGestionDesc}}
                 </div>
                 <br>
             </div>
@@ -208,26 +151,9 @@
           <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
             data-bs-parent="#accordionFlushExample">
             <div class="accordion-body" style="text-align: center;">
-              <ul style="list-style-type: none;">
-                <li>
-                  <div *ngFor="let item of items | async">
-                    {{item.GestionCarreras1}}
-                  </div>
-                </li>
-                <li>
-                  <div *ngFor="let item of items | async">
-                    {{item.GestionCarreras2}}
-                  </div>
-                </li>
-                <li>
-                  <div *ngFor="let item of items | async">
-                    {{item.GestionCarreras3}}
-                  </div>
-                </li>
-                <li>
-                  <div *ngFor="let item of items | async">
-                    {{item.GestionCarreras4}}
-                  </div>
+              <ul style="list-style-type: none;" *ngFor="let Carrera of Carreras | async">
+                <li >
+                    {{Carrera.CarrerasGestionOpc}}
                 </li>
               </ul>
             <br>

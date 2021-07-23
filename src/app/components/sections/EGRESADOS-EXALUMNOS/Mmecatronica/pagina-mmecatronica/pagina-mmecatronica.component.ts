@@ -14,11 +14,21 @@ import { AngularFirestore } from '@angular/fire/firestore';
 export class PaginaMmecatronicaComponent implements OnInit {
 
   items: Observable<any[]>
+  Conceptos: Observable<any[]>
+  Objetivos: Observable<any[]>
+  Perfiles: Observable<any[]>
+  Estructuras: Observable<any[]>
+  Areas: Observable<any[]>
 
   public carouselData: ICarouselItem[]=CAROUSEL_DATA_ITEMS_MMECATRONICA;
 
   constructor(firestore: AngularFirestore) {
     this.items = firestore.collection('EgresadosYExalumnos').valueChanges();
+    this.Conceptos = firestore.collection('/EgresadosYExalumnos/Mmecatronica/ConceptosMmecatronica').valueChanges();
+    this.Objetivos = firestore.collection('/EgresadosYExalumnos/Mmecatronica/ObjetivoMmecatronica').valueChanges();
+    this.Perfiles = firestore.collection('/EgresadosYExalumnos/Mmecatronica/PerfilMmecatronica').valueChanges();
+    this.Estructuras = firestore.collection('/EgresadosYExalumnos/Mmecatronica/EstructuraMmecatronica').valueChanges();
+    this.Areas = firestore.collection('/EgresadosYExalumnos/Mmecatronica/AreasMmecatronica').valueChanges();
   }
 
   ngOnInit(): void {

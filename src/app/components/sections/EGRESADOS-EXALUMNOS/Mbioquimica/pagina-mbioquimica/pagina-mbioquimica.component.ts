@@ -16,13 +16,23 @@ export class PaginaMbioquimicaComponent implements OnInit {
   items: Observable<any[]>
   materiasB: Observable<any[]>
   materiasO: Observable<any[]>
+  Conceptos: Observable<any[]>
+  Objetivos: Observable<any[]>
+  Campos: Observable<any[]>
+  Perfiles: Observable<any[]>
+  Areas: Observable<any[]>
 
   public carouselData: ICarouselItem[]=CAROUSEL_DATA_ITEMS_MBIOQUIMICA;
   constructor(firestore: AngularFirestore) {
-    
+
     this.items = firestore.collection('EgresadosYExalumnos').valueChanges();
     this.materiasB = firestore.collection('/EgresadosYExalumnos/MCienciasIngenieriaBioquimica/BioquimicaMateriasBasicas').valueChanges();
     this.materiasO = firestore.collection('/EgresadosYExalumnos/MCienciasIngenieriaBioquimica/BioquimicaMateriasOptativas').valueChanges();
+    this.Conceptos = firestore.collection('/EgresadosYExalumnos/MCienciasIngenieriaBioquimica/ConceptosMbioquimica').valueChanges();
+    this.Objetivos = firestore.collection('/EgresadosYExalumnos/MCienciasIngenieriaBioquimica/ObjetivoMbioquimica').valueChanges();
+    this.Campos = firestore.collection('/EgresadosYExalumnos/MCienciasIngenieriaBioquimica/CampoMbioquimica').valueChanges();
+    this.Perfiles = firestore.collection('/EgresadosYExalumnos/MCienciasIngenieriaBioquimica/PerfilMbioquimica').valueChanges();
+    this.Areas = firestore.collection('/EgresadosYExalumnos/MCienciasIngenieriaBioquimica/AreaMbioquimica').valueChanges();
   }
 
   ngOnInit(): void {

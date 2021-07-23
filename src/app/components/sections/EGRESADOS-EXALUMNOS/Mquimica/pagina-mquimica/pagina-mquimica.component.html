@@ -47,7 +47,7 @@
        </div></h4>
         <p class="card-text">
           <div *ngFor="let Objetivo of Objetivos | async">
-            {{iteObjetivom.ObjetivoMquimicaDesc}}
+            {{Objetivo.ObjetivoMquimicaDesc}}
           </div>
         <br>
         <br>
@@ -69,48 +69,11 @@
         data-bs-parent="#accordionFlushExample">
         <div class="accordion-body">
           <p class="card-text">
-            <UL *ngFor="let Perfil of Perfiles | async">
-              <LI>
+            <ul *ngFor="let Perfil of Perfiles | async">
+              <li>
                 {{Perfil.PerfilMquimicaOpc}}
-              </LI>
-
-              <LI>
-                <div *ngFor="let item of items | async">
-                  {{item.QuimicaPerfilop2}}
-                </div>
-              </LI>
-
-              <LI>
-                <div *ngFor="let item of items | async">
-                  {{item.QuimicaPerfilop3}}
-                </div>
-              </LI>
-
-              <LI>
-                <div *ngFor="let item of items | async">
-                  {{item.QuimicaPerfilop4}}
-                </div>
-              </LI>
-
-              <LI>
-                <div *ngFor="let item of items | async">
-                  {{item.QuimicaPerfilop5}}
-                </div>
-              </LI>
-
-              <LI>
-                <div *ngFor="let item of items | async">
-                  {{item.QuimicaPerfilop6}}
-                </div>
-              </LI>
-
-              <LI>
-                <div *ngFor="let item of items | async">
-                  {{item.QuimicaPerfilop7}}
-                </div>
-              </LI>
-
-            </UL>
+              </li>
+            </ul>
     </div>
     <br>
     <br>
@@ -140,8 +103,8 @@
                     </div>
                   </div></h4>
                   <ul>
-                    <div *ngFor="let materiasBasicas of materiasB | async">
-                      <li>{{materiasBasicas.QuimicaMateriaBasica}}</li>
+                    <div *ngFor="let materiaBasicas of materiasB | async">
+                      <li>{{materiaBasicas.QuimicaMateriaBasica}}</li>
                     </div>
                   </ul>
                 </div>
@@ -157,8 +120,8 @@
                       </div>
                     </div></h4>
                     <ul>
-                      <div *ngFor="let materiasOptativas of materiasO | async">
-                        <li>{{materiasOptativas.QuimicaMateriaOptativa}}</li>
+                      <div *ngFor="let materiaOptativas of materiasO | async">
+                        <li>{{materiaOptativas.QuimicaMateriaOptativa}}</li>
                       </div>
                     </ul>
                   </div>
@@ -182,16 +145,9 @@
       <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
         data-bs-parent="#accordionFlushExample">
         <div class="accordion-body" style="text-align: center;">
-          <ul style="list-style-type: none;">
+          <ul style="list-style-type: none;" *ngFor="let Area of Areas | async">
           <li>
-            <div *ngFor="let item of items | async">
-            {{item.QuimicaAreasop1}}
-            </div>
-          </li>
-          <li>
-            <div *ngFor="let item of items | async">
-              {{item.QuimicaAreasop2}}
-              </div>
+            {{Area.AreaMquimicaOpc}}
           </li>
         </ul>
         <br>

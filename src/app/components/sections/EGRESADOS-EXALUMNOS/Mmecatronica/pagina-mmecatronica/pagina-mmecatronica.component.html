@@ -35,8 +35,8 @@
             </div>
         </div></h4>
          <p class="card-text">
-          <div *ngFor="let item of items | async">
-            {{item.MecatronicaGenerales}}
+          <div *ngFor="let Concepto of Conceptos | async">
+            {{Concepto.ConceptosMmecatronicaDesc}}
             </div>
         <br>
        </div>
@@ -50,8 +50,8 @@
           </div>
        </div></h4>
         <p class="card-text">
-          <div *ngFor="let item of items | async">
-            {{item.MecatronicaObjetivo}}
+          <div *ngFor="let Objetivo of Objetivos | async">
+            {{Objetivo.ObjetivoMmecatronicaDesc}}
             </div>
         <br>
       </div>
@@ -74,43 +74,9 @@
             data-bs-parent="#accordionFlushExample">
             <div class="accordion-body">
               <p class="card-text">
-                <div *ngFor="let item of items | async">
-                  {{item.MecatronicaPerfil}}
-                </div>
-                <br>
-
-
-              <p class="card-text">
-                <div *ngFor="let item of items | async">
-                  {{item.MecatronicaPerfil}}
-                </div>
-                <br>
-
-             <ul>
+             <ul *ngFor="let Perfil of Perfiles | async" style="list-style-type: none;">
                <li>
-                <div *ngFor="let item of items | async">
-                  {{item.MecatronicaPerfilop1}}
-                </div>
-               </li>
-               <li>
-                <div *ngFor="let item of items | async">
-                  {{item.MecatronicaPerfilop2}}
-                </div>
-               </li>
-               <li>
-                <div *ngFor="let item of items | async">
-                  {{item.MecatronicaPerfilop3}}
-                </div>
-               </li>
-               <li>
-                <div *ngFor="let item of items | async">
-                  {{item.MecatronicaPerfilop4}}
-                </div>
-               </li>
-               <li>
-                <div *ngFor="let item of items | async">
-                  {{item.MecatronicaPerfilop5}}
-                </div>
+                  {{Perfil.PerfilMmecatronicaOpc}}
                </li>
              </ul>
            <br>
@@ -139,30 +105,13 @@
                   <div class="cardS">
                     <div class="card-body">
                       <p class="card-text">
-                          <div *ngFor="let item of items | async">
-                            {{item.MecatronicaPlan}}
+                          <div >
+
                           </div>
-                      <ul>
+                      <ul *ngFor="let Estructura of Estructuras | async">
                         <li>
-                          <div *ngFor="let item of items | async">
-                            {{item.MecatronicaPlanop1}}
-                          </div>
-                         </li>
-                         <li>
-                          <div *ngFor="let item of items | async">
-                            {{item.MecatronicaPlanop2}}
-                          </div>
-                         </li>
-                         <li>
-                          <div *ngFor="let item of items | async">
-                            {{item.MecatronicaPlanop3}}
-                          </div>
-                         </li>
-                         <li>
-                          <div *ngFor="let item of items | async">
-                            {{item.MecatronicaPlanop4}}
-                          </div>
-                         </li>
+                            {{Estructura.EstructuraMmecatronicaopc}}
+                        </li>
                       </ul>
                       <BR>
                     </div>
@@ -193,21 +142,9 @@
           <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
             data-bs-parent="#accordionFlushExample">
             <div class="accordion-body" style="text-align: center;">
-              <ul style="list-style-type: none;">
+              <ul style="list-style-type: none;" *ngFor="let Area of Areas | async">
                 <li>
-                  <div *ngFor="let item of items | async">
-                    {{item.MecatronicaAreas}}
-                  </div>
-                 </li>
-                 <li>
-                  <div *ngFor="let item of items | async">
-                    {{item.MecatronicaAreas1}}
-                  </div>
-                 </li>
-                 <li>
-                  <div *ngFor="let item of items | async">
-                    {{item.MecatronicaAreas2}}
-                  </div>
+                    {{Area.AreasMmecatronicaOpc}}
                  </li>
             </ul>
             <br>

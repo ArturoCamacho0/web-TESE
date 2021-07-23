@@ -29,7 +29,7 @@ export class PaginaMquimicaComponent implements OnInit {
     this.materiasO = firestore.collection('/EgresadosYExalumnos/MCienciasIngenieriaQuimica/QuimicaMateriasOptativas').valueChanges();
     this.Conceptos = firestore.collection('/EgresadosYExalumnos/MCienciasIngenieriaQuimica/ConceptosMquimica').valueChanges();
     this.Objetivos = firestore.collection('/EgresadosYExalumnos/MCienciasIngenieriaQuimica/ObjetivoMquimica').valueChanges();
-    this.Perfiles = firestore.collection('/EgresadosYExalumnos/MCienciasIngenieriaQuimica/PerfilMquimica/01/PerfilMquimicaOpc').valueChanges();
+    this.Perfiles = firestore.collection('/EgresadosYExalumnos/MCienciasIngenieriaQuimica/PerfilMquimica').valueChanges();
     this.Areas = firestore.collection('/EgresadosYExalumnos/MCienciasIngenieriaQuimica/AreaMquimica').valueChanges();
   }
 
