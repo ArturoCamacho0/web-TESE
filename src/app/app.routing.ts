@@ -39,6 +39,7 @@ import { ControlVinculacionComponent } from './components/sections/EGRESADOS-EXA
 import { ControlActividadesComponent } from './components/sections/EGRESADOS-EXALUMNOS/ControlEgresados/control-actividades/control-actividades.component';
 import { ControlCursosComponent } from './components/sections/EGRESADOS-EXALUMNOS/ControlEgresados/control-cursos/control-cursos.component';
 import { ControlCompromisoComponent } from './components/sections/EGRESADOS-EXALUMNOS/ControlEgresados/control-compromiso/control-compromiso.component';
+import { ControlHistorialComponent } from './components/sections/EGRESADOS-EXALUMNOS/ControlEgresados/control-historial/control-historial.component';
 
 
 //import carreras
@@ -93,6 +94,7 @@ const appRoutes: Routes = [
     { path: 'ControlActividades', component:ControlActividadesComponent},
     { path: 'ControlCursos', component:ControlCursosComponent},
     { path: 'ControlServicio', component:ControlCompromisoComponent},
+    { path: 'ControlHistorial', component:ControlHistorialComponent },
 
 
     { path: 'Carreras', component: CuerpoComponent},

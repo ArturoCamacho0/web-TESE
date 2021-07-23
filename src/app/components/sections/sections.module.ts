@@ -73,6 +73,7 @@ import { ControlVinculacionComponent } from './EGRESADOS-EXALUMNOS/ControlEgresa
 import { ControlActividadesComponent } from './EGRESADOS-EXALUMNOS/ControlEgresados/control-actividades/control-actividades.component';
 import { ControlCursosComponent } from './EGRESADOS-EXALUMNOS/ControlEgresados/control-cursos/control-cursos.component';
 import { ControlCompromisoComponent } from './EGRESADOS-EXALUMNOS/ControlEgresados/control-compromiso/control-compromiso.component';
+import { ControlHistorialComponent } from './EGRESADOS-EXALUMNOS/ControlEgresados/control-historial/control-historial.component';
 
 
 
@@ -147,6 +148,7 @@ import { ControlCompromisoComponent } from './EGRESADOS-EXALUMNOS/ControlEgresad
     ControlActividadesComponent,
     ControlCursosComponent,
     ControlCompromisoComponent,
+    ControlHistorialComponent,
   ],
   imports: [
     CommonModule,
