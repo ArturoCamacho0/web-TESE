@@ -32,8 +32,6 @@ export class ControlMquimicaComponent implements OnInit {
   ingresarMateriaO: FormGroup;
   ingresarArea: FormGroup;
 
-  inputAddressArea : FormControl;
-
   constructor(private fbq: FormBuilder, private _MquimicaService: MquimicaService) {
     this.ingresarConcepto=this.fbq.group({
       ConceptoQuimica:['', Validators.required]
@@ -53,8 +51,6 @@ export class ControlMquimicaComponent implements OnInit {
     this.ingresarArea=this.fbq.group({
       AreaQuimica:['', Validators.required]
     })
-
-    this.inputAddressArea = new FormControl();
   }
 
   ngOnInit(): void {
@@ -103,7 +99,7 @@ export class ControlMquimicaComponent implements OnInit {
       return;
     }
     const Perfil : any={
-      PerfilMQuimicaDesc: this.ingresarPerfil.value.PerfilQuimica
+      PerfilMquimicaOpc: this.ingresarPerfil.value.PerfilQuimica
     }
     this._MquimicaService.crearPerfil(Perfil).then(()=>{
       console.log('REGISTRO AGREGADO...');
@@ -305,17 +301,6 @@ export class ControlMquimicaComponent implements OnInit {
     }).catch(error =>{
       console.log(error);
     })
-  }
-
-  editarArea(id : string) {
-    var area = {
-      id : id,
-      AreaMquimicaOpc : this.inputAddressArea.value
-    };
-    this._MquimicaService.editarArea(area).then(() => {
-
-    console.log('OK');
-    });
   }
 
 

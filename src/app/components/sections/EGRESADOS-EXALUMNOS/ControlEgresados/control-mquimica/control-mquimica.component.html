@@ -147,18 +147,18 @@
     </form>
     <br>
     <h1 class="fw-bold lh-sm fs-4 shadow p-3 mb-5 bg-body rounded" *ngIf="Perfil.length==0">AUN NO HAY DATOS</h1>
-    <form *ngIf="Perfil.length>0">
-      <label for="inputAddress" class="form-label fw-bold" >Eliminar/Editar</label>
-      <div *ngFor="let Perfil of Perfil" class="row">
-        <div class="col-8">
-          <input type="text" class="form-control mb-2" id="inputAddressPerfil" value="{{Perfil.PerfilMQuimicaDesc}}">
-        </div>
-        <div class="col float-rigth">
-          <button type="button" (click)="eliminaPerfil(Perfil.id)"  class="btn btn-danger">Eliminar</button>
-        </div>
-      </div>
-    </form>
-  </section>
+<form *ngIf="Perfil.length>0">
+  <label for="inputAddress" class="form-label fw-bold" >Eliminar/Editar</label>
+  <div *ngFor="let Perfil of Perfil" class="row">
+    <div class="col-8">
+      <input type="text" class="form-control mb-2" id="inputAddressPerfil" value="{{Perfil.PerfilMquimicaOpc}}">
+    </div>
+    <div class="col float-rigth">
+      <button type="button" (click)="eliminaPerfil(Perfil.id)" class="btn btn-danger">Eliminar</button>
+    </div>
+  </div>
+</form>
+</section>
 
 
   <section  class="lh-sm fs-4 shadow p-3 mb-5 bg-body rounded">
@@ -251,13 +251,10 @@
   <label for="inputAddress" class="form-label fw-bold" >Eliminar/Editar</label>
   <div *ngFor="let Area of Area" class="row">
     <div class="col-8">
-      <input type="text" class="form-control mb-2" [formControl]="inputAddressArea" id="inputAddressArea" value="{{Area.AreaMquimicaOpc}}">
+      <input type="text" class="form-control mb-2" id="inputAddressArea" value="{{Area.AreaMquimicaOpc}}">
     </div>
     <div class="col float-rigth">
       <button type="button" (click)="eliminaArea(Area.id)" class="btn btn-danger">Eliminar</button>
-    </div>
-    <div class="col float-rigth">
-      <button type="button" (click)="editarArea(Area.id)" class="btn btn-danger">Editar</button>
     </div>
   </div>
 </form>
