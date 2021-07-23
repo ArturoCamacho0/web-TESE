@@ -60,6 +60,14 @@ import { CuerpoMecatronicaComponent } from './carrera/profesion/IngenieriaMecatr
 import { CarouselMecatronicaComponent } from './carrera/profesion/IngenieriaMecatronica/carousel-mecatronica/carousel-mecatronica.component';
 import { CarouselQuimicaComponent } from './carrera/profesion/IngenieriaQuimica/carousel-quimica/carousel-quimica.component';
 import { CuerpoQuimicaComponent } from './carrera/profesion/IngenieriaQuimica/cuerpo-quimica/cuerpo-quimica.component';
+
+
+
+
+
+
+
+/**IDENTIDAD INSTITUCIONNAL */
 import { AdministracionLogoComponent } from './Identidad-institucional/Administracion/administracion-logo/administracion-logo.component';
 import { AdministracionHistoriaComponent } from './Identidad-institucional/Administracion/administracion-historia/administracion-historia.component';
 import { AdministracionMisionComponent } from './Identidad-institucional/Administracion/administracion-mision/administracion-mision.component';
@@ -67,9 +75,17 @@ import { AdministracionOrganigramaComponent } from './Identidad-institucional/Ad
 import { ImgLogoComponent } from './Identidad-institucional/Administracion/administracion-logo/Edit/img-logo/img-logo.component';
 import { AdministracionInscripcionComponent } from './admisionytramites/admin/administracion-inscripcion/administracion-inscripcion.component';
 import { AdministracionReinscripcionComponent } from './admisionytramites/admin/administracion-reinscripcion/administracion-reinscripcion/administracion-reinscripcion.component';
+import { EditCarreraComponent } from './Identidad-institucional/Administracion/administracion-historia/Edit/edit-carrera/edit-carrera.component';
+import { EditPosgradoComponent } from './Identidad-institucional/Administracion/administracion-historia/Edit/edit-posgrado/edit-posgrado.component';
+import { EditDocumentoComponent } from './Identidad-institucional/Administracion/administracion-mision/Edit/edit-documento/edit-documento.component';
+import { EditOrgranigramaComponent } from './Identidad-institucional/Administracion/administracion-organigrama/Edit/edit-orgranigrama/edit-orgranigrama.component';
 
 
 import { ReinscripcionComponent } from './admisionytramites/reinscripcion/reinscripcion.component';
+import { BecasComponent } from './admisionytramites/becas/becas.component';
+import { TitulacionComponent } from './admisionytramites/titulacion/titulacion.component';
+import { CursosComponent } from './admisionytramites/cursos/cursos.component';
+import { ServiciosocialComponent } from './admisionytramites/serviciosocial/serviciosocial.component';
 
 
 
@@ -138,11 +154,20 @@ import { ReinscripcionComponent } from './admisionytramites/reinscripcion/reinsc
     AdministracionMisionComponent,
     AdministracionOrganigramaComponent,
     ImgLogoComponent,
-    AdministracionInscripcionComponent,
-    AdministracionReinscripcionComponent,
-ReinscripcionComponent
+    EditCarreraComponent,
+    EditPosgradoComponent,
+    EditDocumentoComponent,
+    EditOrgranigramaComponent,
 
+AdministracionInscripcionComponent,
+AdministracionReinscripcionComponent,
 
+ReinscripcionComponent,
+InscripcionComponent,
+BecasComponent,
+TitulacionComponent,
+CursosComponent,
+ServiciosocialComponent
 
 
 

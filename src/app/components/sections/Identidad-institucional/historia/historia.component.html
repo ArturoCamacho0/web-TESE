@@ -84,7 +84,7 @@
                 <div class="card-body">
                   <h3 class="card-title"> {{dropdowns_title.Titulo_subdrop}}</h3>
 
-                  <a href="#" class="btn btn-primary">Mas Info..</a>
+                  <a href="#" class="btn btn-danger">Mas Info..</a>
                 </div>
               </div>
             </div>
@@ -103,14 +103,14 @@
       <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
         <div class="accordion-body">
 
-          <div class="row">
+          <div class="row g-3">
 
-            <div class="col-sm-3 mb-3" *ngFor="let A_dropdowns_titles of dropdown_posgrados">
+            <div class="col-3 mb-3 center" *ngFor="let A_dropdowns_titles of dropdown_posgrados">
               <div class="card">
                 <img src="{{A_dropdowns_titles.Dir_subdrop}}" class="card-img-top" alt="..." >
                 <div class="card-body">
                   <h3 class="card-title">{{A_dropdowns_titles.Titulo_subdrop}}</h3>
-                  <a href="#" class="btn btn-primary">Mas Info..</a>
+                  <a href="#" class="btn btn-danger">Mas Info..</a>
                 </div>
               </div>
             </div>

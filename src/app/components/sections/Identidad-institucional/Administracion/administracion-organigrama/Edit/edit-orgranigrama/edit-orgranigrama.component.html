@@ -1,3 +1,4 @@
+
 <div class="">
   <mat-drawer-container class="side-container">
     <mat-drawer mode="side"class="sidebar" id="side" #drawer opened>
@@ -42,17 +43,19 @@
 
     <h1 class="fw-bold lh-sm fs-4 shadow p-3 mb-5 bg-body rounded">Panel Administracion Organigrama</h1>
 
-    <section class="lh-sm fs-4 shadow p-3 mb-5 bg-body rounded">
-      <form>
 
-        <div *ngFor="let organigrama_contends of organigrama" class="row g-3">
+    <section class="lh-sm fs-4 shadow p-3 mb-5 bg-body rounded">
+      <h1 class="fw-bold">{{titulo}}</h1>
+      <form [formGroup]="FormularioEditar" (ngSubmit)="editarOrganigrama()">
+
+        <div  class="row g-3">
           <label for="inputAddress" class="form-label fw-bold" >Ruta de Organigrama</label>
-        <div class="col-10">
-          <input type="text" class="form-control" id="inputAddress" value="{{organigrama_contends.Dir}}">
+        <div class="col">
+          <input type="text" class="form-control" id="inputAddress" formControlName="ruta">
         </div>
 
         <div class="col">
-          <button type="button" [routerLink]="['/edit-organigrama/',organigrama_contends.id]" class="btn btn-success">Editar</button>
+          <button type="submit" class="btn btn-success">Actualizar</button>
         </div>
       </div>
 

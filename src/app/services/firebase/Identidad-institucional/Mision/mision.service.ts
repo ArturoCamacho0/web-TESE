@@ -38,6 +38,14 @@ export class MisionService {
     return this.firestore.collection('/Identidad/Mision/MisionDocumentos').doc(id).delete();
   }
 
+  getDocumentoEdit(id:string): Observable<any>{
+    return this.firestore.collection('/Identidad/Mision/MisionDocumentos').doc(id).snapshotChanges();
+  }
+
+  actualizarDocumento(id: string, data: any): Promise<any>{
+    return this.firestore.collection('/Identidad/Mision/MisionDocumentos').doc(id).update(data);
+  }
+
   getOrganigrama(): Observable<any>{
     return this.firestore.collection('/Identidad/Organigrama/DatosOrganigrama').snapshotChanges();
   }
