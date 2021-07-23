@@ -27,6 +27,7 @@ export class GestionEmpresarialComponent implements OnInit {
       titulo_Egreso:['',Validators.required]
     })
     this.ingresarDoc = this.fbm.group({
+      id_Doc:['',Validators.required],
       contenido_Doc:['',Validators.required],
       titulo_Doc:['',Validators.required]
     })
@@ -87,6 +88,7 @@ export class GestionEmpresarialComponent implements OnInit {
       return;
     }
     const Doc :any={
+      id_Doc:this.ingresarDoc.value.id_Doc,
       titulo:this.ingresarDoc.value.titulo_Doc,
       contenido:this.ingresarDoc.value.contenido_Doc,
       fechacreacion: new Date(),

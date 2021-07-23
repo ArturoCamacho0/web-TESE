@@ -177,6 +177,7 @@
           <label for="inputAddress" class="form-label fw-bold" >Agregar</label>
 
           <div class="col-10">
+            <input type="number" class="form-control" id="exampleFormControlTextarea1" value="" rows="3" placeholder="Posicion" formControlName="id_Doc">
             <input type="text" class="form-control" id="inputAddress" value="" formControlName="titulo_Doc" placeholder="Titulo Boton">
             <input type="text" class="form-control" id="inputAddress1" value="" formControlName="contenido_Doc" placeholder="Contenido Boton">
           </div>
@@ -193,12 +194,12 @@
         <label for="inputAddress" class="form-label fw-bold" >Eliminar</label>
         <div *ngFor="let Doc of Doc " class="row" >
           <div class="col-10">
+            Id
+            <input type="text" class="form-control" id="inputAddressDoc" value="{{Doc.id_Doc}}" disabled>
             Titulo-Boton
-            <input type="text" class="form-control" id="inputAddressDoc" value="{{Doc.titulo}}" disabled>
+            <input type="text" class="form-control" id="inputAddressDoc1" value="{{Doc.titulo}}" disabled>
             Contenido-Boton
-            <input type="text" class="form-control" id="inputAddressDoc1" value="{{Doc.contenido}}" disabled>
-
-
+            <input type="text" class="form-control" id="inputAddressDoc2" value="{{Doc.contenido}}" disabled>
           </div>
           <div class="col float-rigth">
             <button type="button" (click)="eliminaDoc(Doc.id)"  class="btn btn-danger">Eliminar</button>

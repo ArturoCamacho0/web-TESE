@@ -43,6 +43,7 @@ export class CarreraPrincipalComponent implements OnInit {
       titulo_visionDiv:['',Validators.required]
     })
     this.ingresarDoc = this.fbm.group({
+      id_Doc:['',Validators.required],
       contenido_Doc:['',Validators.required],
       titulo_Doc:['',Validators.required]
     })
@@ -143,6 +144,7 @@ export class CarreraPrincipalComponent implements OnInit {
       return;
     }
     const Doc :any={
+      id_Doc:this.ingresarDoc.value.id_Doc,
       titulo:this.ingresarDoc.value.titulo_Doc,
       contenido:this.ingresarDoc.value.contenido_Doc,
       fechacreacion: new Date(),
