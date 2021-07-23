@@ -30,12 +30,11 @@
       <div class="cards">
         <div class="card-body" style="background-color:#E3E3E3; text-align: center;">
           <h4 class="card-title"><div class="Titulo2">
-            <div *ngFor="let item of items | async">
-              {{item.ConceptosGenerales}}
-            </div>
+            CONCEPTOS GENERALES
           </div></h4>
-          <h3> <div *ngFor="let item of items | async">
-            {{item.QuimicaGenerales}}
+          <h3>
+            <div *ngFor="let Concepto of Conceptos | async">
+            {{Concepto.ConceptosMQuimicaDesc}}
           </div>
           </h3>
        </div>
@@ -44,13 +43,11 @@
      <div class="cards">
       <div class="card-body" style="text-align: center;">
        <h4 class="card-title"><div class="Titulo2">
-        <div *ngFor="let item of items | async">
-          {{item.Objetivo}}
-        </div>
+        OBJETIVO
        </div></h4>
         <p class="card-text">
-          <div *ngFor="let item of items | async">
-            {{item.QuimicaObjetivo}}
+          <div *ngFor="let Objetivo of Objetivos | async">
+            {{iteObjetivom.ObjetivoMquimicaDesc}}
           </div>
         <br>
         <br>
@@ -64,9 +61,7 @@
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
           data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
           <h4 class="card-title"><div class="subtitulo">
-            <div *ngFor="let item of items | async">
-              {{item.PerfilEgresado}}
-            </div>
+            PERFIL DEL EGRESADO
           </div></h4>
         </button>
       </h2>
@@ -74,14 +69,9 @@
         data-bs-parent="#accordionFlushExample">
         <div class="accordion-body">
           <p class="card-text">
-            <div *ngFor="let item of items | async">
-              {{item.QuimicaPerfil}}
-            </div>
-            <UL>
+            <UL *ngFor="let Perfil of Perfiles | async">
               <LI>
-                <div *ngFor="let item of items | async">
-                {{item.QuimicaPerfilop1}}
-                </div>
+                {{Perfil.PerfilMquimicaOpc}}
               </LI>
 
               <LI>
@@ -132,9 +122,7 @@
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
           data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
           <h4 class="card-title"><div class="subtitulo">
-            <div *ngFor="let item of items | async">
-              {{item.Materias}}
-            </div>
+            MATERIAS
           </div></h4>
         </button>
       </h2>
@@ -187,9 +175,7 @@
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
           data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
           <h4 class="card-title"><div class="subtitulo">
-              <div *ngFor="let item of items | async">
-              {{item.Areas}}
-              </div>
+              AREAS DE INVESTIGACIÓN
           </div></h4>
         </button>
       </h2>

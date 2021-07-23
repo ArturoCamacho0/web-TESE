@@ -14,6 +14,11 @@ import { AngularFirestore } from '@angular/fire/firestore';
 
 export class PaginaMquimicaComponent implements OnInit {
   items: Observable<any[]>
+  Conceptos: Observable<any[]>
+  Objetivos: Observable<any[]>
+  Perfiles: Observable<any[]>
+  Materias: Observable<any[]>
+  Areas: Observable<any[]>
   materiasB: Observable<any[]>
   materiasO: Observable<any[]>
 
@@ -22,6 +27,10 @@ export class PaginaMquimicaComponent implements OnInit {
     this.items = firestore.collection('EgresadosYExalumnos').valueChanges();
     this.materiasB = firestore.collection('/EgresadosYExalumnos/MCienciasIngenieriaQuimica/QuimicaMateriasBasicas').valueChanges();
     this.materiasO = firestore.collection('/EgresadosYExalumnos/MCienciasIngenieriaQuimica/QuimicaMateriasOptativas').valueChanges();
+    this.Conceptos = firestore.collection('/EgresadosYExalumnos/MCienciasIngenieriaQuimica/ConceptosMquimica').valueChanges();
+    this.Objetivos = firestore.collection('/EgresadosYExalumnos/MCienciasIngenieriaQuimica/ObjetivoMquimica').valueChanges();
+    this.Perfiles = firestore.collection('/EgresadosYExalumnos/MCienciasIngenieriaQuimica/PerfilMquimica/01/PerfilMquimicaOpc').valueChanges();
+    this.Areas = firestore.collection('/EgresadosYExalumnos/MCienciasIngenieriaQuimica/AreaMquimica').valueChanges();
   }
 
   ngOnInit(): void {
