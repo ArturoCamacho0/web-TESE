@@ -105,6 +105,7 @@ import { MecatronicaComponent } from './carrera/Administracion-Carreras/mecatron
 import { QuimicaComponent } from './carrera/Administracion-Carreras/quimica/quimica.component';
 import { SistemasComputacionalesComponent } from './carrera/Administracion-Carreras/sistemas-computacionales/sistemas-computacionales.component';
 import { AdminHomeComponent } from '../admin/admin-home/admin-home.component';
+import { ControlHistorialComponent } from './EGRESADOS-EXALUMNOS/ControlEgresados/control-historial/control-historial.component';
 
 
 @NgModule({
@@ -210,7 +211,8 @@ import { AdminHomeComponent } from '../admin/admin-home/admin-home.component';
     MecanicaComponent,
     MecatronicaComponent,
     QuimicaComponent,
-    SistemasComputacionalesComponent
+    SistemasComputacionalesComponent,
+    ControlHistorialComponent
   ],
   imports: [
     CommonModule,

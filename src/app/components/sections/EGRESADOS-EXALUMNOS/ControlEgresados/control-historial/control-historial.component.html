@@ -1,0 +1,196 @@
+<div class="">
+  <mat-drawer-container class="side-container">
+    <mat-drawer mode="side"class="sidebar" id="side" #drawer opened>
+      <mat-selection-list role="list-container" [multiple]="false">
+        <a routerLink="/ControlVinculacion">
+          <mat-list-option style="margin-top: 10%;">
+            VINCULACION EMPRESARIAL E INCUBADORA DE EMPRESAS
+          </mat-list-option>
+        </a>
+          <br>
+          <br>
+        <a routerLink="/ControlActividades">
+          <mat-list-option>
+           ACTIVIDADES Y CREDENCIALES EGRESADOS
+          </mat-list-option>
+        </a>
+          <br>
+          <br>
+        <a routerLink="/ControlCursos">
+          <mat-list-option>
+           CURSOS Y DIPLOMADOS
+          </mat-list-option>
+        </a>
+          <br>
+          <br>
+        <a routerLink="/ControlHistorial">
+          <mat-list-option>
+           HISTORIAL ACADEMICO
+          </mat-list-option>
+        </a>
+          <br>
+          <br>
+        <a routerLink="/ControlServicio">
+          <mat-list-option>
+           SERVICIO A LA COMUNIDAD
+          </mat-list-option>
+        </a>
+      </mat-selection-list>
+    </mat-drawer>
+
+    <mat-drawer-content class="side-content">
+      <button id="arrow" type="button" mat-button (click)="drawer.toggle()" (click)="open()">
+        <mat-icon id="right" class="open">arrow_forward</mat-icon>
+        <mat-icon id="left">arrow_back</mat-icon>
+      </button>
+      <mat-divider class="divider"></mat-divider>
+
+      <!--ENLACE-->
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#" class="Link">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">ControlEgresados</li>
+          <li class="breadcrumb-item"><a routerLink="/ControlEgresados" class="Link">Posgrados</a></li>
+          <li class="breadcrumb-item active" aria-current="page">ControlHistorial</li>
+        </ol>
+      </nav>
+
+    <h1 class="fw-bold lh-sm fs-4 shadow p-3 mb-5 bg-body rounded titulo">CONTROL HISTORIAL ACADÉMICO</h1>
+
+    <section  class="lh-sm fs-4 shadow p-3 mb-5 bg-body rounded">
+      <label for="inputAddress" class="form-label fw-bold subtitulo" >HISTORIAL ACADÉMICO</label>
+
+    <form [formGroup]="ingresarhistorial" (ngSubmit)="agregarhistorial()">
+      <div class="row ">
+        <span *ngIf="submitedhistorial && ingresarhistorial.invalid" class="alert alert-danger">DEBE LLENAR LOS CAMPOS...</span>
+        <label for="inputAddress" class="form-label fw-bold" >Agregar</label>
+
+        <div class="col-10">
+          <input type="text" class="form-control" id="inputAddress" value="" formControlName="historial" placeholder="HISTORIAL ACADÉMICO*">
+        </div>
+
+        <div class="col">
+          <button type="submit" class="btn btn-success">Agregar</button>
+        </div>
+
+      </div>
+    </form>
+    <br>
+    <h1 class="fw-bold lh-sm fs-4 shadow p-3 mb-5 bg-body rounded" *ngIf="historial.length==0">AUN NO HAY DATOS</h1>
+    <form *ngIf="historial.length>0">
+      <label for="inputAddress" class="form-label fw-bold" >Eliminar/Editar</label>
+      <div *ngFor="let historial of historial" class="row">
+        <div class="col-8">
+          <input type="text" class="form-control mb-2" id="inputAddresshistorial" value="{{historial.HistorialDesc}}">
+        </div>
+        <div class="col float-rigth">
+          <button type="button" (click)="eliminahistorial(historial.id)"  class="btn btn-danger">Eliminar</button>
+        </div>
+      </div>
+    </form>
+  </section>
+
+        <section  class="lh-sm fs-4 shadow p-3 mb-5 bg-body rounded">
+        <label for="inputAddress" class="form-label fw-bold subtitulo" >DOCUMENTO ELECTRÓNICO</label>
+
+      <form [formGroup]="ingresarDocumentoE" (ngSubmit)="agregarDocumentoE()">
+        <div class="row ">
+          <span *ngIf="submitedDocumentoE && ingresarDocumentoE.invalid" class="alert alert-danger">DEBE LLENAR LOS CAMPOS...</span>
+          <label for="inputAddress" class="form-label fw-bold" >Agregar</label>
+
+          <div class="col-10">
+            <input type="text" class="form-control" id="inputAddress" value="" formControlName="DocumentoE" placeholder="DOCUMENTO ELECTRÓNICO*">
+          </div>
+
+          <div class="col">
+            <button type="submit" class="btn btn-success">Agregar</button>
+          </div>
+
+        </div>
+      </form>
+      <br>
+      <h1 class="fw-bold lh-sm fs-4 shadow p-3 mb-5 bg-body rounded" *ngIf="DocumentoE.length==0">AUN NO HAY DATOS</h1>
+      <form *ngIf="DocumentoE.length>0">
+        <label for="inputAddress" class="form-label fw-bold" >Eliminar/Editar</label>
+        <div *ngFor="let DocumentoE of DocumentoE" class="row">
+          <div class="col-8">
+            <input type="text" class="form-control mb-2" id="inputAddressDocumentoE" value="{{DocumentoE.DocEDesc}}">
+          </div>
+          <div class="col float-rigth">
+            <button type="button" (click)="eliminaDocumentoE(DocumentoE.id)"  class="btn btn-danger">Eliminar</button>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <section  class="lh-sm fs-4 shadow p-3 mb-5 bg-body rounded">
+      <label for="inputAddress" class="form-label fw-bold subtitulo" >DOCUMENTO OFICIAL</label>
+
+    <form [formGroup]="ingresarDocumentoO" (ngSubmit)="agregarDocumentoO()">
+      <div class="row ">
+        <span *ngIf="submitedDocumentoO && ingresarDocumentoO.invalid" class="alert alert-danger">DEBE LLENAR LOS CAMPOS...</span>
+        <label for="inputAddress" class="form-label fw-bold" >Agregar</label>
+
+        <div class="col-10">
+          <input type="text" class="form-control" id="inputAddress" value="" formControlName="DocumentoO" placeholder="DOCUMENTO OFICIAL*">
+        </div>
+
+        <div class="col">
+          <button type="submit" class="btn btn-success">Agregar</button>
+        </div>
+
+      </div>
+    </form>
+    <br>
+    <h1 class="fw-bold lh-sm fs-4 shadow p-3 mb-5 bg-body rounded" *ngIf="DocumentoO.length==0">AUN NO HAY DATOS</h1>
+    <form *ngIf="DocumentoO.length>0">
+      <label for="inputAddress" class="form-label fw-bold" >Eliminar/Editar</label>
+      <div *ngFor="let DocumentoO of DocumentoO" class="row">
+        <div class="col-8">
+          <input type="text" class="form-control mb-2" id="inputAddressDocumentoO" value="{{DocumentoO.DocODesc}}">
+        </div>
+        <div class="col float-rigth">
+          <button type="button" (click)="eliminaDocumentoO(DocumentoO.id)"  class="btn btn-danger">Eliminar</button>
+        </div>
+      </div>
+    </form>
+  </section>
+
+
+  <section  class="lh-sm fs-4 shadow p-3 mb-5 bg-body rounded">
+    <label for="inputAddress" class="form-label fw-bold subtitulo" >HORARIOS</label>
+
+  <form [formGroup]="ingresarHorario" (ngSubmit)="agregarHorario()">
+    <div class="row ">
+      <span *ngIf="submitedHorario && ingresarHorario.invalid" class="alert alert-danger">DEBE LLENAR LOS CAMPOS...</span>
+      <label for="inputAddress" class="form-label fw-bold" >Agregar</label>
+
+      <div class="col-10">
+        <input type="text" class="form-control" id="inputAddress" value="" formControlName="Horario" placeholder="HORARIO*">
+      </div>
+
+      <div class="col">
+        <button type="submit" class="btn btn-success">Agregar</button>
+      </div>
+
+    </div>
+  </form>
+  <br>
+  <h1 class="fw-bold lh-sm fs-4 shadow p-3 mb-5 bg-body rounded" *ngIf="Horario.length==0">AUN NO HAY DATOS</h1>
+  <form *ngIf="Horario.length>0">
+    <label for="inputAddress" class="form-label fw-bold" >Eliminar/Editar</label>
+    <div *ngFor="let Horario of Horario" class="row">
+      <div class="col-8">
+        <input type="text" class="form-control mb-2" id="inputAddressHorario" value="{{Horario.HorarioOpc}}">
+      </div>
+      <div class="col float-rigth">
+        <button type="button" (click)="eliminaHorario(Horario.id)" class="btn btn-danger">Eliminar</button>
+      </div>
+    </div>
+  </form>
+</section>
+
+    </mat-drawer-content>
+  </mat-drawer-container>
+</div>
+

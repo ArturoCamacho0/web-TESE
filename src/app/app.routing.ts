@@ -102,6 +102,7 @@ import { CursosComponent } from './components/sections/admisionytramites/cursos/
 import { ServiciosocialComponent } from './components/sections/admisionytramites/serviciosocial/serviciosocial.component'
 import { MenuComponent } from './components/sections/carrera/menu/menu.component';
 
+import { ControlHistorialComponent } from './components/sections/EGRESADOS-EXALUMNOS/ControlEgresados/control-historial/control-historial.component';
 
 // Rutas
 const appRoutes: Routes = [
@@ -213,6 +214,8 @@ const appRoutes: Routes = [
     { path: 'cursos', component: CursosComponent },
     { path: 'Serviciosocial', component: ServiciosocialComponent },
     { path: 'titulacion', component: TitulacionComponent },
+    { path: 'ControlHistorial', component:ControlHistorialComponent }
+    
 ];
 
 // Exportar el modulo
